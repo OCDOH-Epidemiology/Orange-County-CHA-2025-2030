@@ -4,10 +4,11 @@ project:
   execute-dir: project
   resources:
     - "pdfs/**"
-  # Pre-render hooks generate chapter table/figure objects from the workbook.
-  # Enable and point these at the chapters that use metadata-driven objects.
-  # pre-render:
-  #   - python3 scripts/generate_chapter_objects.py --chapter "chapters/03-demographics.qmd" --output-dir "chapters/_generated/objects" --strict-refs
+  # Pre-render hook regenerates table/figure include files from the workbook
+  # (data/raw/workbook.xlsx) into chapters/_generated/objects/ before each render.
+  # Add more lines pointing at other chapters as you build them out.
+  pre-render:
+    - python3 scripts/generate_chapter_objects.py --workbook "data/raw/workbook.xlsx" --chapter "chapters/13-example-data-objects.qmd" --output-dir "chapters/_generated/objects" --include-source true
   post-render:
     - node scripts/patch_quarto_search.js
 
@@ -35,6 +36,7 @@ book:
     - chapters/10-Environmental Indicators.qmd
     - chapters/11-County-Health-Summaries.qmd
     - chapters/12-Appendices.qmd
+    - chapters/13-example-data-objects.qmd
   sidebar:
     style: docked
     search: true

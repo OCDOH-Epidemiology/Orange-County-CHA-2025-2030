@@ -20,7 +20,7 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 # Point this at your workbook in data/raw/ once you add it.
-CHA_WORKBOOK_PATH = project_root / "data" / "raw" / "your-workbook.xlsx"
+CHA_WORKBOOK_PATH = project_root / "data" / "raw" / "workbook.xlsx"
 ```
 
 <!-- WORKED EXAMPLE - the standard pattern for adding a data object to a section.

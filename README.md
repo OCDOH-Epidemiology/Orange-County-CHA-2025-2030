@@ -15,7 +15,8 @@ A reusable [Quarto](https://quarto.org) **book** template for building a Communi
 | `templates/` | Word authoring template + `TEMPLATE_INSTRUCTIONS.md`. |
 | `theme.scss`, `custom-citation-styles.css`, `references-dropdown.html` | Styling. |
 | `references.bib` | Bibliography (starts empty - add your citations). |
-| `data/raw/` | Drop your source Excel workbook here. |
+| `data/raw/workbook.xlsx` | The project data workbook (a working starter ships with the template). |
+| `chapters/13-example-data-objects.qmd` | Live demo of a figure + table generated from the workbook (delete when done). |
 | `source/` | Optional source Word documents. |
 | `media/`, `pdfs/` | Images and downloadable PDFs (e.g. maps). |
 | `docs/` | Rendered output (generated; git-ignored). |
@@ -32,16 +33,31 @@ A reusable [Quarto](https://quarto.org) **book** template for building a Communi
    ```bash
    quarto render
    ```
-3. Open `docs/index.html` in a browser.
+3. Open `docs/index.html` in a browser. The "Template Example: Live Data Objects" chapter shows a figure + table built from the starter `data/raw/workbook.xlsx`.
+
+## How the data pipeline works
+
+Tables and figures are **data-driven**, not hand-written. The Excel workbook is both the data and the configuration:
+
+```
+data/raw/workbook.xlsx  ──pre-render──>  chapters/_generated/objects/<id>.qmd  ──include──>  rendered figure/table
+```
+
+1. The workbook holds metadata sheets (`_registry`, `_figure_specs`, `_table_specs`, optional `_source_specs`) plus one data sheet per object. See `scripts/WORKBOOK_SCHEMA.md`.
+2. On every `quarto render`, the `pre-render` hook in `_quarto.yml` runs `scripts/generate_chapter_objects.py`, which writes one include file per object into `chapters/_generated/objects/` (these are git-ignored build artifacts).
+3. A chapter pulls an object in with `{{< include _generated/objects/<object_id>.qmd >}}`, which reads the workbook at render time via the `CHA_WORKBOOK_PATH` defined in that chapter's setup block.
+
+**Convention:** the workbook lives at `data/raw/workbook.xlsx`. Keep that name (or update `CHA_WORKBOOK_PATH` in your chapters and the `--workbook` path in the `_quarto.yml` pre-render hook). Just dropping an arbitrary spreadsheet in `data/raw/` is **not** enough — it must follow the schema in `scripts/WORKBOOK_SCHEMA.md`.
 
 ## Spinning up a new workbook
 
 1. **Rename the project.** Edit `_quarto.yml`: set `book.title`, `book.subtitle`, and `book.author`. Update `index.qmd` (population focus + contacts).
-2. **Add your data.** Put your Excel workbook in `data/raw/` and update the `CHA_WORKBOOK_PATH` placeholder at the top of each chapter that loads data.
-3. **Write narrative.** Each `chapters/*.qmd` keeps the standard section structure with `TODO` placeholders. Replace the placeholders with your text. (You can also author chapters in Word - see `templates/TEMPLATE_INSTRUCTIONS.md`.)
-4. **Insert tables/figures.** Each chapter marks data objects with `<!-- OBJECT: <id> ... -->` comments and includes one worked example. Use the pipeline to generate the real include files, then reference them with `{{< include _generated/objects/<id>.qmd >}}`.
-5. **Add citations.** Append BibTeX entries to `references.bib` and cite them in text with `[@citation-key]`.
-6. **Re-enable pipeline hooks** (optional). The `pre-render` block in `_quarto.yml` is commented out; enable it once your chapters use metadata-driven objects.
+2. **Replace the data.** Put your real workbook at `data/raw/workbook.xlsx` (same schema as the starter). It feeds every figure/table.
+3. **Wire your chapters into the pipeline.** Add a `pre-render` line in `_quarto.yml` for each chapter that uses objects (mirroring the example line), so its include files regenerate on render.
+4. **Write narrative.** Each `chapters/*.qmd` keeps the standard section structure with `TODO` placeholders. Replace the placeholders with your text. (You can also author chapters in Word - see `templates/TEMPLATE_INSTRUCTIONS.md`.)
+5. **Insert tables/figures.** Each chapter marks where data objects go with `<!-- OBJECT: <id> -->` comments. Replace a marker with a real include `{{< include _generated/objects/<id>.qmd >}}` once that `<id>` exists in your workbook's `_registry`.
+6. **Add citations.** Append BibTeX entries to `references.bib` and cite them in text with `[@citation-key]`.
+7. **Remove the demo.** Delete `chapters/13-example-data-objects.qmd` and its line in `_quarto.yml` once you no longer need the reference example.
 
 ## Scripts
 

@@ -16,18 +16,8 @@ from scripts.workbook_loader import WorkbookModel, load_cha_workbook
 
 
 def _resolve_default_workbook_path() -> Path:
-    candidates = [
-        Path("data/raw/Mid-Hudson Regional Community Health Assessment 2025 Data File.xlsx"),
-        Path(
-            "/Users/dq/Coding/Coding Projects/Mid-Hudson Regional CHA 2025/"
-            "Mid-HudsonRegionalCHA-2025/data/raw/"
-            "Mid-Hudson Regional Community Health Assessment 2025 Data File.xlsx"
-        ),
-    ]
-    for candidate in candidates:
-        if candidate.exists():
-            return candidate
-    return candidates[0]
+    # Convention: keep the project workbook at data/raw/workbook.xlsx.
+    return Path("data/raw/workbook.xlsx")
 
 
 DEFAULT_WORKBOOK_PATH = _resolve_default_workbook_path()
