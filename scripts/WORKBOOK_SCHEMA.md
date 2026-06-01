@@ -2,53 +2,9 @@
 
 Use this schema to drive CHA table and figure rendering from an Excel workbook.
 
-## Recommended format: Master + Data (two sheets)
+## File format options
 
-This is the simplest format and the one the starter `data/raw/workbook.xlsx` uses.
-The whole workbook is just **two sheets**, and the loader auto-detects it whenever a
-`Master` sheet (with an `object_id` column) and a `Data` sheet are both present.
-
-### `Master` sheet - one row per indicator
-
-Each indicator is **either a figure or a table** (set `object_type`). Columns:
-
-| Column | Notes |
-|---|---|
-| `object_id` | Unique id, prefixed `fig-` or `tbl-` (e.g. `fig-poverty`, `tbl-households`). |
-| `object_type` | `figure` or `table` (inferred from the prefix if blank). |
-| `caption` | Figure/table caption. |
-| `figure_type` | Figures only: `line` / `clustered_bar` / `stacked_bar` / `simple_bar` / `horizontal_bar`. |
-| `x_col` | Name for the category/row-label column (e.g. `County`, `Year`). |
-| `y_cols` | Optional comma list to fix series order; blank = all series. |
-| `x_axis_title`, `y_axis_title` | Figures only: axis labels. |
-| `start_at_zero` | Figures only: `TRUE`/`FALSE`. |
-| `hover_suffix` | Figures only: e.g. `%`. |
-| `show_data_labels` | Bar figures only: `TRUE`/`FALSE`. |
-| `has_multilevel_headers` | Tables only: `TRUE`/`FALSE`. |
-| `format` | One format code applied to all value columns (`percent1`, `integer`, `currency`, ...). |
-| `format_rules` | Optional JSON for per-column formats, e.g. `{"2023":"percent1"}` (overrides `format`). |
-| `section_tag`, `order_index` | Optional grouping/order. |
-| `source_url`, `source_data_year`, `source_estimate_type`, `source_citation_month`, `source_citation_year`, `source_custom_text` | Source-callout fields (`source_custom_text` overrides the generated citation). |
-
-### `Data` sheet - all values stacked, tagged by `object_id`
-
-Tidy/long format, one row per data point:
-
-| Column | Notes |
-|---|---|
-| `object_id` | Which indicator this row belongs to (matches `Master.object_id`). |
-| `category` | The x-axis value / table row label (e.g. a county or a year). |
-| `series` | The column/series name (e.g. `Percent`, `2023`, or `Male\|Total Population` for multilevel). |
-| `value` | The number. |
-
-The loader pivots each indicator's rows into the wide shape the renderer expects,
-preserving the row and series order in which they appear. To add an indicator: add a
-row to `Master` and its data points to `Data` - no new sheets needed.
-
-## Other supported formats
-
-- **Flat per-indicator** (one sheet per indicator with a `Name`/`Object ID`/`Enter Data` layout) - used by the original Mid-Hudson workbook; documented below.
-- **Normalized** (`_registry` + `_figure_specs` + `_table_specs` + optional `_source_specs` metadata sheets + data sheets) - documented below.
+- **Supported**: single Excel workbook (`.xlsx`) with metadata + data sheets.
 - **Note**: CSV-directory loading is not currently implemented in `scripts/workbook_loader.py`.
 
 ## Naming rules
