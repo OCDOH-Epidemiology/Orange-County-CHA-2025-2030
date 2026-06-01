@@ -1,0 +1,95 @@
+---
+title: "Environmental Indicators"
+jupyter: python3
+execute:
+  freeze: false
+---
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+import sys
+from pathlib import Path
+
+# Ensure root-level modules (scripts/) are importable in both Quarto run contexts.
+cwd = Path.cwd()
+project_root = cwd if (cwd / "scripts").exists() else cwd.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+# Point this at your workbook in data/raw/ once you add it.
+CHA_WORKBOOK_PATH = project_root / "data" / "raw" / "your-workbook.xlsx"
+```
+
+<!-- WORKED EXAMPLE - the standard pattern for adding a data object to a section.
+     Generate the object file with scripts/generate_chapter_objects.py (it writes to
+     chapters/_generated/objects/<id>.qmd), then reference it and document its source:
+
+{{</* include _generated/objects/<id>.qmd */>}}
+
+::: {.callout-note collapse="true"}
+## Source
+Data source citation, accessed Month Year.
+:::
+
+::: {.callout-note}
+Note: Methodology notes for this indicator.
+:::
+-->
+
+## Safety
+
+*TODO: Add narrative for this section.*
+
+### Injury
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-unint-injury-mortal-aar -->
+<!-- OBJECT: tbl-unint-injury-mortal-aar -->
+
+## Poisonings
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-poison-control-calls -->
+<!-- OBJECT: tbl-poison-control-calls -->
+
+<!-- OBJECT: fig-child-under5-poison-control -->
+<!-- OBJECT: tbl-child-under5-poison-control -->
+
+<!-- OBJECT: fig-poison-control-cannabis -->
+<!-- OBJECT: tbl-poison-control-cannabis -->
+
+## Motor Vehicle Accidents
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-mva-mortal-rate -->
+<!-- OBJECT: tbl-mva-mortal-rate -->
+
+<!-- OBJECT: fig-mva-alcohol-injury-death-crude -->
+<!-- OBJECT: tbl-mva-alcohol-injury-death-crude -->
+
+<!-- OBJECT: fig-mva-mortal-rande-aar -->
+<!-- OBJECT: tbl-mva-mortal-rande-aar -->
+
+## Falls
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-falls-hospital-aar -->
+<!-- OBJECT: tbl-falls-hospital-aar -->
+
+<!-- OBJECT: fig-85-falls-hospital -->
+<!-- OBJECT: tbl-85-falls-hospital -->
+
+<!-- OBJECT: fig-65-falls-hospital-rande-rate -->
+<!-- OBJECT: tbl-65-falls-hospital-rande-rate -->
+
+## Domestic Violence / Intrapersonal Violence
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-mortal-homicide-aar -->
+<!-- OBJECT: tbl-mortal-homicide-aar -->
+<!-- OBJECT: fig-assault-hospital-aar -->
+<!-- OBJECT: tbl-assault-hospital-aar -->
+<!-- OBJECT: fig-dv-victim-rate -->
+<!-- OBJECT: tbl-dv-victim-rate -->

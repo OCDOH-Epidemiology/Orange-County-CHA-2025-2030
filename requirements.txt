@@ -1,0 +1,12 @@
+bokeh>=3.3
+itables>=2.0
+pandas>=2.1
+openpyxl>=3.1
+pyarrow>=14.0
+jupyter>=1.0
+ipykernel>=6.29
+great-tables>=0.6
+python-docx>=1.1.0
+PyPDF2>=3.0.0
+matplotlib>=3.7
+plotly>=5.18

@@ -1,0 +1,14 @@
+---
+title: Acknowledgments
+jupyter: python3
+execute:
+  freeze: false
+---
+
+## Local Health Departments
+
+*TODO: Add narrative for this section.*
+
+## Local and Regional Hospitals
+
+*TODO: Add narrative for this section.*

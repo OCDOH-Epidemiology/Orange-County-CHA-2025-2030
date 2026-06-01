@@ -1,0 +1,209 @@
+---
+title: "County Health Summaries"
+jupyter: python3
+execute:
+  freeze: false
+---
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+import sys
+from pathlib import Path
+
+# Ensure root-level modules (scripts/) are importable in both Quarto run contexts.
+cwd = Path.cwd()
+project_root = cwd if (cwd / "scripts").exists() else cwd.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+# Point this at your workbook in data/raw/ once you add it.
+CHA_WORKBOOK_PATH = project_root / "data" / "raw" / "your-workbook.xlsx"
+```
+
+<!-- WORKED EXAMPLE - the standard pattern for adding a data object to a section.
+     Generate the object file with scripts/generate_chapter_objects.py (it writes to
+     chapters/_generated/objects/<id>.qmd), then reference it and document its source:
+
+{{</* include _generated/objects/<id>.qmd */>}}
+
+::: {.callout-note collapse="true"}
+## Source
+Data source citation, accessed Month Year.
+:::
+
+::: {.callout-note}
+Note: Methodology notes for this indicator.
+:::
+-->
+
+## Dutchess County Health Summary
+
+*TODO: Add narrative for this section.*
+
+### Demographics
+
+*TODO: Add narrative for this section.*
+
+### Community Survey Findings
+
+*TODO: Add narrative for this section.*
+
+#### Regional Community Health Survey 2025
+
+*TODO: Add narrative for this section.*
+
+#### Dutchess County Resident Priority Voting
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-dc-pav -->
+<!-- OBJECT: tbl-dc-pav -->
+
+### Areas of Focus
+
+*TODO: Add narrative for this section.*
+
+### Assets and Resources
+
+*TODO: Add narrative for this section.*
+
+## Orange County Health Summary
+
+*TODO: Add narrative for this section.*
+
+### Demographics
+
+*TODO: Add narrative for this section.*
+
+### Community Survey Findings
+
+*TODO: Add narrative for this section.*
+
+#### Orange County Community Health Survey
+
+*TODO: Add narrative for this section.*
+
+#### Orange County Community Asset Survey
+
+*TODO: Add narrative for this section.*
+
+### Areas of Focus
+
+*TODO: Add narrative for this section.*
+
+### Assets and Resources
+
+*TODO: Add narrative for this section.*
+
+## Putnam County Health Summary
+
+*TODO: Add narrative for this section.*
+
+### Demographics
+
+*TODO: Add narrative for this section.*
+
+### Community Survey Findings
+
+*TODO: Add narrative for this section.*
+
+#### Regional Community Health Survey
+
+*TODO: Add narrative for this section.*
+
+#### Community Health Experience Survey
+
+*TODO: Add narrative for this section.*
+
+### Areas of Focus
+
+*TODO: Add narrative for this section.*
+
+### Assets and Resources
+
+*TODO: Add narrative for this section.*
+
+## Rockland County Health Summary
+
+*TODO: Add narrative for this section.*
+
+### Demographics
+
+*TODO: Add narrative for this section.*
+
+### Community Survey Findings
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: tbl-rccha-demo -->
+<!-- OBJECT: fig-resp-zip -->
+<!-- OBJECT: fig-resp-qol-rc -->
+<!-- OBJECT: fig-t3-pos-rc -->
+<!-- OBJECT: fig-top-need-improve -->
+<!-- OBJECT: fig-econ-need-improve -->
+<!-- OBJECT: fig-safe-health-need-improve -->
+<!-- OBJECT: fig-educat-need-improv -->
+
+### Areas of Focus
+
+*TODO: Add narrative for this section.*
+
+### Assets and Resources
+
+*TODO: Add narrative for this section.*
+
+## Sullivan County Health Summary
+
+*TODO: Add narrative for this section.*
+
+### Demographics
+
+*TODO: Add narrative for this section.*
+
+### Community Survey Findings
+
+*TODO: Add narrative for this section.*
+
+### Areas of Focus
+
+*TODO: Add narrative for this section.*
+
+### Assets and Resources
+
+*TODO: Add narrative for this section.*
+
+## Ulster County Health Summary
+
+*TODO: Add narrative for this section.*
+
+### Demographics
+
+*TODO: Add narrative for this section.*
+
+### Areas of Focus
+
+*TODO: Add narrative for this section.*
+
+### Assets and Resources
+
+*TODO: Add narrative for this section.*
+
+### Efforts Moving Forward
+
+*TODO: Add narrative for this section.*
+
+## Westchester County Health Summary
+
+*TODO: Add narrative for this section.*
+
+### Demographics
+
+*TODO: Add narrative for this section.*
+
+### Area of Focus and Efforts Moving Forward
+
+*TODO: Add narrative for this section.*
+
+### Assets and Resources
+
+*TODO: Add narrative for this section.*

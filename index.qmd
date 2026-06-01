@@ -1,0 +1,31 @@
+---
+title: "Community Health Assessment YEAR"
+jupyter: python3
+execute:
+  freeze: false
+page-layout: full
+---
+
+::: {.hero}
+A living, data-driven assessment of the community's health status, priorities, and conditions.
+:::
+
+## Population Focus
+
+<!-- TODO: List the counties / municipalities / population covered by this assessment. -->
+
+>-   Area One
+>-   Area Two
+>-   Area Three
+
+## Questions or Comments About the Assessment
+
+For questions about this assessment, please contact:
+
+### Area One
+
+>**Name, Credentials**\
+> Title\
+> [email@example.org](mailto:email@example.org)
+
+<!-- TODO: Duplicate the contact block above for each participating area. -->

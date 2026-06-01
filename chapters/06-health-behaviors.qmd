@@ -1,0 +1,62 @@
+---
+title: "Health Behaviors Indicators"
+jupyter: python3
+execute:
+  freeze: false
+---
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+import sys
+from pathlib import Path
+
+# Ensure root-level modules (scripts/) are importable in both Quarto run contexts.
+cwd = Path.cwd()
+project_root = cwd if (cwd / "scripts").exists() else cwd.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+# Point this at your workbook in data/raw/ once you add it.
+CHA_WORKBOOK_PATH = project_root / "data" / "raw" / "your-workbook.xlsx"
+```
+
+<!-- WORKED EXAMPLE - the standard pattern for adding a data object to a section.
+     Generate the object file with scripts/generate_chapter_objects.py (it writes to
+     chapters/_generated/objects/<id>.qmd), then reference it and document its source:
+
+{{</* include _generated/objects/<id>.qmd */>}}
+
+::: {.callout-note collapse="true"}
+## Source
+Data source citation, accessed Month Year.
+:::
+
+::: {.callout-note}
+Note: Methodology notes for this indicator.
+:::
+-->
+
+## Physical Activity
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-brfss-leisure-pa -->
+<!-- OBJECT: tbl-brfss-adult-leisure-pa -->
+
+## Nutrition
+
+*TODO: Add narrative for this section.*
+
+### Fruit and Vegetable Consumption
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-brfss-fruit-veg -->
+<!-- OBJECT: tbl-brfss-adult-fruit-veg -->
+
+### Sugary Beverages
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-brfss-sug-bev -->
+<!-- OBJECT: tbl-brfss-adult-sug-bev -->
+

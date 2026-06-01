@@ -1,0 +1,216 @@
+---
+title: "Community Partner Survey"
+jupyter: python3
+execute:
+  freeze: false
+toc-depth: 4
+---
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+import sys
+from pathlib import Path
+
+# Ensure root-level modules (scripts/) are importable in both Quarto run contexts.
+cwd = Path.cwd()
+project_root = cwd if (cwd / "scripts").exists() else cwd.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+# Point this at your workbook in data/raw/ once you add it.
+CHA_WORKBOOK_PATH = project_root / "data" / "raw" / "your-workbook.xlsx"
+```
+
+<!-- WORKED EXAMPLE - the standard pattern for adding a data object to a section.
+     Generate the object file with scripts/generate_chapter_objects.py (it writes to
+     chapters/_generated/objects/<id>.qmd), then reference it and document its source:
+
+{{</* include _generated/objects/<id>.qmd */>}}
+
+::: {.callout-note collapse="true"}
+## Source
+Data source citation, accessed Month Year.
+:::
+
+::: {.callout-note}
+Note: Methodology notes for this indicator.
+:::
+-->
+
+## Background
+
+*TODO: Add narrative for this section.*
+
+## Dutchess County
+
+*TODO: Add narrative for this section.*
+
+### Major Findings
+
+*TODO: Add narrative for this section.*
+
+### Specific Recommendations
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-dc-affect-health -->
+<!-- OBJECT: tbl-dc-affect-health -->
+<!-- OBJECT: fig-dc-achieve-health -->
+<!-- OBJECT: tbl-dc-achieve-health -->
+<!-- OBJECT: fig-dc-impact-hlth-issue -->
+<!-- OBJECT: tbl-dc-impact-hlth-issue -->
+<!-- OBJECT: fig-dc-impact-sdoh -->
+<!-- OBJECT: tbl-dc-impact-sdoh -->
+<!-- OBJECT: fig-dc-eco-wellbeing -->
+<!-- OBJECT: tbl-dc-eco-wellbeing -->
+<!-- OBJECT: fig-dc-impact-mhsu -->
+<!-- OBJECT: tbl-dc-impact-mhsu -->
+<!-- OBJECT: fig-dc-impact-hlthinsur-access -->
+<!-- OBJECT: tbl-dc-impact-hlthinsur-access -->
+
+## Orange County
+
+*TODO: Add narrative for this section.*
+
+### Major Findings
+
+*TODO: Add narrative for this section.*
+
+### Specific Recommendations
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-oc-affect-health -->
+<!-- OBJECT: tbl-oc-affect-health -->
+<!-- OBJECT: fig-oc-achieve-health -->
+<!-- OBJECT: tbl-oc-achieve-health -->
+<!-- OBJECT: fig-oc-impact-hlth-issue -->
+<!-- OBJECT: tbl-oc-impact-hlth-issue -->
+<!-- OBJECT: fig-oc-impact-sdoh -->
+<!-- OBJECT: tbl-oc-impact-sdoh -->
+<!-- OBJECT: fig-oc-eco-wellbeing -->
+<!-- OBJECT: tbl-oc-eco-wellbeing -->
+<!-- OBJECT: fig-oc-impact-mhsu -->
+<!-- OBJECT: tbl-oc-impact-mhsu -->
+<!-- OBJECT: fig-oc-impact-hlthinsur-access -->
+<!-- OBJECT: tbl-oc-impact-hlthinsur-access -->
+
+## Putnam County
+
+*TODO: Add narrative for this section.*
+
+### Major Findings
+
+*TODO: Add narrative for this section.*
+
+### Specific Recommendations
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-pc-big-hlth-prob -->
+<!-- OBJECT: fig-pc-help-improve-hlth -->
+<!-- OBJECT: fig-pc-help-hlth-screen-education -->
+<!-- OBJECT: fig-pc-reason-no-hlthcare -->
+<!-- OBJECT: fig-pc-trust-hlth-source -->
+
+## Rockland County
+
+*TODO: Add narrative for this section.*
+
+### Major Findings
+
+*TODO: Add narrative for this section.*
+
+### Specific Recommendations
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-rc-affect-health -->
+<!-- OBJECT: tbl-rc-affect-health -->
+<!-- OBJECT: fig-rc-achieve-health -->
+<!-- OBJECT: tbl-rc-achieve-health -->
+
+<!-- OBJECT: fig-rc-impact-hlth-issue -->
+<!-- OBJECT: tbl-rc-impact-hlth-issue -->
+<!-- OBJECT: fig-rc-impact-sdoh -->
+<!-- OBJECT: tbl-rc-impact-sdoh -->
+<!-- OBJECT: fig-rc-impact-eco-wellbeing -->
+<!-- OBJECT: tbl-rc-impact-eco-wellbeing -->
+<!-- OBJECT: fig-rc-impact-mhsu -->
+<!-- OBJECT: tbl-rc-impact-mhsu -->
+<!-- OBJECT: fig-rc-impact-hlthinsur-access -->
+<!-- OBJECT: tbl-rc-impact-hlthinsur-access -->
+
+## Sullivan County
+
+*TODO: Add narrative for this section.*
+
+### Major Findings
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-sc-affect-health -->
+<!-- OBJECT: tbl-sc-affect-health -->
+<!-- OBJECT: fig-sc-achieve-health -->
+<!-- OBJECT: tbl-sc-achieve-health -->
+<!-- OBJECT: fig-sc-impact-hlth-issue -->
+<!-- OBJECT: tbl-sc-impact-hlth-issue -->
+<!-- OBJECT: fig-sc-impact-sdoh -->
+<!-- OBJECT: tbl-sc-impact-sdoh -->
+<!-- OBJECT: fig-sc-eco-wellbeing -->
+<!-- OBJECT: tbl-sc-eco-wellbeing -->
+<!-- OBJECT: fig-sc-impact-mhsu -->
+<!-- OBJECT: tbl-sc-impact-mhsu -->
+<!-- OBJECT: fig-sc-impact-hlthinsur-access -->
+<!-- OBJECT: tbl-sc-impact-hlthinsur-access -->
+
+## Ulster County
+
+*TODO: Add narrative for this section.*
+
+### Major Findings
+
+*TODO: Add narrative for this section.*
+
+### Specific Recommendations
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-uc-affect-health -->
+<!-- OBJECT: tbl-uc-affect-health -->
+<!-- OBJECT: fig-uc-achieve-health -->
+<!-- OBJECT: tbl-uc-achieve-health -->
+
+<!-- OBJECT: fig-uc-impact-hlth-issue -->
+<!-- OBJECT: tbl-uc-impact-hlth-issue -->
+<!-- OBJECT: fig-uc-impact-sdoh -->
+<!-- OBJECT: tbl-uc-impact-sdoh -->
+<!-- OBJECT: fig-uc-eco-wellbeing -->
+<!-- OBJECT: tbl-uc-eco-wellbeing -->
+<!-- OBJECT: fig-uc-impact-mhsu -->
+<!-- OBJECT: tbl-uc-impact-mhsu -->
+<!-- OBJECT: fig-uc-impact-hlthinsur-access -->
+<!-- OBJECT: tbl-uc-impact-hlthinsur-access -->
+
+## Westchester County
+
+*TODO: Add narrative for this section.*
+
+### Major Findings
+
+*TODO: Add narrative for this section.*
+
+### Specific Recommendations
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-wc-affect-health -->
+<!-- OBJECT: tbl-wc-affect-health -->
+<!-- OBJECT: fig-wc-achieve-health -->
+<!-- OBJECT: tbl-wc-achieve-health -->
+
+<!-- OBJECT: fig-wc-impact-hlth-issue -->
+<!-- OBJECT: tbl-wc-impact-hlth-issue -->
+<!-- OBJECT: fig-wc-impact-sdoh -->
+<!-- OBJECT: tbl-wc-impact-sdoh -->
+<!-- OBJECT: fig-wc-eco-wellbeing -->
+<!-- OBJECT: tbl-wc-eco-wellbeing -->
+<!-- OBJECT: fig-wc-impact-mhsu -->
+<!-- OBJECT: tbl-wc-impact-mhsu -->
+<!-- OBJECT: fig-wc-impact-hlthinsur-access -->
+<!-- OBJECT: tbl-wc-impact-hlthinsur-access -->

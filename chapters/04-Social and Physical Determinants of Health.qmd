@@ -1,0 +1,262 @@
+---
+title: "Social and Physical Determinants of Health"
+jupyter: python3
+execute:
+  freeze: false
+toc-depth: 4
+---
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+import sys
+from pathlib import Path
+
+# Ensure root-level modules (scripts/) are importable in both Quarto run contexts.
+cwd = Path.cwd()
+project_root = cwd if (cwd / "scripts").exists() else cwd.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+# Point this at your workbook in data/raw/ once you add it.
+CHA_WORKBOOK_PATH = project_root / "data" / "raw" / "your-workbook.xlsx"
+```
+
+<!-- WORKED EXAMPLE - the standard pattern for adding a data object to a section.
+     Generate the object file with scripts/generate_chapter_objects.py (it writes to
+     chapters/_generated/objects/<id>.qmd), then reference it and document its source:
+
+{{</* include _generated/objects/<id>.qmd */>}}
+
+::: {.callout-note collapse="true"}
+## Source
+Data source citation, accessed Month Year.
+:::
+
+::: {.callout-note}
+Note: Methodology notes for this indicator.
+:::
+-->
+
+## Economic Stability
+
+*TODO: Add narrative for this section.*
+
+### Employment
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-labor-force -->
+<!-- OBJECT: tbl-labor-force -->
+
+<!-- OBJECT: fig-unemployed -->
+<!-- OBJECT: tbl-unemployed -->
+
+### Food Insecurity
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-food-insecurity -->
+<!-- OBJECT: tbl-food-insecurity -->
+
+<!-- OBJECT: fig-childhood-food-insecurity -->
+<!-- OBJECT: tbl-childhood-food-insecurity -->
+
+### Housing Instability
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-cost-burdened-renters -->
+<!-- OBJECT: tbl-cost-burdened-renters -->
+
+<!-- OBJECT: fig-severely-cost-burdened -->
+<!-- OBJECT: tbl-severely-cost-burdened -->
+
+<!-- OBJECT: tbl-hud-housing -->
+
+### Poverty
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: tbl-poverty-threshold -->
+
+<!-- OBJECT: fig-poverty-rate -->
+<!-- OBJECT: tbl-poverty-rate -->
+
+<!-- OBJECT: fig-poverty-by-race -->
+<!-- OBJECT: tbl-poverty-by-race -->
+
+### Economically Disadvantaged
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-economically-disadvantaged -->
+<!-- OBJECT: tbl-economically-disadvantaged -->
+
+### Asset Limited, Income Constrained, Employed (ALICE)
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: tbl-alice-budget -->
+
+<!-- OBJECT: fig-alice-threshold -->
+<!-- OBJECT: tbl-alice-threshold -->
+
+## Education
+
+*TODO: Add narrative for this section.*
+
+### High School Graduation
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-graduation-rate -->
+<!-- OBJECT: tbl-graduation-rate -->
+
+<!-- OBJECT: fig-graduation-by-race -->
+<!-- OBJECT: tbl-graduation-by-race -->
+
+### Early Childhood Education and Development
+
+*TODO: Add narrative for this section.*
+
+### Adverse Childhood Experiences
+
+*TODO: Add narrative for this section.*
+
+### Attainment of Higher Education
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-educational-attainment -->
+<!-- OBJECT: tbl-educational-attainment -->
+
+### Language and Literacy
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-language-proficiency -->
+<!-- OBJECT: tbl-language-proficiency -->
+
+## Social and Community Context
+
+*TODO: Add narrative for this section.*
+
+### Civic Participation
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-disconnected-youth -->
+<!-- OBJECT: tbl-disconnected-youth -->
+
+### Discrimination
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-residential-segregation -->
+<!-- OBJECT: tbl-residential-segregation -->
+
+## Health Care Access and Usage
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-medical-care-cost -->
+<!-- OBJECT: tbl-adult-medical-care-cost -->
+
+### Health Insurance Coverage
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-children-uninsured -->
+<!-- OBJECT: tbl-children-uninsured -->
+
+<!-- OBJECT: fig-adult-health-insured -->
+<!-- OBJECT: tbl-adult-health-insured -->
+
+### Health Professional Shortage Areas
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: tbl-medically-underserved -->
+
+<!-- OBJECT: fig-primary-care-providers -->
+<!-- OBJECT: tbl-primary-care-providers -->
+
+<!-- OBJECT: fig-dentists -->
+<!-- OBJECT: tbl-dentists -->
+
+<!-- OBJECT: fig-mental-health-providers -->
+<!-- OBJECT: tbl-mental-health-providers -->
+
+### Access to Primary Care
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-adult-access-primary-care -->
+<!-- OBJECT: tbl-adult-access-primary-care -->
+
+### Health Care Usage
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-pph -->
+<!-- OBJECT: tbl-pph -->
+
+<!-- OBJECT: fig-pph-black-white-nh -->
+<!-- OBJECT: tbl-pph-black-white-nh -->
+
+<!-- OBJECT: fig-pph-white-nh -->
+<!-- OBJECT: tbl-pph-white-nh -->
+
+### Health Literacy
+
+*TODO: Add narrative for this section.*
+
+## Neighborhood and Built Environment
+
+*TODO: Add narrative for this section.*
+
+### Access to Foods that Support Healthy Eating Patterns
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-food-environment -->
+<!-- OBJECT: tbl-food-environment -->
+
+<!-- OBJECT: fig-limited-healthy-foods -->
+<!-- OBJECT: tbl-limited-healthy-foods -->
+
+### Crime and Violence
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-violent-crime -->
+<!-- OBJECT: tbl-violent-crime -->
+
+### Environmental Conditions
+
+*TODO: Add narrative for this section.*
+
+#### Air Pollution
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-density-matter -->
+<!-- OBJECT: tbl-density-matter -->
+
+### Water Quality
+
+*TODO: Add narrative for this section.*
+
+#### Lead Poisoning
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-lead-children -->
+<!-- OBJECT: tbl-lead-children -->
+
+### Quality of Housing
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-severe-housing -->
+<!-- OBJECT: tbl-severe-housing -->
+
+### Transportation
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-no-vehicles -->
+<!-- OBJECT: tbl-no-vehicles -->
+
+### Modes of Transportation
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-mode-to-work -->
+<!-- OBJECT: tbl-mode-to-work -->
+
+### Average Commute Time
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: fig-mean-time-work -->
+<!-- OBJECT: tbl-mean-time-work -->
+

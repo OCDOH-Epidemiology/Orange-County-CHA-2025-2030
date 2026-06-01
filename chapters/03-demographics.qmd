@@ -1,0 +1,95 @@
+---
+title: "Demographic Summary"
+jupyter: python3
+toc: true
+toc-depth: 3
+execute:
+  freeze: false
+---
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+import sys
+from pathlib import Path
+
+# Ensure root-level modules (scripts/) are importable in both Quarto run contexts.
+cwd = Path.cwd()
+project_root = cwd if (cwd / "scripts").exists() else cwd.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+# Point this at your workbook in data/raw/ once you add it.
+CHA_WORKBOOK_PATH = project_root / "data" / "raw" / "your-workbook.xlsx"
+```
+
+<!-- WORKED EXAMPLE - the standard pattern for adding a data object to a section.
+     Generate the object file with scripts/generate_chapter_objects.py (it writes to
+     chapters/_generated/objects/<id>.qmd), then reference it and document its source:
+
+{{</* include _generated/objects/<id>.qmd */>}}
+
+::: {.callout-note collapse="true"}
+## Source
+Data source citation, accessed Month Year.
+:::
+
+::: {.callout-note}
+Note: Methodology notes for this indicator.
+:::
+-->
+
+## Demographic Characteristics
+
+*TODO: Add narrative for this section.*
+
+### Population
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: tbl-population-demographics -->
+
+### Sex
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: tbl-sex -->
+
+### Age
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: tbl-age -->
+
+### Ethnicity and Race
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: tbl-ethnicity -->
+
+<!-- OBJECT: tbl-race -->
+
+### Spoken Language
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: tbl-language -->
+
+### Educational Attainment
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: tbl-education-base -->
+
+### Income
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: tbl-households -->
+
+<!-- OBJECT: tbl-income -->
+
+### Veteran Status
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: tbl-veteran -->
+
+### Disability
+
+*TODO: Add narrative for this section.*
+<!-- OBJECT: tbl-disability -->
+

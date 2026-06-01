@@ -1,0 +1,327 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: "Tw Cen MT", "Tw Cen MT Std", "Century Gothic", "Trebuchet MS", "Segoe UI", sans-serif;
+$headings-font-family: $font-family-sans-serif;
+
+$primary: #9acd4c;
+$secondary: #4e6e1e;
+$success: #75a42e;
+$info: #eaf5db;
+$warning: #c9a227;
+$danger: #b91c1c;
+$light: #f5f7f0;
+$dark: #1f2a37;
+
+$body-color: #000000;
+$body-bg: #ffffff;
+$link-color: #006d2c;
+$link-hover-color: #004e1f;
+
+$border-radius: 0;
+$card-border-radius: 0;
+$card-border-color: rgba(154, 205, 76, 0.4);
+
+/*-- scss:rules --*/
+:root {
+  --cha-primary: #9acd4c;
+  --cha-primary-light: #eaf5db;
+  --cha-accent: #4e6e1e;
+  --cha-figure: #75a42e;
+  --cha-link: #006d2c;
+  --cha-muted: #3d3d3d;
+  --cha-surface: #ffffff;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1 {
+  background: var(--cha-primary);
+  border: 2px solid var(--cha-primary);
+  color: #1f2a37;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.35rem 0.75rem;
+}
+
+h2 {
+  background: var(--cha-primary-light);
+  border: 2px solid var(--cha-primary-light);
+  color: #000000;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  padding: 0.25rem 0.75rem;
+}
+
+h3 {
+  border-top: 1px solid var(--cha-primary);
+  color: #000000;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-top: 0.35rem;
+}
+
+h4 {
+  border-top: 1px dotted var(--cha-primary);
+  color: var(--cha-accent);
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  margin-left: 0;
+  padding-top: 0.25rem;
+}
+
+figure figcaption,
+table caption {
+  color: #2f5d1d;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+figure figcaption p {
+  margin-bottom: 0;
+}
+
+section.footnotes {
+  font-size: 0.875rem;
+}
+
+section.footnotes a {
+  color: var(--cha-link);
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* Citation links styling - no underline on superscripts */
+/* Comprehensive override for all citation links - must come after Bootstrap */
+a[href^="#cite-"],
+a[href^="#cite-"]:link,
+a[href^="#cite-"]:visited,
+a[href^="#cite-"]:hover,
+a[href^="#cite-"]:active,
+a[href^="#cite-"]:focus,
+a[href^="#cite-"]:any-link {
+  color: var(--cha-link) !important;
+  text-decoration: none !important;
+  text-underline-offset: 0 !important;
+  text-underline-position: unset !important;
+  text-decoration-line: none !important;
+  text-decoration-style: none !important;
+  text-decoration-thickness: 0 !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  transition: color 0.2s ease;
+}
+
+a[href^="#cite-"]:hover,
+a[href^="#cite-"]:hover:link,
+a[href^="#cite-"]:hover:visited {
+  color: $link-hover-color !important;
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Target sup inside citation links - comprehensive override */
+a[href^="#cite-"] sup,
+a[href^="#cite-"]:link sup,
+a[href^="#cite-"]:visited sup,
+a[href^="#cite-"]:hover sup,
+a[href^="#cite-"]:active sup,
+a[href^="#cite-"]:focus sup,
+a[href^="#cite-"]:any-link sup {
+  font-size: 0.75em !important;
+  vertical-align: super !important;
+  line-height: 0 !important;
+  color: var(--cha-link) !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-underline-offset: 0 !important;
+  text-underline-position: unset !important;
+  text-decoration-style: none !important;
+  text-decoration-thickness: 0 !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+a[href^="#cite-"]:hover sup,
+a[href^="#cite-"]:hover:link sup,
+a[href^="#cite-"]:hover:visited sup {
+  color: $link-hover-color !important;
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Override any sup a rules for citation links */
+sup a[href^="#cite-"],
+sup a[href^="#cite-"]:link,
+sup a[href^="#cite-"]:visited,
+sup a[href^="#cite-"]:hover,
+sup a[href^="#cite-"]:active,
+sup a[href^="#cite-"]:focus,
+sup a[href^="#cite-"]:any-link {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  border-bottom: none !important;
+  text-underline-offset: 0 !important;
+  text-underline-position: unset !important;
+  text-decoration-style: none !important;
+  text-decoration-thickness: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Use default scroll behavior for reduced-motion compatibility. */
+html {
+  scroll-behavior: auto;
+}
+
+/* Highlight target citation when linked to */
+span[id^="cite-"]:target {
+  background-color: var(--cha-primary-light);
+  padding: 0.2em 0.4em;
+  border-left: 3px solid var(--cha-primary);
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.hero {
+  background: var(--cha-primary-light);
+  border: 1px solid var(--cha-primary);
+  border-radius: 0;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.kpi-card {
+  background: var(--cha-surface);
+  border: 1px solid rgba(154, 205, 76, 0.4);
+  box-shadow: none;
+}
+
+.kpi-card h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cha-muted);
+}
+
+.kpi-card strong {
+  font-size: 1.7rem;
+  color: var(--cha-accent);
+}
+
+.callout-note {
+  border-left: 4px solid var(--cha-primary);
+}
+
+/* Provide a visible first-focus target for keyboard users. */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background: #000000;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  transform: translateY(-120%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Ensure clear focus visibility on all common interactive controls. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 3px solid #1f2a37;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px #eaf5db;
+}
+
+/* Keep links distinguishable without relying on color alone. */
+a {
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: 0.16em;
+}
+
+/* Improve touch and motor accessibility in key navigation areas. */
+.navbar a,
+.pagination .page-link,
+.quarto-navigation-tool {
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.book-title .title,
+.quarto-title .title {
+  color: #1f2a37;
+}
+
+.breadcrumb-item > a {
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+/* Keep chapter navigation transitions subtle and non-disorienting. */
+body {
+  animation: chapter-fade-in 220ms ease-out;
+}
+
+body.page-is-leaving {
+  opacity: 0;
+  transition: opacity 180ms ease-in;
+}
+
+@keyframes chapter-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,71 @@
+project:
+  type: book
+  output-dir: docs
+  execute-dir: project
+  resources:
+    - "pdfs/**"
+  # Pre-render hooks generate chapter table/figure objects from the workbook.
+  # Enable and point these at the chapters that use metadata-driven objects.
+  # pre-render:
+  #   - python3 scripts/generate_chapter_objects.py --chapter "chapters/03-demographics.qmd" --output-dir "chapters/_generated/objects" --strict-refs
+  post-render:
+    - node scripts/patch_quarto_search.js
+
+lang: en
+
+book:
+  title: "Community Health Assessment YEAR"
+  subtitle: ""
+  author: "Your Organization"
+  # google-analytics: "G-XXXXXXXXXX"
+  downloads: [pdf]
+  chapters:
+    - index.qmd
+    - chapters/00-acknowledgements.qmd
+    - chapters/01-executive-summary.qmd
+    - chapters/01-introduction.qmd
+    - chapters/02-area-being-assessed.qmd
+    - chapters/03-demographics.qmd
+    - chapters/04-Social and Physical Determinants of Health.qmd
+    - chapters/05-community-partner-survey.qmd
+    - chapters/06-health-behaviors.qmd
+    - chapters/07-health-indicators.qmd
+    - chapters/08-Behavioral-Health.qmd
+    - chapters/09-Child-Health.qmd
+    - chapters/10-Environmental Indicators.qmd
+    - chapters/11-County-Health-Summaries.qmd
+    - chapters/12-Appendices.qmd
+  sidebar:
+    style: docked
+    search: true
+    collapse-level: 2
+
+bibliography: references.bib
+csl: https://www.zotero.org/styles/vancouver
+reference-location: section
+
+format:
+  html:
+    theme:
+      - default
+      - theme.scss
+    css: custom-citation-styles.css
+    include-in-header: includes/skip-link-head.html
+    include-before-body: includes/skip-to-main.html
+    include-after-body: references-dropdown.html
+    toc: true
+    toc-depth: 3
+    page-layout: full
+    code-fold: true
+    code-tools: false
+    number-sections: true
+    smooth-scroll: false
+    fig-cap-location: top
+    tbl-cap-location: top
+  pdf:
+    documentclass: report
+    include-in-header:
+      - includes/pdf-table-packages.tex
+
+execute:
+  freeze: false
