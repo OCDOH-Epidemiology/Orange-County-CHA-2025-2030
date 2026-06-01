@@ -40,14 +40,19 @@ A reusable [Quarto](https://quarto.org) **book** template for building a Communi
 Tables and figures are **data-driven**, not hand-written. The Excel workbook is both the data and the configuration:
 
 ```
-data/raw/workbook.xlsx  ──pre-render──>  chapters/_generated/objects/<id>.qmd  ──include──>  rendered figure/table
+data/raw/workbook.xlsx  ──generate──>  chapters/_generated/objects/<id>.qmd  ──include──>  rendered figure/table
 ```
 
-1. The workbook holds metadata sheets (`_registry`, `_figure_specs`, `_table_specs`, optional `_source_specs`) plus one data sheet per object. See `scripts/WORKBOOK_SCHEMA.md`.
-2. On every `quarto render`, the `pre-render` hook in `_quarto.yml` runs `scripts/generate_chapter_objects.py`, which writes one include file per object into `chapters/_generated/objects/` (these are git-ignored build artifacts).
+1. The workbook uses the **flat per-indicator format** (the same format as the Mid-Hudson CHA workbook): one sheet per indicator, with config cells in columns A/B (`Name`, `Table/Figure/Both`, `Object ID`, `Figure Type`, `X Column`, ...) and a data block to the right of an `Enter Data` cell. The starter `data/raw/workbook.xlsx` includes two example sheets (`Example Indicator`, `Example Trend`). See `scripts/WORKBOOK_SCHEMA.md`. (A normalized `_registry`/`_figure_specs`/`_table_specs` format is also supported.)
+2. `scripts/generate_chapter_objects.py` reads the workbook and writes one include file per object into `chapters/_generated/objects/`. These files **are committed** to the repo so includes resolve on the very first render. The `pre-render` hook in `_quarto.yml` re-runs the generator on every `quarto render` to keep them in sync as the workbook changes.
 3. A chapter pulls an object in with `{{< include _generated/objects/<object_id>.qmd >}}`, which reads the workbook at render time via the `CHA_WORKBOOK_PATH` defined in that chapter's setup block.
 
-**Convention:** the workbook lives at `data/raw/workbook.xlsx`. Keep that name (or update `CHA_WORKBOOK_PATH` in your chapters and the `--workbook` path in the `_quarto.yml` pre-render hook). Just dropping an arbitrary spreadsheet in `data/raw/` is **not** enough — it must follow the schema in `scripts/WORKBOOK_SCHEMA.md`.
+**Convention:** the workbook lives at `data/raw/workbook.xlsx`. Keep that name (or update `CHA_WORKBOOK_PATH` in your chapters and the `--workbook` path in the `_quarto.yml` pre-render hook). Just dropping an arbitrary spreadsheet in `data/raw/` is **not** enough — it must follow the flat-indicator schema in `scripts/WORKBOOK_SCHEMA.md`.
+
+> **When you add a brand-new indicator**, run the generator once before rendering so its include file exists (Quarto resolves includes before the pre-render hook runs):
+> ```bash
+> python3 scripts/generate_chapter_objects.py --workbook "data/raw/workbook.xlsx" --chapter "chapters/13-example-data-objects.qmd" --output-dir "chapters/_generated/objects" --include-source true
+> ```
 
 ## Spinning up a new workbook
 
@@ -55,7 +60,7 @@ data/raw/workbook.xlsx  ──pre-render──>  chapters/_generated/objects/<id
 2. **Replace the data.** Put your real workbook at `data/raw/workbook.xlsx` (same schema as the starter). It feeds every figure/table.
 3. **Wire your chapters into the pipeline.** Add a `pre-render` line in `_quarto.yml` for each chapter that uses objects (mirroring the example line), so its include files regenerate on render.
 4. **Write narrative.** Each `chapters/*.qmd` keeps the standard section structure with `TODO` placeholders. Replace the placeholders with your text. (You can also author chapters in Word - see `templates/TEMPLATE_INSTRUCTIONS.md`.)
-5. **Insert tables/figures.** Each chapter marks where data objects go with `<!-- OBJECT: <id> -->` comments. Replace a marker with a real include `{{< include _generated/objects/<id>.qmd >}}` once that `<id>` exists in your workbook's `_registry`.
+5. **Insert tables/figures.** Each chapter marks where data objects go with `<!-- OBJECT: <id> -->` comments. Add the indicator sheet to the workbook, run the generator once (see note above), then replace the marker with a real include `{{< include _generated/objects/<id>.qmd >}}`.
 6. **Add citations.** Append BibTeX entries to `references.bib` and cite them in text with `[@citation-key]`.
 7. **Remove the demo.** Delete `chapters/13-example-data-objects.qmd` and its line in `_quarto.yml` once you no longer need the reference example.
 
