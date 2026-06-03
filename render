@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Render the Quarto book from a local temp directory.
+# Use this instead of `quarto render` when the repo lives on a network/external
+# volume (e.g. Work Drive), where macOS creates ._* sidecars that break Quarto.
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+exec bash "${ROOT}/scripts/render_html_local_workdir.sh" "$@"

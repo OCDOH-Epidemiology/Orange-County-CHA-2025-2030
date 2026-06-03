@@ -33,6 +33,11 @@ A reusable [Quarto](https://quarto.org) **book** template for building a Communi
    ```bash
    quarto render
    ```
+   If the repo is on a network or external drive (for example Work Drive) and render fails with `Not a directory (os error 20): readdir '.../._...'`, use the local workdir wrapper instead (macOS creates `._*` metadata files on those volumes that Quarto cannot read):
+   ```bash
+   ./render
+   ```
+   Same as `bash scripts/render_html_local_workdir.sh` — stages the project under `/tmp`, runs `quarto render --to html`, and syncs `docs/` back into the repo.
 3. Open `docs/index.html` in a browser. The "Template Example: Live Data Objects" chapter shows a figure + table built from the starter `data/raw/workbook.xlsx`.
 
 ## How the data pipeline works
@@ -82,10 +87,12 @@ See `scripts/` for the full pipeline and guides:
 ## Publishing to GitHub Pages
 
 The book outputs to `docs/` for GitHub Pages.
-1. Run `quarto render`.
+1. Run `quarto render` (or `./render` if the project is on Work Drive or another external volume).
 2. Commit and push to `main`.
 3. In GitHub: Settings -> Pages -> Build from branch `main`, folder `/docs`.
 
 ## Accessibility
 
 `ACCESSIBILITY_CHANGES.md` documents the accessibility conventions baked into this template (skip-links, alt text, heading hierarchy, etc.). Keep them in mind as you author.
+
+bash scripts/render_html_local_workdir.sh

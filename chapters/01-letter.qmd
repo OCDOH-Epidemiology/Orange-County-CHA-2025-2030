@@ -1,0 +1,50 @@
+---
+title: "Letter from Director of Epidemiology to the Community"
+jupyter: python3
+execute:
+  freeze: false
+---
+
+Dear Orange County Residents and Partners,
+
+It is my privilege to share with you the completion of our latest Orange County Community Health Assessment
+(CHA). This document reflects months of listening, analyzing, and collaborating with community members, service
+providers, and partners across many sectors who care deeply about the health and well-being of our county.
+
+The CHA and Community Health Improvement Plan (CHIP) together tell an important story about Orange County.
+They describe where we are today, the challenges our residents face, and the opportunities we have to improve
+health for all. This work goes beyond statistics and charts. It incorporates lived experiences, community priorities,and the voices of people who know their neighborhoods best. As the team responsible for overseeing the
+development of these reports, we are committed to ensuring that this process is inclusive, data-informed, and
+grounded in the realities of everyday life in Orange County.
+
+One message came through clearly: improving community health cannot be accomplished by any single
+organization, discipline, or level of government. Health is shaped by access to quality healthcare, but also by
+housing stability, food security, transportation, education, safe environments, economic opportunity, and strong
+social connections. Addressing these complex and interconnected factors requires partnerships that are broad,
+creative, and sustained.
+
+Orange County is fortunate to have a strong network of community-based organizations, healthcare providers,
+schools, faith-based groups, municipalities, businesses, and residents who already work every day to make a
+difference. The CHA and CHIP build upon this foundation by identifying shared priorities and providing a
+roadmap for collective action. They are not intended to sit on a shelf, but to serve as living guides that inform
+decisions, align resources, and inspire collaboration.
+
+The Orange County Department of Health is committed to doing its part, but we know that government alone
+cannot solve the most pressing health challenges facing our county. Lasting change happens when community
+members and partners bring their knowledge, skills, relationships, and passion to the table. Each organization
+and individual has something valuable to contribute.
+
+I invite you to review the CHA and consider how your work, your organization, or your interests align with the
+priorities outlined. We welcome new and existing partners to join us in implementing strategies, sharing ideas,
+and co-creating solutions. Whether you represent an organization or are simply someone who cares about the
+future of Orange County, your voice matters. Together, we can build a healthier, more resilient Orange County
+where everyone has the opportunity to thrive.
+
+Thank you for your continued commitment to our community and for being part of this important work.
+
+Sincerely,
+
+
+>- Jacqueline Lawler, MPH
+>- Director of Epidemiology and Public Health Planning
+>- Orange County Department of Health 

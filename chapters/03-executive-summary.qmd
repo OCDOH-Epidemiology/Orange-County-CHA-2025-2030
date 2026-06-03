@@ -1,0 +1,58 @@
+---
+title: "Executive Summary"
+jupyter: python3
+toc: true
+toc-depth: 3
+execute:
+  freeze: false
+---
+## What Is a Community Health Assessment and Community Health Improvement Plan?
+
+The Community Health Assessment (CHA) describes the overall health of the community by presenting information on health status, factors that influence health, and community needs and assets. The CHA is a foundational essential service of local public health departments to assess and monitor health and to identify target populations that may be at increased risk of poor health outcomes. Through systematic, comprehensive data analysis, the CHA identifies key health priorities as outlined by the New York State (NYS) Department of Health’s (DOH) Prevention Agenda.
+
+The Community Health Improvement Plan (CHIP) is a long-term systemic effort to improve resident health by addressing the public health priorities identified in the CHA. Creating the CHA and CHIP is a collaborative process between the local health department (LHD) and key, diverse stakeholders in the community, including the area hospitals, to coordinate efforts, establish priorities, and combine resources to guide health promotion strategies.
+
+## What Does the CHA and CHIP Process Look Like?
+
+The Orange County (OC) DOH utilized a modified model of the Mobilizing Action through Planning and Partnership process (MAPP), developed by the National Association for County and City Health Officials (NACCHO). MAPP is a community-driven strategic planning process to achieve health equity. As part of this process, the OC CHA findings are shared within the OC community and will be the foundation for completion of the OC CHIP, which will be finalized in June of 2026.
+
+## What Were the Data Sources Reviewed?
+
+The OC CHA utilized national, state, and local data including over 30 secondary sources and three primary sources. For example, secondary data from the US Census Bureau, Behavioral Risk Factor Surveillance System, NYS Cancer Dashboard, NYS Communicable Disease Electronic Surveillance System, NYSDOH Community Health Indicator Reports, NYSDOH County Health Indicators by Race and Ethnicity, NYS Prevention Agenda Tracking Dashboard, Vital Statistics of NYS, among many others were used. Local sources from the Orange County Medical Examiner’s Office, the Orange County Community Health Survey, Mid-Hudson (M-H) Community Provider Survey, Community Asset Survey, among others, were also used.
+
+Comparisons were made to NYS, NYS excluding NYC, M-H Region, other M-H counties, and sub-county estimates, where available. Sources are reviewed as part of a continuous data review process and shared with local partners as new data becomes available. As a complement to this secondary data review and the primary data collection with the resident surveys, OCDOH updated the Community Health Assessment Data Review Guide. The guide is a review of over 150 of the most current secondary data indicators available. Multiple opportunities were provided for residents to share their input, including multiple surveys, focus groups, key informant interviews, and the OC Health Summit.
+
+## What Were the Major Health Issues Identified?
+
+Premature death for those less than 65 years in OC is the second worst in the M-H Region and worse than the NYS rate. Heart disease and cancer are the leading causes of death and premature death (death before age 75) by a large margin. These margins are larger along racial and ethnic lines, with OC having the second highest percentage difference between Black Non-Hispanics and White Non-Hispanics, in the M-H Region.
+
+Obesity is a leading contributor to these top causes of death, as well as cancer, diabetes, stroke, and hypertension, all of which can lead to premature death. OC’s percentage of adults overweight or obese is the highest in the M-H Region at 75%. Over the past ten years, the rates of obesity have continually grown, as well as the subsequent morbidity of cardiovascular disease, prediabetes, and hypertension. OC’s age-adjusted all cancer mortality is the highest in the M-H Region at 155.5 per 100,000 residents, and 1.4 times higher than the NYS rate based on the latest available data.
+
+Within these preventable causes of death, there are disparities among racial and ethnic minorities. These disparities can be seen in the rates of premature deaths, food insecurity, infant mortality, asthma hospitalizations, hospitalizations and mortality due to heart disease, breast cancer mortality, prostate cancer incidence and mortality, colorectal cancer mortality, and premature births. Many of these health outcomes are influenced by the social determinants of health, conditions where systems and policies determine the environments in which people live.
+
+Given the connectivity between physical health and mental health, it is important to focus on both physical health and mental health. In 2024, 36% of OC adults 18 years and older reported they experience either moderate or serious psychological distress. However, 47% of adults with an income less than $25K per year reported moderate or serious psychological distress. This highlights the role poverty plays in impacting residents’ well-being.
+
+Where data are available across the M-H Region from 2019–2022, OC ranked fourth in the M-H region in overdose deaths involving any opioid and higher than the NYS excluding NYC rate. However, strides have been made in addressing substance use in OC, including a 45.5% reduction in overdose deaths between 2021 and 2024, where local data are available.
+
+Other health areas where OC falls behind NYS or has worsened since the last assessment include:
+
+>- Food security
+>- Obesity in children and adults
+>- Severely cost burdened households
+>- Cardiovascular disease hospitalization rate
+>- Adults with prediabetes
+>- Lack of physical activity
+>- Asthma hospitalization rate among adults
+>- Emergency department visits for asthma in children 17 years and younger
+>- Stroke hospitalization rate
+>- Cancer mortality including all-cancer, female breast cancer, lung and bronchus, prostate, and colorectal cancer
+>- Childhood immunization rates among children 24–35 months of age
+>- Percentage of births with late or no prenatal care
+>- Percentage of women age 50–74 years receiving breast cancer screening based on recent guidelines
+>- Early syphilis case rate
+
+## How Will the Priority Areas and Strategies to Address These Issues Be Chosen?
+
+Priority areas will be selected over the next six months through the analysis of local data, community engagement assessments (including community surveys), focus groups, key informant interviews, and the Orange County Health Summit. As part of this process, OCDOH created a CHIP Steering Committee consisting of 20 individuals outside of internal staff representing area hospitals, community-based organizations, business owners, schools and colleges, federally qualified healthcare centers, and the community.
+
+Over the next six months, the committee will meet to review the assessments and collectively select the priority areas and evidence-based strategies, draft the goals, objectives, responsible partners, a timeline for completion, evaluation measures, and both short-term and long-term outcome measures. Each priority area will have a corresponding workgroup led by OCDOH and will use existing partnerships to actively recruit community partners and residents to participate. The CHIP Steering Committee will meet quarterly after June 2026 to review progress, make modifications as necessary, and ensure that each strategy is executed.

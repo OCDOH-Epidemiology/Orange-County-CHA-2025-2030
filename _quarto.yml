@@ -15,19 +15,18 @@ project:
 lang: en
 
 book:
-  title: "Community Health Assessment YEAR"
+  title: "Orange County Community Health Assessment 2025-2030"
   subtitle: ""
-  author: "Your Organization"
+  author: "Orange County Department of Health"
   # google-analytics: "G-XXXXXXXXXX"
   downloads: [pdf]
   chapters:
     - index.qmd
     - chapters/00-acknowledgements.qmd
-    - chapters/01-executive-summary.qmd
-    - chapters/01-introduction.qmd
-    - chapters/02-area-being-assessed.qmd
-    - chapters/03-demographics.qmd
-    - chapters/04-Social and Physical Determinants of Health.qmd
+    - chapters/01-letter.qmd
+    - chapters/02-Data Sources and Indicator Selection.qmd
+    - chapters/03-executive-summary.qmd
+    - chapters/04-OCDOH.qmd
     - chapters/05-community-partner-survey.qmd
     - chapters/06-health-behaviors.qmd
     - chapters/07-health-indicators.qmd

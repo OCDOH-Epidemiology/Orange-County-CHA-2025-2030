@@ -54,10 +54,18 @@ OBJECT_IDS_OMIT_EMBEDDED_SOURCE: frozenset[str] = frozenset(
 )
 
 
+def _iter_chapter_qmd_files(chapters_dir: Path):
+    """Yield chapter files while skipping macOS sidecar metadata files."""
+    for chapter_file in chapters_dir.glob("*.qmd"):
+        if chapter_file.name.startswith("._"):
+            continue
+        yield chapter_file
+
+
 def _include_stems_from_chapters(chapters_dir: Path) -> set[str]:
     """Collect fig-/tbl- stems from all chapter shortcode includes (any .qmd in chapters/)."""
     stems: set[str] = set()
-    for chapter_file in chapters_dir.glob("*.qmd"):
+    for chapter_file in _iter_chapter_qmd_files(chapters_dir):
         stems.update(_INCLUDE_STEM_RE.findall(chapter_file.read_text(encoding="utf-8")))
     return stems
 
@@ -313,7 +321,7 @@ def main(argv: list[str] | None = None) -> None:
     chapter_text = chapter_path.read_text(encoding="utf-8")
     preserve_stems: set[str] = set()
     chapters_dir = chapter_path.parent
-    for chapter_file in chapters_dir.glob("*.qmd"):
+    for chapter_file in _iter_chapter_qmd_files(chapters_dir):
         chapter_body = chapter_file.read_text(encoding="utf-8")
         include_prefix = output_dir.relative_to(chapter_file.parent).as_posix()
         preserve_re = re.compile(re.escape(include_prefix) + r"/([A-Za-z0-9+-]+)\.qmd")
