@@ -86,10 +86,15 @@ See `scripts/` for the full pipeline and guides:
 
 ## Publishing to GitHub Pages
 
-The book outputs to `docs/` for GitHub Pages.
-1. Run `quarto render` (or `./render` if the project is on Work Drive or another external volume).
-2. Commit and push to `main`.
-3. In GitHub: Settings -> Pages -> Build from branch `main`, folder `/docs`.
+The book renders to `docs/index.html`. GitHub must serve **that folder**, not the repo root (root shows `README.md`).
+
+1. Render: `quarto render` or `./render` (Work Drive / external volumes).
+2. Commit the `docs/` folder and push to `main`.
+3. On GitHub: **Settings → Pages → Build and deployment → Deploy from a branch**
+   - Branch: `main`
+   - Folder: **`/docs`** (not `/ (root)`)
+
+Site URL: `https://ocdoh-epidemiology.github.io/Orange-County-CHA-2025-2030/`
 
 ## Accessibility
 

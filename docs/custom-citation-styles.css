@@ -1,0 +1,88 @@
+/* Custom citation styles - loads after Bootstrap to ensure overrides work */
+/* This file should be included in quarto.yml to load after Bootstrap */
+
+/* Force remove underlines from citation links - highest specificity */
+a[href^="#cite-"],
+a[href^="#cite-"]:link,
+a[href^="#cite-"]:visited,
+a[href^="#cite-"]:hover,
+a[href^="#cite-"]:active,
+a[href^="#cite-"]:focus,
+a[href^="#cite-"]:any-link {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-decoration-style: none !important;
+  text-decoration-thickness: 0 !important;
+  text-underline-offset: 0 !important;
+  text-underline-position: unset !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  -webkit-text-decoration: none !important;
+  -moz-text-decoration: none !important;
+}
+
+a[href^="#cite-"] sup,
+a[href^="#cite-"]:link sup,
+a[href^="#cite-"]:visited sup,
+a[href^="#cite-"]:hover sup,
+a[href^="#cite-"]:active sup,
+a[href^="#cite-"]:focus sup,
+a[href^="#cite-"]:any-link sup {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-decoration-style: none !important;
+  text-decoration-thickness: 0 !important;
+  text-underline-offset: 0 !important;
+  text-underline-position: unset !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  -webkit-text-decoration: none !important;
+  -moz-text-decoration: none !important;
+}
+
+sup a[href^="#cite-"],
+sup a[href^="#cite-"]:link,
+sup a[href^="#cite-"]:visited,
+sup a[href^="#cite-"]:hover,
+sup a[href^="#cite-"]:active,
+sup a[href^="#cite-"]:focus,
+sup a[href^="#cite-"]:any-link {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-decoration-style: none !important;
+  text-decoration-thickness: 0 !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  -webkit-text-decoration: none !important;
+  -moz-text-decoration: none !important;
+}
+
+/* Quarto/Pandoc citation links */
+a[role="doc-biblioref"],
+a[role="doc-biblioref"]:link,
+a[role="doc-biblioref"]:visited,
+a[role="doc-biblioref"]:hover,
+a[role="doc-biblioref"]:active,
+a[role="doc-biblioref"]:focus {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Move figure caption above the figure for #fig-labor-force */
+.quarto-float[id^="fig-labor-force"] {
+  display: flex;
+  flex-direction: column;
+}
+
+.quarto-float[id^="fig-labor-force"] .quarto-float-caption-bottom {
+  order: -1;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+.quarto-float[id^="fig-labor-force"] figcaption.quarto-float-caption-bottom {
+  order: -1;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}

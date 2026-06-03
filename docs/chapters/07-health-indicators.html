@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>9&nbsp; Health Indicators – Orange County Community Health Assessment 2025-2030</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/08-Behavioral-Health.html" rel="next">
+<link href="../chapters/06-health-behaviors.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-59d722b0d079687c6600c5aa91245af3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.querySelector(".skip-link")) return;
+  var targetId = "quarto-document-content";
+  var link = document.createElement("a");
+  link.className = "skip-link";
+  link.href = "#" + targetId;
+  link.textContent = "Skip to main content";
+  if (document.body.firstChild) {
+    document.body.insertBefore(link, document.body.firstChild);
+  } else {
+    document.body.appendChild(link);
+  }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var toggles = document.querySelectorAll(
+    'div[data-bs-toggle="collapse"][data-bs-target]'
+  );
+  toggles.forEach(function (el) {
+    if (!el.hasAttribute("role")) {
+      el.setAttribute("role", "button");
+    }
+    if (!el.hasAttribute("tabindex")) {
+      el.setAttribute("tabindex", "0");
+    }
+    el.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        el.click();
+      }
+    });
+  });
+
+  var sidebarGlass = document.getElementById("quarto-sidebar-glass");
+  if (sidebarGlass && !sidebarGlass.getAttribute("aria-label")) {
+    sidebarGlass.setAttribute("aria-label", "Close sidebar overlay");
+  }
+
+  var scrollableOutputs = document.querySelectorAll(
+    ".cell-output.cell-output-display:not(.cell-output-markdown)"
+  );
+  scrollableOutputs.forEach(function (el) {
+    if (!el.hasAttribute("tabindex")) {
+      el.setAttribute("tabindex", "0");
+    }
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
+  if (prefersReducedMotion.matches) return;
+
+  var isModifiedClick = function (event) {
+    return (
+      event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0
+    );
+  };
+
+  var shouldAnimateNavigation = function (anchor) {
+    if (!anchor || !anchor.href) return false;
+    if (anchor.target && anchor.target.toLowerCase() === "_blank") return false;
+    if (anchor.hasAttribute("download")) return false;
+
+    var nextUrl = new URL(anchor.href, window.location.href);
+    if (nextUrl.origin !== window.location.origin) return false;
+    if (nextUrl.pathname === window.location.pathname && nextUrl.hash) return false;
+
+    return true;
+  };
+
+  document.addEventListener("click", function (event) {
+    if (isModifiedClick(event)) return;
+
+    var anchor = event.target.closest("a");
+    if (!shouldAnimateNavigation(anchor)) return;
+
+    event.preventDefault();
+    document.body.classList.add("page-is-leaving");
+    window.setTimeout(function () {
+      window.location.assign(anchor.href);
+    }, 180);
+  });
+});
+</script>
+
+
+<link rel="stylesheet" href="../custom-citation-styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/07-health-indicators.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Health Indicators</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Orange County Community Health Assessment 2025-2030</a> 
+        <div class="sidebar-tools-main">
+    <a href="../Orange-County-Community-Health-Assessment-2025-2030.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Community Health Assessment YEAR</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/00-acknowledgements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Acknowledgments</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01-letter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Letter from Director of Epidemiology to the Community</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02-Data Sources and Indicator Selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data Sources and Indicator Selection</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03-executive-summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Executive Summary</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04-OCDOH.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Orange County Department of Health</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05-community-partner-survey.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Community Partner Survey</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/06-health-behaviors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Health Behaviors Indicators</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/07-health-indicators.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Health Indicators</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/08-Behavioral-Health.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Behavioral Health</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/09-Child-Health.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Child Health</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/10-Environmental Indicators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Environmental Indicators</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/11-County-Health-Summaries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">County Health Summaries</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/12-Appendices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">List of Appendices</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/13-example-data-objects.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Template Example: Live Data Objects</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#mortality" id="toc-mortality" class="nav-link active" data-scroll-target="#mortality"><span class="header-section-number">9.1</span> Mortality</a></li>
+  <li><a href="#premature-death" id="toc-premature-death" class="nav-link" data-scroll-target="#premature-death"><span class="header-section-number">9.2</span> Premature Death</a></li>
+  <li><a href="#physical-health" id="toc-physical-health" class="nav-link" data-scroll-target="#physical-health"><span class="header-section-number">9.3</span> Physical Health</a>
+  <ul class="collapse">
+  <li><a href="#chronic-diseases" id="toc-chronic-diseases" class="nav-link" data-scroll-target="#chronic-diseases"><span class="header-section-number">9.3.1</span> Chronic Diseases</a></li>
+  <li><a href="#asthma" id="toc-asthma" class="nav-link" data-scroll-target="#asthma"><span class="header-section-number">9.3.2</span> Asthma</a></li>
+  <li><a href="#cardiovascular-disease" id="toc-cardiovascular-disease" class="nav-link" data-scroll-target="#cardiovascular-disease"><span class="header-section-number">9.3.3</span> Cardiovascular Disease</a></li>
+  <li><a href="#hypertension" id="toc-hypertension" class="nav-link" data-scroll-target="#hypertension"><span class="header-section-number">9.3.4</span> Hypertension</a></li>
+  <li><a href="#cerebrovascular-disease" id="toc-cerebrovascular-disease" class="nav-link" data-scroll-target="#cerebrovascular-disease"><span class="header-section-number">9.3.5</span> Cerebrovascular Disease</a></li>
+  <li><a href="#coronary-heart-disease" id="toc-coronary-heart-disease" class="nav-link" data-scroll-target="#coronary-heart-disease"><span class="header-section-number">9.3.6</span> Coronary Heart Disease</a></li>
+  <li><a href="#diabetes" id="toc-diabetes" class="nav-link" data-scroll-target="#diabetes"><span class="header-section-number">9.3.7</span> Diabetes</a></li>
+  <li><a href="#obesity" id="toc-obesity" class="nav-link" data-scroll-target="#obesity"><span class="header-section-number">9.3.8</span> Obesity</a></li>
+  <li><a href="#cirrhosis-of-the-liver" id="toc-cirrhosis-of-the-liver" class="nav-link" data-scroll-target="#cirrhosis-of-the-liver"><span class="header-section-number">9.3.9</span> Cirrhosis of the Liver</a></li>
+  <li><a href="#cancer" id="toc-cancer" class="nav-link" data-scroll-target="#cancer"><span class="header-section-number">9.3.10</span> Cancer</a></li>
+  <li><a href="#colorectal-cancer" id="toc-colorectal-cancer" class="nav-link" data-scroll-target="#colorectal-cancer"><span class="header-section-number">9.3.11</span> Colorectal Cancer</a></li>
+  <li><a href="#lung-cancer" id="toc-lung-cancer" class="nav-link" data-scroll-target="#lung-cancer"><span class="header-section-number">9.3.12</span> Lung Cancer</a></li>
+  <li><a href="#prostate-cancer" id="toc-prostate-cancer" class="nav-link" data-scroll-target="#prostate-cancer"><span class="header-section-number">9.3.13</span> Prostate Cancer</a></li>
+  <li><a href="#female-breast-cancer" id="toc-female-breast-cancer" class="nav-link" data-scroll-target="#female-breast-cancer"><span class="header-section-number">9.3.14</span> Female Breast Cancer</a></li>
+  <li><a href="#cervix-uteri-cancer" id="toc-cervix-uteri-cancer" class="nav-link" data-scroll-target="#cervix-uteri-cancer"><span class="header-section-number">9.3.15</span> Cervix Uteri Cancer</a></li>
+  <li><a href="#infectious-diseases" id="toc-infectious-diseases" class="nav-link" data-scroll-target="#infectious-diseases"><span class="header-section-number">9.3.16</span> Infectious Diseases</a></li>
+  <li><a href="#covid-19" id="toc-covid-19" class="nav-link" data-scroll-target="#covid-19"><span class="header-section-number">9.3.17</span> COVID-19</a></li>
+  <li><a href="#human-papillomavirus-immunization" id="toc-human-papillomavirus-immunization" class="nav-link" data-scroll-target="#human-papillomavirus-immunization"><span class="header-section-number">9.3.18</span> Human Papillomavirus Immunization</a></li>
+  <li><a href="#flu-immunization" id="toc-flu-immunization" class="nav-link" data-scroll-target="#flu-immunization"><span class="header-section-number">9.3.19</span> Flu Immunization</a></li>
+  <li><a href="#pneumonia-immunization" id="toc-pneumonia-immunization" class="nav-link" data-scroll-target="#pneumonia-immunization"><span class="header-section-number">9.3.20</span> Pneumonia Immunization</a></li>
+  <li><a href="#sexually-transmitted-infections" id="toc-sexually-transmitted-infections" class="nav-link" data-scroll-target="#sexually-transmitted-infections"><span class="header-section-number">9.3.21</span> Sexually Transmitted Infections</a></li>
+  <li><a href="#tick-borne-diseases" id="toc-tick-borne-diseases" class="nav-link" data-scroll-target="#tick-borne-diseases"><span class="header-section-number">9.3.22</span> Tick-Borne Diseases</a></li>
+  <li><a href="#maternal-and-infant-health" id="toc-maternal-and-infant-health" class="nav-link" data-scroll-target="#maternal-and-infant-health"><span class="header-section-number">9.3.23</span> Maternal and Infant Health</a></li>
+  <li><a href="#adverse-birth-outcomes" id="toc-adverse-birth-outcomes" class="nav-link" data-scroll-target="#adverse-birth-outcomes"><span class="header-section-number">9.3.24</span> Adverse Birth Outcomes</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+<a class="skip-link" href="#quarto-document-content">Skip to main content</a>
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Health Indicators</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- WORKED EXAMPLE - the standard pattern for adding a data object to a section.
+     Generate the object file with scripts/generate_chapter_objects.py (it writes to
+     chapters/_generated/objects/<id>.qmd), then reference it and document its source:
+
+{{< include _generated/objects/<id>.qmd >}}
+
+::: {.callout-note collapse="true"}
+## Source
+Data source citation, accessed Month Year.
+:::
+
+::: {.callout-note}
+Note: Methodology notes for this indicator.
+:::
+-->
+<section id="mortality" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="mortality"><span class="header-section-number">9.1</span> Mortality</h2>
+<p><em>TODO: Add narrative for this section.</em></p>
+</section>
+<section id="premature-death" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="premature-death"><span class="header-section-number">9.2</span> Premature Death</h2>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-premature-death-percent --> <!-- OBJECT: tbl-premature-death-percent --></p>
+<!-- OBJECT: fig-premature-death-percent-diff-bnhvswnh -->
+<!-- OBJECT: tbl-premature-death-percent-diff-bnhvswnh -->
+<!-- OBJECT: fig-premature-death-percent-diff-hvswnh -->
+<!-- OBJECT: tbl-premature-death-percent-diff-hvswnh -->
+</section>
+<section id="physical-health" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="physical-health"><span class="header-section-number">9.3</span> Physical Health</h2>
+<p><em>TODO: Add narrative for this section.</em></p>
+<section id="chronic-diseases" class="level3" data-number="9.3.1">
+<h3 data-number="9.3.1" class="anchored" data-anchor-id="chronic-diseases"><span class="header-section-number">9.3.1</span> Chronic Diseases</h3>
+<p><em>TODO: Add narrative for this section.</em></p>
+<section id="chronic-lower-respiratory-diseases" class="level4" data-number="9.3.1.1">
+<h4 data-number="9.3.1.1" class="anchored" data-anchor-id="chronic-lower-respiratory-diseases"><span class="header-section-number">9.3.1.1</span> Chronic Lower Respiratory Diseases</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-clrd-hospital-aar --> <!-- OBJECT: tbl-clrd-hospital-aar --></p>
+<!-- OBJECT: fig-clrd-mortal-aar -->
+<!-- OBJECT: tbl-clrd-mortal-aar -->
+<!-- OBJECT: fig-clrd-hospital-rande-aar -->
+<!-- OBJECT: tbl-clrd-hospital-rande-aar -->
+<!-- OBJECT: fig-clrd-mortal-rande-aar -->
+<!-- OBJECT: tbl-clrd-mortal-rande-aar -->
+</section>
+</section>
+<section id="asthma" class="level3" data-number="9.3.2">
+<h3 data-number="9.3.2" class="anchored" data-anchor-id="asthma"><span class="header-section-number">9.3.2</span> Asthma</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-brfss-adult-asthma --> <!-- OBJECT: tbl-brfss-adult-asthma --></p>
+<!-- OBJECT: fig-asthma-hopsital-aar -->
+<!-- OBJECT: tbl-asthma-hopsital-aar -->
+<!-- OBJECT: fig-asthma-hopsital-rande-aar -->
+<!-- OBJECT: tbl-asthma-hopsital-rande-aar -->
+<!-- OBJECT: fig-0to17-asthma-ed-rate -->
+<!-- OBJECT: tbl-0to17-asthma-ed-rate -->
+</section>
+<section id="cardiovascular-disease" class="level3" data-number="9.3.3">
+<h3 data-number="9.3.3" class="anchored" data-anchor-id="cardiovascular-disease"><span class="header-section-number">9.3.3</span> Cardiovascular Disease</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-adult-cardiovasdz-percent --> <!-- OBJECT: tbl-adult-cardiovasdz-percent --></p>
+<!-- OBJECT: fig-cardiovasdz-hospi-aar -->
+<!-- OBJECT: tbl-cardiovasdz-hospi-aar -->
+<!-- OBJECT: fig-cardiovasdz-mortal-aar -->
+<!-- OBJECT: tbl-cardiovasdz-mortal-aar -->
+</section>
+<section id="hypertension" class="level3" data-number="9.3.4">
+<h3 data-number="9.3.4" class="anchored" data-anchor-id="hypertension"><span class="header-section-number">9.3.4</span> Hypertension</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-adult-highbp-mddx-percent --> <!-- OBJECT: tbl-adult-highbp-mddx-percent --></p>
+</section>
+<section id="cerebrovascular-disease" class="level3" data-number="9.3.5">
+<h3 data-number="9.3.5" class="anchored" data-anchor-id="cerebrovascular-disease"><span class="header-section-number">9.3.5</span> Cerebrovascular Disease</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-cerebrovasdz-hospital-aar --> <!-- OBJECT: tbl-cerebrovasdz-hospital-aar --></p>
+<!-- OBJECT: fig-cerebrovasdz-hospital-rande-aar -->
+<!-- OBJECT: tbl-cerebrovasdz-hospital-rande-aar -->
+<!-- OBJECT: fig-cerebrovasdz-mortal-aar -->
+<!-- OBJECT: tbl-cerebrovasdz-mortal-aar -->
+<!-- OBJECT: fig-cerebrovasdz-mortal-rande-aar -->
+<!-- OBJECT: tbl-cerebrovasdz-mortal-rande-aar -->
+</section>
+<section id="coronary-heart-disease" class="level3" data-number="9.3.6">
+<h3 data-number="9.3.6" class="anchored" data-anchor-id="coronary-heart-disease"><span class="header-section-number">9.3.6</span> Coronary Heart Disease</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-coronary-heart-disease-hospital-aar --> <!-- OBJECT: tbl-coronary-heart-disease-hospital-aar --></p>
+<!-- OBJECT: fig-coronary-heart-disease-hospital-rande-aar -->
+<!-- OBJECT: tbl-coronary-heart-disease-hospital-rande-aar -->
+<!-- OBJECT: fig-heartattack-hospital-aar -->
+<!-- OBJECT: tbl-heartattack-hospital-aar -->
+<!-- OBJECT: fig-congheartfail-mortal-aar -->
+<!-- OBJECT: tbl-congheartfail-mortal-aar -->
+<!-- OBJECT: fig-congheartfail-mortal-rande -->
+<!-- OBJECT: tbl-congheartfail-mortal-rande -->
+<!-- OBJECT: fig-heartattack-mortal-aar -->
+<!-- OBJECT: tbl-heartattack-mortal-aar -->
+<!-- OBJECT: fig-congheartfail-mortal-aar-2 -->
+<!-- OBJECT: tbl-congheartfail-mortal-aar-2 -->
+</section>
+<section id="diabetes" class="level3" data-number="9.3.7">
+<h3 data-number="9.3.7" class="anchored" data-anchor-id="diabetes"><span class="header-section-number">9.3.7</span> Diabetes</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-mddx-predm-dm-percent --> <!-- OBJECT: tbl-mddx-predm-dm-percent --></p>
+<!-- OBJECT: fig-dm-hospital-rande-aar -->
+<!-- OBJECT: tbl-dm-hospital-rande-aar -->
+<!-- OBJECT: fig-highbs-dm-percent -->
+<!-- OBJECT: tbl-highbs-dm-percent -->
+<!-- OBJECT: fig-dm-mortal-aar -->
+<!-- OBJECT: tbl-dm-mortal-aar -->
+<!-- OBJECT: fig-dm-mortal-rande-aar -->
+<!-- OBJECT: tbl-dm-mortal-rande-aar -->
+</section>
+<section id="obesity" class="level3" data-number="9.3.8">
+<h3 data-number="9.3.8" class="anchored" data-anchor-id="obesity"><span class="header-section-number">9.3.8</span> Obesity</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-adult-oando-percent --> <!-- OBJECT: tbl-adult-oando-percent --></p>
+<!-- OBJECT: fig-adult-obese-percent -->
+<!-- OBJECT: tbl-adult-obese-percent -->
+<!-- OBJECT: fig-child-oando-percent -->
+<!-- OBJECT: tbl-child-oando-percent -->
+</section>
+<section id="cirrhosis-of-the-liver" class="level3" data-number="9.3.9">
+<h3 data-number="9.3.9" class="anchored" data-anchor-id="cirrhosis-of-the-liver"><span class="header-section-number">9.3.9</span> Cirrhosis of the Liver</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-cirrhosis-hospital-aar --> <!-- OBJECT: tbl-cirrhosis-hospital-aar --></p>
+<!-- OBJECT: fig-cirrhosis-mortal-aar -->
+<!-- OBJECT: tbl-cirrhosis-mortal-aar -->
+</section>
+<section id="cancer" class="level3" data-number="9.3.10">
+<h3 data-number="9.3.10" class="anchored" data-anchor-id="cancer"><span class="header-section-number">9.3.10</span> Cancer</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-allca-incident-mortal-aar --> <!-- OBJECT: tbl-allca-incident-mortal-aar --></p>
+<!-- OBJECT: fig-allca-incident-mortal-sex-aar -->
+<!-- OBJECT: tbl-allca-incident-mortal-sex-aar -->
+</section>
+<section id="colorectal-cancer" class="level3" data-number="9.3.11">
+<h3 data-number="9.3.11" class="anchored" data-anchor-id="colorectal-cancer"><span class="header-section-number">9.3.11</span> Colorectal Cancer</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-colonrectca-incident-mortal-aar --> <!-- OBJECT: tbl-colonrectca-incident-mortal-aar --></p>
+<!-- OBJECT: fig-colonrectca-incident-mortal-sex-aar -->
+<!-- OBJECT: tbl-colonrectca-incident-mortal-sex-aar -->
+<!-- OBJECT: fig-colorectalca-incidence-rande-aar -->
+<!-- OBJECT: tbl-colorectalca-incidence-rande-aar -->
+<!-- OBJECT: fig-adult-50to64-colorectalca-screening-percent -->
+<!-- OBJECT: tbl-adult-50to64-colorectalca-screening-percent -->
+</section>
+<section id="lung-cancer" class="level3" data-number="9.3.12">
+<h3 data-number="9.3.12" class="anchored" data-anchor-id="lung-cancer"><span class="header-section-number">9.3.12</span> Lung Cancer</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-lungbronchca-incident-mortal-aar --> <!-- OBJECT: tbl-lungbronchca-incident-mortal-aar --></p>
+<!-- OBJECT: fig-lungbronchca-incident-mortal-sex-aar -->
+<!-- OBJECT: tbl-lungbronchca-incident-mortal-sex-aar -->
+<!-- OBJECT: fig-lungca-incidence-rande-aar -->
+<!-- OBJECT: tbl-lungca-incidence-rande-aar -->
+</section>
+<section id="prostate-cancer" class="level3" data-number="9.3.13">
+<h3 data-number="9.3.13" class="anchored" data-anchor-id="prostate-cancer"><span class="header-section-number">9.3.13</span> Prostate Cancer</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-male-prostateca-incidence-mortal-aar --> <!-- OBJECT: tbl-male-prostateca-incidence-mortal-aar --></p>
+</section>
+<section id="female-breast-cancer" class="level3" data-number="9.3.14">
+<h3 data-number="9.3.14" class="anchored" data-anchor-id="female-breast-cancer"><span class="header-section-number">9.3.14</span> Female Breast Cancer</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-female-breastca-incidence-mortal-aar --> <!-- OBJECT: tbl-female-breastca-incidence-mortal-aar --></p>
+<!-- OBJECT: fig-female-breastca-screening-percent -->
+<!-- OBJECT: tbl-female-breastca-screening-percent -->
+</section>
+<section id="cervix-uteri-cancer" class="level3" data-number="9.3.15">
+<h3 data-number="9.3.15" class="anchored" data-anchor-id="cervix-uteri-cancer"><span class="header-section-number">9.3.15</span> Cervix Uteri Cancer</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-cervutca-incident-mortal-aar --> <!-- OBJECT: tbl-cervutca-incident-mortal-aar --></p>
+<!-- OBJECT: fig-cervutca-screening-percent -->
+<!-- OBJECT: tbl-cervutca-screening-percent -->
+</section>
+<section id="infectious-diseases" class="level3" data-number="9.3.16">
+<h3 data-number="9.3.16" class="anchored" data-anchor-id="infectious-diseases"><span class="header-section-number">9.3.16</span> Infectious Diseases</h3>
+<p><em>TODO: Add narrative for this section.</em></p>
+<section id="vaccine-preventable-diseases" class="level4" data-number="9.3.16.1">
+<h4 data-number="9.3.16.1" class="anchored" data-anchor-id="vaccine-preventable-diseases"><span class="header-section-number">9.3.16.1</span> Vaccine-Preventable Diseases</h4>
+<p><em>TODO: Add narrative for this section.</em></p>
+</section>
+<section id="childhood-immunization" class="level4" data-number="9.3.16.2">
+<h4 data-number="9.3.16.2" class="anchored" data-anchor-id="childhood-immunization"><span class="header-section-number">9.3.16.2</span> Childhood Immunization</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-24to35mo-child-vaccine-series-percent --> <!-- OBJECT: tbl-24to35mo-child-vaccine-series-percent --></p>
+</section>
+</section>
+<section id="covid-19" class="level3" data-number="9.3.17">
+<h3 data-number="9.3.17" class="anchored" data-anchor-id="covid-19"><span class="header-section-number">9.3.17</span> COVID-19</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-covid-mort-aar --> <!-- OBJECT: tbl-covid-mort-aar --></p>
+</section>
+<section id="human-papillomavirus-immunization" class="level3" data-number="9.3.18">
+<h3 data-number="9.3.18" class="anchored" data-anchor-id="human-papillomavirus-immunization"><span class="header-section-number">9.3.18</span> Human Papillomavirus Immunization</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-13yo-hpv-vaccine-complete-percent --> <!-- OBJECT: tbl-13yo-hpv-vaccine-complete-percent --></p>
+</section>
+<section id="flu-immunization" class="level3" data-number="9.3.19">
+<h3 data-number="9.3.19" class="anchored" data-anchor-id="flu-immunization"><span class="header-section-number">9.3.19</span> Flu Immunization</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-adult-flu-immi-lastyear-percent --> <!-- OBJECT: tbl-adult-flu-immi-lastyear-percent --></p>
+<!-- OBJECT: fig-65-flu-immi-percent -->
+<!-- OBJECT: tbl-65-flu-immi-percent -->
+</section>
+<section id="pneumonia-immunization" class="level3" data-number="9.3.20">
+<h3 data-number="9.3.20" class="anchored" data-anchor-id="pneumonia-immunization"><span class="header-section-number">9.3.20</span> Pneumonia Immunization</h3>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-65-pneumo-immi-percent --> <!-- OBJECT: tbl-65-pneumo-immi-percent --></p>
+</section>
+<section id="sexually-transmitted-infections" class="level3" data-number="9.3.21">
+<h3 data-number="9.3.21" class="anchored" data-anchor-id="sexually-transmitted-infections"><span class="header-section-number">9.3.21</span> Sexually Transmitted Infections</h3>
+<p><em>TODO: Add narrative for this section.</em></p>
+<section id="hivaids" class="level4" data-number="9.3.21.1">
+<h4 data-number="9.3.21.1" class="anchored" data-anchor-id="hivaids"><span class="header-section-number">9.3.21.1</span> HIV/AIDS</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-hiv-incident-aar --> <!-- OBJECT: tbl-hiv-incident-aar --></p>
+</section>
+<section id="gonorrhea" class="level4" data-number="9.3.21.2">
+<h4 data-number="9.3.21.2" class="anchored" data-anchor-id="gonorrhea"><span class="header-section-number">9.3.21.2</span> Gonorrhea</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-gono-incident-aar --> <!-- OBJECT: tbl-gono-incident-aar --></p>
+</section>
+<section id="chlamydia" class="level4" data-number="9.3.21.3">
+<h4 data-number="9.3.21.3" class="anchored" data-anchor-id="chlamydia"><span class="header-section-number">9.3.21.3</span> Chlamydia</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-chlamy-incident-aar --> <!-- OBJECT: tbl-chlamy-incident-aar --></p>
+</section>
+<section id="syphilis" class="level4" data-number="9.3.21.4">
+<h4 data-number="9.3.21.4" class="anchored" data-anchor-id="syphilis"><span class="header-section-number">9.3.21.4</span> Syphilis</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-syph-early-aar --> <!-- OBJECT: tbl-syph-early-aar --></p>
+</section>
+</section>
+<section id="tick-borne-diseases" class="level3" data-number="9.3.22">
+<h3 data-number="9.3.22" class="anchored" data-anchor-id="tick-borne-diseases"><span class="header-section-number">9.3.22</span> Tick-Borne Diseases</h3>
+<p><em>TODO: Add narrative for this section.</em></p>
+<section id="lyme-disease" class="level4" data-number="9.3.22.1">
+<h4 data-number="9.3.22.1" class="anchored" data-anchor-id="lyme-disease"><span class="header-section-number">9.3.22.1</span> Lyme Disease</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-lyme-disease --> <!-- OBJECT: tbl-lyme-disease --></p>
+</section>
+<section id="anaplasmosis" class="level4" data-number="9.3.22.2">
+<h4 data-number="9.3.22.2" class="anchored" data-anchor-id="anaplasmosis"><span class="header-section-number">9.3.22.2</span> Anaplasmosis</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-anaplasmosis --> <!-- OBJECT: tbl-anaplasmosis --></p>
+</section>
+<section id="babesiosis" class="level4" data-number="9.3.22.3">
+<h4 data-number="9.3.22.3" class="anchored" data-anchor-id="babesiosis"><span class="header-section-number">9.3.22.3</span> Babesiosis</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-babesiosis --> <!-- OBJECT: tbl-babesiosis --></p>
+</section>
+<section id="rabies" class="level4" data-number="9.3.22.4">
+<h4 data-number="9.3.22.4" class="anchored" data-anchor-id="rabies"><span class="header-section-number">9.3.22.4</span> Rabies</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: tbl-rabies-test-domestic --></p>
+<!-- OBJECT: tbl-rabies-test-wild -->
+<!-- OBJECT: fig-rabies-pep-rate -->
+<!-- OBJECT: tbl-rabies-pep-rate -->
+</section>
+</section>
+<section id="maternal-and-infant-health" class="level3" data-number="9.3.23">
+<h3 data-number="9.3.23" class="anchored" data-anchor-id="maternal-and-infant-health"><span class="header-section-number">9.3.23</span> Maternal and Infant Health</h3>
+<p><em>TODO: Add narrative for this section.</em></p>
+<section id="prenatal-care" class="level4" data-number="9.3.23.1">
+<h4 data-number="9.3.23.1" class="anchored" data-anchor-id="prenatal-care"><span class="header-section-number">9.3.23.1</span> Prenatal Care</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-early-pnc-percent --> <!-- OBJECT: tbl-early-pnc-percent --></p>
+<!-- OBJECT: fig-late-no-pnc-percent -->
+<!-- OBJECT: tbl-late-no-pnc-percent -->
+<!-- OBJECT: fig-epc-rande-percent -->
+<!-- OBJECT: tbl-epc-rande-percent -->
+</section>
+<section id="all-pregnancies-by-age-group" class="level4" data-number="9.3.23.2">
+<h4 data-number="9.3.23.2" class="anchored" data-anchor-id="all-pregnancies-by-age-group"><span class="header-section-number">9.3.23.2</span> All Pregnancies by Age Group</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-15to44-preg-rate --> <!-- OBJECT: tbl-15to44-preg-rate --></p>
+<!-- OBJECT: fig-15to44-preg-rate-rande -->
+<!-- OBJECT: tbl-15to44-preg-rate-rande -->
+</section>
+<section id="adolescent-pregnancy" class="level4" data-number="9.3.23.3">
+<h4 data-number="9.3.23.3" class="anchored" data-anchor-id="adolescent-pregnancy"><span class="header-section-number">9.3.23.3</span> Adolescent Pregnancy</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-15to19-teenpreg-rate --> <!-- OBJECT: tbl-15to19-teenpreg-rate --></p>
+<!-- OBJECT: fig-17-teenpreg-rande-rate -->
+<!-- OBJECT: tbl-17-teenpreg-rande-rate -->
+</section>
+<section id="self-pay-or-medicaid-births-pregnancies" class="level4" data-number="9.3.23.4">
+<h4 data-number="9.3.23.4" class="anchored" data-anchor-id="self-pay-or-medicaid-births-pregnancies"><span class="header-section-number">9.3.23.4</span> Self-Pay or Medicaid Births / Pregnancies</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-financial-coverage-liveb-percent --> <!-- OBJECT: tbl-financial-coverage-liveb-percent --></p>
+</section>
+</section>
+<section id="adverse-birth-outcomes" class="level3" data-number="9.3.24">
+<h3 data-number="9.3.24" class="anchored" data-anchor-id="adverse-birth-outcomes"><span class="header-section-number">9.3.24</span> Adverse Birth Outcomes</h3>
+<p><em>TODO: Add narrative for this section.</em></p>
+<section id="preterm-births" class="level4" data-number="9.3.24.1">
+<h4 data-number="9.3.24.1" class="anchored" data-anchor-id="preterm-births"><span class="header-section-number">9.3.24.1</span> Preterm Births</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-preterm-births-percent --> <!-- OBJECT: tbl-preterm-births-percent --></p>
+</section>
+<section id="low-birthweight-births" class="level4" data-number="9.3.24.2">
+<h4 data-number="9.3.24.2" class="anchored" data-anchor-id="low-birthweight-births"><span class="header-section-number">9.3.24.2</span> Low Birthweight Births</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-lbw-percent --> <!-- OBJECT: tbl-lbw-percent --></p>
+<!-- OBJECT: fig-lbw-rande-percent -->
+<!-- OBJECT: tbl-lbw-rande-percent -->
+</section>
+<section id="infant-mortality" class="level4" data-number="9.3.24.3">
+<h4 data-number="9.3.24.3" class="anchored" data-anchor-id="infant-mortality"><span class="header-section-number">9.3.24.3</span> Infant Mortality</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-infant-mortal-rate --> <!-- OBJECT: tbl-infant-mortal-rate --></p>
+</section>
+<section id="breastfeeding" class="level4" data-number="9.3.24.4">
+<h4 data-number="9.3.24.4" class="anchored" data-anchor-id="breastfeeding"><span class="header-section-number">9.3.24.4</span> Breastfeeding</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-hospital-exclusive-bf-percent --> <!-- OBJECT: tbl-hospital-exclusive-bf-percent --></p>
+</section>
+<section id="oral-health" class="level4" data-number="9.3.24.5">
+<h4 data-number="9.3.24.5" class="anchored" data-anchor-id="oral-health"><span class="header-section-number">9.3.24.5</span> Oral Health</h4>
+<p><em>TODO: Add narrative for this section.</em> <!-- OBJECT: fig-medicaid-1dental-visit-percent --> <!-- OBJECT: tbl-medicaid-1dental-visit-percent --></p>
+<!-- OBJECT: fig-medicaid-dental-past12-percent -->
+<!-- OBJECT: tbl-medicaid-dental-past12-percent -->
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Find the page-level bibliography container generated by Quarto/Pandoc
+  var refs = document.getElementById("refs");
+  if (!refs) {
+    return;
+  }
+
+  // Avoid double-wrapping if script runs more than once
+  if (refs.closest(".cha-references-callout")) {
+    return;
+  }
+
+  // Create outer callout wrapper to match existing Source dropdown cards
+  var callout = document.createElement("div");
+  callout.className = "callout callout-style-default callout-note callout-titled cha-references-callout";
+
+  // Header with Bootstrap collapse toggle attributes
+  var header = document.createElement("button");
+  header.type = "button";
+  header.className = "callout-header d-flex align-content-center collapsed w-100 text-start border-0 bg-transparent";
+  header.setAttribute("data-bs-toggle", "collapse");
+  header.setAttribute("data-bs-target", ".cha-references-contents");
+  header.setAttribute("aria-expanded", "false");
+  header.setAttribute("aria-controls", "cha-references");
+  header.setAttribute("aria-label", "Toggle references");
+
+  var iconContainer = document.createElement("div");
+  iconContainer.className = "callout-icon-container";
+  var icon = document.createElement("i");
+  icon.className = "callout-icon";
+  iconContainer.appendChild(icon);
+
+  var titleContainer = document.createElement("div");
+  titleContainer.className = "callout-title-container flex-fill";
+
+  var srOnly = document.createElement("span");
+  srOnly.className = "screen-reader-only";
+  srOnly.textContent = "Note";
+
+  var titleText = document.createTextNode("References");
+
+  titleContainer.appendChild(srOnly);
+  titleContainer.appendChild(titleText);
+
+  var toggleBtn = document.createElement("div");
+  toggleBtn.className = "callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end";
+  var toggleIcon = document.createElement("i");
+  toggleIcon.className = "callout-toggle";
+  toggleBtn.appendChild(toggleIcon);
+
+  header.appendChild(iconContainer);
+  header.appendChild(titleContainer);
+  header.appendChild(toggleBtn);
+
+  // Collapsible body container
+  var bodyContainerOuter = document.createElement("div");
+  bodyContainerOuter.id = "cha-references";
+  bodyContainerOuter.className = "cha-references-contents callout-collapse collapse";
+
+  var bodyInner = document.createElement("div");
+  bodyInner.className = "callout-body-container callout-body";
+
+  // Move the existing refs list inside the body
+  bodyInner.appendChild(refs);
+  bodyContainerOuter.appendChild(bodyInner);
+
+  callout.appendChild(header);
+  callout.appendChild(bodyContainerOuter);
+
+  // Insert the callout near the bottom of the content, before page navigation if present
+  var pageNav = document.querySelector("nav.page-navigation");
+  if (pageNav && pageNav.parentNode) {
+    pageNav.parentNode.insertBefore(callout, pageNav);
+  } else if (refs.parentNode) {
+    refs.parentNode.insertBefore(callout, refs);
+  } else {
+    document.body.appendChild(callout);
+  }
+});
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/06-health-behaviors.html" class="pagination-link" aria-label="Health Behaviors Indicators">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Health Behaviors Indicators</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/08-Behavioral-Health.html" class="pagination-link" aria-label="Behavioral Health">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Behavioral Health</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
