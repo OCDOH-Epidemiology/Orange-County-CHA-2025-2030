@@ -22,7 +22,6 @@ book:
   downloads: [pdf]
   chapters:
     - index.qmd
-    - chapters/00-acknowledgements.qmd
     - chapters/01-letter.qmd
     - chapters/02-Data Sources and Indicator Selection.qmd
     - chapters/03-executive-summary.qmd

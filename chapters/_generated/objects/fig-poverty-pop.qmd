@@ -1,0 +1,12 @@
+<!-- indicator: fig-poverty-pop -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-poverty-pop
+#| fig-cap: 'Population in Poverty, 2019–2022'
+#| fig-alt: 'Data visualization showing Population in Poverty, 2019–2022.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-poverty-pop", workbook_path=CHA_WORKBOOK_PATH).show()
+```

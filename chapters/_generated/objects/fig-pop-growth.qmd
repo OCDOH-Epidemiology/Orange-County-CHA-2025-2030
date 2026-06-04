@@ -1,0 +1,12 @@
+<!-- indicator: fig-pop-growth -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-pop-growth
+#| fig-cap: 'Population Growth by Municipality, 2000–2020'
+#| fig-alt: 'Data visualization showing Population Growth by Municipality, 2000–2020.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-pop-growth", workbook_path=CHA_WORKBOOK_PATH).show()
+```

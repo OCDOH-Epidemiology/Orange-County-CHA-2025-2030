@@ -1,0 +1,12 @@
+<!-- indicator: fig-income-poverty-gini -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-income-poverty-gini
+#| fig-cap: 'Household Median Income, Poverty Status, and GINI Index by Municipality, 2023'
+#| fig-alt: 'Data visualization showing Household Median Income, Poverty Status, and GINI Index by Municipality, 2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-income-poverty-gini", workbook_path=CHA_WORKBOOK_PATH).show()
+```

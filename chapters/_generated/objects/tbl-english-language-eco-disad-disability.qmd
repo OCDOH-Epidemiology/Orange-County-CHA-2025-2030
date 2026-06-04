@@ -1,0 +1,20 @@
+<!-- indicator: tbl-english-language-eco-disad-disability -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-english-language-eco-disad-disability
+#| tbl-cap: 'English Language Learners, Economically Disadvantaged, and Students with Disabilities by Public School District, 2023–2024'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-english-language-eco-disad-disability", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+from IPython.display import Markdown, display
+from scripts.cha_registry_renderer import render_source_callout_for_object
+display(Markdown(render_source_callout_for_object("tbl-english-language-eco-disad-disability", CHA_WORKBOOK_PATH)))
+```

@@ -4,759 +4,729 @@
     "href": "index.html",
     "title": "Orange County Community Health Assessment 2025-2030",
     "section": "",
-    "text": "0.1 Population Focus",
+    "text": "Skip to main content\n\n\n\n\n\nA living, data-driven assessment of the community’s health status, priorities, and conditions.\n\nThe Orange County Department of Health (OCDOH) extends its sincere gratitude to the many individuals, organizations, and community members who contributed to the development of the 2025–2030 Community Health Assessment (CHA). Whether you completed a survey, participated in a focus group, or facilitated data collection efforts, your collaboration was essential to this process. Your feedback provided the essential data needed to identify our county’s most pressing health priorities and will directly inform the strategies implemented to improve public health outcomes over the next five years. Special thanks to the following individuals and organizations:\n\nThis report was coordinated by Jackie Lawler, MPH, CPH, Director of Epidemiology and Public Health Planning. The data analysis, content development, and final review were completed by the OCDOH Division of Epidemiology and Public Health Planning staff:\n\n\nDayquan Crandell, Epidemiologist\nErin Ray Pascaretti, Epidemiologist\nFrank Mikuszewski, Epidemiologist\nAdolfo Rivera, Biostatistician\n\n\n\nWe would like to specifically recognize the following partners for their technical expertise and support:\n\nLaurisa E. Sampson, Orange County Department of Health Director of Health Equity, for her instrumental role in planning and implementing the numerous community focus groups that informed this assessment.\n\nHospital Partners for their shared commitment to the Community Health Assessment and Improvement process, and ensuring that our county’s health priorities are addressed through a coordinated, data-driven approach that connects clinical care and public health:\n\n\nBon Secours Charity Health System – Members of WMCHealth\nGarnet Health Medical Center\nMontefiore St. Luke’s Cornwall Hospital\n\n\n\nOrange County Department of Planning for their expertise in Census data and GIS mapping, specifically:\n\n\nMegan Tennermann, Senior Planner\nVeronica Fernandez-Rogers, Planner\n\n\n\n\nSiena Research Institute for their technical guidance, methodology design, and implementation of the Community Health Survey, specifically:\n\n\nLeslie Foster, Business Development Manager\nMeghann Crawford, Director of Data Management\n\n\n\n\nHealthfirst and Affinity by Molina Healthcare for providing refreshments for our community partners and stakeholders supporting the Orange County Health Summit, specifically:\n\n\nHealthfirst: Melissa Wood, Community Relations Specialist\nAffinity by Molina: Felicita Colon-Cordero, Community Engagement Specialist",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Community Health Assessment YEAR</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#population-focus",
-    "href": "index.html#population-focus",
-    "title": "Orange County Community Health Assessment 2025-2030",
-    "section": "",
-    "text": "Area One\nArea Two\nArea Three",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Community Health Assessment YEAR</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#questions-or-comments-about-the-assessment",
-    "href": "index.html#questions-or-comments-about-the-assessment",
-    "title": "Orange County Community Health Assessment 2025-2030",
-    "section": "0.2 Questions or Comments About the Assessment",
-    "text": "0.2 Questions or Comments About the Assessment\nFor questions about this assessment, please contact:\n\n0.2.1 Area One\n\nName, Credentials\nTitle\nemail@example.org",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Community Health Assessment YEAR</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/00-acknowledgements.html",
-    "href": "chapters/00-acknowledgements.html",
-    "title": "2  Acknowledgments",
-    "section": "",
-    "text": "Skip to main content\n\n\n\n\nThe Orange County Department of Health (OCDOH) extends its sincere gratitude to the many individuals, organizations, and community members who contributed to the development of the 2025–2030 Community Health Assessment (CHA). Whether you completed a survey, participated in a focus group, or facilitated data collection efforts, your collaboration was essential to this process. Your feedback provided the essential data needed to identify our county’s most pressing health priorities and will directly inform the strategies implemented to improve public health outcomes over the next five years. Special thanks to the following individuals and organizations:\nThis report was coordinated by Jackie Lawler, MPH, CPH, Director of Epidemiology and Public Health Planning. The data analysis, content development, and final review were completed by the OCDOH Division of Epidemiology and Public Health Planning staff:\n\n\nDayquan Crandell, Epidemiologist\nErin Ray Pascaretti, Epidemiologist\nFrank Mikuszewski, Epidemiologist\nAdolfo Rivera, Biostatistician\n\n\nWe would like to specifically recognize the following partners for their technical expertise and support:\nLaurisa E. Sampson, Orange County Department of Health Director of Health Equity, for her instrumental role in planning and implementing the numerous community focus groups that informed this assessment.\nHospital Partners for their shared commitment to the Community Health Assessment and Improvement process, and ensuring that our county’s health priorities are addressed through a coordinated, data-driven approach that connects clinical care and public health:\n\n\nBon Secours Charity Health System – Members of WMCHealth\nGarnet Health Medical Center\nMontefiore St. Luke’s Cornwall Hospital\n\n\nOrange County Department of Planning for their expertise in Census data and GIS mapping, specifically:\n\n\nMegan Tennermann, Senior Planner\nVeronica Fernandez-Rogers, Planner\n\n\nSiena Research Institute for their technical guidance, methodology design, and implementation of the Community Health Survey, specifically:\n\n\nLeslie Foster, Business Development Manager\nMeghann Crawford, Director of Data Management\n\n\nHealthfirst and Affinity by Molina Healthcare for providing refreshments for our community partners and stakeholders supporting the Orange County Health Summit, specifically:\n\n\nHealthfirst: Melissa Wood, Community Relations Specialist\nAffinity by Molina: Felicita Colon-Cordero, Community Engagement Specialist",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Acknowledgments</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Acknowledgments</span>"
     ]
   },
   {
     "objectID": "chapters/01-letter.html",
     "href": "chapters/01-letter.html",
-    "title": "3  Letter from Director of Epidemiology to the Community",
+    "title": "2  Letter from Director of Epidemiology to the Community",
     "section": "",
     "text": "Skip to main content\n\n\n\n\nDear Orange County Residents and Partners,\nIt is my privilege to share with you the completion of our latest Orange County Community Health Assessment (CHA). This document reflects months of listening, analyzing, and collaborating with community members, service providers, and partners across many sectors who care deeply about the health and well-being of our county.\nThe CHA and Community Health Improvement Plan (CHIP) together tell an important story about Orange County. They describe where we are today, the challenges our residents face, and the opportunities we have to improve health for all. This work goes beyond statistics and charts. It incorporates lived experiences, community priorities,and the voices of people who know their neighborhoods best. As the team responsible for overseeing the development of these reports, we are committed to ensuring that this process is inclusive, data-informed, and grounded in the realities of everyday life in Orange County.\nOne message came through clearly: improving community health cannot be accomplished by any single organization, discipline, or level of government. Health is shaped by access to quality healthcare, but also by housing stability, food security, transportation, education, safe environments, economic opportunity, and strong social connections. Addressing these complex and interconnected factors requires partnerships that are broad, creative, and sustained.\nOrange County is fortunate to have a strong network of community-based organizations, healthcare providers, schools, faith-based groups, municipalities, businesses, and residents who already work every day to make a difference. The CHA and CHIP build upon this foundation by identifying shared priorities and providing a roadmap for collective action. They are not intended to sit on a shelf, but to serve as living guides that inform decisions, align resources, and inspire collaboration.\nThe Orange County Department of Health is committed to doing its part, but we know that government alone cannot solve the most pressing health challenges facing our county. Lasting change happens when community members and partners bring their knowledge, skills, relationships, and passion to the table. Each organization and individual has something valuable to contribute.\nI invite you to review the CHA and consider how your work, your organization, or your interests align with the priorities outlined. We welcome new and existing partners to join us in implementing strategies, sharing ideas, and co-creating solutions. Whether you represent an organization or are simply someone who cares about the future of Orange County, your voice matters. Together, we can build a healthier, more resilient Orange County where everyone has the opportunity to thrive.\nThank you for your continued commitment to our community and for being part of this important work.\nSincerely,\n\n\nJacqueline Lawler, MPH\nDirector of Epidemiology and Public Health Planning\nOrange County Department of Health",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Letter from Director of Epidemiology to the Community</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Letter from Director of Epidemiology to the Community</span>"
     ]
   },
   {
     "objectID": "chapters/02-Data Sources and Indicator Selection.html",
     "href": "chapters/02-Data Sources and Indicator Selection.html",
-    "title": "4  Data Sources and Indicator Selection",
+    "title": "3  Data Sources and Indicator Selection",
     "section": "",
     "text": "Skip to main content\n\n\n\n\nTo create this document, the following data sources were utilized. In certain instances, data were obtained by special request and are not readily available to the public.\n\nAmerican Community Survey (ACS): Conducted by the US Census Bureau, the ACS is an ongoing nationwide survey that provides detailed demographic, social, economic, and housing data. The Orange County (OC) Department of Health (DOH) Division of Epidemiology and Public Health Planning utilizes 5-year estimates to ensure reliable data for smaller geographic areas and subpopulations. This resource is the primary source for monitoring social determinants of health, including poverty status, educational attainment, health insurance coverage, and housing cost burden. Secondary source\nBehavioral Risk Factor Surveillance System (BRFSS): Coordinated by the Centers for Disease Control and Prevention (CDC), this annual telephone survey collects data on health-related risk behaviors, chronic conditions, and the use of preventive services. For local planning, OCDOH Division of Epidemiology and Public Health (PH) Planning utilizes the New York State (NYS) Expanded BRFSS, which provides county-level estimates through increased sampling to allow for statistically significant analysis of health disparities within OC. Secondary source\nCommunity Asset Survey (CAS): Developed by the OCDOH Division of Epidemiology and PH Planning, the CAS is a tool from Mobilizing for Action through Planning and Partnership (MAPP) 2.0 Community Context Assessment. It captures residents’ perceptions of community assets, quality of life, and prominent health concerns through in-person engagement at local events and online via SurveyMonkey. This dataset includes 2022 and 2025 data, allowing for the identification of shifting community priorities and the existence of disparities in resource access. Primary source\nCommunity Health Survey: Conducted by the Siena College Research Institute, this survey utilizes a dual-frame (landline and cell phone) random-digit-dial mode supplemented by an online panel. To ensure statistical representativeness, the sample includes oversamples of Latino, Black, and low-SES households, with data weighted to the most current American Community Survey 5-year estimates. The OCDOH Division of Epidemiology and PH Planning maintains data from 2018, 2022, 2023, and 2024 to facilitate longitudinal comparisons of community perceptions and health behaviors. Primary source\nCommunity-Level Youth Development Evaluation Survey (CLYDE): This validated youth assessment satisfies Drug-Free Communities reporting requirements and is conducted biennially within participating OC school districts. Utilizing the research-based Communities That Care framework, CLYDE collects anonymous data on youth substance use prevalence, mental health, bullying, and specific developmental risk and protective factors across the family, school, and community domains. Primary source\nHealthy People 2030: Guided by the US Department of Health and Human Services (HHS), this initiative provides 10-year national objectives for improving the health of all Americans. It features measurable goals with a heightened focus on health equity and social determinants of health, serving as the primary foundation and benchmarking framework for the 2025-2030 NYS Prevention Agenda. Secondary source\nInstitute for Traffic Safety Management and Research (ITSMR): An academic research center within the University at Albany’s Rockefeller College of Public Affairs and Policy, ITSMR manages the Traffic Safety Statistical Repository. This platform offers 10 years of finalized and preliminary data on police-reported crashes and traffic tickets across NYS. It enables OC to analyze trends in impaired driving, pedestrian safety, and occupant protection (seat belt use) at both the county and municipal levels. Secondary source\nMid-Hudson (M-H) Community Partner Survey: An online survey distributed by the Hudson Valley PH Collaborative to those who provide services in the region. Primary source\nNational Center for HIV, Viral Hepatitis, STD, and Tuberculosis Prevention AtlasPlus: This interactive CDC tool provides nearly 20 years of surveillance data on HIV, viral hepatitis, STDs, and tuberculosis. It integrates social determinants of health indicators, allowing OC to analyze disease trends alongside social and economic data at national, state, and county levels. Secondary source\nNew York State Cancer Registry: Mandated by PH Law Section 2401, this population-based registry collects comprehensive data on incidence, stage at diagnosis, and treatment for all reportable cancers (except certain skin cancers). It receives reports from hospitals, laboratories, and clinicians, ensuring high-quality surveillance used to monitor the burden of cancer and evaluate prevention programs. Secondary source\nNew York State Childhood Lead Poisoning Prevention Program (CLPPP): As the largest program of its kind in the US, CLPPP funds local health departments to identify and remediate lead hazards in high-risk housing. The program monitors blood lead levels through mandated provider reporting and utilizes a lowered actionable threshold of 5 micrograms per deciliter (ug/dL) to trigger public health interventions and environmental inspections. Secondary source\nNew York State Communicable Disease Annual Reports: Published by the NYSDOH Bureau of Communicable Disease Control, these documents provide annual case counts and rates per 100,000 for mandated reportable diseases. Data are available at the state and county levels, often including five-year historical trends and demographic breakdowns by age and sex. Secondary source\nNew York State Communicable Disease Electronic Surveillance System (CDESS): The reporting of suspected or confirmed communicable diseases is mandated under the NYS Sanitary Code (10NYCRR 2.10). While physicians have primary reporting responsibility, school nurses, laboratory directors, and healthcare facilities are also required to report. All reportable data from the Electronic Clinical Laboratory Reporting System (ECLRS) are integrated into CDESS for timely investigation. LHDs review these records to initiate, confirm, or dismiss cases based on standardized case definitions. Primary source\nNew York State Department of Health Bureau of Communicable Disease Control: This Bureau has broad oversight for the surveillance and control of more than 70 reportable and emerging infection diseases mandated under the NYS Sanitary Code. BCDC conducts epidemiological investigations, manages routine disease reporting, and provides technical assistance to local health departments for outbreak response and rabies post-exposure management. Secondary source\nNew York State Department of Health Bureau of Vital Records: This Bureau is responsible for the registration and preservation of vital events. It serves as the official repository for births, deaths, and fetal deaths occurring in NYS outside of NYC and maintains marriage and divorce records for the entire state. This Bureau is the primary authority for issuing certified copies of these records and providing the underlying data for statewide public health surveillance. Secondary source\nNew York State Department of Health Community Health Indicator Reports (CHIRS): This dashboard tracks approximately 350 indicators organized by 15 health topics, consolidating data from former County Health Assessment Indicators reports. It provides interactive visualizations, including tables, maps, and trend graphs, allowing OC to compare its performance against regional and statewide benchmarks. Secondary source\nNew York State Department of Health County Health Indicators by Race/Ethnicity (CHIRE): This map-based tool provides health indicator data disaggregated by race and ethnicity at the state and county levels. It covers mortality, chronic diseases, substance abuse, and social determinants of health, allowing for direct comparisons between OC’s minority health outcomes and the Rest of State averages by race and ethnicity to identify and monitor health disparities at the county level. Secondary source\nNew York State/Region Cancer Statistics Dashboards: These interactive dashboards provide streamlined access to comprehensive cancer data, including incidence, mortality, trends, stage at diagnosis, survival, and prevalence. Organized by state, regional, and county levels, they allow for site-specific analysis used to monitor the cancer burden and evaluate the impact of local screening initiatives. Secondary source\nNew York State Department of Health Office of Sexual Health and Epidemiology: This office is responsible for conducting Sexually Transmitted Infections (STI) surveillance related to screening, disease morbidity, and HIV/STI Partner Services intervention activities. OSHE oversees surveillance for chlamydia, gonorrhea, syphilis, and mpox for NYS excluding New York City (NYC) and provides technical assistance to local health departments to ensure data-driven disease control. Secondary source\nNew York State Education Department: This public portal provides comprehensive NYS school and district report cards containing data on student enrollment (by race, gender, and disability), graduation rates, and English Language Learner status. It also includes critical social determinants of health metrics, such as chronic absenteeism, free and reduced-price lunch eligibility, and school safety incidents. Secondary source\nNew York State HIV Surveillance System: Conducted by the AIDS Institute Bureau of HIV/AIDS Epidemiology, this system monitors the HIV epidemic through mandated state reporting. It utilizes ECLRS and clinician-based reporting to collect comprehensive data on diagnoses and disease monitoring. This system serves as the primary data source for the NYS HIV/AIDS Annual Surveillance Reports and tracks progress toward Ending the Epidemic goals. Secondary source\nNew York State Opioid Data Dashboard: This interactive visual platform tracks nearly 100 indicators at the state and county levels to monitor the overall burden of the overdose epidemic. It provides critical data on fatal and nonfatal overdoses (including opioids, heroin, and cocaine), controlled substance prescribing, and opioid use disorder treatment admissions. Secondary source\nNew York State Prescription Monitoring Program Dashboard: This database tracks the prescribing and dispensing of controlled substances to identify patterns of use and potential misuse. The data are the property of NYS and may be used solely for public health statistical analysis within a Local Health Department; any effort to identify a specific individual, provider, or entity is strictly prohibited. The OCDOH Division of Epidemiology and PH Planning maintains written approval to share the data contained within this Community Health Assessment. Secondary source\nNew York State Prescription Monitoring Program Registry: This secure database provides practitioners with a patient’s dispensed controlled substance history for the past five years, including data reported by pharmacies in NYS and participating interstate partners. Established under the I-STOP law, this registry allows providers to evaluate treatment history and identify potential misuse or “doctor shopping” before prescribing. Secondary source\nNew York State Prevention Agenda Tracking Dashboard: This is an interactive visual presentation of the most current tracking indicator data to track progress of the NYS’s Health Improvement Plan at state and county levels. It serves as a key source for monitoring progress that communities around the state have made regarding meeting the Prevention Agenda objectives. Secondary source\nNew York State Quality Indicators Dashboard: A comprehensive public health surveillance tool managed by NYSDOH. It provides accessible, county-level data across various health domains, such as chronic disease, maternal health, and environmental safety, to support community health assessment and planning. The dashboard allows users to compare local performance against NYS excluding NYC and the M-H Region benchmarks using standardized measures like age-adjusted rates. The data contained in the NYS Quality Indicators Dashboard are the property of the NYS and may be used solely for the purposes of public health statistical analysis by authorized users. Any effort to determine the identity of a specific individual, provider, or entity, or to use the information for any purpose other than for public health statistical analysis, is prohibited. The OCDOH Division of Epidemiology and PH Planning has written approval to share the data contained within this Community Health Assessment. Secondary source\nNew York State Sexually Transmitted Infections Data and Statistics Dashboard: This interactive web-based platform provides public access to surveillance data for reportable STIs across NYS. It empowers healthcare providers, policymakers, and the public with up-to-date data to inform community-level prevention and treatment strategies. The platform specifically supports a “syndemic approach,” addressing the intersection of STIs with HIV/AIDS, viral hepatitis, and substance use epidemics. Secondary source\nNew York State Student Weight Status Category Reporting System: A system that collects aggregated weight status data, including underweight, healthy weight, overweight, and obesity categories, from required school health certificates for children in public schools outside of NYC. These biennial reports provide essential district, county, and regional prevalence estimates that help health departments and schools identify trends, target resources, and evaluate the effectiveness of childhood obesity prevention interventions. Secondary source\nNew York Statewide Planning and Research Cooperative System (SPARCS): SPARCS is a comprehensive all-payer reporting system that captures patient-level characteristics, diagnoses, and charges for hospital inpatient stays and outpatient visits, including emergency department admissions and ambulatory surgery. To protect privacy, SPARCS has three access levels: Public Data for de-identified trends, Limited Research Data without direct identifiers, and Identifiable Data, which requires Data Protection Review Board approval. Secondary source\nOrange County Department of Social Services: The OC Department of Social Services provides temporary financial and social service assistance to help eligible individuals and families lead safe and independent lives. Administered under NYS Social Services Law (Chapter 55 and Title 18 of the NYCRR), the department manages programs for Supplemental Nutrition Assistance (SNAP), Medicaid eligibility, Temporary Assistance, and Child Protective Services. This resource provides vital data for monitoring economic stability and food security within the county. Secondary source\nOrange County Office of the Medical Examiner (OME): The OCOME investigates sudden, unexpected, and unnatural fatalities occurring within OC to ensure accurate cause and manner of death certification. This includes any death not due to 100% natural causes, workplace injuries, unattended deaths, homicides, suicides, and drug-related fatalities (overdoses). As the OCME investigates all jurisdictional deaths occurring within the county, data include non-residents but exclude residents who died elsewhere. Primary source\nSmall Area Income and Poverty Estimates Program (SAIPE): Conducted by the US Census Bureau, SAIPE provides the only single-year income and poverty statistics for all 3,143 US counties and 13,126 school districts. This program combines ACS data with administrative records to produce model-based estimates of median household income and childhood poverty. These data are a primary resource for OC to identify economic disparities and guide federal funding allocations, such as Title I school grants. Secondary source\nSTI Dashboard New York: This interactive web-based platform provides public access to surveillance data for reportable STIs across NYS. It features data visualizations for chlamydia, gonorrhea, and syphilis, allowing users to filter by sex, age group, and race/ethnicity at both the statewide and county levels. The dashboard is designed to support a “syndemic approach” to address the intersecting epidemics of HIV, STIs, viral hepatitis, and substance use. Secondary source\nUS Bureau of Labor Statistics (BLS): The BLS is the primary federal agency responsible for measuring labor market activity, working conditions, price changes, and productivity in the economy. As an independent statistical agency, it provides essential data to support public and private decision-making. Secondary source\nUS Census Bureau: The Census Bureau publishes population estimates and demographic components of change, such as births, deaths, and migration. These data can be sorted by characteristics such as age, sex, and race, as well as by national, state, and county location. The Census Bureau provides the official population estimates and demographic components of change, including births, deaths, and migration, necessary for calculating local health rates. Through the ACS and Population Estimates Program, data can be disaggregated by age, sex, race, ethnicity, and geography to identify socio-economic disparities. Secondary source\nVital Statistics of New York State: The Vital Statistics of NYS is a registry maintained by the NYS Bureau of Vital Records (BVR), part of the NYSDOH, covering births, deaths, and fetal deaths occurring in NYS outside of NYC, as well as statewide marriage and divorce records. Beyond record-keeping, it serves as a data source for annual statistical reports used in public health surveillance and policymaking. OCDOH Division of Epidemiology and PH Planning requested and analyzed data from Vital Records for inclusion in this CHA. Vital Records data do not include OC births or deaths recorded in NYC. All rates calculated from the Vital Records data use ACS 5-year population estimates, except for the age intervals &lt;1 year and 1-9 years, which are based on crude live births in OC. The opinions, results, findings, and/or interpretations of the data contained within the CHA are the responsibility of the OCDOH Epidemiology and PH Planning staff and do not necessarily reflect the official policy or position of the NYSDOH or BVR. Primary source",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data Sources and Indicator Selection</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data Sources and Indicator Selection</span>"
     ]
   },
   {
     "objectID": "chapters/03-executive-summary.html",
     "href": "chapters/03-executive-summary.html",
-    "title": "5  Executive Summary",
+    "title": "4  Executive Summary",
     "section": "",
-    "text": "5.1 What Is a Community Health Assessment and Community Health Improvement Plan?\nThe Community Health Assessment (CHA) describes the overall health of the community by presenting information on health status, factors that influence health, and community needs and assets. The CHA is a foundational essential service of local public health departments to assess and monitor health and to identify target populations that may be at increased risk of poor health outcomes. Through systematic, comprehensive data analysis, the CHA identifies key health priorities as outlined by the New York State (NYS) Department of Health’s (DOH) Prevention Agenda.\nThe Community Health Improvement Plan (CHIP) is a long-term systemic effort to improve resident health by addressing the public health priorities identified in the CHA. Creating the CHA and CHIP is a collaborative process between the local health department (LHD) and key, diverse stakeholders in the community, including the area hospitals, to coordinate efforts, establish priorities, and combine resources to guide health promotion strategies.",
+    "text": "4.1 What Is a Community Health Assessment and Community Health Improvement Plan?\nThe Community Health Assessment (CHA) describes the overall health of the community by presenting information on health status, factors that influence health, and community needs and assets. The CHA is a foundational essential service of local public health departments to assess and monitor health and to identify target populations that may be at increased risk of poor health outcomes. Through systematic, comprehensive data analysis, the CHA identifies key health priorities as outlined by the New York State (NYS) Department of Health’s (DOH) Prevention Agenda.\nThe Community Health Improvement Plan (CHIP) is a long-term systemic effort to improve resident health by addressing the public health priorities identified in the CHA. Creating the CHA and CHIP is a collaborative process between the local health department (LHD) and key, diverse stakeholders in the community, including the area hospitals, to coordinate efforts, establish priorities, and combine resources to guide health promotion strategies.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Executive Summary</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Executive Summary</span>"
     ]
   },
   {
     "objectID": "chapters/03-executive-summary.html#what-does-the-cha-and-chip-process-look-like",
     "href": "chapters/03-executive-summary.html#what-does-the-cha-and-chip-process-look-like",
-    "title": "5  Executive Summary",
-    "section": "5.2 What Does the CHA and CHIP Process Look Like?",
-    "text": "5.2 What Does the CHA and CHIP Process Look Like?\nThe Orange County (OC) DOH utilized a modified model of the Mobilizing Action through Planning and Partnership process (MAPP), developed by the National Association for County and City Health Officials (NACCHO). MAPP is a community-driven strategic planning process to achieve health equity. As part of this process, the OC CHA findings are shared within the OC community and will be the foundation for completion of the OC CHIP, which will be finalized in June of 2026.",
+    "title": "4  Executive Summary",
+    "section": "4.2 What Does the CHA and CHIP Process Look Like?",
+    "text": "4.2 What Does the CHA and CHIP Process Look Like?\nThe Orange County (OC) DOH utilized a modified model of the Mobilizing Action through Planning and Partnership process (MAPP), developed by the National Association for County and City Health Officials (NACCHO). MAPP is a community-driven strategic planning process to achieve health equity. As part of this process, the OC CHA findings are shared within the OC community and will be the foundation for completion of the OC CHIP, which will be finalized in June of 2026.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Executive Summary</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Executive Summary</span>"
     ]
   },
   {
     "objectID": "chapters/03-executive-summary.html#what-were-the-data-sources-reviewed",
     "href": "chapters/03-executive-summary.html#what-were-the-data-sources-reviewed",
-    "title": "5  Executive Summary",
-    "section": "5.3 What Were the Data Sources Reviewed?",
-    "text": "5.3 What Were the Data Sources Reviewed?\nThe OC CHA utilized national, state, and local data including over 30 secondary sources and three primary sources. For example, secondary data from the US Census Bureau, Behavioral Risk Factor Surveillance System, NYS Cancer Dashboard, NYS Communicable Disease Electronic Surveillance System, NYSDOH Community Health Indicator Reports, NYSDOH County Health Indicators by Race and Ethnicity, NYS Prevention Agenda Tracking Dashboard, Vital Statistics of NYS, among many others were used. Local sources from the Orange County Medical Examiner’s Office, the Orange County Community Health Survey, Mid-Hudson (M-H) Community Provider Survey, Community Asset Survey, among others, were also used.\nComparisons were made to NYS, NYS excluding NYC, M-H Region, other M-H counties, and sub-county estimates, where available. Sources are reviewed as part of a continuous data review process and shared with local partners as new data becomes available. As a complement to this secondary data review and the primary data collection with the resident surveys, OCDOH updated the Community Health Assessment Data Review Guide. The guide is a review of over 150 of the most current secondary data indicators available. Multiple opportunities were provided for residents to share their input, including multiple surveys, focus groups, key informant interviews, and the OC Health Summit.",
+    "title": "4  Executive Summary",
+    "section": "4.3 What Were the Data Sources Reviewed?",
+    "text": "4.3 What Were the Data Sources Reviewed?\nThe OC CHA utilized national, state, and local data including over 30 secondary sources and three primary sources. For example, secondary data from the US Census Bureau, Behavioral Risk Factor Surveillance System, NYS Cancer Dashboard, NYS Communicable Disease Electronic Surveillance System, NYSDOH Community Health Indicator Reports, NYSDOH County Health Indicators by Race and Ethnicity, NYS Prevention Agenda Tracking Dashboard, Vital Statistics of NYS, among many others were used. Local sources from the Orange County Medical Examiner’s Office, the Orange County Community Health Survey, Mid-Hudson (M-H) Community Provider Survey, Community Asset Survey, among others, were also used.\nComparisons were made to NYS, NYS excluding NYC, M-H Region, other M-H counties, and sub-county estimates, where available. Sources are reviewed as part of a continuous data review process and shared with local partners as new data becomes available. As a complement to this secondary data review and the primary data collection with the resident surveys, OCDOH updated the Community Health Assessment Data Review Guide. The guide is a review of over 150 of the most current secondary data indicators available. Multiple opportunities were provided for residents to share their input, including multiple surveys, focus groups, key informant interviews, and the OC Health Summit.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Executive Summary</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Executive Summary</span>"
     ]
   },
   {
     "objectID": "chapters/03-executive-summary.html#what-were-the-major-health-issues-identified",
     "href": "chapters/03-executive-summary.html#what-were-the-major-health-issues-identified",
-    "title": "5  Executive Summary",
-    "section": "5.4 What Were the Major Health Issues Identified?",
-    "text": "5.4 What Were the Major Health Issues Identified?\nPremature death for those less than 65 years in OC is the second worst in the M-H Region and worse than the NYS rate. Heart disease and cancer are the leading causes of death and premature death (death before age 75) by a large margin. These margins are larger along racial and ethnic lines, with OC having the second highest percentage difference between Black Non-Hispanics and White Non-Hispanics, in the M-H Region.\nObesity is a leading contributor to these top causes of death, as well as cancer, diabetes, stroke, and hypertension, all of which can lead to premature death. OC’s percentage of adults overweight or obese is the highest in the M-H Region at 75%. Over the past ten years, the rates of obesity have continually grown, as well as the subsequent morbidity of cardiovascular disease, prediabetes, and hypertension. OC’s age-adjusted all cancer mortality is the highest in the M-H Region at 155.5 per 100,000 residents, and 1.4 times higher than the NYS rate based on the latest available data.\nWithin these preventable causes of death, there are disparities among racial and ethnic minorities. These disparities can be seen in the rates of premature deaths, food insecurity, infant mortality, asthma hospitalizations, hospitalizations and mortality due to heart disease, breast cancer mortality, prostate cancer incidence and mortality, colorectal cancer mortality, and premature births. Many of these health outcomes are influenced by the social determinants of health, conditions where systems and policies determine the environments in which people live.\nGiven the connectivity between physical health and mental health, it is important to focus on both physical health and mental health. In 2024, 36% of OC adults 18 years and older reported they experience either moderate or serious psychological distress. However, 47% of adults with an income less than $25K per year reported moderate or serious psychological distress. This highlights the role poverty plays in impacting residents’ well-being.\nWhere data are available across the M-H Region from 2019–2022, OC ranked fourth in the M-H region in overdose deaths involving any opioid and higher than the NYS excluding NYC rate. However, strides have been made in addressing substance use in OC, including a 45.5% reduction in overdose deaths between 2021 and 2024, where local data are available.\nOther health areas where OC falls behind NYS or has worsened since the last assessment include:\n\n\nFood security\nObesity in children and adults\nSeverely cost burdened households\nCardiovascular disease hospitalization rate\nAdults with prediabetes\nLack of physical activity\nAsthma hospitalization rate among adults\nEmergency department visits for asthma in children 17 years and younger\nStroke hospitalization rate\nCancer mortality including all-cancer, female breast cancer, lung and bronchus, prostate, and colorectal cancer\nChildhood immunization rates among children 24–35 months of age\nPercentage of births with late or no prenatal care\nPercentage of women age 50–74 years receiving breast cancer screening based on recent guidelines\nEarly syphilis case rate",
+    "title": "4  Executive Summary",
+    "section": "4.4 What Were the Major Health Issues Identified?",
+    "text": "4.4 What Were the Major Health Issues Identified?\nPremature death for those less than 65 years in OC is the second worst in the M-H Region and worse than the NYS rate. Heart disease and cancer are the leading causes of death and premature death (death before age 75) by a large margin. These margins are larger along racial and ethnic lines, with OC having the second highest percentage difference between Black Non-Hispanics and White Non-Hispanics, in the M-H Region.\nObesity is a leading contributor to these top causes of death, as well as cancer, diabetes, stroke, and hypertension, all of which can lead to premature death. OC’s percentage of adults overweight or obese is the highest in the M-H Region at 75%. Over the past ten years, the rates of obesity have continually grown, as well as the subsequent morbidity of cardiovascular disease, prediabetes, and hypertension. OC’s age-adjusted all cancer mortality is the highest in the M-H Region at 155.5 per 100,000 residents, and 1.4 times higher than the NYS rate based on the latest available data.\nWithin these preventable causes of death, there are disparities among racial and ethnic minorities. These disparities can be seen in the rates of premature deaths, food insecurity, infant mortality, asthma hospitalizations, hospitalizations and mortality due to heart disease, breast cancer mortality, prostate cancer incidence and mortality, colorectal cancer mortality, and premature births. Many of these health outcomes are influenced by the social determinants of health, conditions where systems and policies determine the environments in which people live.\nGiven the connectivity between physical health and mental health, it is important to focus on both physical health and mental health. In 2024, 36% of OC adults 18 years and older reported they experience either moderate or serious psychological distress. However, 47% of adults with an income less than $25K per year reported moderate or serious psychological distress. This highlights the role poverty plays in impacting residents’ well-being.\nWhere data are available across the M-H Region from 2019–2022, OC ranked fourth in the M-H region in overdose deaths involving any opioid and higher than the NYS excluding NYC rate. However, strides have been made in addressing substance use in OC, including a 45.5% reduction in overdose deaths between 2021 and 2024, where local data are available.\nOther health areas where OC falls behind NYS or has worsened since the last assessment include:\n\n\nFood security\nObesity in children and adults\nSeverely cost burdened households\nCardiovascular disease hospitalization rate\nAdults with prediabetes\nLack of physical activity\nAsthma hospitalization rate among adults\nEmergency department visits for asthma in children 17 years and younger\nStroke hospitalization rate\nCancer mortality including all-cancer, female breast cancer, lung and bronchus, prostate, and colorectal cancer\nChildhood immunization rates among children 24–35 months of age\nPercentage of births with late or no prenatal care\nPercentage of women age 50–74 years receiving breast cancer screening based on recent guidelines\nEarly syphilis case rate",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Executive Summary</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Executive Summary</span>"
     ]
   },
   {
     "objectID": "chapters/03-executive-summary.html#how-will-the-priority-areas-and-strategies-to-address-these-issues-be-chosen",
     "href": "chapters/03-executive-summary.html#how-will-the-priority-areas-and-strategies-to-address-these-issues-be-chosen",
-    "title": "5  Executive Summary",
-    "section": "5.5 How Will the Priority Areas and Strategies to Address These Issues Be Chosen?",
-    "text": "5.5 How Will the Priority Areas and Strategies to Address These Issues Be Chosen?\nPriority areas will be selected over the next six months through the analysis of local data, community engagement assessments (including community surveys), focus groups, key informant interviews, and the Orange County Health Summit. As part of this process, OCDOH created a CHIP Steering Committee consisting of 20 individuals outside of internal staff representing area hospitals, community-based organizations, business owners, schools and colleges, federally qualified healthcare centers, and the community.\nOver the next six months, the committee will meet to review the assessments and collectively select the priority areas and evidence-based strategies, draft the goals, objectives, responsible partners, a timeline for completion, evaluation measures, and both short-term and long-term outcome measures. Each priority area will have a corresponding workgroup led by OCDOH and will use existing partnerships to actively recruit community partners and residents to participate. The CHIP Steering Committee will meet quarterly after June 2026 to review progress, make modifications as necessary, and ensure that each strategy is executed.",
+    "title": "4  Executive Summary",
+    "section": "4.5 How Will the Priority Areas and Strategies to Address These Issues Be Chosen?",
+    "text": "4.5 How Will the Priority Areas and Strategies to Address These Issues Be Chosen?\nPriority areas will be selected over the next six months through the analysis of local data, community engagement assessments (including community surveys), focus groups, key informant interviews, and the Orange County Health Summit. As part of this process, OCDOH created a CHIP Steering Committee consisting of 20 individuals outside of internal staff representing area hospitals, community-based organizations, business owners, schools and colleges, federally qualified healthcare centers, and the community.\nOver the next six months, the committee will meet to review the assessments and collectively select the priority areas and evidence-based strategies, draft the goals, objectives, responsible partners, a timeline for completion, evaluation measures, and both short-term and long-term outcome measures. Each priority area will have a corresponding workgroup led by OCDOH and will use existing partnerships to actively recruit community partners and residents to participate. The CHIP Steering Committee will meet quarterly after June 2026 to review progress, make modifications as necessary, and ensure that each strategy is executed.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Executive Summary</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Executive Summary</span>"
     ]
   },
   {
     "objectID": "chapters/04-OCDOH.html",
     "href": "chapters/04-OCDOH.html",
-    "title": "6  Orange County Department of Health",
+    "title": "5  Orange County Department of Health",
     "section": "",
-    "text": "6.1 History\nThe Orange County Department of Health (OCDOH) was formed in 1969 as a full-service department in a chartered county with legislative oversight and an advisory Board of Health. The Department operates under the NYS Public Health Code and Titles 10 and 6 of the Official Compilation of Codes, Rules, and Regulations of the State of New York. Prior to 1969, public health services were provided through the New York State Department of Health (NYSDOH) district office in Middletown, which also served Sullivan and Putnam Counties and the City of Beacon in Dutchess County. In the 1960s, NYSDOH encouraged the creation of county health departments in counties with a population base of 100,000 or more to better meet resident needs. NYSDOH and the public health offices in the county’s cities initially provided staff for the newly formed Orange County Department of Health.",
+    "text": "5.1 History\nThe Orange County Department of Health (OCDOH) was formed in 1969 as a full-service department in a chartered county with legislative oversight and an advisory Board of Health. The Department operates under the NYS Public Health Code and Titles 10 and 6 of the Official Compilation of Codes, Rules, and Regulations of the State of New York. Prior to 1969, public health services were provided through the New York State Department of Health (NYSDOH) district office in Middletown, which also served Sullivan and Putnam Counties and the City of Beacon in Dutchess County. In the 1960s, NYSDOH encouraged the creation of county health departments in counties with a population base of 100,000 or more to better meet resident needs. NYSDOH and the public health offices in the county’s cities initially provided staff for the newly formed Orange County Department of Health.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Orange County Department of Health</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Orange County Department of Health</span>"
     ]
   },
   {
     "objectID": "chapters/04-OCDOH.html#mission",
     "href": "chapters/04-OCDOH.html#mission",
-    "title": "6  Orange County Department of Health",
-    "section": "6.2 Mission",
-    "text": "6.2 Mission\nIn partnership with our community, OCDOH protects, promotes, and improves the health and quality of life of everyone in Orange County.",
+    "title": "5  Orange County Department of Health",
+    "section": "5.2 Mission",
+    "text": "5.2 Mission\nIn partnership with our community, OCDOH protects, promotes, and improves the health and quality of life of everyone in Orange County.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Orange County Department of Health</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Orange County Department of Health</span>"
     ]
   },
   {
     "objectID": "chapters/04-OCDOH.html#scope-of-services",
     "href": "chapters/04-OCDOH.html#scope-of-services",
-    "title": "6  Orange County Department of Health",
-    "section": "6.3 Scope of Services",
-    "text": "6.3 Scope of Services\nThe Department provides public health services countywide. Outreach, prevention, education, and intervention services are strategically located in communities of high need. OCDOH consists of nine main divisions: Administration, Community Health Outreach, Early Intervention Services, Emergency Preparedness, Environmental Health, Epidemiology and Public Health Planning, Health Equity, the Medical Examiner’s Office, and Public Health Nursing.\nOverall direction and leadership for the Department are led by the Acting Commissioner of Health and Deputy Commissioners of Health. Jennifer Roman, DO, is the current Acting Commissioner of Health and the Medical Examiner. OCDOH has two Deputy Commissioners: Lisa Lahiff, JD, MHA, and Gretchen Riordan.",
+    "title": "5  Orange County Department of Health",
+    "section": "5.3 Scope of Services",
+    "text": "5.3 Scope of Services\nThe Department provides public health services countywide. Outreach, prevention, education, and intervention services are strategically located in communities of high need. OCDOH consists of nine main divisions: Administration, Community Health Outreach, Early Intervention Services, Emergency Preparedness, Environmental Health, Epidemiology and Public Health Planning, Health Equity, the Medical Examiner’s Office, and Public Health Nursing.\nOverall direction and leadership for the Department are led by the Acting Commissioner of Health and Deputy Commissioners of Health. Jennifer Roman, DO, is the current Acting Commissioner of Health and the Medical Examiner. OCDOH has two Deputy Commissioners: Lisa Lahiff, JD, MHA, and Gretchen Riordan.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Orange County Department of Health</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Orange County Department of Health</span>"
     ]
   },
   {
     "objectID": "chapters/04-OCDOH.html#division-of-community-health-outreach-cho",
     "href": "chapters/04-OCDOH.html#division-of-community-health-outreach-cho",
-    "title": "6  Orange County Department of Health",
-    "section": "6.4 Division of Community Health Outreach (CHO)",
-    "text": "6.4 Division of Community Health Outreach (CHO)\nThe Division of Community Health Outreach (CHO) is led by director Jill Boyd and has offices in Newburgh, Middletown, and Port Jervis. CHO provides outreach, information, and referrals to individuals at high risk of contracting chronic or communicable diseases or requiring management of acute or chronic health conditions. CHO consists of many programs that provide resources and education to the communities they serve and target different public health issues to improve health and quality of life.\nThese programs include:\n\n\nHealthy Neighborhoods and Childhood Lead Poisoning Prevention Programs, collectively known as Lead Safe Orange, monitor the results of mandatory childhood lead poisoning testing, provide case management for lead-poisoned children, and identify and address potential lead hazards. Lead Safe Orange targets areas in the cities of Newburgh, Middletown, and Port Jervis that are at high risk of lead hazards and meet residents directly in their homes to provide education and inspections to reduce lead exposure.\nLyme Disease and West Nile Virus Prevention Program focuses on reducing the incidence of Lyme and West Nile in Orange County by working with the public and healthcare providers to provide educational materials and tick removal kits. Staff are also able to assist in identifying ticks that potentially carry Lyme disease.\nThe Pregnant or Parenting People’s Initiative (funded through the Perinatal Infant Community Health Collaborative) operates in Monroe, Newburgh, New Windsor, Middletown, Port Jervis, Highland Falls, Chester, Goshen, Highland Mills, Pine Bush, Walden, and Town of Wallkill, and aims to improve maternal and infant health outcomes through individual-level needs assessments, case coordination, and referrals for high-need women and their infants. Community involvement, both by staff and the women they serve, is also prioritized to promote policy change and community-level health interventions.\nPublic Health Education works with hospitals, healthcare providers, schools, businesses, local coalitions and agencies, local media, and the public to provide education on current health topics and disseminate public health messages.\nAdolescent Tobacco Use Prevention Act, JUUL Vaping Prevention, and Enforcement provide services to eliminate the use of tobacco and vapor products, particularly among the youth population, and prevent the long-term health consequences that can result from tobacco use.\nCreating Healthy Schools and Communities is a five-year grant focused on increasing opportunities for physical activity and improved nutrition in high-need communities in New York State. In Orange County, the grant is administered in Middletown, Newburgh, Port Jervis, Highland Falls, Pine Bush, and Minisink. The program aims to implement food service guidelines with worksites and community settings; improve policies, practices, and environments for physical activity and nutrition in early care and education (ECE) settings and schools; and implement community planning and active transportation interventions in municipalities to increase safe and accessible physical activity.\nBreastfeeding Friendly New York is a five-year grant focused on providing a comprehensive, community-wide approach to implement policy, systems, and environmental changes in support of breastfeeding, chest feeding, and lactation. The grant serves the cities of Middletown, Newburgh, and Port Jervis, and the towns of Deerpark, Highlands, Mount Hope, New Windsor, and Wallkill.",
+    "title": "5  Orange County Department of Health",
+    "section": "5.4 Division of Community Health Outreach (CHO)",
+    "text": "5.4 Division of Community Health Outreach (CHO)\nThe Division of Community Health Outreach (CHO) is led by director Jill Boyd and has offices in Newburgh, Middletown, and Port Jervis. CHO provides outreach, information, and referrals to individuals at high risk of contracting chronic or communicable diseases or requiring management of acute or chronic health conditions. CHO consists of many programs that provide resources and education to the communities they serve and target different public health issues to improve health and quality of life.\nThese programs include:\n\n\nHealthy Neighborhoods and Childhood Lead Poisoning Prevention Programs, collectively known as Lead Safe Orange, monitor the results of mandatory childhood lead poisoning testing, provide case management for lead-poisoned children, and identify and address potential lead hazards. Lead Safe Orange targets areas in the cities of Newburgh, Middletown, and Port Jervis that are at high risk of lead hazards and meet residents directly in their homes to provide education and inspections to reduce lead exposure.\nLyme Disease and West Nile Virus Prevention Program focuses on reducing the incidence of Lyme and West Nile in Orange County by working with the public and healthcare providers to provide educational materials and tick removal kits. Staff are also able to assist in identifying ticks that potentially carry Lyme disease.\nThe Pregnant or Parenting People’s Initiative (funded through the Perinatal Infant Community Health Collaborative) operates in Monroe, Newburgh, New Windsor, Middletown, Port Jervis, Highland Falls, Chester, Goshen, Highland Mills, Pine Bush, Walden, and Town of Wallkill, and aims to improve maternal and infant health outcomes through individual-level needs assessments, case coordination, and referrals for high-need women and their infants. Community involvement, both by staff and the women they serve, is also prioritized to promote policy change and community-level health interventions.\nPublic Health Education works with hospitals, healthcare providers, schools, businesses, local coalitions and agencies, local media, and the public to provide education on current health topics and disseminate public health messages.\nAdolescent Tobacco Use Prevention Act, JUUL Vaping Prevention, and Enforcement provide services to eliminate the use of tobacco and vapor products, particularly among the youth population, and prevent the long-term health consequences that can result from tobacco use.\nCreating Healthy Schools and Communities is a five-year grant focused on increasing opportunities for physical activity and improved nutrition in high-need communities in New York State. In Orange County, the grant is administered in Middletown, Newburgh, Port Jervis, Highland Falls, Pine Bush, and Minisink. The program aims to implement food service guidelines with worksites and community settings; improve policies, practices, and environments for physical activity and nutrition in early care and education (ECE) settings and schools; and implement community planning and active transportation interventions in municipalities to increase safe and accessible physical activity.\nBreastfeeding Friendly New York is a five-year grant focused on providing a comprehensive, community-wide approach to implement policy, systems, and environmental changes in support of breastfeeding, chest feeding, and lactation. The grant serves the cities of Middletown, Newburgh, and Port Jervis, and the towns of Deerpark, Highlands, Mount Hope, New Windsor, and Wallkill.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Orange County Department of Health</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Orange County Department of Health</span>"
     ]
   },
   {
     "objectID": "chapters/04-OCDOH.html#division-of-early-intervention-services-eis",
     "href": "chapters/04-OCDOH.html#division-of-early-intervention-services-eis",
-    "title": "6  Orange County Department of Health",
-    "section": "6.5 Division of Early Intervention Services (EIS)",
-    "text": "6.5 Division of Early Intervention Services (EIS)\nThe Division of Early Intervention Services (EIS) is led by director Sandra Brownsey, MS, CAS. The primary office is located in Goshen with a small satellite office in Newburgh. EIS oversees the provision of services to children with developmental delays, learning disabilities, or other special health care needs. The programs within the Division include Early Intervention and Child Find (ages 0-3), Preschool Services (ages 3-5), and Children and Youth with Special Health Care Needs (ages 0-21). All programs are voluntary and at no cost to families.\nEarly Intervention evaluates children to assess development and determine eligibility for services such as Speech Therapy, Occupational Therapy, Physical Therapy, and/or Special Instruction. Child Find screens and monitors the development of children by completing milestone checklists and providing parents with resources to enhance learning. Preschool Services are determined at the school district level by a child’s Committee on Preschool Special Education (CPSE). The Children and Youth with Special Health Care Needs program provides timely information and resources to families when a child has a developmental, behavioral, medical, or other special need. Local resources include parent support groups, adaptive recreation, sibling supports, mental health experts, food banks, and health care providers.",
+    "title": "5  Orange County Department of Health",
+    "section": "5.5 Division of Early Intervention Services (EIS)",
+    "text": "5.5 Division of Early Intervention Services (EIS)\nThe Division of Early Intervention Services (EIS) is led by director Sandra Brownsey, MS, CAS. The primary office is located in Goshen with a small satellite office in Newburgh. EIS oversees the provision of services to children with developmental delays, learning disabilities, or other special health care needs. The programs within the Division include Early Intervention and Child Find (ages 0-3), Preschool Services (ages 3-5), and Children and Youth with Special Health Care Needs (ages 0-21). All programs are voluntary and at no cost to families.\nEarly Intervention evaluates children to assess development and determine eligibility for services such as Speech Therapy, Occupational Therapy, Physical Therapy, and/or Special Instruction. Child Find screens and monitors the development of children by completing milestone checklists and providing parents with resources to enhance learning. Preschool Services are determined at the school district level by a child’s Committee on Preschool Special Education (CPSE). The Children and Youth with Special Health Care Needs program provides timely information and resources to families when a child has a developmental, behavioral, medical, or other special need. Local resources include parent support groups, adaptive recreation, sibling supports, mental health experts, food banks, and health care providers.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Orange County Department of Health</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Orange County Department of Health</span>"
     ]
   },
   {
     "objectID": "chapters/04-OCDOH.html#public-health-emergency-response-preparedness-phep",
     "href": "chapters/04-OCDOH.html#public-health-emergency-response-preparedness-phep",
-    "title": "6  Orange County Department of Health",
-    "section": "6.6 Public Health Emergency Response & Preparedness (PHEP)",
-    "text": "6.6 Public Health Emergency Response & Preparedness (PHEP)\nPublic Health Emergency Response & Preparedness (PHEP) is directed by Bryan Welsh and is based in the Orange County Emergency Services center. The division is responsible for planning and coordinating responses to public health emergencies in Orange County. PHEP works closely with the Medical Reserve Corps and county, state, and regional partners, and serves as a liaison with the Department of Emergency Services to integrate public health into emergency operations. The division supports preparedness activities, emergency response, and recovery efforts, including mass distribution operations and vaccination Points of Dispensing. PHEP/MRC is also active in non-emergency health screening events, providing blood pressure and non-fasting cholesterol screenings and education.",
+    "title": "5  Orange County Department of Health",
+    "section": "5.6 Public Health Emergency Response & Preparedness (PHEP)",
+    "text": "5.6 Public Health Emergency Response & Preparedness (PHEP)\nPublic Health Emergency Response & Preparedness (PHEP) is directed by Bryan Welsh and is based in the Orange County Emergency Services center. The division is responsible for planning and coordinating responses to public health emergencies in Orange County. PHEP works closely with the Medical Reserve Corps and county, state, and regional partners, and serves as a liaison with the Department of Emergency Services to integrate public health into emergency operations. The division supports preparedness activities, emergency response, and recovery efforts, including mass distribution operations and vaccination Points of Dispensing. PHEP/MRC is also active in non-emergency health screening events, providing blood pressure and non-fasting cholesterol screenings and education.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Orange County Department of Health</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Orange County Department of Health</span>"
     ]
   },
   {
     "objectID": "chapters/04-OCDOH.html#division-of-environmental-health",
     "href": "chapters/04-OCDOH.html#division-of-environmental-health",
-    "title": "6  Orange County Department of Health",
-    "section": "6.7 Division of Environmental Health",
-    "text": "6.7 Division of Environmental Health\nThe Division of Environmental Health is led by Principal Public Health Engineer Steven Gagnon, PE, MPH, who supervises the Bureau of Sanitary Engineering, and Principal Public Health Sanitarian Timothy Gaeta, who supervises the Bureau of Sanitary Control. Environmental Health is responsible for enforcing the New York State Sanitary Code to prevent and control environmental threats to public health. The Bureau of Sanitary Engineering directly monitors over 250 public water supply systems and conducts reviews of plans for new and modified public water supply systems; sewage disposal systems for realty subdivisions, food service, and temporary residence operations; water treatment systems for non-public water supply systems; and newly constructed swimming pools. Sanitary Engineering staff collects about 125 routine coliform samples per month to ensure community water system compliance, as well as additional samples collected during sanitary surveys of water systems and for further monitoring of positive samples.\nThe Bureau of Sanitary Control inspects over 1,500 food service operations, including restaurants, school lunch programs, mobile food establishments, temporary food service operations, and vending machines, to maintain proper sanitary conditions. Additionally, Sanitary Control inspects temporary residences, children’s camps, farm labor camps, public pools, bathing beaches, mobile home parks, recreational parks and campsites, public functions, and agricultural fairs for clean water, proper sewage disposal, and general safety and sanitation for residents visiting or living at these facilities. Sanitary Control staff is also responsible for following up on reports of public health nuisance complaints made by county residents, such as rodent or insect infestations and improper sewage disposal, enforcing the New York State Clean Indoor Air Act, processing specimens for rabies testing at NYSDOH’s Rabies Laboratory, and evaluating homes of children with high blood lead levels. Sanitary Control is also responsible for enforcement of the Orange County Sanitary Code, which deals with property maintenance issues brought to our attention through complaints. In addition to the above programs, Sanitary Control has a very robust Lead Based Paint program consisting of Childhood Lead Cases, Primary Prevention Lead Cases, and the newly created Lead Rental Registry.",
+    "title": "5  Orange County Department of Health",
+    "section": "5.7 Division of Environmental Health",
+    "text": "5.7 Division of Environmental Health\nThe Division of Environmental Health is led by Principal Public Health Engineer Steven Gagnon, PE, MPH, who supervises the Bureau of Sanitary Engineering, and Principal Public Health Sanitarian Timothy Gaeta, who supervises the Bureau of Sanitary Control. Environmental Health is responsible for enforcing the New York State Sanitary Code to prevent and control environmental threats to public health. The Bureau of Sanitary Engineering directly monitors over 250 public water supply systems and conducts reviews of plans for new and modified public water supply systems; sewage disposal systems for realty subdivisions, food service, and temporary residence operations; water treatment systems for non-public water supply systems; and newly constructed swimming pools. Sanitary Engineering staff collects about 125 routine coliform samples per month to ensure community water system compliance, as well as additional samples collected during sanitary surveys of water systems and for further monitoring of positive samples.\nThe Bureau of Sanitary Control inspects over 1,500 food service operations, including restaurants, school lunch programs, mobile food establishments, temporary food service operations, and vending machines, to maintain proper sanitary conditions. Additionally, Sanitary Control inspects temporary residences, children’s camps, farm labor camps, public pools, bathing beaches, mobile home parks, recreational parks and campsites, public functions, and agricultural fairs for clean water, proper sewage disposal, and general safety and sanitation for residents visiting or living at these facilities. Sanitary Control staff is also responsible for following up on reports of public health nuisance complaints made by county residents, such as rodent or insect infestations and improper sewage disposal, enforcing the New York State Clean Indoor Air Act, processing specimens for rabies testing at NYSDOH’s Rabies Laboratory, and evaluating homes of children with high blood lead levels. Sanitary Control is also responsible for enforcement of the Orange County Sanitary Code, which deals with property maintenance issues brought to our attention through complaints. In addition to the above programs, Sanitary Control has a very robust Lead Based Paint program consisting of Childhood Lead Cases, Primary Prevention Lead Cases, and the newly created Lead Rental Registry.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Orange County Department of Health</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Orange County Department of Health</span>"
     ]
   },
   {
     "objectID": "chapters/04-OCDOH.html#health-equity",
     "href": "chapters/04-OCDOH.html#health-equity",
-    "title": "6  Orange County Department of Health",
-    "section": "6.8 Health Equity",
-    "text": "6.8 Health Equity\nLaurisa Sampson serves as the Director of Health Equity for the Orange County Department of Health and is based in the Newburgh office at 130 Broadway. The Health Equity Office works in partnership with residents, community organizations, and healthcare providers to advance health equity across Orange County. The office strives to strengthen community-driven, data-informed approaches that address social factors influencing health and support equitable access to preventive services, including recommended health screenings. Through inclusive collaboration and a focus on long-term impact, the Health Equity Office is committed to creating conditions where all residents have the opportunity to achieve good health—because in Orange County, health grows here for everyone.",
+    "title": "5  Orange County Department of Health",
+    "section": "5.8 Health Equity",
+    "text": "5.8 Health Equity\nLaurisa Sampson serves as the Director of Health Equity for the Orange County Department of Health and is based in the Newburgh office at 130 Broadway. The Health Equity Office works in partnership with residents, community organizations, and healthcare providers to advance health equity across Orange County. The office strives to strengthen community-driven, data-informed approaches that address social factors influencing health and support equitable access to preventive services, including recommended health screenings. Through inclusive collaboration and a focus on long-term impact, the Health Equity Office is committed to creating conditions where all residents have the opportunity to achieve good health—because in Orange County, health grows here for everyone.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Orange County Department of Health</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Orange County Department of Health</span>"
     ]
   },
   {
     "objectID": "chapters/04-OCDOH.html#division-of-epidemiology-and-public-health-planning",
     "href": "chapters/04-OCDOH.html#division-of-epidemiology-and-public-health-planning",
-    "title": "6  Orange County Department of Health",
-    "section": "6.9 Division of Epidemiology and Public Health Planning",
-    "text": "6.9 Division of Epidemiology and Public Health Planning\nThe Division of Epidemiology and Public Health Planning is led by director Jacqueline Lawler, MPH, and has offices in Goshen and Newburgh. Epidemiology is responsible for assessing and monitoring the population health status and needs of the county, investigating and addressing health problems affecting residents, providing communication and education to various audiences with various levels of health literacy, and improving public health functions through ongoing evaluation and continuous quality improvement. Epidemiology staff collaborate with community stakeholders to provide education and coordinate efforts and resources for disease surveillance.",
+    "title": "5  Orange County Department of Health",
+    "section": "5.9 Division of Epidemiology and Public Health Planning",
+    "text": "5.9 Division of Epidemiology and Public Health Planning\nThe Division of Epidemiology and Public Health Planning is led by director Jacqueline Lawler, MPH, and has offices in Goshen and Newburgh. Epidemiology is responsible for assessing and monitoring the population health status and needs of the county, investigating and addressing health problems affecting residents, providing communication and education to various audiences with various levels of health literacy, and improving public health functions through ongoing evaluation and continuous quality improvement. Epidemiology staff collaborate with community stakeholders to provide education and coordinate efforts and resources for disease surveillance.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Orange County Department of Health</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Orange County Department of Health</span>"
     ]
   },
   {
     "objectID": "chapters/04-OCDOH.html#medical-examiners-me-office",
     "href": "chapters/04-OCDOH.html#medical-examiners-me-office",
-    "title": "6  Orange County Department of Health",
-    "section": "6.10 Medical Examiner’s (ME) Office",
-    "text": "6.10 Medical Examiner’s (ME) Office\nThe Medical Examiner’s (ME) Office is led by Medical Examiner Jennifer Roman, DO, and has an office in Goshen. The ME Office investigates sudden, unexpected, and unnatural fatalities to ensure accurate cause and manner of death certification. The ME Office works with LiveOn NY to facilitate tissue retrieval from decedents for potentially lifesaving research and transplantation. They also assist the District Attorney’s Office to investigate cases and provide testimony for grand jury and trial and collaborate with the Hudson Valley Crime Analysis Center to confirm drug-related fatalities.",
+    "title": "5  Orange County Department of Health",
+    "section": "5.10 Medical Examiner’s (ME) Office",
+    "text": "5.10 Medical Examiner’s (ME) Office\nThe Medical Examiner’s (ME) Office is led by Medical Examiner Jennifer Roman, DO, and has an office in Goshen. The ME Office investigates sudden, unexpected, and unnatural fatalities to ensure accurate cause and manner of death certification. The ME Office works with LiveOn NY to facilitate tissue retrieval from decedents for potentially lifesaving research and transplantation. They also assist the District Attorney’s Office to investigate cases and provide testimony for grand jury and trial and collaborate with the Hudson Valley Crime Analysis Center to confirm drug-related fatalities.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Orange County Department of Health</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Orange County Department of Health</span>"
     ]
   },
   {
     "objectID": "chapters/04-OCDOH.html#division-of-public-health-nursing",
     "href": "chapters/04-OCDOH.html#division-of-public-health-nursing",
-    "title": "6  Orange County Department of Health",
-    "section": "6.11 Division of Public Health Nursing",
-    "text": "6.11 Division of Public Health Nursing\nThe Division of Public Health Nursing is led by director Heather Boss, RN, BSN, and has offices in Goshen, Middletown, and Newburgh. The division conducts investigations into communicable and vaccine-preventable diseases and serves residents aged two months and older through programs focused on communicable disease, immunization, sexually transmitted infections (STIs), and tuberculosis (TB). Public Health Nursing offers child immunization clinics for all recommended vaccines, as well as adult and travel immunization clinics. Child immunization clinics are available at no charge for eligible children under 18 years and for specific vaccines for high school students aged 19 years and older. Nursing staff also runs Latent TB testing clinics and conducts follow-up on suspected and confirmed TB cases, including contact investigations, administration of anti-TB medication, and regular monitoring of patients. The Public Health Nursing Sexual Health program offers free testing and treatment of STIs. A voluntary service is also offered to assist patients diagnosed with an STI in notifying partners who were potentially exposed to reduce the risk of transmission.",
+    "title": "5  Orange County Department of Health",
+    "section": "5.11 Division of Public Health Nursing",
+    "text": "5.11 Division of Public Health Nursing\nThe Division of Public Health Nursing is led by director Heather Boss, RN, BSN, and has offices in Goshen, Middletown, and Newburgh. The division conducts investigations into communicable and vaccine-preventable diseases and serves residents aged two months and older through programs focused on communicable disease, immunization, sexually transmitted infections (STIs), and tuberculosis (TB). Public Health Nursing offers child immunization clinics for all recommended vaccines, as well as adult and travel immunization clinics. Child immunization clinics are available at no charge for eligible children under 18 years and for specific vaccines for high school students aged 19 years and older. Nursing staff also runs Latent TB testing clinics and conducts follow-up on suspected and confirmed TB cases, including contact investigations, administration of anti-TB medication, and regular monitoring of patients. The Public Health Nursing Sexual Health program offers free testing and treatment of STIs. A voluntary service is also offered to assist patients diagnosed with an STI in notifying partners who were potentially exposed to reduce the risk of transmission.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Orange County Department of Health</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Orange County Department of Health</span>"
     ]
   },
   {
     "objectID": "chapters/05-community-partner-survey.html",
     "href": "chapters/05-community-partner-survey.html",
-    "title": "7  Community Partner Survey",
+    "title": "6  Community Partner Survey",
     "section": "",
-    "text": "7.1 Background\nTODO: Add narrative for this section.",
+    "text": "6.1 Background\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Community Partner Survey</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Community Partner Survey</span>"
     ]
   },
   {
     "objectID": "chapters/05-community-partner-survey.html#dutchess-county",
     "href": "chapters/05-community-partner-survey.html#dutchess-county",
-    "title": "7  Community Partner Survey",
-    "section": "7.2 Dutchess County",
-    "text": "7.2 Dutchess County\nTODO: Add narrative for this section.\n\n7.2.1 Major Findings\nTODO: Add narrative for this section.\n\n\n7.2.2 Specific Recommendations\nTODO: Add narrative for this section.",
+    "title": "6  Community Partner Survey",
+    "section": "6.2 Dutchess County",
+    "text": "6.2 Dutchess County\nTODO: Add narrative for this section.\n\n6.2.1 Major Findings\nTODO: Add narrative for this section.\n\n\n6.2.2 Specific Recommendations\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Community Partner Survey</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Community Partner Survey</span>"
     ]
   },
   {
     "objectID": "chapters/05-community-partner-survey.html#orange-county",
     "href": "chapters/05-community-partner-survey.html#orange-county",
-    "title": "7  Community Partner Survey",
-    "section": "7.3 Orange County",
-    "text": "7.3 Orange County\nTODO: Add narrative for this section.\n\n7.3.1 Major Findings\nTODO: Add narrative for this section.\n\n\n7.3.2 Specific Recommendations\nTODO: Add narrative for this section.",
+    "title": "6  Community Partner Survey",
+    "section": "6.3 Orange County",
+    "text": "6.3 Orange County\nTODO: Add narrative for this section.\n\n6.3.1 Major Findings\nTODO: Add narrative for this section.\n\n\n6.3.2 Specific Recommendations\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Community Partner Survey</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Community Partner Survey</span>"
     ]
   },
   {
     "objectID": "chapters/05-community-partner-survey.html#putnam-county",
     "href": "chapters/05-community-partner-survey.html#putnam-county",
-    "title": "7  Community Partner Survey",
-    "section": "7.4 Putnam County",
-    "text": "7.4 Putnam County\nTODO: Add narrative for this section.\n\n7.4.1 Major Findings\nTODO: Add narrative for this section.\n\n\n7.4.2 Specific Recommendations\nTODO: Add narrative for this section.",
+    "title": "6  Community Partner Survey",
+    "section": "6.4 Putnam County",
+    "text": "6.4 Putnam County\nTODO: Add narrative for this section.\n\n6.4.1 Major Findings\nTODO: Add narrative for this section.\n\n\n6.4.2 Specific Recommendations\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Community Partner Survey</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Community Partner Survey</span>"
     ]
   },
   {
     "objectID": "chapters/05-community-partner-survey.html#rockland-county",
     "href": "chapters/05-community-partner-survey.html#rockland-county",
-    "title": "7  Community Partner Survey",
-    "section": "7.5 Rockland County",
-    "text": "7.5 Rockland County\nTODO: Add narrative for this section.\n\n7.5.1 Major Findings\nTODO: Add narrative for this section.\n\n\n7.5.2 Specific Recommendations\nTODO: Add narrative for this section.",
+    "title": "6  Community Partner Survey",
+    "section": "6.5 Rockland County",
+    "text": "6.5 Rockland County\nTODO: Add narrative for this section.\n\n6.5.1 Major Findings\nTODO: Add narrative for this section.\n\n\n6.5.2 Specific Recommendations\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Community Partner Survey</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Community Partner Survey</span>"
     ]
   },
   {
     "objectID": "chapters/05-community-partner-survey.html#sullivan-county",
     "href": "chapters/05-community-partner-survey.html#sullivan-county",
-    "title": "7  Community Partner Survey",
-    "section": "7.6 Sullivan County",
-    "text": "7.6 Sullivan County\nTODO: Add narrative for this section.\n\n7.6.1 Major Findings\nTODO: Add narrative for this section.",
+    "title": "6  Community Partner Survey",
+    "section": "6.6 Sullivan County",
+    "text": "6.6 Sullivan County\nTODO: Add narrative for this section.\n\n6.6.1 Major Findings\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Community Partner Survey</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Community Partner Survey</span>"
     ]
   },
   {
     "objectID": "chapters/05-community-partner-survey.html#ulster-county",
     "href": "chapters/05-community-partner-survey.html#ulster-county",
-    "title": "7  Community Partner Survey",
-    "section": "7.7 Ulster County",
-    "text": "7.7 Ulster County\nTODO: Add narrative for this section.\n\n7.7.1 Major Findings\nTODO: Add narrative for this section.\n\n\n7.7.2 Specific Recommendations\nTODO: Add narrative for this section.",
+    "title": "6  Community Partner Survey",
+    "section": "6.7 Ulster County",
+    "text": "6.7 Ulster County\nTODO: Add narrative for this section.\n\n6.7.1 Major Findings\nTODO: Add narrative for this section.\n\n\n6.7.2 Specific Recommendations\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Community Partner Survey</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Community Partner Survey</span>"
     ]
   },
   {
     "objectID": "chapters/05-community-partner-survey.html#westchester-county",
     "href": "chapters/05-community-partner-survey.html#westchester-county",
-    "title": "7  Community Partner Survey",
-    "section": "7.8 Westchester County",
-    "text": "7.8 Westchester County\nTODO: Add narrative for this section.\n\n7.8.1 Major Findings\nTODO: Add narrative for this section.\n\n\n7.8.2 Specific Recommendations\nTODO: Add narrative for this section.",
+    "title": "6  Community Partner Survey",
+    "section": "6.8 Westchester County",
+    "text": "6.8 Westchester County\nTODO: Add narrative for this section.\n\n6.8.1 Major Findings\nTODO: Add narrative for this section.\n\n\n6.8.2 Specific Recommendations\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Community Partner Survey</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Community Partner Survey</span>"
     ]
   },
   {
     "objectID": "chapters/06-health-behaviors.html",
     "href": "chapters/06-health-behaviors.html",
-    "title": "8  Health Behaviors Indicators",
+    "title": "7  Health Behaviors Indicators",
     "section": "",
-    "text": "8.1 Physical Activity\nTODO: Add narrative for this section.",
+    "text": "7.1 Physical Activity\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Health Behaviors Indicators</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Health Behaviors Indicators</span>"
     ]
   },
   {
     "objectID": "chapters/06-health-behaviors.html#nutrition",
     "href": "chapters/06-health-behaviors.html#nutrition",
-    "title": "8  Health Behaviors Indicators",
-    "section": "8.2 Nutrition",
-    "text": "8.2 Nutrition\nTODO: Add narrative for this section.\n\n8.2.1 Fruit and Vegetable Consumption\nTODO: Add narrative for this section.  \n\n\n8.2.2 Sugary Beverages\nTODO: Add narrative for this section.",
+    "title": "7  Health Behaviors Indicators",
+    "section": "7.2 Nutrition",
+    "text": "7.2 Nutrition\nTODO: Add narrative for this section.\n\n7.2.1 Fruit and Vegetable Consumption\nTODO: Add narrative for this section.  \n\n\n7.2.2 Sugary Beverages\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Health Behaviors Indicators</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Health Behaviors Indicators</span>"
     ]
   },
   {
     "objectID": "chapters/07-health-indicators.html",
     "href": "chapters/07-health-indicators.html",
-    "title": "9  Health Indicators",
+    "title": "8  Health Indicators",
     "section": "",
-    "text": "9.1 Mortality\nTODO: Add narrative for this section.",
+    "text": "8.1 Mortality\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Health Indicators</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Health Indicators</span>"
     ]
   },
   {
     "objectID": "chapters/07-health-indicators.html#premature-death",
     "href": "chapters/07-health-indicators.html#premature-death",
-    "title": "9  Health Indicators",
-    "section": "9.2 Premature Death",
-    "text": "9.2 Premature Death\nTODO: Add narrative for this section.",
+    "title": "8  Health Indicators",
+    "section": "8.2 Premature Death",
+    "text": "8.2 Premature Death\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Health Indicators</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Health Indicators</span>"
     ]
   },
   {
     "objectID": "chapters/07-health-indicators.html#physical-health",
     "href": "chapters/07-health-indicators.html#physical-health",
-    "title": "9  Health Indicators",
-    "section": "9.3 Physical Health",
-    "text": "9.3 Physical Health\nTODO: Add narrative for this section.\n\n9.3.1 Chronic Diseases\nTODO: Add narrative for this section.\n\n9.3.1.1 Chronic Lower Respiratory Diseases\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n\n9.3.2 Asthma\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n9.3.3 Cardiovascular Disease\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n9.3.4 Hypertension\nTODO: Add narrative for this section.  \n\n\n9.3.5 Cerebrovascular Disease\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n9.3.6 Coronary Heart Disease\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9.3.7 Diabetes\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n\n\n9.3.8 Obesity\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n9.3.9 Cirrhosis of the Liver\nTODO: Add narrative for this section.  \n\n\n\n\n9.3.10 Cancer\nTODO: Add narrative for this section.  \n\n\n\n\n9.3.11 Colorectal Cancer\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n9.3.12 Lung Cancer\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n9.3.13 Prostate Cancer\nTODO: Add narrative for this section.  \n\n\n9.3.14 Female Breast Cancer\nTODO: Add narrative for this section.  \n\n\n\n\n9.3.15 Cervix Uteri Cancer\nTODO: Add narrative for this section.  \n\n\n\n\n9.3.16 Infectious Diseases\nTODO: Add narrative for this section.\n\n9.3.16.1 Vaccine-Preventable Diseases\nTODO: Add narrative for this section.\n\n\n9.3.16.2 Childhood Immunization\nTODO: Add narrative for this section.  \n\n\n\n9.3.17 COVID-19\nTODO: Add narrative for this section.  \n\n\n9.3.18 Human Papillomavirus Immunization\nTODO: Add narrative for this section.  \n\n\n9.3.19 Flu Immunization\nTODO: Add narrative for this section.  \n\n\n\n\n9.3.20 Pneumonia Immunization\nTODO: Add narrative for this section.  \n\n\n9.3.21 Sexually Transmitted Infections\nTODO: Add narrative for this section.\n\n9.3.21.1 HIV/AIDS\nTODO: Add narrative for this section.  \n\n\n9.3.21.2 Gonorrhea\nTODO: Add narrative for this section.  \n\n\n9.3.21.3 Chlamydia\nTODO: Add narrative for this section.  \n\n\n9.3.21.4 Syphilis\nTODO: Add narrative for this section.  \n\n\n\n9.3.22 Tick-Borne Diseases\nTODO: Add narrative for this section.\n\n9.3.22.1 Lyme Disease\nTODO: Add narrative for this section.  \n\n\n9.3.22.2 Anaplasmosis\nTODO: Add narrative for this section.  \n\n\n9.3.22.3 Babesiosis\nTODO: Add narrative for this section.  \n\n\n9.3.22.4 Rabies\nTODO: Add narrative for this section. \n\n\n\n\n\n\n9.3.23 Maternal and Infant Health\nTODO: Add narrative for this section.\n\n9.3.23.1 Prenatal Care\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n9.3.23.2 All Pregnancies by Age Group\nTODO: Add narrative for this section.  \n\n\n\n\n9.3.23.3 Adolescent Pregnancy\nTODO: Add narrative for this section.  \n\n\n\n\n9.3.23.4 Self-Pay or Medicaid Births / Pregnancies\nTODO: Add narrative for this section.  \n\n\n\n9.3.24 Adverse Birth Outcomes\nTODO: Add narrative for this section.\n\n9.3.24.1 Preterm Births\nTODO: Add narrative for this section.  \n\n\n9.3.24.2 Low Birthweight Births\nTODO: Add narrative for this section.  \n\n\n\n\n9.3.24.3 Infant Mortality\nTODO: Add narrative for this section.  \n\n\n9.3.24.4 Breastfeeding\nTODO: Add narrative for this section.  \n\n\n9.3.24.5 Oral Health\nTODO: Add narrative for this section.",
+    "title": "8  Health Indicators",
+    "section": "8.3 Physical Health",
+    "text": "8.3 Physical Health\nTODO: Add narrative for this section.\n\n8.3.1 Chronic Diseases\nTODO: Add narrative for this section.\n\n8.3.1.1 Chronic Lower Respiratory Diseases\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n\n8.3.2 Asthma\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n8.3.3 Cardiovascular Disease\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n8.3.4 Hypertension\nTODO: Add narrative for this section.  \n\n\n8.3.5 Cerebrovascular Disease\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n8.3.6 Coronary Heart Disease\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8.3.7 Diabetes\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n\n\n8.3.8 Obesity\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n8.3.9 Cirrhosis of the Liver\nTODO: Add narrative for this section.  \n\n\n\n\n8.3.10 Cancer\nTODO: Add narrative for this section.  \n\n\n\n\n8.3.11 Colorectal Cancer\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n8.3.12 Lung Cancer\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n8.3.13 Prostate Cancer\nTODO: Add narrative for this section.  \n\n\n8.3.14 Female Breast Cancer\nTODO: Add narrative for this section.  \n\n\n\n\n8.3.15 Cervix Uteri Cancer\nTODO: Add narrative for this section.  \n\n\n\n\n8.3.16 Infectious Diseases\nTODO: Add narrative for this section.\n\n8.3.16.1 Vaccine-Preventable Diseases\nTODO: Add narrative for this section.\n\n\n8.3.16.2 Childhood Immunization\nTODO: Add narrative for this section.  \n\n\n\n8.3.17 COVID-19\nTODO: Add narrative for this section.  \n\n\n8.3.18 Human Papillomavirus Immunization\nTODO: Add narrative for this section.  \n\n\n8.3.19 Flu Immunization\nTODO: Add narrative for this section.  \n\n\n\n\n8.3.20 Pneumonia Immunization\nTODO: Add narrative for this section.  \n\n\n8.3.21 Sexually Transmitted Infections\nTODO: Add narrative for this section.\n\n8.3.21.1 HIV/AIDS\nTODO: Add narrative for this section.  \n\n\n8.3.21.2 Gonorrhea\nTODO: Add narrative for this section.  \n\n\n8.3.21.3 Chlamydia\nTODO: Add narrative for this section.  \n\n\n8.3.21.4 Syphilis\nTODO: Add narrative for this section.  \n\n\n\n8.3.22 Tick-Borne Diseases\nTODO: Add narrative for this section.\n\n8.3.22.1 Lyme Disease\nTODO: Add narrative for this section.  \n\n\n8.3.22.2 Anaplasmosis\nTODO: Add narrative for this section.  \n\n\n8.3.22.3 Babesiosis\nTODO: Add narrative for this section.  \n\n\n8.3.22.4 Rabies\nTODO: Add narrative for this section. \n\n\n\n\n\n\n8.3.23 Maternal and Infant Health\nTODO: Add narrative for this section.\n\n8.3.23.1 Prenatal Care\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n8.3.23.2 All Pregnancies by Age Group\nTODO: Add narrative for this section.  \n\n\n\n\n8.3.23.3 Adolescent Pregnancy\nTODO: Add narrative for this section.  \n\n\n\n\n8.3.23.4 Self-Pay or Medicaid Births / Pregnancies\nTODO: Add narrative for this section.  \n\n\n\n8.3.24 Adverse Birth Outcomes\nTODO: Add narrative for this section.\n\n8.3.24.1 Preterm Births\nTODO: Add narrative for this section.  \n\n\n8.3.24.2 Low Birthweight Births\nTODO: Add narrative for this section.  \n\n\n\n\n8.3.24.3 Infant Mortality\nTODO: Add narrative for this section.  \n\n\n8.3.24.4 Breastfeeding\nTODO: Add narrative for this section.  \n\n\n8.3.24.5 Oral Health\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Health Indicators</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Health Indicators</span>"
     ]
   },
   {
     "objectID": "chapters/08-Behavioral-Health.html",
     "href": "chapters/08-Behavioral-Health.html",
-    "title": "10  Behavioral Health",
+    "title": "9  Behavioral Health",
     "section": "",
-    "text": "10.1 Mental Health\nTODO: Add narrative for this section.",
+    "text": "9.1 Mental Health\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Behavioral Health</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Behavioral Health</span>"
     ]
   },
   {
     "objectID": "chapters/08-Behavioral-Health.html#substance-use",
     "href": "chapters/08-Behavioral-Health.html#substance-use",
-    "title": "10  Behavioral Health",
-    "section": "10.2 Substance Use",
-    "text": "10.2 Substance Use\nTODO: Add narrative for this section.\n\n10.2.1 Tobacco & Vaping\nTODO: Add narrative for this section. \n\n\n\n\n10.2.2 Alcohol\nTODO: Add narrative for this section.  \n\n\n10.2.3 Opioid Use\nTODO: Add narrative for this section.",
+    "title": "9  Behavioral Health",
+    "section": "9.2 Substance Use",
+    "text": "9.2 Substance Use\nTODO: Add narrative for this section.\n\n9.2.1 Tobacco & Vaping\nTODO: Add narrative for this section. \n\n\n\n\n9.2.2 Alcohol\nTODO: Add narrative for this section.  \n\n\n9.2.3 Opioid Use\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Behavioral Health</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Behavioral Health</span>"
     ]
   },
   {
     "objectID": "chapters/08-Behavioral-Health.html#suicide",
     "href": "chapters/08-Behavioral-Health.html#suicide",
-    "title": "10  Behavioral Health",
-    "section": "10.3 Suicide",
-    "text": "10.3 Suicide\nTODO: Add narrative for this section.",
+    "title": "9  Behavioral Health",
+    "section": "9.3 Suicide",
+    "text": "9.3 Suicide\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Behavioral Health</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Behavioral Health</span>"
     ]
   },
   {
     "objectID": "chapters/09-Child-Health.html",
     "href": "chapters/09-Child-Health.html",
-    "title": "11  Child Health",
+    "title": "10  Child Health",
     "section": "",
-    "text": "11.1 Asthma\nTODO: Add narrative for this section.",
+    "text": "10.1 Asthma\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Child Health</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Child Health</span>"
     ]
   },
   {
     "objectID": "chapters/09-Child-Health.html#gastroenteritis",
     "href": "chapters/09-Child-Health.html#gastroenteritis",
-    "title": "11  Child Health",
-    "section": "11.2 Gastroenteritis",
-    "text": "11.2 Gastroenteritis\nTODO: Add narrative for this section.",
+    "title": "10  Child Health",
+    "section": "10.2 Gastroenteritis",
+    "text": "10.2 Gastroenteritis\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Child Health</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Child Health</span>"
     ]
   },
   {
     "objectID": "chapters/09-Child-Health.html#otitis-media",
     "href": "chapters/09-Child-Health.html#otitis-media",
-    "title": "11  Child Health",
-    "section": "11.3 Otitis Media",
-    "text": "11.3 Otitis Media\nTODO: Add narrative for this section.",
+    "title": "10  Child Health",
+    "section": "10.3 Otitis Media",
+    "text": "10.3 Otitis Media\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Child Health</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Child Health</span>"
     ]
   },
   {
     "objectID": "chapters/09-Child-Health.html#pneumonia",
     "href": "chapters/09-Child-Health.html#pneumonia",
-    "title": "11  Child Health",
-    "section": "11.4 Pneumonia",
-    "text": "11.4 Pneumonia\nTODO: Add narrative for this section.",
+    "title": "10  Child Health",
+    "section": "10.4 Pneumonia",
+    "text": "10.4 Pneumonia\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Child Health</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Child Health</span>"
     ]
   },
   {
     "objectID": "chapters/10-Environmental Indicators.html",
     "href": "chapters/10-Environmental Indicators.html",
-    "title": "12  Environmental Indicators",
+    "title": "11  Environmental Indicators",
     "section": "",
-    "text": "12.1 Safety\nTODO: Add narrative for this section.",
+    "text": "11.1 Safety\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Environmental Indicators</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Environmental Indicators</span>"
     ]
   },
   {
     "objectID": "chapters/10-Environmental Indicators.html#safety",
     "href": "chapters/10-Environmental Indicators.html#safety",
-    "title": "12  Environmental Indicators",
+    "title": "11  Environmental Indicators",
     "section": "",
-    "text": "12.1.1 Injury\nTODO: Add narrative for this section.",
+    "text": "11.1.1 Injury\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Environmental Indicators</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Environmental Indicators</span>"
     ]
   },
   {
     "objectID": "chapters/10-Environmental Indicators.html#poisonings",
     "href": "chapters/10-Environmental Indicators.html#poisonings",
-    "title": "12  Environmental Indicators",
-    "section": "12.2 Poisonings",
-    "text": "12.2 Poisonings\nTODO: Add narrative for this section.",
+    "title": "11  Environmental Indicators",
+    "section": "11.2 Poisonings",
+    "text": "11.2 Poisonings\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Environmental Indicators</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Environmental Indicators</span>"
     ]
   },
   {
     "objectID": "chapters/10-Environmental Indicators.html#motor-vehicle-accidents",
     "href": "chapters/10-Environmental Indicators.html#motor-vehicle-accidents",
-    "title": "12  Environmental Indicators",
-    "section": "12.3 Motor Vehicle Accidents",
-    "text": "12.3 Motor Vehicle Accidents\nTODO: Add narrative for this section.",
+    "title": "11  Environmental Indicators",
+    "section": "11.3 Motor Vehicle Accidents",
+    "text": "11.3 Motor Vehicle Accidents\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Environmental Indicators</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Environmental Indicators</span>"
     ]
   },
   {
     "objectID": "chapters/10-Environmental Indicators.html#falls",
     "href": "chapters/10-Environmental Indicators.html#falls",
-    "title": "12  Environmental Indicators",
-    "section": "12.4 Falls",
-    "text": "12.4 Falls\nTODO: Add narrative for this section.",
+    "title": "11  Environmental Indicators",
+    "section": "11.4 Falls",
+    "text": "11.4 Falls\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Environmental Indicators</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Environmental Indicators</span>"
     ]
   },
   {
     "objectID": "chapters/10-Environmental Indicators.html#domestic-violence-intrapersonal-violence",
     "href": "chapters/10-Environmental Indicators.html#domestic-violence-intrapersonal-violence",
-    "title": "12  Environmental Indicators",
-    "section": "12.5 Domestic Violence / Intrapersonal Violence",
-    "text": "12.5 Domestic Violence / Intrapersonal Violence\nTODO: Add narrative for this section.",
+    "title": "11  Environmental Indicators",
+    "section": "11.5 Domestic Violence / Intrapersonal Violence",
+    "text": "11.5 Domestic Violence / Intrapersonal Violence\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Environmental Indicators</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Environmental Indicators</span>"
     ]
   },
   {
     "objectID": "chapters/11-County-Health-Summaries.html",
     "href": "chapters/11-County-Health-Summaries.html",
-    "title": "13  County Health Summaries",
+    "title": "12  County Health Summaries",
     "section": "",
-    "text": "13.1 Dutchess County Health Summary\nTODO: Add narrative for this section.",
+    "text": "12.1 Dutchess County Health Summary\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>County Health Summaries</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>County Health Summaries</span>"
     ]
   },
   {
     "objectID": "chapters/11-County-Health-Summaries.html#dutchess-county-health-summary",
     "href": "chapters/11-County-Health-Summaries.html#dutchess-county-health-summary",
-    "title": "13  County Health Summaries",
+    "title": "12  County Health Summaries",
     "section": "",
-    "text": "13.1.1 Demographics\nTODO: Add narrative for this section.\n\n\n13.1.2 Community Survey Findings\nTODO: Add narrative for this section.\n\n13.1.2.1 Regional Community Health Survey 2025\nTODO: Add narrative for this section.\n\n\n13.1.2.2 Dutchess County Resident Priority Voting\nTODO: Add narrative for this section.  \n\n\n\n13.1.3 Areas of Focus\nTODO: Add narrative for this section.\n\n\n13.1.4 Assets and Resources\nTODO: Add narrative for this section.",
+    "text": "12.1.1 Demographics\nTODO: Add narrative for this section.\n\n\n12.1.2 Community Survey Findings\nTODO: Add narrative for this section.\n\n12.1.2.1 Regional Community Health Survey 2025\nTODO: Add narrative for this section.\n\n\n12.1.2.2 Dutchess County Resident Priority Voting\nTODO: Add narrative for this section.  \n\n\n\n12.1.3 Areas of Focus\nTODO: Add narrative for this section.\n\n\n12.1.4 Assets and Resources\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>County Health Summaries</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>County Health Summaries</span>"
     ]
   },
   {
     "objectID": "chapters/11-County-Health-Summaries.html#orange-county-health-summary",
     "href": "chapters/11-County-Health-Summaries.html#orange-county-health-summary",
-    "title": "13  County Health Summaries",
-    "section": "13.2 Orange County Health Summary",
-    "text": "13.2 Orange County Health Summary\nTODO: Add narrative for this section.\n\n13.2.1 Demographics\nTODO: Add narrative for this section.\n\n\n13.2.2 Community Survey Findings\nTODO: Add narrative for this section.\n\n13.2.2.1 Orange County Community Health Survey\nTODO: Add narrative for this section.\n\n\n13.2.2.2 Orange County Community Asset Survey\nTODO: Add narrative for this section.\n\n\n\n13.2.3 Areas of Focus\nTODO: Add narrative for this section.\n\n\n13.2.4 Assets and Resources\nTODO: Add narrative for this section.",
+    "title": "12  County Health Summaries",
+    "section": "12.2 Orange County Health Summary",
+    "text": "12.2 Orange County Health Summary\nTODO: Add narrative for this section.\n\n12.2.1 Demographics\nTODO: Add narrative for this section.\n\n\n12.2.2 Community Survey Findings\nTODO: Add narrative for this section.\n\n12.2.2.1 Orange County Community Health Survey\nTODO: Add narrative for this section.\n\n\n12.2.2.2 Orange County Community Asset Survey\nTODO: Add narrative for this section.\n\n\n\n12.2.3 Areas of Focus\nTODO: Add narrative for this section.\n\n\n12.2.4 Assets and Resources\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>County Health Summaries</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>County Health Summaries</span>"
     ]
   },
   {
     "objectID": "chapters/11-County-Health-Summaries.html#putnam-county-health-summary",
     "href": "chapters/11-County-Health-Summaries.html#putnam-county-health-summary",
-    "title": "13  County Health Summaries",
-    "section": "13.3 Putnam County Health Summary",
-    "text": "13.3 Putnam County Health Summary\nTODO: Add narrative for this section.\n\n13.3.1 Demographics\nTODO: Add narrative for this section.\n\n\n13.3.2 Community Survey Findings\nTODO: Add narrative for this section.\n\n13.3.2.1 Regional Community Health Survey\nTODO: Add narrative for this section.\n\n\n13.3.2.2 Community Health Experience Survey\nTODO: Add narrative for this section.\n\n\n\n13.3.3 Areas of Focus\nTODO: Add narrative for this section.\n\n\n13.3.4 Assets and Resources\nTODO: Add narrative for this section.",
+    "title": "12  County Health Summaries",
+    "section": "12.3 Putnam County Health Summary",
+    "text": "12.3 Putnam County Health Summary\nTODO: Add narrative for this section.\n\n12.3.1 Demographics\nTODO: Add narrative for this section.\n\n\n12.3.2 Community Survey Findings\nTODO: Add narrative for this section.\n\n12.3.2.1 Regional Community Health Survey\nTODO: Add narrative for this section.\n\n\n12.3.2.2 Community Health Experience Survey\nTODO: Add narrative for this section.\n\n\n\n12.3.3 Areas of Focus\nTODO: Add narrative for this section.\n\n\n12.3.4 Assets and Resources\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>County Health Summaries</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>County Health Summaries</span>"
     ]
   },
   {
     "objectID": "chapters/11-County-Health-Summaries.html#rockland-county-health-summary",
     "href": "chapters/11-County-Health-Summaries.html#rockland-county-health-summary",
-    "title": "13  County Health Summaries",
-    "section": "13.4 Rockland County Health Summary",
-    "text": "13.4 Rockland County Health Summary\nTODO: Add narrative for this section.\n\n13.4.1 Demographics\nTODO: Add narrative for this section.\n\n\n13.4.2 Community Survey Findings\nTODO: Add narrative for this section.        \n\n\n13.4.3 Areas of Focus\nTODO: Add narrative for this section.\n\n\n13.4.4 Assets and Resources\nTODO: Add narrative for this section.",
+    "title": "12  County Health Summaries",
+    "section": "12.4 Rockland County Health Summary",
+    "text": "12.4 Rockland County Health Summary\nTODO: Add narrative for this section.\n\n12.4.1 Demographics\nTODO: Add narrative for this section.\n\n\n12.4.2 Community Survey Findings\nTODO: Add narrative for this section.        \n\n\n12.4.3 Areas of Focus\nTODO: Add narrative for this section.\n\n\n12.4.4 Assets and Resources\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>County Health Summaries</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>County Health Summaries</span>"
     ]
   },
   {
     "objectID": "chapters/11-County-Health-Summaries.html#sullivan-county-health-summary",
     "href": "chapters/11-County-Health-Summaries.html#sullivan-county-health-summary",
-    "title": "13  County Health Summaries",
-    "section": "13.5 Sullivan County Health Summary",
-    "text": "13.5 Sullivan County Health Summary\nTODO: Add narrative for this section.\n\n13.5.1 Demographics\nTODO: Add narrative for this section.\n\n\n13.5.2 Community Survey Findings\nTODO: Add narrative for this section.\n\n\n13.5.3 Areas of Focus\nTODO: Add narrative for this section.\n\n\n13.5.4 Assets and Resources\nTODO: Add narrative for this section.",
+    "title": "12  County Health Summaries",
+    "section": "12.5 Sullivan County Health Summary",
+    "text": "12.5 Sullivan County Health Summary\nTODO: Add narrative for this section.\n\n12.5.1 Demographics\nTODO: Add narrative for this section.\n\n\n12.5.2 Community Survey Findings\nTODO: Add narrative for this section.\n\n\n12.5.3 Areas of Focus\nTODO: Add narrative for this section.\n\n\n12.5.4 Assets and Resources\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>County Health Summaries</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>County Health Summaries</span>"
     ]
   },
   {
     "objectID": "chapters/11-County-Health-Summaries.html#ulster-county-health-summary",
     "href": "chapters/11-County-Health-Summaries.html#ulster-county-health-summary",
-    "title": "13  County Health Summaries",
-    "section": "13.6 Ulster County Health Summary",
-    "text": "13.6 Ulster County Health Summary\nTODO: Add narrative for this section.\n\n13.6.1 Demographics\nTODO: Add narrative for this section.\n\n\n13.6.2 Areas of Focus\nTODO: Add narrative for this section.\n\n\n13.6.3 Assets and Resources\nTODO: Add narrative for this section.\n\n\n13.6.4 Efforts Moving Forward\nTODO: Add narrative for this section.",
+    "title": "12  County Health Summaries",
+    "section": "12.6 Ulster County Health Summary",
+    "text": "12.6 Ulster County Health Summary\nTODO: Add narrative for this section.\n\n12.6.1 Demographics\nTODO: Add narrative for this section.\n\n\n12.6.2 Areas of Focus\nTODO: Add narrative for this section.\n\n\n12.6.3 Assets and Resources\nTODO: Add narrative for this section.\n\n\n12.6.4 Efforts Moving Forward\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>County Health Summaries</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>County Health Summaries</span>"
     ]
   },
   {
     "objectID": "chapters/11-County-Health-Summaries.html#westchester-county-health-summary",
     "href": "chapters/11-County-Health-Summaries.html#westchester-county-health-summary",
-    "title": "13  County Health Summaries",
-    "section": "13.7 Westchester County Health Summary",
-    "text": "13.7 Westchester County Health Summary\nTODO: Add narrative for this section.\n\n13.7.1 Demographics\nTODO: Add narrative for this section.\n\n\n13.7.2 Area of Focus and Efforts Moving Forward\nTODO: Add narrative for this section.\n\n\n13.7.3 Assets and Resources\nTODO: Add narrative for this section.",
+    "title": "12  County Health Summaries",
+    "section": "12.7 Westchester County Health Summary",
+    "text": "12.7 Westchester County Health Summary\nTODO: Add narrative for this section.\n\n12.7.1 Demographics\nTODO: Add narrative for this section.\n\n\n12.7.2 Area of Focus and Efforts Moving Forward\nTODO: Add narrative for this section.\n\n\n12.7.3 Assets and Resources\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>County Health Summaries</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>County Health Summaries</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html",
     "href": "chapters/12-Appendices.html",
-    "title": "14  List of Appendices",
+    "title": "13  List of Appendices",
     "section": "",
-    "text": "14.1 Appendix A - Region Map\nTODO: Add narrative for this section.",
+    "text": "13.1 Appendix A - Region Map\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html#sec-appendix-b-map",
     "href": "chapters/12-Appendices.html#sec-appendix-b-map",
-    "title": "14  List of Appendices",
-    "section": "14.2 Appendix B - Dutchess County Map",
-    "text": "14.2 Appendix B - Dutchess County Map\nTODO: Add narrative for this section.",
+    "title": "13  List of Appendices",
+    "section": "13.2 Appendix B - Dutchess County Map",
+    "text": "13.2 Appendix B - Dutchess County Map\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html#sec-appendix-c-map",
     "href": "chapters/12-Appendices.html#sec-appendix-c-map",
-    "title": "14  List of Appendices",
-    "section": "14.3 Appendix C - Orange County Map",
-    "text": "14.3 Appendix C - Orange County Map\nTODO: Add narrative for this section.",
+    "title": "13  List of Appendices",
+    "section": "13.3 Appendix C - Orange County Map",
+    "text": "13.3 Appendix C - Orange County Map\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html#sec-appendix-d-map",
     "href": "chapters/12-Appendices.html#sec-appendix-d-map",
-    "title": "14  List of Appendices",
-    "section": "14.4 Appendix D - Putnam County Map",
-    "text": "14.4 Appendix D - Putnam County Map\nTODO: Add narrative for this section.",
+    "title": "13  List of Appendices",
+    "section": "13.4 Appendix D - Putnam County Map",
+    "text": "13.4 Appendix D - Putnam County Map\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html#sec-appendix-e-map",
     "href": "chapters/12-Appendices.html#sec-appendix-e-map",
-    "title": "14  List of Appendices",
-    "section": "14.5 Appendix E - Rockland County Map",
-    "text": "14.5 Appendix E - Rockland County Map\nTODO: Add narrative for this section.",
+    "title": "13  List of Appendices",
+    "section": "13.5 Appendix E - Rockland County Map",
+    "text": "13.5 Appendix E - Rockland County Map\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html#sec-appendix-f-map",
     "href": "chapters/12-Appendices.html#sec-appendix-f-map",
-    "title": "14  List of Appendices",
-    "section": "14.6 Appendix F - Sullivan County Map",
-    "text": "14.6 Appendix F - Sullivan County Map\nTODO: Add narrative for this section.",
+    "title": "13  List of Appendices",
+    "section": "13.6 Appendix F - Sullivan County Map",
+    "text": "13.6 Appendix F - Sullivan County Map\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html#sec-appendix-g-map",
     "href": "chapters/12-Appendices.html#sec-appendix-g-map",
-    "title": "14  List of Appendices",
-    "section": "14.7 Appendix G - Ulster County Map",
-    "text": "14.7 Appendix G - Ulster County Map\nTODO: Add narrative for this section.",
+    "title": "13  List of Appendices",
+    "section": "13.7 Appendix G - Ulster County Map",
+    "text": "13.7 Appendix G - Ulster County Map\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html#sec-appendix-h-map",
     "href": "chapters/12-Appendices.html#sec-appendix-h-map",
-    "title": "14  List of Appendices",
-    "section": "14.8 Appendix H - Westchester County Map",
-    "text": "14.8 Appendix H - Westchester County Map\nTODO: Add narrative for this section.",
+    "title": "13  List of Appendices",
+    "section": "13.8 Appendix H - Westchester County Map",
+    "text": "13.8 Appendix H - Westchester County Map\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html#sec-appendix-i-community-partner-survey",
     "href": "chapters/12-Appendices.html#sec-appendix-i-community-partner-survey",
-    "title": "14  List of Appendices",
-    "section": "14.9 Appendix I - Region Community Partner Survey",
-    "text": "14.9 Appendix I - Region Community Partner Survey\nTODO: Add narrative for this section.",
+    "title": "13  List of Appendices",
+    "section": "13.9 Appendix I - Region Community Partner Survey",
+    "text": "13.9 Appendix I - Region Community Partner Survey\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html#sec-appendix-j-community-partner-survey-references",
     "href": "chapters/12-Appendices.html#sec-appendix-j-community-partner-survey-references",
-    "title": "14  List of Appendices",
-    "section": "14.10 Appendix J - Region Community Partner Survey References",
-    "text": "14.10 Appendix J - Region Community Partner Survey References\nTODO: Add narrative for this section.",
+    "title": "13  List of Appendices",
+    "section": "13.10 Appendix J - Region Community Partner Survey References",
+    "text": "13.10 Appendix J - Region Community Partner Survey References\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html#sec-appendix-k-putnam-nuvance-cbo-survey",
     "href": "chapters/12-Appendices.html#sec-appendix-k-putnam-nuvance-cbo-survey",
-    "title": "14  List of Appendices",
-    "section": "14.11 Appendix K - Putnam County and Nuvance CBO and Partner Survey",
-    "text": "14.11 Appendix K - Putnam County and Nuvance CBO and Partner Survey\nTODO: Add narrative for this section.",
+    "title": "13  List of Appendices",
+    "section": "13.11 Appendix K - Putnam County and Nuvance CBO and Partner Survey",
+    "text": "13.11 Appendix K - Putnam County and Nuvance CBO and Partner Survey\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html#sec-appendix-l-mid-hudson-regional-community-health-survey",
     "href": "chapters/12-Appendices.html#sec-appendix-l-mid-hudson-regional-community-health-survey",
-    "title": "14  List of Appendices",
-    "section": "14.12 Appendix L - Regional Community Health Survey",
-    "text": "14.12 Appendix L - Regional Community Health Survey\nTODO: Add narrative for this section.",
+    "title": "13  List of Appendices",
+    "section": "13.12 Appendix L - Regional Community Health Survey",
+    "text": "13.12 Appendix L - Regional Community Health Survey\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html#sec-appendix-m-orange-county-community-health-survey",
     "href": "chapters/12-Appendices.html#sec-appendix-m-orange-county-community-health-survey",
-    "title": "14  List of Appendices",
-    "section": "14.13 Appendix M - Orange County Community Health Survey",
-    "text": "14.13 Appendix M - Orange County Community Health Survey\nTODO: Add narrative for this section.",
+    "title": "13  List of Appendices",
+    "section": "13.13 Appendix M - Orange County Community Health Survey",
+    "text": "13.13 Appendix M - Orange County Community Health Survey\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html#sec-appendix-n-orange-county-community-asset-survey",
     "href": "chapters/12-Appendices.html#sec-appendix-n-orange-county-community-asset-survey",
-    "title": "14  List of Appendices",
-    "section": "14.14 Appendix N - Orange County Community Asset Survey",
-    "text": "14.14 Appendix N - Orange County Community Asset Survey\nTODO: Add narrative for this section.",
+    "title": "13  List of Appendices",
+    "section": "13.14 Appendix N - Orange County Community Asset Survey",
+    "text": "13.14 Appendix N - Orange County Community Asset Survey\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html#sec-appendix-o-putnam-nuvance-community-health-experience-survey",
     "href": "chapters/12-Appendices.html#sec-appendix-o-putnam-nuvance-community-health-experience-survey",
-    "title": "14  List of Appendices",
-    "section": "14.15 Appendix O - Putnam County and Nuvance Community Health Experience Survey",
-    "text": "14.15 Appendix O - Putnam County and Nuvance Community Health Experience Survey\nTODO: Add narrative for this section.",
+    "title": "13  List of Appendices",
+    "section": "13.15 Appendix O - Putnam County and Nuvance Community Health Experience Survey",
+    "text": "13.15 Appendix O - Putnam County and Nuvance Community Health Experience Survey\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html#sec-appendix-p-rockland-county-community-health-assessment-survey",
     "href": "chapters/12-Appendices.html#sec-appendix-p-rockland-county-community-health-assessment-survey",
-    "title": "14  List of Appendices",
-    "section": "14.16 Appendix P - Rockland County Community Health Assessment Survey",
-    "text": "14.16 Appendix P - Rockland County Community Health Assessment Survey\nTODO: Add narrative for this section.",
+    "title": "13  List of Appendices",
+    "section": "13.16 Appendix P - Rockland County Community Health Assessment Survey",
+    "text": "13.16 Appendix P - Rockland County Community Health Assessment Survey\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/12-Appendices.html#sec-appendix-q-gnyha-2025-community-health-needs-assessment-survey",
     "href": "chapters/12-Appendices.html#sec-appendix-q-gnyha-2025-community-health-needs-assessment-survey",
-    "title": "14  List of Appendices",
-    "section": "14.17 Appendix Q - Greater New York Hospital Association 2025 Community Health Needs Assessment Survey",
-    "text": "14.17 Appendix Q - Greater New York Hospital Association 2025 Community Health Needs Assessment Survey\nTODO: Add narrative for this section.",
+    "title": "13  List of Appendices",
+    "section": "13.17 Appendix Q - Greater New York Hospital Association 2025 Community Health Needs Assessment Survey",
+    "text": "13.17 Appendix Q - Greater New York Hospital Association 2025 Community Health Needs Assessment Survey\nTODO: Add narrative for this section.",
     "crumbs": [
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>List of Appendices</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>List of Appendices</span>"
     ]
   },
   {
     "objectID": "chapters/13-example-data-objects.html",
     "href": "chapters/13-example-data-objects.html",
-    "title": "15  Template Example: Live Data Objects",
+    "title": "14  Template Example: Live Data Objects",
     "section": "",
-    "text": "15.1 How this works\nThe figure and table below are not hand-written. They come from data/raw/workbook.xlsx, which uses the same format as the Mid-Hudson CHA workbook:\nOn every quarto render, the pre-render hook in _quarto.yml runs scripts/generate_chapter_objects.py, which reads the indicator sheets and writes one include file per object into chapters/_generated/objects/. This chapter pulls them in.\nThe Poverty Rate sheet is a figure (Figure 15.1); the Total Households sheet is a table (Table 15.1).\nFigure 15.1: Percentage of Population Below Poverty Level\nNoteSource\n\n\n\n\n\nUS Census Bureau; American Community Survey, Table S1701, accessed Month Year.\nTable 15.1: Total Households\n\n\n\n\n\n\n\n\nArea\nHouseholds\n\n\n\n\nDutchess\n115,184\n\n\nOrange\n137,311\n\n\nPutnam\n35,054\n\n\nRockland\n103,284\n\n\nSullivan\n30,215\n\n\nUlster\n73,105\n\n\nWestchester\n370,256\n\n\nMid-Hudson\n864,409\n\n\nNYS excl NYC\n4,355,640\n\n\nNYS\n7,668,956\nNoteSource\n\n\n\n\n\nUS Census Bureau; American Community Survey, Table S1901, accessed Month Year.",
+    "text": "14.1 How this works\nThe figure and table below are not hand-written. They come from data/raw/workbook.xlsx, which uses the same format as the Mid-Hudson CHA workbook:\nOn every quarto render, the pre-render hook in _quarto.yml runs scripts/generate_chapter_objects.py, which reads the indicator sheets and writes one include file per object into chapters/_generated/objects/. This chapter pulls them in.\nThe Poverty Rate sheet is a figure (Figure 14.1); the Total Households sheet is a table (Table 14.1).\nFigure 14.1: Percentage of Population Below Poverty Level\nTable 14.1: Total Households\n\n\n\n\n\n\n\n\n\n\n\n\n\nTable 'tbl-households' not found in workbook.",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Template Example: Live Data Objects</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Template Example: Live Data Objects</span>"
     ]
   },
   {
     "objectID": "chapters/13-example-data-objects.html#how-this-works",
     "href": "chapters/13-example-data-objects.html#how-this-works",
-    "title": "15  Template Example: Live Data Objects",
+    "title": "14  Template Example: Live Data Objects",
     "section": "",
     "text": "A Master sheet - the roster of every indicator (Activate/Deactivate, Object_Type, Indicator Name, Object ID, Figure ID, data source).\nA Dropdowns sheet - reference lists for the data-entry dropdowns (format codes, y-labels, sources, dates, …).\nOne sheet per indicator with a config block in columns A/B (Name, Table/Figure/Both, Object ID, Figure Type, X Column, …) and the data entered to the right of the Enter Data cell.",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Template Example: Live Data Objects</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Template Example: Live Data Objects</span>"
     ]
   },
   {
     "objectID": "chapters/13-example-data-objects.html#to-add-your-own-indicator",
     "href": "chapters/13-example-data-objects.html#to-add-your-own-indicator",
-    "title": "15  Template Example: Live Data Objects",
-    "section": "15.2 To add your own indicator",
-    "text": "15.2 To add your own indicator\n\nCopy an indicator sheet (Poverty Rate or Total Households).\nSet the config cells in column A/B - especially Name, Table/Figure/Both (figure or table), Object ID, and (for figures) Figure Type / X Column.\nFill the data to the right of the Enter Data cell: the row-label column (col F) plus value columns, with per-column format codes in the row just above.\nAdd the indicator to the Master roster (optional, for tracking).\nReference it in any chapter with {{&lt; include _generated/objects/&lt;object_id&gt;.qmd &gt;}} (e.g. fig-&lt;id&gt; or tbl-&lt;id&gt;), run the generator once, then quarto render.\n\nSee scripts/WORKBOOK_SCHEMA.md and scripts/PIPELINE_USAGE.md for full details.",
+    "title": "14  Template Example: Live Data Objects",
+    "section": "14.2 To add your own indicator",
+    "text": "14.2 To add your own indicator\n\nCopy an indicator sheet (Poverty Rate or Total Households).\nSet the config cells in column A/B - especially Name, Table/Figure/Both (figure or table), Object ID, and (for figures) Figure Type / X Column.\nFill the data to the right of the Enter Data cell: the row-label column (col F) plus value columns, with per-column format codes in the row just above.\nAdd the indicator to the Master roster (optional, for tracking).\nReference it in any chapter with {{&lt; include _generated/objects/&lt;object_id&gt;.qmd &gt;}} (e.g. fig-&lt;id&gt; or tbl-&lt;id&gt;), run the generator once, then quarto render.\n\nSee scripts/WORKBOOK_SCHEMA.md and scripts/PIPELINE_USAGE.md for full details.",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Template Example: Live Data Objects</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Template Example: Live Data Objects</span>"
     ]
   }
 ]
