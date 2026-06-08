@@ -89,6 +89,8 @@ class SourceSpec:
     citation_month: str
     citation_year: int
     custom_text: str
+    source_text: str = ""
+    note_text: str = ""
 
 
 @dataclass(frozen=True)
@@ -549,6 +551,12 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
                     row_label_col=(data_df.columns[0] if not data_df.empty else ""),
                 )
 
+            raw_source = _as_text(_config_value(config, "Source", ""))
+            if raw_source.lower().startswith("source:"):
+                raw_source = raw_source[len("source:"):].strip()
+
+            raw_note = _as_text(_config_value(config, "Note", ""))
+
             source_specs[object_id] = SourceSpec(
                 object_id=object_id,
                 table_id=_as_text(_config_value(config, "Table ID", "")),
@@ -558,6 +566,8 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
                 citation_month=_as_text(_config_value(config, "Citation Month", "April")),
                 citation_year=_as_int(_config_value(config, "Citation Year", 2025), default=2025),
                 custom_text=_as_text(_config_value(config, "Custom Text", "")),
+                source_text=raw_source,
+                note_text=raw_note,
             )
 
         order_counter += 1
@@ -667,6 +677,8 @@ def _load_normalized_workbook(source_path: Path) -> WorkbookModel:
                 citation_month=_as_text(row.get("citation_month", "April")),
                 citation_year=_as_int(row.get("citation_year", 2025), default=2025),
                 custom_text=_as_text(row.get("custom_text", "")),
+                source_text=_as_text(row.get("source_text", "")),
+                note_text=_as_text(row.get("note_text", "")),
             )
 
     data_frames: dict[str, pd.DataFrame] = {}

@@ -26,7 +26,7 @@ from scripts.cha_chapter_renderer import (  # noqa: E402
 from scripts.workbook_loader import load_cha_workbook  # noqa: E402
 
 
-DEFAULT_CHAPTER = PROJECT_ROOT / "chapters" / "04-Social and Physical Determinants of Health.qmd"
+DEFAULT_CHAPTER = PROJECT_ROOT / "chapters" / "04-OCDOH.qmd"
 DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "chapters" / "_generated" / "ch04-objects"
 
 
@@ -91,6 +91,23 @@ def _validate_chapter_references(chapter_text: str, registry_ids: set[str]) -> l
                 errors.append(
                     f"Broken fig/tbl pairing for slug '{slug}' (expected '{fig_id}' and '{tbl_id}' in workbook)."
                 )
+    return errors
+
+
+def _validate_include_directives(
+    chapter_text: str, output_dir: Path, written_stems: set[str]
+) -> list[str]:
+    """Check that include directives point to generated files that actually exist."""
+    errors: list[str] = []
+    include_stems = set(_INCLUDE_STEM_RE.findall(chapter_text))
+    for stem in sorted(include_stems):
+        target = output_dir / f"{stem}.qmd"
+        if stem not in written_stems and not target.exists():
+            errors.append(
+                f"Include directive references '{stem}.qmd' but no generated file exists. "
+                f"Available stems with similar prefix: "
+                f"{sorted(s for s in written_stems if s.split('-')[0] == stem.split('-')[0])}"
+            )
     return errors
 
 
@@ -184,8 +201,21 @@ def _write_indicator_files(
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    model = load_cha_workbook(workbook_path)
+
     written_stems: list[str] = []
     for group in groups:
+        # Look up sheet-level source/note text.  When an indicator group has
+        # both a figure and a table, attach source/note only to the table
+        # include file to avoid rendering duplicates.
+        def _source_note(object_id: str, attach: bool) -> tuple[str, str]:
+            if not attach:
+                return "", ""
+            spec = model.source_specs.get(object_id)
+            if not spec:
+                return "", ""
+            return spec.source_text, spec.note_text
+
         if group.figure_id:
             figure_path = output_dir / f"{group.figure_id}.qmd"
             fig_include_source = (
@@ -193,13 +223,17 @@ def _write_indicator_files(
                 and not bool(group.table_id)
                 and group.figure_id not in OBJECT_IDS_OMIT_EMBEDDED_SOURCE
             )
+            fig_src, fig_note = _source_note(
+                group.figure_id, attach=not bool(group.table_id)
+            )
             figure_path.write_text(
                 render_figure_blocks(
                     group.figure_id,
                     group.caption,
                     workbook_var=workbook_var,
-                    # Prefer source on table files to avoid duplicates.
                     include_source=fig_include_source,
+                    source_text=fig_src,
+                    note_text=fig_note,
                 )
                 + "\n",
                 encoding="utf-8",
@@ -211,12 +245,15 @@ def _write_indicator_files(
             tbl_include_source = (
                 include_source and group.table_id not in OBJECT_IDS_OMIT_EMBEDDED_SOURCE
             )
+            tbl_src, tbl_note = _source_note(group.table_id, attach=True)
             table_path.write_text(
                 render_table_blocks(
                     group.table_id,
                     group.caption,
                     workbook_var=workbook_var,
                     include_source=tbl_include_source,
+                    source_text=tbl_src,
+                    note_text=tbl_note,
                 )
                 + "\n",
                 encoding="utf-8",
@@ -347,6 +384,12 @@ def main(argv: list[str] | None = None) -> None:
         chapter_text,
         set(model.registry.keys()) | fallback_registry_ids | include_stems_all_chapters,
     )
+
+    include_errors = _validate_include_directives(
+        chapter_text, output_dir, set(written_stems) | fallback_registry_ids
+    )
+    chapter_errors.extend(include_errors)
+
     if chapter_errors and args.strict_refs:
         formatted = "\n".join(f"- {err}" for err in chapter_errors)
         raise ValueError(f"Chapter reference validation failed:\n{formatted}")

@@ -232,12 +232,33 @@ def render_indicator_blocks(
     return "\n\n".join(parts)
 
 
+def _render_source_note_markdown(source_text: str = "", note_text: str = "") -> list[str]:
+    """Return markdown callout blocks for sheet-level source and note metadata."""
+    parts: list[str] = []
+    if source_text:
+        parts.append(
+            '::: {.callout-note collapse="true"}\n'
+            "## Source\n\n"
+            f"{source_text}\n"
+            ":::"
+        )
+    if note_text:
+        parts.append(
+            "::: {.callout-note}\n"
+            f"{note_text}\n"
+            ":::"
+        )
+    return parts
+
+
 def render_figure_blocks(
     figure_id: str,
     caption: str,
     *,
     workbook_var: str = "CHA_WORKBOOK_PATH",
     include_source: bool = False,
+    source_text: str = "",
+    note_text: str = "",
 ) -> str:
     """
     Render canonical Quarto blocks for a single figure object.
@@ -245,6 +266,7 @@ def render_figure_blocks(
     parts: list[str] = [f"<!-- indicator: {figure_id} -->", _render_figure_block(figure_id, caption, workbook_var)]
     if include_source:
         parts.append(_render_source_block(figure_id, workbook_var))
+    parts.extend(_render_source_note_markdown(source_text, note_text))
     return "\n\n".join(parts)
 
 
@@ -254,6 +276,8 @@ def render_table_blocks(
     *,
     workbook_var: str = "CHA_WORKBOOK_PATH",
     include_source: bool = True,
+    source_text: str = "",
+    note_text: str = "",
 ) -> str:
     """
     Render canonical Quarto blocks for a single table object.
@@ -261,4 +285,5 @@ def render_table_blocks(
     parts: list[str] = [f"<!-- indicator: {table_id} -->", _render_table_block(table_id, caption, workbook_var)]
     if include_source:
         parts.append(_render_source_block(table_id, workbook_var))
+    parts.extend(_render_source_note_markdown(source_text, note_text))
     return "\n\n".join(parts)

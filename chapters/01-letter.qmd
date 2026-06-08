@@ -45,6 +45,6 @@ Thank you for your continued commitment to our community and for being part of t
 Sincerely,
 
 
->- Jacqueline Lawler, MPH
->- Director of Epidemiology and Public Health Planning
->- Orange County Department of Health 
+Jacqueline Lawler, MPH\
+Director of Epidemiology and Public Health Planning\
+Orange County Department of Health

@@ -26,7 +26,7 @@ book:
     - chapters/02-Data Sources and Indicator Selection.qmd
     - chapters/03-executive-summary.qmd
     - chapters/04-OCDOH.qmd
-    - chapters/05-community-partner-survey.qmd
+    - chapters/05-demographics.qmd
     - chapters/06-health-behaviors.qmd
     - chapters/07-health-indicators.qmd
     - chapters/08-Behavioral-Health.qmd

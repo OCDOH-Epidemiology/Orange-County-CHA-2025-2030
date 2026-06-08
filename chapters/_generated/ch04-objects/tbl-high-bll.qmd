@@ -1,0 +1,21 @@
+<!-- indicator: tbl-high-bll -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-high-bll
+#| tbl-cap: 'Incidence of Confirmed High Blood Lead Level, Rate per 1,000 Tested Children Aged < 72 Months, 2018–2021'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-high-bll", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+
+NYS Community Health Indicator Reports Dashboard, August 2025 sourced from NYS Childhood Lead Poisoning Prevention Program https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard& p=ch&cos=33
+:::
+
+::: {.callout-note}
+Note: High blood lead level is considered >10 Micrograms per Deciliter. Three-year averages for Orange County and single-year estimates for the Mid-Hudson Region, NYS excl NYC, and NYS.
+:::

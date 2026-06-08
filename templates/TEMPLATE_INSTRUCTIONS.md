@@ -112,7 +112,7 @@ For reusable digital CHA builds, keep indicator metadata in the workbook and gen
 
 ```
 python3 scripts/generate_chapter_objects.py \
-  --chapter "chapters/04-Social and Physical Determinants of Health.qmd" \
+  --chapter "chapters/04-OCDOH.qmd" \
   --output-dir "chapters/_generated/ch04-objects" \
   --rewrite-chapter
 ```
@@ -121,7 +121,7 @@ python3 scripts/generate_chapter_objects.py \
 
 ```
 python3 scripts/build_digital_cha.py \
-  --chapter "chapters/04-Social and Physical Determinants of Health.qmd" \
+  --chapter "chapters/04-OCDOH.qmd" \
   --rewrite-chapter \
   --render chapter
 ```

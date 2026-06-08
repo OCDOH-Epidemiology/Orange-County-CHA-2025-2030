@@ -8,7 +8,7 @@ toc-depth: 4
 
 ## History
 
-The Orange County Department of Health (OCDOH) was formed in 1969 as a full-service department in a chartered county with legislative oversight and an advisory Board of Health. The Department operates under the NYS Public Health Code and Titles 10 and 6 of the Official Compilation of Codes, Rules, and Regulations of the State of New York. Prior to 1969, public health services were provided through the New York State Department of Health (NYSDOH) district office in Middletown, which also served Sullivan and Putnam Counties and the City of Beacon in Dutchess County. In the 1960s, NYSDOH encouraged the creation of county health departments in counties with a population base of 100,000 or more to better meet resident needs. NYSDOH and the public health offices in the county's cities initially provided staff for the newly formed Orange County Department of Health.
+The Orange County Department of Health (OCDOH) was formed in 1969 as a full-service department in a chartered county with legislative oversight and an advisory Board of Health. The Department operates under the New York State Public Health Code and Titles 10 and 6 of the Official Compilation of Codes, Rules, and Regulations of the State of New York. Prior to 1969, public health services were provided through the NYSDOH district office in Middletown, which also served Sullivan and Putnam counties and the City of Beacon in Dutchess County. In the 1960s, NYSDOH encouraged the creation of county health departments in counties with a population base of 100,000 or more to better meet resident needs. NYSDOH and the public health offices in the county's cities initially provided staff for the newly formed OCDOH.
 
 ## Mission
 
@@ -42,7 +42,7 @@ Early Intervention evaluates children to assess development and determine eligib
 
 ## Public Health Emergency Response & Preparedness (PHEP)
 
-Public Health Emergency Response & Preparedness (PHEP) is directed by Bryan Welsh and is based in the Orange County Emergency Services center. The division is responsible for planning and coordinating responses to public health emergencies in Orange County. PHEP works closely with the Medical Reserve Corps and county, state, and regional partners, and serves as a liaison with the Department of Emergency Services to integrate public health into emergency operations. The division supports preparedness activities, emergency response, and recovery efforts, including mass distribution operations and vaccination Points of Dispensing. PHEP/MRC is also active in non-emergency health screening events, providing blood pressure and non-fasting cholesterol screenings and education.
+Public Health Emergency Response & Preparedness (PHEP) is directed by Bryan Welsh and is based in the Orange County Emergency Services center. The division is responsible for planning and coordinating responses to public health emergencies in Orange County. PHEP works closely with the MRC and county, state, and regional partners, and serves as a liaison with the Department of Emergency Services to integrate public health into emergency operations. The division supports preparedness activities, emergency response, and recovery efforts, including mass distribution operations and vaccination Points of Dispensing. PHEP/MRC are also active in non-emergency health screening events, providing blood pressure and non-fasting cholesterol screenings and education.
 
 ## Division of Environmental Health
 

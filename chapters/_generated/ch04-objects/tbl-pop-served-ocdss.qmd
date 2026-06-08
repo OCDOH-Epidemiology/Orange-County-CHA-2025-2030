@@ -1,0 +1,21 @@
+<!-- indicator: tbl-pop-served-ocdss -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-pop-served-ocdss
+#| tbl-cap: 'Population Served by Orange County Department of Social Services, 2022–2024'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-pop-served-ocdss", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+
+Data request from Orange County Department of Social Services, November 2025
+:::
+
+::: {.callout-note}
+Note: All end of year figures equal the amounts on December 31st of the indicated year. All counts have been rounded to the nearest whole number. Dollar amounts have been rounded to the nearest tenth.
+:::

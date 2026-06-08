@@ -13,7 +13,7 @@ quarto render
 Pre-render command:
 
 ```bash
-python3 scripts/generate_chapter_objects.py --chapter "chapters/04-Social and Physical Determinants of Health.qmd" --output-dir "chapters/_generated/ch04-objects"
+python3 scripts/generate_chapter_objects.py --chapter "chapters/04-OCDOH.qmd" --output-dir "chapters/_generated/ch04-objects"
 ```
 
 This means you no longer need to run `generate_chapter_objects.py` manually for normal builds.
@@ -23,7 +23,7 @@ This means you no longer need to run `generate_chapter_objects.py` manually for 
 ```bash
 python3 scripts/generate_chapter_objects.py \
   --workbook "data/raw/Mid-Hudson Regional Community Health Assessment 2025 Data File.xlsx" \
-  --chapter "chapters/04-Social and Physical Determinants of Health.qmd" \
+  --chapter "chapters/04-OCDOH.qmd" \
   --output-dir "chapters/_generated/ch04-objects"
 ```
 
@@ -36,7 +36,7 @@ Output:
 
 ```bash
 python3 scripts/generate_chapter_objects.py \
-  --chapter "chapters/04-Social and Physical Determinants of Health.qmd" \
+  --chapter "chapters/04-OCDOH.qmd" \
   --output-dir "chapters/_generated/ch04-objects" \
   --rewrite-chapter
 ```
@@ -47,7 +47,7 @@ This replaces repetitive object python chunks with include shortcodes.
 
 ```bash
 python3 scripts/generate_chapter_objects.py \
-  --chapter "chapters/04-Social and Physical Determinants of Health.qmd" \
+  --chapter "chapters/04-OCDOH.qmd" \
   --strict-refs
 ```
 
@@ -82,7 +82,7 @@ Use the pipeline wrapper script for repeatable builds:
 
 ```bash
 python3 scripts/build_digital_cha.py \
-  --chapter "chapters/04-Social and Physical Determinants of Health.qmd" \
+  --chapter "chapters/04-OCDOH.qmd" \
   --output-dir "chapters/_generated/ch04-objects" \
   --rewrite-chapter \
   --render chapter

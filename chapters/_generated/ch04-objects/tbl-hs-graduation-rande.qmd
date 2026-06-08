@@ -1,0 +1,21 @@
+<!-- indicator: tbl-hs-graduation-rande -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-hs-graduation-rande
+#| tbl-cap: 'High School Graduation Rate, by Race and Ethnicity, 2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-hs-graduation-rande", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+
+NYS Education Department, August 2025 https://data.nysed.gov/gradrate.php?year=2022&county=44
+:::
+
+::: {.callout-note}
+Note: Graduation rate is the percentage of students within a cohort earning a Regents, Regents with Advanced Designation, or a Local Diploma. Students earning a Non Diploma Credential are not counted as graduates.
+:::

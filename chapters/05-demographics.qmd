@@ -1,0 +1,88 @@
+---
+title: "Demographics"
+jupyter: python3
+execute:
+  freeze: false
+toc-depth: 4
+---
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+import sys
+from pathlib import Path
+
+# Ensure root-level modules (scripts/) are importable in both Quarto run contexts.
+cwd = Path.cwd()
+project_root = cwd if (cwd / "scripts").exists() else cwd.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+# Point this at your workbook in data/raw/ once you add it.
+CHA_WORKBOOK_PATH = project_root / "data" / "raw" / "workbook.xlsx"
+```
+
+<!-- Source and Note callouts are now auto-generated from the workbook's
+     "Source Specifications" and "Note Specifications" sections in each sheet.
+     Run scripts/generate_chapter_objects.py to regenerate include files. -->
+
+Orange County, New York, is located approximately 40 miles north of New York City and is uniquely positioned between the Hudson River to the east and the Delaware River to the west. Ulster and Sullivan Counties border Orange County to the north, Rockland County lies to the south, and the county also shares its southwest borders with New Jersey and Pennsylvania. Spanning approximately 812 square miles, Orange County contains a diverse mix of rural, farmland, suburban, and urban environments [@tbl-pop-housing-density]. The county includes three cities, 21 towns, and 19 villages, with nearly 17% of residents living in the three cities of Middletown, Newburgh, and Port Jervis [@tbl-demographics-sum]; [@fig-pop].
+
+Within this regional context, Orange County has undergone a period of sustained growth and significant demographic transformation, with its population increasing from 341,367 in 2000 to 401,310 in 2020, and an estimated 403,840 by 2023 [@tbl-pop]; [@tbl-pop-growth];[@tbl-demographics-sum]. This overall growth highlights the county's role as a major residential hub, even as other parts of New York State faced stagnation. However, this growth is not evenly distributed, revealing a landscape of stark geographic and social disparities [@tbl-demographics-sum]; [@fig-pop].The most prominent driver of change is the Town of Palm Tree (and the Village of Kiryas Joel), which represents a major demographic outlier. While the county's median age is 36.9, Palm Tree's median age is 15.1 years, and children account for over half of the population [@tbl-demographics-sum]; [@tbl-pop-sex-age]; [@fig-median-age]. This area also exhibits extreme density (25,049.3 people per square mile), which far exceeds the county average of 497.2 per square mile and is substantially higher than traditional urban centers such as Newburgh City (7,519.4) and Middletown City (5,692.1) [@tbl-pop-housing-density].
+
+In contrast, several communities reflect an older age structure, including Tuxedo Park Village (median age 51.9) and both Tuxedo Town and Warwick Village (48.4), indicating higher concentrations of older adults and a potentially aging workforce in select areas [@tbl-demographics-sum]; [@fig-median-age]. Racial and ethnic composition also varies considerably across the county: Newburgh City and Middletown City are notably diverse—with Hispanic or Latino residents comprising approximately 52% and 44% of their populations, respectively—while many smaller municipalities remain comparatively more homogeneous [@tbl-pop-race-ethnicity]. Together, these variations in age, density, and racial and ethnic composition illustrate a county that is simultaneously a high-density extension of the New York City metropolitan sphere and a collection of distinct communities with differing demographic profiles [@tbl-demographics-sum]; [@tbl-pop-housing-density]; [@tbl-pop-race-ethnicity]. Industry and occupation context that further informs these local differences is summarized in [@tbl-employed-civilians-industry]; [@tbl-employed-civilian-occupations].
+
+<!-- Table 1: Demographic Summary by Municipality, 2023 -->
+{{< include _generated/objects/tbl-demographics-sum.qmd >}}
+
+<!-- Table 2: Population by Municipality, 1970–2020 -->
+{{< include _generated/objects/tbl-pop.qmd >}}
+
+<!-- Figure 1: Total Population by Municipality, 2023 -->
+
+![Total Population by Municipality, 2023](docs/map_pdfs/Population.pdf){#fig-pop width="100%"}
+
+::: {.callout-note collapse="true"}
+## Source
+US Census Bureau, American Community Survey, 2019–2023 5-Year Population Estimates, Table DP05 - Demographic and Housing Estimates, November 2025 
+https://data.census.gov/table/ACSDP5Y2023.DP05?q=population+age&g=050XX00US36071$0600000_060XX00US3607107003,3607115308,3607118300,3607118916,3607119961,3607129553,3607130631,3607131907,3607134550,3607147042,3607147713,3607147999,3607148153,3607148857,3607150034,3607150045,3607150848,36071561853607159388,3607175781,3607177992,3607178366,3607178839,3607182755_160XX00US3615297,3618333,3626319,3629542,3632325,3634495,3639853,3646162,3647988,3648142,3655673,3668610,3675779,3675803,3676210,3677849,3678355,3678465,3682750&y=2023 
+:::
+
+::: {.callout-note} 
+Note: Town totals include Village totals. The Village of Harriman is split between the Towns of Monroe and Woodbury.
+:::
+
+<!-- Table 3: Population Growth by Municipality, 2000–2020 -->
+{{< include _generated/objects/tbl-pop-growth.qmd >}}
+
+<!-- Table 4: Population Density and Housing Unit Density by Municipality, 2023 -->
+{{< include _generated/objects/tbl-pop-housing-density.qmd >}}
+
+<!-- Table 5: Population of Municipalities by Sex and Age, 2023 -->
+{{< include _generated/objects/tbl-pop-sex-age.qmd >}}
+
+<!-- Figure 2: Median Age by Municipality, 2023 -->
+
+![Median Age by Municipality, 2023](docs/map_pdfs/median_age.pdf){#fig-median-age width="100%"}
+
+::: {.callout-note collapse="true"}
+## Source
+US Census Bureau, American Community Survey, 2019–2023 5-Year Population Estimates, Table DP05 - Demographic and
+Housing Estimates, June 2025
+
+https://data.census.gov/table/ACSDP5Y2023.DP05?q=population+age&g=050XX00US36071$0600000_060XX00US3607107003,3607115308,3607118300,3607118916,3607119961,3607129553,3607130631,3607131907,3607134550,3607147042,3607147713,3607147999,3607148153,3607148857,3607150034,3607150045,3607150848,3607156185,3607159388,3607175781,3607177992,3607178366,3607178839,3607182755_160XX00US3615297,3618333,3626319,3629542,3632325,3634495,3639853,3646162,3647988,3648142,3655673,3668610,3675779,3675803,3676210,3677849,3678355,3678465,3682750&y=2023
+:::
+
+::: {.callout-note} 
+Note: Town totals include Village totals. The Village of Harriman is split between the Towns of Monroe and Woodbury. The median age for Orange County is 37.3 years.
+:::
+
+<!-- Table 6: Population of Municipalities by Race and Ethnicity, 2020  -->
+{{< include _generated/objects/tbl-pop-race-ethnicity.qmd >}}
+
+<!-- Table 7: Employed Civilians by Industry and Municipality, 2023 -->
+{{< include _generated/objects/tbl-employed-civilians-industry.qmd >}}
+
+<!-- Table 8: Employed Civilian Occupations by Municipality, 2023 -->
+{{< include _generated/objects/tbl-employed-civilian-occupations.qmd >}}

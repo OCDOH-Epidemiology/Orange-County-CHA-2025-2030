@@ -1,0 +1,21 @@
+<!-- indicator: tbl-own-vs-rent-per-room -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-own-vs-rent-per-room
+#| tbl-cap: 'Owner versus Renter Occupancy Per Room by Municipality, 2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-own-vs-rent-per-room", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+
+US Census Bureau, American Community Survey 2019–2023 5-Year Population Estimates, Table B25014-Tenure by Occupants per Room, November 2025 https://data.census.gov/table/ACSDT5Y2023.B25014?q=B25014+Orange+County,+NY&g=060XX00US3607134550,360715618 5,3607148857,3607182755,3607147042,3607148153,3607178839,3607130631,3607118300,3607175781,3607150045,36 07147713,3607147999,3607150848,3607129553,3607107003,3607115308,3607131907,3607118916,3607178366,360717 7992,3607119961,3607150034,3607159388_160XX00US3646162,3629542,3630752,3655673,3678355,3676210,3634495, 3615297,3675803,3682750,3677849,3632325,3647988,3678465,3639853,3618333,3668610,3648142_050XX00US36071
+:::
+
+::: {.callout-note}
+Note: Town totals include Village totals
+:::

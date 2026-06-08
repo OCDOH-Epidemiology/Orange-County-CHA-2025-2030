@@ -1,0 +1,30 @@
+<!-- indicator: tbl-pop-sex-age -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-pop-sex-age
+#| tbl-cap: 'Population of Municipalities by Sex and Age, 2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-pop-sex-age", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+from IPython.display import Markdown, display
+from scripts.cha_registry_renderer import render_source_callout_for_object
+display(Markdown(render_source_callout_for_object("tbl-pop-sex-age", CHA_WORKBOOK_PATH)))
+```
+
+::: {.callout-note collapse="true"}
+## Source
+
+US Census Bureau, American Community Survey 2019–2023 5-Year Population Estimates, Table S0101-Age and Sex, November 2025 https://data.census.gov/table?q=S0101+Orange+County,+NY&g=050XX00US36071
+:::
+
+::: {.callout-note}
+Note: Town totals include Village totals.
+:::
