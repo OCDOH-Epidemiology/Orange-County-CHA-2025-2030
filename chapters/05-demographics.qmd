@@ -41,7 +41,7 @@ In contrast, several communities reflect an older age structure, including Tuxed
 
 <!-- Figure 1: Total Population by Municipality, 2023 -->
 
-![Total Population by Municipality, 2023](../pdfs/Population.pdf){#fig-pop width="100%"}
+![](../pdfs/Population.png){#fig-pop fig-alt="Total Population by Municipality, 2023" width="100%"}
 
 ::: {.callout-note collapse="true"}
 ## Source
@@ -64,7 +64,7 @@ Note: Town totals include Village totals. The Village of Harriman is split betwe
 
 <!-- Figure 2: Median Age by Municipality, 2023 -->
 
-![Median Age by Municipality, 2023](../pdfs/median%20age.pdf){#fig-median-age width="100%"}
+![](../pdfs/median-age.png){#fig-median-age fig-alt="Median Age by Municipality, 2023" width="100%"}
 
 ::: {.callout-note collapse="true"}
 ## Source
