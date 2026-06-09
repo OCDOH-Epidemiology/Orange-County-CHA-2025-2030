@@ -234,39 +234,19 @@
     "href": "chapters/06-mortality.html#premature-death",
     "title": "7  Mortality",
     "section": "7.3 Premature Death",
-    "text": "7.3 Premature Death\nPremature death highlights deaths occurring earlier in the life course and is used as an indicator of preventable mortality and health inequities. In Orange County, premature death measures consistently indicated disproportionate burden among historically underserved populations, including elevated premature mortality among Non-Hispanic Black and Hispanic residents ?fig-premature-death-rande.\nPremature death is not proportionate across communities, with some municipalities experiencing substantially higher percentages than others; the City of Newburgh had the highest share at 42.9% Figure 7.4.\n\n\n\n\nFigure 7.4\n\n\n\n\n\n\n\n\n\n\n\n\nNoteSource\n\n\n\n\n\nNYS Prevention Agenda Tracking Dashboard, October 2025, sourced from Vital Statistics of NYS https://apps.health.ny.gov/public/tabvis/PHIG_Public/pa/",
+    "text": "7.3 Premature Death\nPremature death highlights deaths occurring earlier in the life course and is used as an indicator of preventable mortality and health inequities. In Orange County, premature death measures consistently indicated disproportionate burden among historically underserved populations, including elevated premature mortality among Non-Hispanic Black and Hispanic residents Figure 7.5. In addition, premature death is not proportionate across communities, with some municipalities experiencing substantially higher percentages than others, with the City of Newburgh being the highest at 42.9%.\n\n\n\n\nFigure 7.4\n\n\n\n\n\n\n\n\n\n\n\n\nNoteSource\n\n\n\n\n\nNYS Prevention Agenda Tracking Dashboard, October 2025, sourced from Vital Statistics of NYS https://apps.health.ny.gov/public/tabvis/PHIG_Public/pa/\n\n\n\n\n\n\n\n\n\nFigure 7.5: Percentage of Deaths that are Premature, by Race and Ethnicity, 2018–2020",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mortality</span>"
     ]
   },
   {
-    "objectID": "chapters/07-health-indicators.html",
-    "href": "chapters/07-health-indicators.html",
-    "title": "8  Health Indicators",
+    "objectID": "chapters/07-SDOH.html",
+    "href": "chapters/07-SDOH.html",
+    "title": "8  Social Determinants of Health",
     "section": "",
-    "text": "8.1 Mortality\nTODO: Add narrative for this section.",
+    "text": "Skip to main content",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Health Indicators</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/07-health-indicators.html#premature-death",
-    "href": "chapters/07-health-indicators.html#premature-death",
-    "title": "8  Health Indicators",
-    "section": "8.2 Premature Death",
-    "text": "8.2 Premature Death\nTODO: Add narrative for this section.",
-    "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Health Indicators</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/07-health-indicators.html#physical-health",
-    "href": "chapters/07-health-indicators.html#physical-health",
-    "title": "8  Health Indicators",
-    "section": "8.3 Physical Health",
-    "text": "8.3 Physical Health\nTODO: Add narrative for this section.\n\n8.3.1 Chronic Diseases\nTODO: Add narrative for this section.\n\n8.3.1.1 Chronic Lower Respiratory Diseases\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n\n8.3.2 Asthma\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n8.3.3 Cardiovascular Disease\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n8.3.4 Hypertension\nTODO: Add narrative for this section.  \n\n\n8.3.5 Cerebrovascular Disease\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n8.3.6 Coronary Heart Disease\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8.3.7 Diabetes\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n\n\n8.3.8 Obesity\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n8.3.9 Cirrhosis of the Liver\nTODO: Add narrative for this section.  \n\n\n\n\n8.3.10 Cancer\nTODO: Add narrative for this section.  \n\n\n\n\n8.3.11 Colorectal Cancer\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n\n\n8.3.12 Lung Cancer\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n8.3.13 Prostate Cancer\nTODO: Add narrative for this section.  \n\n\n8.3.14 Female Breast Cancer\nTODO: Add narrative for this section.  \n\n\n\n\n8.3.15 Cervix Uteri Cancer\nTODO: Add narrative for this section.  \n\n\n\n\n8.3.16 Infectious Diseases\nTODO: Add narrative for this section.\n\n8.3.16.1 Vaccine-Preventable Diseases\nTODO: Add narrative for this section.\n\n\n8.3.16.2 Childhood Immunization\nTODO: Add narrative for this section.  \n\n\n\n8.3.17 COVID-19\nTODO: Add narrative for this section.  \n\n\n8.3.18 Human Papillomavirus Immunization\nTODO: Add narrative for this section.  \n\n\n8.3.19 Flu Immunization\nTODO: Add narrative for this section.  \n\n\n\n\n8.3.20 Pneumonia Immunization\nTODO: Add narrative for this section.  \n\n\n8.3.21 Sexually Transmitted Infections\nTODO: Add narrative for this section.\n\n8.3.21.1 HIV/AIDS\nTODO: Add narrative for this section.  \n\n\n8.3.21.2 Gonorrhea\nTODO: Add narrative for this section.  \n\n\n8.3.21.3 Chlamydia\nTODO: Add narrative for this section.  \n\n\n8.3.21.4 Syphilis\nTODO: Add narrative for this section.  \n\n\n\n8.3.22 Tick-Borne Diseases\nTODO: Add narrative for this section.\n\n8.3.22.1 Lyme Disease\nTODO: Add narrative for this section.  \n\n\n8.3.22.2 Anaplasmosis\nTODO: Add narrative for this section.  \n\n\n8.3.22.3 Babesiosis\nTODO: Add narrative for this section.  \n\n\n8.3.22.4 Rabies\nTODO: Add narrative for this section. \n\n\n\n\n\n\n8.3.23 Maternal and Infant Health\nTODO: Add narrative for this section.\n\n8.3.23.1 Prenatal Care\nTODO: Add narrative for this section.  \n\n\n\n\n\n\n8.3.23.2 All Pregnancies by Age Group\nTODO: Add narrative for this section.  \n\n\n\n\n8.3.23.3 Adolescent Pregnancy\nTODO: Add narrative for this section.  \n\n\n\n\n8.3.23.4 Self-Pay or Medicaid Births / Pregnancies\nTODO: Add narrative for this section.  \n\n\n\n8.3.24 Adverse Birth Outcomes\nTODO: Add narrative for this section.\n\n8.3.24.1 Preterm Births\nTODO: Add narrative for this section.  \n\n\n8.3.24.2 Low Birthweight Births\nTODO: Add narrative for this section.  \n\n\n\n\n8.3.24.3 Infant Mortality\nTODO: Add narrative for this section.  \n\n\n8.3.24.4 Breastfeeding\nTODO: Add narrative for this section.  \n\n\n8.3.24.5 Oral Health\nTODO: Add narrative for this section.",
-    "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Health Indicators</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Social Determinants of Health</span>"
     ]
   },
   {

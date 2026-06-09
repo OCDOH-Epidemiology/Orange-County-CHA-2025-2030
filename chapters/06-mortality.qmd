@@ -76,16 +76,17 @@ Cause patterns differ when examined by sex from 2020–2022 [@tbl-number-deaths-
 
 ## Premature Death
 
-Premature death highlights deaths occurring earlier in the life course and is used as an indicator of preventable mortality and health inequities. In Orange County, premature death measures consistently indicated disproportionate burden among historically underserved populations, including elevated premature mortality among Non-Hispanic Black and Hispanic residents [@fig-premature-death-rande].
-
-Premature death is not proportionate across communities, with some municipalities experiencing substantially higher percentages than others; the City of Newburgh had the highest share at 42.9% [@fig-premature-death-mcd].
+Premature death highlights deaths occurring earlier in the life course and is used as an indicator of preventable mortality and health inequities. In Orange County, premature death measures consistently indicated disproportionate burden among historically underserved populations, including elevated premature mortality among Non-Hispanic Black and Hispanic residents [@fig-premature-deaths-rande]. In addition, premature death is not proportionate
+across communities, with some municipalities experiencing substantially higher percentages than others, with the City of Newburgh being the highest at 42.9%. 
 
 <!-- Figure 6: Percentage of Premature Deaths Under 65 Years, by Minor Civil Division, 2019–2022 -->
-
-![](../pdfs/premature-death.png){#fig-premature-death-mcd fig-alt="Percentage of Premature Deaths Under 65 Years, by Minor Civil Division, 2019–2022" width="100%"}
+![](../pdfs/premature-death.png){#fig-premature-death-mcd fig-cap="Percentage of Premature Deaths Under 65 Years, by Minor Civil Division, 2019–2022" fig-alt="Percentage of Premature Deaths Under 65 Years, by Minor Civil Division, 2019–2022" width="100%"}
 
 ::: {.callout-note collapse="true"}
 ## Source
 NYS Prevention Agenda Tracking Dashboard, October 2025, sourced from Vital Statistics of NYS
 https://apps.health.ny.gov/public/tabvis/PHIG_Public/pa/
 :::
+
+<!-- Figure 7: Percentage of Deaths that are Premature, by Race and Ethnicity, 2018–2020 -->
+{{< include _generated/objects/fig-premature-deaths-rande.qmd >}}
