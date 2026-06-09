@@ -202,41 +202,41 @@
   {
     "objectID": "chapters/06-mortality.html",
     "href": "chapters/06-mortality.html",
-    "title": "7  Health Behaviors Indicators",
+    "title": "7  Mortality",
     "section": "",
     "text": "7.1 All-Cause Mortality\nMortality measures the frequency and distribution of deaths in a population and serves as a summary indicator of community health and health system performance. In this section, mortality is presented across three complementary lenses: all-cause mortality (overall burden and distribution of deaths), leading causes of death (the primary conditions and injuries driving mortality), and premature death (deaths occurring earlier than expected, reflecting preventable and inequitable loss of life).\nAcross 2020–2023, Orange County recorded 12,712 deaths, with the age-adjusted all-cause mortality rate declining from 887.8 per 100,000 in 2020 to 708.2 in 2023. This is consistent with the elevated mortality conditions observed during the first year of the COVID-19 pandemic followed by improvement in subsequent years Table 7.1.\nMortality also differed by sex, with males consistently experiencing higher age-adjusted all-cause mortality than females from 2020–2023 Figure 7.3.\nGeographic differences were evident across the four cities of Orange County Figure 7.2. Over 2020–2023, rates ranged from 936.3 per 100,000 in ZIP 10940 (lowest) to 1,752.7 in ZIP 12550 (highest), with 10950 (1,322.3) and 12771 (1,086.6) falling between these extremes. There was a pattern of improvement from 2020–2023: 12550 remained highest each year but declined from 2,103.9 (2020) to 1,487.2 (2023); 10940 decreased from 1,035.8 to 809.8; 10950 was reduced from 1,688.6 to 1,203.3; and 12771 stayed comparatively stable, remaining near ~1,100 across the period.\nDifferences by race and ethnicity were also observed in all-cause mortality. Age-adjusted comparisons indicate a persistent inequity burden, with Non-Hispanic Black residents experiencing the highest age-adjusted mortality rate in Orange County (2020–2022) Figure 7.1.\nTable 7.1: All-Cause Mortality, Rate per 100,000 Population by Age, ZIP Code, Race and Ethnicity, 2020–2023\n\n\n\n\n\n\n\n\n\n2020\n2021\n2022\n2023\nTotal # 2020-2023\n\n\n\n#\nRate\n#\nRate\n#\nRate\n#\nRate\nTotal #\nAverage Rate\n\n\n\n\nTotal\n3,392\n887.8\n3,020\n758.3\n3,077\n766.9\n2,860\n708.2\n12,349\n780.3\n\n\nAge Intervals\n\n\n\n\n\n\n\n\n\n\n\n\n&lt;1\n16\n332.8\n18\n351.2\n15\n302.1\n17\n323.6\n66\n327.4\n\n\n1-9\n9\n19.2\n8\n16.3\n7\n14.5\n13\n26.2\n37\n19.1\n\n\n10-19\n13\n22.7\n8\n13.3\n9\n14.5\n6\n9.7\n36\n15.1\n\n\n20-24\n28\n98.2\n21\n72.0\n26\n87.7\n11\n38.4\n86\n74.1\n\n\n25-34\n73\n162.6\n57\n122.3\n56\n118.2\n48\n100.2\n234\n125.8\n\n\n35-44\n98\n216.7\n101\n211.6\n87\n178.6\n87\n174.9\n373\n195.5\n\n\n45-54\n174\n332.3\n192\n359.8\n159\n303.7\n150\n291.2\n675\n321.7\n\n\n55-64\n395\n811.1\n392\n762.7\n392\n765.9\n344\n667.8\n1,523\n751.9\n\n\n65-74\n663\n2102.6\n599\n1789.7\n620\n1831.6\n546\n1567.2\n2,428\n1822.7\n\n\n75-84\n788\n5344.2\n728\n4770.6\n790\n4986.1\n752\n4586.2\n3,058\n4921.8\n\n\n85+\n1,135\n15876.3\n896\n13151.3\n916\n13048.4\n886\n13206.1\n3,833\n13820.6\n\n\nRace/Ethnicity\n\n\n\n\n\n\n\n\n\n\n\n\nNon-Hispanic White\n2,626\n1088.8\n2,347\n946.8\n2,393\n986.2\n2,255\n2249.0\n9,621\n1317.7\n\n\nNon-Hispanic Black\n310\n806.2\n277\n697.2\n290\n691.4\n265\n259.0\n1,142\n613.4\n\n\nHispanic\n376\n468.5\n310\n363.2\n305\n340.8\n267\n267.0\n1,258\n359.9\n\n\nOther\n80\n360.6\n86\n339.7\n89\n327.7\n73\n85.0\n328\n278.3\n\n\nZip Code\n\n\n\n\n\n\n\n\n\n\n\n\n10,940\n512\n1035.8\n496\n973.8\n480\n925.7\n430\n809.8\n1918\n936.3\n\n\n10,950\n226\n1688.6\n167\n1158.5\n194\n1337.7\n163\n1104.3\n750\n1322.3\n\n\n12,550\n561\n2103.9\n459\n1712.3\n468\n1707.5\n406\n1487.2\n1,894\n1752.7\n\n\n12,771\n139\n964.7\n169\n1138.8\n166\n1148.5\n157\n1094.5\n631\n1086.0\nFigure 7.1: All-Cause Mortality, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2020–2022\nFigure 7.2: All-Cause Mortality, Rate per 100,000 Population by ZIP Code, 2020–2023\nFigure 7.3: All-Cause Mortality, Age-Adjusted Rate per 100,000 Population by Sex, 2020–2023",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Health Behaviors Indicators</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mortality</span>"
     ]
   },
   {
     "objectID": "chapters/06-mortality.html#all-cause-mortality",
     "href": "chapters/06-mortality.html#all-cause-mortality",
-    "title": "7  Health Behaviors Indicators",
+    "title": "7  Mortality",
     "section": "",
     "text": "Note\n\n\n\nNote: See Data Note section for more information regarding this request. Birth and death data for Orange County excludes events recorded in NYC. All rates use ACS 5-year population estimates, except for the ages under 1 year and 1-9 years, which are based on crude live births in Orange County.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Health Behaviors Indicators</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mortality</span>"
     ]
   },
   {
     "objectID": "chapters/06-mortality.html#leading-causes-of-death",
     "href": "chapters/06-mortality.html#leading-causes-of-death",
-    "title": "7  Health Behaviors Indicators",
+    "title": "7  Mortality",
     "section": "7.2 Leading Causes of Death",
     "text": "7.2 Leading Causes of Death\nIn 2022, heart disease and cancer were the two leading causes of death in Orange County by both count and age-adjusted rate, followed by unintentional injury, COVID-19, and chronic lower respiratory disease (CLRD). This profile reflects the combined influence of chronic disease, injury, and infectious disease Table 7.2.\nCause patterns differ when examined by sex from 2020–2022 Table 7.3. Over that period, unintentional injury and suicide contributed disproportionately to male mortality, while Alzheimer’s disease and cerebrovascular disease (stroke) appeared more prominently among females, alongside the continued dominance of heart disease and cancer for both sexes.\n\n\n\n\n\n\nTable 7.2: Top Five Leading Causes of Death, by Count and Age-Adjusted Rate per 100,000 Population, 2022\n\n\n\n\n\n\n\n\n\n#1 Cause of Death\n\n#2 Cause of Death\n\n#3 Cause of Death\n\n#4 Cause of Death\n\n#5 Cause of Death\n\n\nOrange County\nAll Deaths\nHeart Disease\n#1 Cause of Death\nCancer\n#2 Cause of Death\nUnintentional Injury\n#3 Cause of Death\nCOVID-19\n#4 Cause of Death\nCLRD\n\n\n\n\nCount\n3222.0\n653.0\n\n609.0\n\n253.0\n\n231.0\n\n125.0\n\n\nRate\n745.2\n150.6\n\n132.4\n\n62.2\n\n53.4\n\n29.6\n\n\nNYS Excl NYC\n\nHeart Disease\n\nCancer\n\nCOVID-19\n\nUnintentional Injury\n\nCLRD\n\n\nCount\n113465.0\n26215.0\n\n21762.0\n\n6666.0\n\n6666.0\n\n4602.0\n\n\nRate\n744.0\n166.4\n\n137.3\n\n54.8\n\n42.3\n\n28.8\n\n\nNYS\n\nHeart Disease\n\nCancer\n\nCOVID-19\n\nUnintentional Injury\n\nCerebrovascular Disease\n\n\nCount\n173986.0\n43166.0\n\n32584.0\n\n11174.0\n\n10820.0\n\n6574.0\n\n\nRate\n679.6\n163.7\n\n123.7\n\n42.7\n\n50.6\n\n25.1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nNote: Premature death includes deaths occurring before the age of 75.\n\n\n\n\n\n\n\n\nTable 7.3: Number of Deaths from Leading Causes by Sex, 2020–2022\n\n\n\n\n\n\n\n\n\nNumber of Deaths\n\n\nCause of Death\nMale\nFemale\nTotal\n\n\n\n\nAll Causes\n6235.0\n6114.0\n12349.0\n\n\nDisease of the Heart\n1409.0\n1214.0\n2623.0\n\n\nMalignant Neoplasms\n1165.0\n1217.0\n2382.0\n\n\nUnintentional Injury\n793.0\n366.0\n1159.0\n\n\nCOPD/CLRD\n222.0\n271.0\n493.0\n\n\nCerebrovascular Disease\n176.0\n236.0\n412.0\n\n\nAlzheimer's Disease\n106.0\n292.0\n398.0\n\n\nDiabetes\n155.0\n146.0\n301.0\n\n\nPneumonia\n136.0\n109.0\n245.0\n\n\nSepticemia\n128.0\n135.0\n263.0\n\n\nSuicide\n185.0\n42.0\n227.0\n\n\nCirrhosis of Liver\n84.0\n39.0\n123.0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nNote: See Data Note section for more information regarding this request. Birth and death data for Orange County excludes events recorded in NYC. All rates use ACS 5-year population estimates, except for the ages under 1 year and 1-9 years, which are based on crude live births in Orange County.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Health Behaviors Indicators</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mortality</span>"
     ]
   },
   {
     "objectID": "chapters/06-mortality.html#premature-death",
     "href": "chapters/06-mortality.html#premature-death",
-    "title": "7  Health Behaviors Indicators",
+    "title": "7  Mortality",
     "section": "7.3 Premature Death",
     "text": "7.3 Premature Death\nPremature death highlights deaths occurring earlier in the life course and is used as an indicator of preventable mortality and health inequities. In Orange County, premature death measures consistently indicated disproportionate burden among historically underserved populations, including elevated premature mortality among Non-Hispanic Black and Hispanic residents ?fig-premature-death-rande.\nPremature death is not proportionate across communities, with some municipalities experiencing substantially higher percentages than others; the City of Newburgh had the highest share at 42.9% Figure 7.4.\n\n\n\n\nFigure 7.4\n\n\n\n\n\n\n\n\n\n\n\n\nNoteSource\n\n\n\n\n\nNYS Prevention Agenda Tracking Dashboard, October 2025, sourced from Vital Statistics of NYS https://apps.health.ny.gov/public/tabvis/PHIG_Public/pa/",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Health Behaviors Indicators</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mortality</span>"
     ]
   },
   {

@@ -1,5 +1,5 @@
 ---
-title: "Health Behaviors Indicators"
+title: "Mortality"
 jupyter: python3
 execute:
   freeze: false
