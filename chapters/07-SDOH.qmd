@@ -40,16 +40,13 @@ Note: Methodology notes for this indicator.
 
 Social determinants of health (SDOH) describe the conditions in the environments where people are born, live, learn, work, play, worship, and age, as well as the systems that shape access to opportunity and resources. In Orange County, SDOH indicators vary substantially across municipalities and school districts. This section summarizes key measures across five domains—Economic Stability, Education Access and Quality, Health Care Access and Quality, Neighborhood and Built Environment, and Social and Community Context—using the tables and figures listed below.
 
-While key indicators are summarized here, more data emphasizing the difference in health outcomes rooted in broader social and economic inequities is found in the Health Equity Dashboard (1) that can be accessed via the OCDOH website.
+While key indicators are summarized here, more data emphasizing the difference in health outcomes rooted in broader social and economic inequities is found in the Health Equity Dashboard[^1] that can be accessed via the OCDOH website.
+
+[^1]: Orange County Department of Health, Health Equity Dashboard, [https://www.orangecountygov.com/2361/Dashboard-Portal](https://www.orangecountygov.com/2361/Dashboard-Portal), accessed August 2025.
 
 Orange County’s 2023 median household income was $96,497 [@tbl-income-poverty-gini]. However, the municipal range is wide, with the highest reported median income in Tuxedo Park Village ($250,000+) and substantially lower median incomes in municipalities such as Palm Tree Town ($43,171) and the City of Newburgh ($51,006) [@tbl-income-poverty-gini]. Countywide, 15.8% of households were below the federal poverty level, while 25.9% were below the local poverty level [@tbl-income-poverty-gini], reflecting that the local poverty threshold is higher than the federal threshold across household sizes [@tbl-poverty-threshold]. In 2023, 28.8% of county households reported incomes above $150,000 [@tbl-income-poverty-gini]. Across time, Orange County’s population living below the federal poverty level was 14.4% in 2022, compared with 15.7% in New York State and 14.0% in the Mid-Hudson Region [@fig-poverty-pop]. Poverty burden is also reflected in absolute counts: 51,238 Orange County residents were estimated to be living in poverty, including 19,619 children under age 18 [@tbl-poverty-age-rande]. Among children, Orange County’s poverty rate was 21.0% in 2022, compared with 18.6% statewide and 15.8% regionally [@fig-children-poverty-threshold].
 
 Differences by race and ethnicity are evident in the census-based poverty figures. In 2023, the share living below the federal poverty level was 9.3% among non-Hispanic White residents, compared with 17.7% among non-Hispanic Black residents and 21.2% among Hispanic/Latino residents [@fig-poverty-individual-rande]. Among families with related children under age 18, 5.3% of non-Hispanic White families were below poverty, compared with 16.0% of non-Hispanic Black families and 11.1% of Hispanic/Latino families [@fig-poverty-family-rande]. Employment conditions also shifted over time, including a clear pandemic-era increase: Orange County’s unemployment rate rose from 3.8% (2019) to 10.2% (2020) and then declined to 3.4% (2023) [@fig-percentage-of-labor-force-unemp].
-
-
-
-1 Orange County Department of Health, Health Equity Dashboard, https://www.orangecountygov.com/2361/Dashboard-Portal,
-accessed August 2025 
 
 <!-- Table 12: Household Median Income, 2023 -->
 {{< include _generated/objects/tbl-income-poverty-gini.qmd >}}
