@@ -1,13 +1,13 @@
-<!-- indicator: tbl-selected-housing-renters -->
+<!-- indicator: tbl-house-characteristics-renters -->
 
 ```{python}
 #| echo: false
 #| warning: false
 #| message: false
-#| label: tbl-selected-housing-renters
-#| tbl-cap: 'Percentage of Adolescents 13 Years Old with a Complete HPV Vaccine Series, 2019–2024'
+#| label: tbl-house-characteristics-renters
+#| tbl-cap: 'Selected Housing Characteristics for Renters by Municipality, 2023'
 from scripts.cha_registry_renderer import render_table_object
-render_table_object(object_id="tbl-selected-housing-renters", workbook_path=CHA_WORKBOOK_PATH)
+render_table_object(object_id="tbl-house-characteristics-renters", workbook_path=CHA_WORKBOOK_PATH)
 ```
 
 ::: {.callout-note}
