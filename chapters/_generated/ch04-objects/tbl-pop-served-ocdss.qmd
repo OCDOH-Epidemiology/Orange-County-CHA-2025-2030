@@ -10,12 +10,6 @@ from scripts.cha_registry_renderer import render_table_object
 render_table_object(object_id="tbl-pop-served-ocdss", workbook_path=CHA_WORKBOOK_PATH)
 ```
 
-::: {.callout-note collapse="true"}
-## Source
-
-Data request from Orange County Department of Social Services, November 2025
-:::
-
 ::: {.callout-note}
 Note: All end of year figures equal the amounts on December 31st of the indicated year. All counts have been rounded to the nearest whole number. Dollar amounts have been rounded to the nearest tenth.
 :::

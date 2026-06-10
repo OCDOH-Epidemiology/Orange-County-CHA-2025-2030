@@ -10,12 +10,6 @@ from scripts.cha_registry_renderer import render_table_object
 render_table_object(object_id="tbl-educational-attain", workbook_path=CHA_WORKBOOK_PATH)
 ```
 
-::: {.callout-note collapse="true"}
-## Source
-
-US Census Bureau, American Community Survey, 2019–2023 5-Year Population Estimates, Table S1501-Educational Attainment, November 2025 https://data.census.gov/table/ACSST5Y2023.S1501?q=S1501+Orange+County,+NY&g=050XX00US36071
-:::
-
 ::: {.callout-note}
 Note: Town totals include Village totals. The category "High School Diploma" includes those who have received a GED or other equivalent document.
 :::

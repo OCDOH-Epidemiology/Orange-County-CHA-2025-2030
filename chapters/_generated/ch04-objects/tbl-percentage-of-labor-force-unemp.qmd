@@ -10,12 +10,6 @@ from scripts.cha_registry_renderer import render_table_object
 render_table_object(object_id="tbl-percentage-of-labor-force-unemp", workbook_path=CHA_WORKBOOK_PATH)
 ```
 
-::: {.callout-note collapse="true"}
-## Source
-
-NYS Community Health Indicator Reports Dashboard, September 2024 sourced from US Department of Labor https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard &p=ch&cos=33
-:::
-
 ::: {.callout-note}
 Note: Unemployed is defined as a person actively seeking employment and available for work. Part-time workers are considered employed. The annual average "Percentage Unemployed" aged 16 years and older was calculated by dividing the number unemployed by the total labor force (employed and unemployed) times 100.
 :::

@@ -10,12 +10,6 @@ from scripts.cha_registry_renderer import render_table_object
 render_table_object(object_id="tbl-english-language-eco-disad-disability", workbook_path=CHA_WORKBOOK_PATH)
 ```
 
-::: {.callout-note collapse="true"}
-## Source
-
-NYS Education Department, November 2025 https://data.nysed.gov/enrollment.php?county=44&year=2024&ethnicity%5B%5D=I&ethnicity%5B%5D=B&ethnicity%5B%5D=H&et hnicity%5B%5D=AP&ethnicity%5B%5D=W&ethnicity%5B%5D=M
-:::
-
 ::: {.callout-note}
 *: These school districts do not have high schools. Note: English Language Learners (ELLs) are those who by reason of foreign birth or ancestry, speak or understand a language other than English or understand little or no English, and require support in order to become proficient in English and are identified pursuant to Section 154.3 of Commissioner's Regulations. Student who participates in, or whose family participates in, economic assistance programs, such as the Free or Reduced-Price Lunch Programs; Social Security Insurance (SSI); Supplemental Nutrition Assistance Program (SNAP); Foster Care; Refugee Assistance (cash or medical assistance); Earned Income Tax Credit (EITC); Home Energy Assistance Program (HEAP); Safety Net Assistance (SNA); Bureau of Indian Affairs (BIA); or Family Assistance: Temporary Assistance for Needy Families (TANF). If one student in a family is identified as low income, all students from that household (economic unit) may be identified as low income. Students with disabilities are those who have been identified as such by the Committee on Special Education and are receiving services under the Individuals with Disabilities Education Act (IDEA). Students with disabilities include those having an intellectual disability; hearing impairment, including deafness; speech or language impairment; visual impairment, including blindness; emotional disability; orthopedic impairment; autism; traumatic brain injury; developmental delay; other health impairment; specific learning disability; deaf-blindness; or multiple disabilities and who, by reason thereof, receive special education and related services under the IDEA according to an Individualized Education Program (IEP), Individualized Family Service Plan (IFSP), or a services plan.
 :::
