@@ -108,7 +108,7 @@ Language indicators show additional variation relevant to educational access. Co
 
 Potentially preventable hospitalizations are commonly interpreted as a proxy indicator of primary care access and chronic disease management. From 2021–2024, Orange County’s rate was 104.4 per 10,000, compared with 84.9 in NYS excluding NYC and 91.4 statewide [@fig-preventable-hosp-25]. Within the county, rates varied notably across ZIP codes, ranging from 59.8 (ZIP 10950) to 190.7 (ZIP 10919) [@fig-preventable-hosp-25].
 
-Insurance coverage also varied by race and ethnicity. Overall, 4.8% of Orange County residents were uninsured in 2023. Uninsured prevalence was higher among Hispanic/Latino residents (9.5%) compared with non-Hispanic White residents (2.6%). The rate was 4.2% among non-Hispanic Black residents [@fig-uninsured-civ-pop-re].
+Insurance coverage also varied by race and ethnicity. Overall, 4.8% of Orange County residents were uninsured in 2023. Uninsured prevalence was higher among Hispanic/Latino residents (9.5%) compared with non-Hispanic White residents (2.6%). The rate was 4.2% among non-Hispanic Black residents [@fig-uninsured-rande].
 
 <!-- Figure 14: Potentially Preventable Hospitalizations, Age-Adjusted Rate per 10,000 Adults by ZIP Code, 2021–2024 -->
 ![](../pdfs/preventable-hosp-25.png){#fig-preventable-hosp-25 fig-cap="Potentially Preventable Hospitalizations, Age-Adjusted Rate per 10,000 Adults by ZIP Code, 2021–2024" fig-alt="Potentially Preventable Hospitalizations, Age-Adjusted Rate per 10,000 Adults by ZIP Code, 2021–2024" width="100%"}
@@ -124,8 +124,8 @@ Note: This includes adults aged 18 years and older. This indicator is defined as
 
 <!-- Figure 15: Uninsured Civilian Noninstitutionalized Population, by Race and Ethnicity, 2023 -->
 
-{{< include _generated/objects/fig-uninsured-civ-pop-re.qmd >}}
-{{< include _generated/objects/tbl-uninsured-civ-pop-re.qmd >}}
+{{< include _generated/objects/fig-uninsured-rande.qmd >}}
+{{< include _generated/objects/tbl-uninsured-rande.qmd >}}
 
 ## Neighborhood and Built Environment 
 
