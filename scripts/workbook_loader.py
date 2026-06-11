@@ -16,12 +16,44 @@ import re
 
 import pandas as pd
 
+from scripts.cha_table_styling import CHA_REGION_ALIASES, CHA_REGION_ORDER
+
 
 VALID_OBJECT_TYPES = {"table", "figure"}
 VALID_FIGURE_TYPES = {"line", "clustered_bar", "stacked_bar", "simple_bar", "horizontal_bar"}
 _VALID_FORMAT_CODES: frozenset[str] = frozenset(
     {"integer", "number", "percent1", "percent2", "currency", "currency2", "ratio", "date"}
 )
+
+_X_COL_SYNONYM_GROUPS: tuple[frozenset[str], ...] = (
+    frozenset({"year", "period"}),
+    frozenset({"county", "region", "region/county"}),
+    frozenset({"group", "category"}),
+)
+
+
+def _are_x_col_synonyms(left: str, right: str) -> bool:
+    """True when two X Column / header labels refer to the same axis dimension."""
+    a = _as_text(left).lower()
+    b = _as_text(right).lower()
+    if not a or not b:
+        return False
+    if a == b:
+        return True
+    return any(a in group and b in group for group in _X_COL_SYNONYM_GROUPS)
+
+
+def _first_col_values_are_regions(series: pd.Series) -> bool:
+    non_null = [_as_text(value) for value in series.tolist() if _as_text(value)]
+    if not non_null:
+        return False
+    matches = sum(
+        1
+        for value in non_null
+        if CHA_REGION_ALIASES.get(value, value) in CHA_REGION_ORDER
+    )
+    return matches / len(non_null) >= 0.8
+
 
 _FIGURE_TYPE_ALIASES: dict[str, str] = {
     "1": "line",
@@ -431,20 +463,24 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
         # A comma in the configured value means it is a list of category
         # values, not a column name — skip the rename in that case.
         is_column_name = configured_x and "," not in configured_x
+        pivot_for_chart = _as_bool(_config_value(config, "Pivot For Chart", False))
         if is_column_name and not data_df.empty and configured_x not in data_df.columns:
             first_col_name = data_df.columns[0]
             if first_col_name == "":
-                # Blank first column → rename to match the configured X Column.
                 new_cols = list(data_df.columns)
-                new_cols[0] = configured_x
+                # X Column names the post-pivot x-axis field. When regions are
+                # stored as rows and pivot_for_chart is on, keep a neutral row
+                # label column for the renderer to transpose.
+                if pivot_for_chart and _first_col_values_are_regions(data_df.iloc[:, 0]):
+                    new_cols[0] = "County"
+                else:
+                    new_cols[0] = configured_x
                 data_df.columns = new_cols
-            elif first_col_name.lower() in {
-                "year", "period", "race/ethnicity", "group", "category",
-                "county", "region", "integer",
-            }:
-                # Common synonym mismatch (e.g., X Column says "Period" but
-                # header says "Year"). Rename to the configured value so the
-                # spec stays consistent.
+            elif _are_x_col_synonyms(first_col_name, configured_x):
+                # True synonym mismatch only (e.g., header "Year" vs X Column
+                # "Period"). Do not rename across dimensions (County vs
+                # Race/Ethnicity) — X Column names the intended x-axis field
+                # after any pivot_for_chart reshape in the renderer.
                 new_cols = list(data_df.columns)
                 new_cols[0] = configured_x
                 data_df.columns = new_cols

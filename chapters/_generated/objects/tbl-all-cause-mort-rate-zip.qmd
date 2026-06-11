@@ -1,0 +1,15 @@
+<!-- indicator: tbl-all-cause-mort-rate-zip -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-all-cause-mort-rate-zip
+#| tbl-cap: 'All-Cause Mortality, Rate per 100,000 Population by ZIP Code, 2020–2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-all-cause-mort-rate-zip", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note}
+Note: See Data Note section for more information regarding this request. Birth and death data for Orange County excludes events recorded in NYC. All rates use ACS 5-year population estimates, except for the ages under 1 year and 1-9 years, which are based on crude live births in Orange County.
+:::

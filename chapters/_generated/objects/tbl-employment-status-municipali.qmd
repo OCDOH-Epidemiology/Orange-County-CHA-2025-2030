@@ -1,0 +1,15 @@
+<!-- indicator: tbl-employment-status-municipali -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-employment-status-municipali
+#| tbl-cap: 'Employment Status by Municipality, 2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-employment-status-municipali", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note}
+Note: Town totals include Village totals. Armed Forces includes active-duty members of the US Air Force, Army, Coast Guard, Marines, or Navy. They are counted as part of the total labor force but are categorized separately from civilians.
+:::

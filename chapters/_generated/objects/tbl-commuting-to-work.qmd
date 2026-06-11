@@ -1,0 +1,15 @@
+<!-- indicator: tbl-commuting-to-work -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-commuting-to-work
+#| tbl-cap: 'Commuting to Work by Municipality, 2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-commuting-to-work", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note}
+Note: Town totals include Village totals.
+:::

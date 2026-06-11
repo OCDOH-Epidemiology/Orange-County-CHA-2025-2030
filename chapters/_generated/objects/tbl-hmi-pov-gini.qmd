@@ -1,0 +1,15 @@
+<!-- indicator: tbl-hmi-pov-gini -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-hmi-pov-gini
+#| tbl-cap: 'Household Median Income, Poverty Status, and GINI Index by Municipality, 2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-hmi-pov-gini", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note}
+Note: Town totals include Village totals. The "local poverty level" standard was initially developed by RECAP and is defined as 50% of the County median household income; in 2023, this was $48,249. The federal poverty level for 2023 is assumed to be a four-person household and is set at $30,000 for 2023. The GINI Index of Income Inequality is a statistical measure of how wealth is concentrated in a location or group. It measures how far a municipalities wealth or income distribution deviated from a perfectly equal distribution. The scale ranges from 0 to 1. A GINI of 0 represents prefect equality or every household has the same income. A GINI of 1 represents perfect inequality or when one household has all the income and everyone else has none. All dollar amounts are indexed to 2023 dollars.
+:::

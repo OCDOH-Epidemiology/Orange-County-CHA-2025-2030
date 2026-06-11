@@ -1,0 +1,15 @@
+<!-- indicator: tbl-population-and-housing-unit-den -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-population-and-housing-unit-den
+#| tbl-cap: 'Population and Housing Unit Density by Municipality, 2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-population-and-housing-unit-den", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note}
+Note: Town totals include Village totals. Land area calculated as of 2020 Census. Population density and housing unit density calculated using 2019-2023 estimates divided by land area.
+:::

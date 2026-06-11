@@ -1,0 +1,15 @@
+<!-- indicator: tbl-employed-civilians-by-industry -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-employed-civilians-by-industry
+#| tbl-cap: 'Employed Civilians by Industry and Municipality, 2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-employed-civilians-by-industry", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note}
+Note: Town totals include Village totals. Industry titles and their 4-digit codes are based on the North American Industry Classification System (NAICS). The Census industry codes for 2023 and later years are based on the 2022 revision of the NAICS. To allow for the creation of multiyear tables, industry data in the multiyear files (prior to data year 2023) were recoded to the 2022 Census industry codes. We recommend using caution when comparing data coded using 2022 Census industry codes with data coded using Census industry codes prior to data year 2023.
+:::

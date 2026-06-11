@@ -1,0 +1,12 @@
+<!-- indicator: fig-premature-deaths-re -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-premature-deaths-re
+#| fig-cap: 'Percentage of Deaths that are Premature, by Race and Ethnicity, 2018–2020'
+#| fig-alt: 'Data visualization showing Percentage of Deaths that are Premature, by Race and Ethnicity, 2018–2020.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-premature-deaths-re", workbook_path=CHA_WORKBOOK_PATH).show()
+```

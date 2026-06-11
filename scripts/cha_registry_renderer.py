@@ -135,6 +135,20 @@ def _line_chart_needs_pivot(
     return bool(remaining) and _time_like_column_headers(remaining)
 
 
+def _first_col_is_region_rows(df: pd.DataFrame) -> bool:
+    """True when the first column holds region/county row labels (Orange, NYS, …)."""
+    first_col = df.columns[0]
+    non_null = [value for value in df[first_col].tolist() if not pd.isna(value)]
+    if not non_null:
+        return False
+    matches = sum(
+        1
+        for value in non_null
+        if _normalize_region_label_for_axis(value) in CHA_REGION_ORDER
+    )
+    return matches / len(non_null) >= 0.8
+
+
 def _resolve_show_data_labels(spec: Any) -> bool:
     if getattr(spec, "show_data_labels", None) is not None:
         return bool(spec.show_data_labels)
@@ -414,16 +428,23 @@ def render_figure_object(
             used_region_pivot = True
 
     if not used_region_pivot:
-        if spec.x_col in df.columns:
-            x_col = spec.x_col
-            needs_pivot = False
-        elif spec.pivot_for_chart:
+        if spec.pivot_for_chart:
             if spec.figure_type == "line" and first_col_is_time_like:
                 x_col = first_col
                 needs_pivot = False
-            else:
+            elif _first_col_is_region_rows(df) or spec.x_col not in df.columns:
+                # X Column names the post-pivot category column on the x-axis.
+                pivot_key = first_col
                 x_col = spec.x_col or "Category"
+                if _first_col_is_region_rows(df) and x_col == pivot_key:
+                    x_col = "Category"
                 needs_pivot = True
+            else:
+                x_col = spec.x_col
+                needs_pivot = False
+        elif spec.x_col in df.columns:
+            x_col = spec.x_col
+            needs_pivot = False
         else:
             # Auto-detect wide single-row category data that needs pivoting:
             # all columns are non-region category names and x_col is absent.

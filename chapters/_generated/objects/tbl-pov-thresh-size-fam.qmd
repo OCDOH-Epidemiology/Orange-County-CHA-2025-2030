@@ -1,0 +1,15 @@
+<!-- indicator: tbl-pov-thresh-size-fam -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-pov-thresh-size-fam
+#| tbl-cap: 'Poverty Threshold by Size of Family and Number of Related Children Under 18 Years, 2024'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-pov-thresh-size-fam", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note}
+Note: The source of the weighted average thresholds is the 2025 Current Population Survey Annual Social and Economic Supplement (CPS ASEC). The official poverty measure compares a family's total before-tax money income to the specific dollar threshold that matches their family size, number of related children under 18, and age of the householder.
+:::

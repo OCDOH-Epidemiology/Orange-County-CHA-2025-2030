@@ -1,0 +1,15 @@
+<!-- indicator: tbl-population-growth -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-population-growth
+#| tbl-cap: 'Population Growth by Municipality, 2000–2020'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-population-growth", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note}
+Note: Town totals include Village totals; Villages of South Blooming Grove and Woodbury were incorporated in 2006; Town of Palm Tree was incorporated in 2017 and made coterminous to the Village of Kiryas Joel thereafter. Prior to incorporation of Town of Palm Tree, the Village of Kiryas Joel was incorporated within the boundaries of the Town of Monroe.
+:::
