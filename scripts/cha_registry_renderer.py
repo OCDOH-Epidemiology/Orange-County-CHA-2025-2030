@@ -26,6 +26,7 @@ from scripts.cha_table_styling import (
     create_source_callout,
     style_cha_table,
 )
+from scripts.cha_merged_table import render_merged_table
 from scripts.cha_pdf_tables import is_pdf_render, render_pdf_table_latex
 from scripts.workbook_loader import WorkbookModel, load_cha_workbook, _VALID_FORMAT_CODES, _as_text
 
@@ -335,6 +336,14 @@ def render_table_object(
         raise ValueError(f"Object '{object_id}' is not a table.")
 
     table_spec = model.table_specs[object_id]
+    if table_spec.merged_grid is not None:
+        if is_pdf_render():
+            source_df = model.data_frames[record.data_sheet].copy()
+            source_df = _prepare_table_df(source_df, table_spec.format_rules)
+            source_df.columns = [_strip_format_tokens_from_label(col) for col in source_df.columns]
+            return Latex(render_pdf_table_latex(object_id, source_df))
+        return render_merged_table(table_spec.merged_grid, format_fn=_format_value)
+
     source_df = model.data_frames[record.data_sheet].copy()
     source_df = _prepare_table_df(source_df, table_spec.format_rules)
     source_df.columns = [_strip_format_tokens_from_label(col) for col in source_df.columns]

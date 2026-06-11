@@ -104,11 +104,32 @@ class FigureSpec:
 
 
 @dataclass(frozen=True)
+class CellMerge:
+    """A merged cell region relative to a table grid origin (0-based)."""
+
+    row: int
+    col: int
+    rowspan: int
+    colspan: int
+
+
+@dataclass(frozen=True)
+class MergedTableGrid:
+    """Rectangular cell grid with Excel merge metadata for live table rendering."""
+
+    cells: tuple[tuple[Any, ...], ...]
+    merges: tuple[CellMerge, ...]
+    header_rows: int
+    format_rules_by_col: tuple[str, ...] = ()
+
+
+@dataclass(frozen=True)
 class TableSpec:
     object_id: str
     has_multilevel_headers: bool
     format_rules: dict[str, str]
     row_label_col: str
+    merged_grid: MergedTableGrid | None = None
 
 
 @dataclass(frozen=True)
@@ -240,6 +261,180 @@ def _config_value(config: dict[str, Any], key: str, default: Any = None) -> Any:
         if _normalize_config_key(existing_key) == normalized_key:
             return value
     return default
+
+
+_FLAT_DATA_COL_START = 5  # column F (0-based index 5)
+_FLAT_ENTER_DATA_MARKER = "enter data"
+
+
+def _flat_data_bounds(df: pd.DataFrame) -> tuple[int, int, int] | None:
+    """Return (header_row_idx, data_col_start, data_col_end) for a flat sheet."""
+    data_col_start_idx = _FLAT_DATA_COL_START
+    data_header_idx: int | None = None
+    for i in range(len(df)):
+        if df.shape[1] > 4 and _as_text(df.iloc[i, 4]).lower() == _FLAT_ENTER_DATA_MARKER:
+            data_header_idx = i
+            break
+    if data_header_idx is None or df.shape[1] <= data_col_start_idx:
+        return None
+
+    header_scan_rows = range(data_header_idx, min(len(df), data_header_idx + 6))
+    last_used_col = data_col_start_idx - 1
+    for j in range(data_col_start_idx, df.shape[1]):
+        if any(_as_text(df.iloc[i, j]) != "" for i in header_scan_rows):
+            last_used_col = j
+    if last_used_col < data_col_start_idx:
+        return None
+    return data_header_idx, data_col_start_idx, last_used_col + 1
+
+
+def _flat_last_header_row_idx(df: pd.DataFrame, header_row_idx: int, data_col_end_idx: int) -> int:
+    """Best-effort last header row before data rows (supports two-row headers)."""
+    data_col_start_idx = _FLAT_DATA_COL_START
+    sub_header_row_idx = header_row_idx + 1
+    if sub_header_row_idx >= len(df):
+        return header_row_idx
+
+    row_label_blank = _as_text(df.iloc[sub_header_row_idx, data_col_start_idx]) == ""
+    has_data_headers = any(
+        _as_text(df.iloc[sub_header_row_idx, j])
+        for j in range(data_col_start_idx + 1, data_col_end_idx)
+    )
+    if row_label_blank and has_data_headers:
+        return sub_header_row_idx
+    return header_row_idx
+
+
+def _worksheet_has_data_body_merges(
+    ws: Any,
+    *,
+    header_row_1based: int,
+    last_header_row_1based: int,
+    data_col_start_1based: int,
+) -> bool:
+    """True when merges extend below the header block into table body rows."""
+    for mc in ws.merged_cells.ranges:
+        if mc.min_col < data_col_start_1based:
+            continue
+        if mc.min_row > last_header_row_1based:
+            return True
+    return False
+
+
+def _resolved_worksheet_value(ws: Any, row_1based: int, col_1based: int) -> Any:
+    for mc in ws.merged_cells.ranges:
+        if mc.min_row <= row_1based <= mc.max_row and mc.min_col <= col_1based <= mc.max_col:
+            return ws.cell(mc.min_row, mc.min_col).value
+    return ws.cell(row_1based, col_1based).value
+
+
+def _flat_grid_stop_row(ws: Any, start_row_1based: int, data_col_start_1based: int, data_col_end_1based: int) -> int:
+    """Find the last populated data row in the flat-sheet data block.
+
+    Flat indicator sheets interleave config keys in column A with table data in
+    columns F+, so only blank streaks in the data columns end the block.
+    """
+    last_row = start_row_1based
+    blank_streak = 0
+    for row_1based in range(start_row_1based + 1, ws.max_row + 1):
+        row_vals = [
+            _resolved_worksheet_value(ws, row_1based, col_1based)
+            for col_1based in range(data_col_start_1based, data_col_end_1based)
+        ]
+        if all(_as_text(value) == "" for value in row_vals):
+            blank_streak += 1
+            if blank_streak >= 2:
+                break
+            continue
+        blank_streak = 0
+        last_row = row_1based
+    return last_row
+
+
+def _extend_data_col_end_for_header_merges(
+    ws: Any,
+    *,
+    header_row_1based: int,
+    data_col_start_1based: int,
+    data_col_end_1based: int,
+) -> int:
+    """Include trailing merge partners that can be blank in the header row."""
+    extended = data_col_end_1based
+    for mc in ws.merged_cells.ranges:
+        if mc.min_row <= header_row_1based <= mc.max_row and mc.min_col >= data_col_start_1based:
+            extended = max(extended, mc.max_col + 1)
+    return extended
+
+
+def _extract_merged_table_grid(ws: Any, df: pd.DataFrame) -> MergedTableGrid | None:
+    """Build a merged cell grid when Excel merges extend into table body rows."""
+    bounds = _flat_data_bounds(df)
+    if bounds is None:
+        return None
+
+    header_row_idx, data_col_start_idx, data_col_end_idx = bounds
+    header_row_1based = header_row_idx + 1
+    data_col_start_1based = data_col_start_idx + 1
+    data_col_end_1based = _extend_data_col_end_for_header_merges(
+        ws,
+        header_row_1based=header_row_1based,
+        data_col_start_1based=data_col_start_1based,
+        data_col_end_1based=data_col_end_idx + 1,
+    )
+    last_header_row_1based = _flat_last_header_row_idx(df, header_row_idx, data_col_end_idx) + 1
+
+    if not _worksheet_has_data_body_merges(
+        ws,
+        header_row_1based=header_row_1based,
+        last_header_row_1based=last_header_row_1based,
+        data_col_start_1based=data_col_start_1based,
+    ):
+        return None
+
+    last_row_1based = _flat_grid_stop_row(ws, header_row_1based, data_col_start_1based, data_col_end_1based)
+    n_rows = last_row_1based - header_row_1based + 1
+    n_cols = data_col_end_1based - data_col_start_1based
+    if n_rows <= 0 or n_cols <= 0:
+        return None
+
+    grid: list[list[Any]] = []
+    for row_1based in range(header_row_1based, last_row_1based + 1):
+        grid.append(
+            [
+                _resolved_worksheet_value(ws, row_1based, col_1based)
+                for col_1based in range(data_col_start_1based, data_col_end_1based)
+            ]
+        )
+
+    merges: list[CellMerge] = []
+    for mc in ws.merged_cells.ranges:
+        if mc.min_row < header_row_1based or mc.max_row > last_row_1based:
+            continue
+        if mc.min_col < data_col_start_1based or mc.max_col >= data_col_end_1based:
+            continue
+        merges.append(
+            CellMerge(
+                row=mc.min_row - header_row_1based,
+                col=mc.min_col - data_col_start_1based,
+                rowspan=mc.max_row - mc.min_row + 1,
+                colspan=mc.max_col - mc.min_col + 1,
+            )
+        )
+
+    format_row_idx = header_row_idx - 1
+    format_rules_by_col: list[str] = []
+    if format_row_idx >= 0:
+        for col_1based in range(data_col_start_1based, data_col_end_1based):
+            fmt_val = _as_text(ws.cell(format_row_idx + 1, col_1based).value).lower()
+            format_rules_by_col.append(fmt_val if fmt_val in _VALID_FORMAT_CODES else "")
+
+    # Grid-mode tables use only the Enter Data row as the rendered header.
+    return MergedTableGrid(
+        cells=tuple(tuple(row) for row in grid),
+        merges=tuple(merges),
+        header_rows=1,
+        format_rules_by_col=tuple(format_rules_by_col),
+    )
 
 
 def _read_excel_raw(path: Path) -> dict[str, pd.DataFrame]:
@@ -454,7 +649,10 @@ def _parse_flat_indicator_sheet(
 
 
 def _load_flat_workbook(source_path: Path) -> WorkbookModel:
+    import openpyxl
+
     raw_sheets = _read_excel_raw(source_path)
+    openpyxl_wb = openpyxl.load_workbook(source_path, data_only=True)
     skip_sheets = {"Master", "Dropdowns", "Template", "_Template", "_Template (2)"}
 
     registry: dict[str, RegistryRecord] = {}
@@ -474,6 +672,9 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
             continue
 
         config, data_df, format_rules, auto_multilevel = _parse_flat_indicator_sheet(sheet_name, sheet_df)
+        merged_grid: MergedTableGrid | None = None
+        if sheet_name in openpyxl_wb.sheetnames:
+            merged_grid = _extract_merged_table_grid(openpyxl_wb[sheet_name], sheet_df)
 
         # When the user sets "X Column" but it doesn't match any data column,
         # reconcile the mismatch so the spec, y_cols, and renderer all agree.
@@ -596,6 +797,8 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
                 )
             else:
                 has_multilevel = auto_multilevel or _as_bool(_config_value(config, "Multilevel Headers", False))
+                if merged_grid is not None:
+                    has_multilevel = False
                 # fallback by generic Data Type if no explicit format rules detected
                 if not format_rules and not data_df.empty:
                     data_type = _as_text(_config_value(config, "Data Type", "")).lower()
@@ -611,6 +814,7 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
                     has_multilevel_headers=has_multilevel,
                     format_rules=format_rules,
                     row_label_col=(data_df.columns[0] if not data_df.empty else ""),
+                    merged_grid=merged_grid,
                 )
 
             raw_source = _as_text(_config_value(config, "Source", ""))
