@@ -112,6 +112,29 @@ def _detect_region_columns(df: pd.DataFrame) -> list[str]:
     return region_cols
 
 
+def _time_like_column_headers(columns: list[Any]) -> bool:
+    if not columns:
+        return False
+    return all(_is_time_like_value(col) for col in columns)
+
+
+def _line_chart_needs_pivot(
+    df: pd.DataFrame,
+    spec: Any,
+    *,
+    first_col_is_time_like: bool,
+) -> bool:
+    """True when regions are rows, years are column headers, and x_col is Year."""
+    if spec.figure_type != "line":
+        return False
+    if not spec.x_col or spec.x_col in df.columns:
+        return False
+    if first_col_is_time_like:
+        return False
+    remaining = list(df.columns[1:])
+    return bool(remaining) and _time_like_column_headers(remaining)
+
+
 def _resolve_show_data_labels(spec: Any) -> bool:
     if getattr(spec, "show_data_labels", None) is not None:
         return bool(spec.show_data_labels)
@@ -414,6 +437,11 @@ def render_figure_object(
             )
             if is_wide_category:
                 x_col = spec.x_col or "Category"
+                needs_pivot = True
+            elif _line_chart_needs_pivot(
+                df, spec, first_col_is_time_like=first_col_is_time_like
+            ):
+                x_col = spec.x_col or "Year"
                 needs_pivot = True
             else:
                 x_col = first_col
