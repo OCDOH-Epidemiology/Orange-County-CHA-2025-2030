@@ -12,7 +12,7 @@ render_table_object(object_id="tbl-demographics-sum", workbook_path=CHA_WORKBOOK
 
 ::: {.callout-note collapse="true"}
 ## Source
-US Census Bureau, American Community Survey, 2019–2023 5-Year Population Estimates, Table DP05-Demographic and Housing Estimates, November 2025 https://data.census.gov/table/ACSDP5Y2023.DP05?q=DP05+Orange+County,+NY&g=050XX00US36071
+US Census Bureau, American Community Survey, 2019–2023 5-Year Population Estimates, Table DP05-Demographic and Housing Estimates, November 2025 [https://data.census.gov/table/ACSDP5Y2023.DP05?q=DP05+Orange+County,+NY&g=050XX00US36071](https://data.census.gov/table/ACSDP5Y2023.DP05?q=DP05+Orange+County,+NY&g=050XX00US36071)
 :::
 
 ::: {.callout-note}

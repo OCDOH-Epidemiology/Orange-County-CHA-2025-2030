@@ -12,7 +12,7 @@ render_table_object(object_id="tbl-premature-deaths-rande", workbook_path=CHA_WO
 
 ::: {.callout-note collapse="true"}
 ## Source
-NYS County Health Indicators by Race and Ethnicity, November 2025 sourced from Vital Statistics of NYS https://www.health.ny.gov/community/health_equity/reports/county/orange.htm
+NYS County Health Indicators by Race and Ethnicity, November 2025 sourced from Vital Statistics of NYS [https://www.health.ny.gov/community/health_equity/reports/county/orange.htm](https://www.health.ny.gov/community/health_equity/reports/county/orange.htm)
 :::
 
 ::: {.callout-note}

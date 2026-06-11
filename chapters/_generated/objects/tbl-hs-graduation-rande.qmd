@@ -12,7 +12,7 @@ render_table_object(object_id="tbl-hs-graduation-rande", workbook_path=CHA_WORKB
 
 ::: {.callout-note collapse="true"}
 ## Source
-NYS Education Department, August 2025 https://data.nysed.gov/gradrate.php?year=2022&county=44
+NYS Education Department, August 2025 [https://data.nysed.gov/gradrate.php?year=2022&county=44](https://data.nysed.gov/gradrate.php?year=2022&county=44)
 :::
 
 ::: {.callout-note}

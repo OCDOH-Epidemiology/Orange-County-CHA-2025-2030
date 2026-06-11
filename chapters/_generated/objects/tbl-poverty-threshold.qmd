@@ -12,7 +12,7 @@ render_table_object(object_id="tbl-poverty-threshold", workbook_path=CHA_WORKBOO
 
 ::: {.callout-note collapse="true"}
 ## Source
-US Census Bureau, Poverty Thresholds by Size of Family and Number of Children, 2024, November 2025 https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html
+US Census Bureau, Poverty Thresholds by Size of Family and Number of Children, 2024, November 2025 [https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html](https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-poverty-thresholds.html)
 :::
 
 ::: {.callout-note}

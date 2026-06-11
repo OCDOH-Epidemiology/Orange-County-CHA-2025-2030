@@ -12,7 +12,7 @@ render_table_object(object_id="tbl-poverty-individual-rande", workbook_path=CHA_
 
 ::: {.callout-note collapse="true"}
 ## Source
-US Census Bureau; American Community Survey, 2019–2023 5-Year Population Estimates, Table S1701-Poverty Status in the Past 12 Months, August 2025 https://data.census.gov/table/ACSST5Y2023.S1701?q=s1701&g=050XX00US36071_010XX00US_040XX00US36
+US Census Bureau; American Community Survey, 2019–2023 5-Year Population Estimates, Table S1701-Poverty Status in the Past 12 Months, August 2025 [https://data.census.gov/table/ACSST5Y2023.S1701?q=s1701&g=050XX00US36071_010XX00US_040XX00US36](https://data.census.gov/table/ACSST5Y2023.S1701?q=s1701&g=050XX00US36071_010XX00US_040XX00US36)
 :::
 
 ::: {.callout-note}

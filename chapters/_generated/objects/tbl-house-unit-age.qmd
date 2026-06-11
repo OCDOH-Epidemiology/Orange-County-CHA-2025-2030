@@ -12,7 +12,7 @@ render_table_object(object_id="tbl-house-unit-age", workbook_path=CHA_WORKBOOK_P
 
 ::: {.callout-note collapse="true"}
 ## Source
-US Census Bureau, American Community Survey 2019–2023 5-Year Population Estimates, Table B25034-Year Structure Built, November 2025 https://data.census.gov/table/ACSDT5Y2023.B25034?q=B25034+Orange+County,+NY&g=050XX00US36071
+US Census Bureau, American Community Survey 2019–2023 5-Year Population Estimates, Table B25034-Year Structure Built, November 2025 [https://data.census.gov/table/ACSDT5Y2023.B25034?q=B25034+Orange+County,+NY&g=050XX00US36071](https://data.census.gov/table/ACSDT5Y2023.B25034?q=B25034+Orange+County,+NY&g=050XX00US36071)
 :::
 
 ::: {.callout-note}

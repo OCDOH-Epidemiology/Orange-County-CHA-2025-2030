@@ -12,7 +12,7 @@ render_table_object(object_id="tbl-cerebrovascdz-hosp-rande-aar", workbook_path=
 
 ::: {.callout-note collapse="true"}
 ## Source
-NYS County Health Indicators by Race and Ethnicity, August 2025 https://www.health.ny.gov/community/health_equity/reports/county/orange.htm
+NYS County Health Indicators by Race and Ethnicity, August 2025 [https://www.health.ny.gov/community/health_equity/reports/county/orange.htm](https://www.health.ny.gov/community/health_equity/reports/county/orange.htm)
 :::
 
 ::: {.callout-note}

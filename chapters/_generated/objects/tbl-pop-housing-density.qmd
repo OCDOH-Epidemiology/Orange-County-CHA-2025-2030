@@ -12,7 +12,7 @@ render_table_object(object_id="tbl-pop-housing-density", workbook_path=CHA_WORKB
 
 ::: {.callout-note collapse="true"}
 ## Source
-US Census Bureau, Quick Facts, November 2025 https://www.census.gov/quickfacts/orangecountynewyork
+US Census Bureau, Quick Facts, November 2025 [https://www.census.gov/quickfacts/orangecountynewyork](https://www.census.gov/quickfacts/orangecountynewyork)
 :::
 
 ::: {.callout-note}

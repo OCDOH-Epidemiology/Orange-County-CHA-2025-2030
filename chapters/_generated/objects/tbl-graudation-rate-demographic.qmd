@@ -12,7 +12,7 @@ render_table_object(object_id="tbl-graudation-rate-demographic", workbook_path=C
 
 ::: {.callout-note collapse="true"}
 ## Source
-NYS Education Department, November 2025 https://data.nysed.gov/enrollment.php?county=44&year=2024&ethnicity5B5D=I&ethnicity5B5D=B&ethnicity5B5D=H&ethnicity5B5D=AP&ethnicity5B5D=W&ethnicity5B5D=M
+NYS Education Department, November 2025 [https://data.nysed.gov/enrollment.php?county=44&year=2024&ethnicity5B5D=I&ethnicity5B5D=B&ethnicity5B5D=H&ethnicity5B5D=AP&ethnicity5B5D=W&ethnicity5B5D=M](https://data.nysed.gov/enrollment.php?county=44&year=2024&ethnicity5B5D=I&ethnicity5B5D=B&ethnicity5B5D=H&ethnicity5B5D=AP&ethnicity5B5D=W&ethnicity5B5D=M)
 :::
 
 ::: {.callout-note}

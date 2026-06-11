@@ -228,6 +228,31 @@ def render_indicator_blocks(
     return "\n\n".join(parts)
 
 
+def _linkify_source_text(text: str) -> str:
+    """Convert bare http(s) URLs to markdown links, preserving existing links."""
+    if not text.strip():
+        return text
+
+    def linkify_segment(segment: str) -> str:
+        def repl(match: re.Match[str]) -> str:
+            raw = match.group(0)
+            url = raw.rstrip(".,;:")
+            suffix = raw[len(url) :]
+            return f"[{url}]({url}){suffix}"
+
+        return re.sub(r"https?://[^\s<>\"']+", repl, segment)
+
+    parts: list[str] = []
+    pos = 0
+    for match in re.finditer(r"\[[^\]]*\]\([^)]*\)", text):
+        if match.start() > pos:
+            parts.append(linkify_segment(text[pos : match.start()]))
+        parts.append(match.group(0))
+        pos = match.end()
+    parts.append(linkify_segment(text[pos:]))
+    return "".join(parts)
+
+
 def _render_source_note_markdown(
     source_text: str = "",
     note_text: str = "",
@@ -240,7 +265,7 @@ def _render_source_note_markdown(
         parts.append(
             '::: {.callout-note collapse="true"}\n'
             "## Source\n"
-            f"{source_text.strip()}\n"
+            f"{_linkify_source_text(source_text.strip())}\n"
             ":::"
         )
     if note_text:

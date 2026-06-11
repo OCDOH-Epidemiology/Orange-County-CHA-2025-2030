@@ -12,7 +12,7 @@ render_table_object(object_id="tbl-english-language-eco-disad-disability", workb
 
 ::: {.callout-note collapse="true"}
 ## Source
-NYS Education Department, November 2025 https://data.nysed.gov/enrollment.php?county=44&year=2024&ethnicity%5B%5D=I&ethnicity%5B%5D=B&ethnicity%5B%5D=H&et hnicity%5B%5D=AP&ethnicity%5B%5D=W&ethnicity%5B%5D=M
+NYS Education Department, November 2025 [https://data.nysed.gov/enrollment.php?county=44&year=2024&ethnicity%5B%5D=I&ethnicity%5B%5D=B&ethnicity%5B%5D=H&et](https://data.nysed.gov/enrollment.php?county=44&year=2024&ethnicity%5B%5D=I&ethnicity%5B%5D=B&ethnicity%5B%5D=H&et) hnicity%5B%5D=AP&ethnicity%5B%5D=W&ethnicity%5B%5D=M
 :::
 
 ::: {.callout-note}

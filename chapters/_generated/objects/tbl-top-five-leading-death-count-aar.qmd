@@ -12,7 +12,7 @@ render_table_object(object_id="tbl-top-five-leading-death-count-aar", workbook_p
 
 ::: {.callout-note collapse="true"}
 ## Source
-Vital Statistics of NYS, November 2025 https://apps.health.ny.gov/public/tabvis/PHIG_Public/lcd
+Vital Statistics of NYS, November 2025 [https://apps.health.ny.gov/public/tabvis/PHIG_Public/lcd](https://apps.health.ny.gov/public/tabvis/PHIG_Public/lcd)
 :::
 
 ::: {.callout-note}
