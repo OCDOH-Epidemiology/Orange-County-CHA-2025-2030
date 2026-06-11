@@ -45,12 +45,12 @@ On every `quarto render`, the `pre-render` hook in `_quarto.yml` runs
 `scripts/generate_chapter_objects.py`, which reads the indicator sheets and writes one
 include file per object into `chapters/_generated/objects/`. This chapter pulls them in.
 
-The `Poverty Rate` sheet is a figure (@fig-poverty-rate); the `Total Households` sheet
-is a table (@tbl-households).
+The `Pop in Poverty` sheet is a figure (@fig-poverty-pop); the companion table is
+@tbl-poverty-pop.
 
-{{< include _generated/objects/fig-poverty-rate.qmd >}}
+{{< include _generated/objects/fig-poverty-pop.qmd >}}
 
-{{< include _generated/objects/tbl-households.qmd >}}
+{{< include _generated/objects/tbl-poverty-pop.qmd >}}
 
 ## To add your own indicator
 

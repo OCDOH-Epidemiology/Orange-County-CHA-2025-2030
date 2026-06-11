@@ -160,6 +160,18 @@ def _load_model(workbook_path: str | Path | None) -> WorkbookModel:
     return load_cha_workbook(path)
 
 
+# Legacy include labels that differ from Master-sheet object IDs.
+OBJECT_ID_ALIASES: dict[str, str] = {
+    "tbl-selected-housing-renters": "tbl-house-characteristics-renters",
+    "fig-poverty-rate": "fig-poverty-pop",
+    "tbl-households": "tbl-poverty-pop",
+}
+
+
+def _resolve_object_id(object_id: str) -> str:
+    return OBJECT_ID_ALIASES.get(object_id, object_id)
+
+
 def _format_value(value: Any, format_name: str) -> Any:
     if pd.isna(value):
         return ""
@@ -310,6 +322,7 @@ def render_table_object(
 ) -> Any:
     from IPython.display import Latex
 
+    object_id = _resolve_object_id(object_id)
     model = _load_model(workbook_path)
     if object_id not in model.registry:
         placeholder = pd.DataFrame({"": [f"Table '{object_id}' not found in workbook."]})
@@ -343,6 +356,7 @@ def render_figure_object(
     figure_id: str,
     workbook_path: str | Path | None = None,
 ):
+    figure_id = _resolve_object_id(figure_id)
     model = _load_model(workbook_path)
     if figure_id not in model.registry:
         fig = go.Figure()

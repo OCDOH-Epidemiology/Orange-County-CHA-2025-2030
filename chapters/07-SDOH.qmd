@@ -176,7 +176,7 @@ Note: Town totals include Village totals. The Village of Harriman is split betwe
 :::
 
 <!-- Table 25: Selected Housing Characteristics for Renters by Municipality, 2023 -->
-{{< include _generated/objects/tbl-selected-housing-renters.qmd >}}
+{{< include _generated/objects/tbl-house-characteristics-renters.qmd >}}
 
 <!-- Figure 17: Renter Occupied Housing Units as a Percentage of Occupied Housing Units, 2023 -->
 ![](../pdfs/renter-occupied.png){#fig-renter-occupied-housing-units fig-cap="Renter Occupied Housing Units as a Percentage of Occupied Housing Units, 2023" fig-alt="Renter Occupied Housing Units as a Percentage of Occupied Housing Units, 2023" width="100%"}

@@ -1,0 +1,12 @@
+<!-- indicator: fig-heartdz-mortal-sex-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-heartdz-mortal-sex-aar
+#| fig-cap: 'Diseases of the Heart Mortality, Age-Adjusted Rate per 100,000 by Sex, 2020–2023'
+#| fig-alt: 'Data visualization showing Diseases of the Heart Mortality, Age-Adjusted Rate per 100,000 by Sex, 2020–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-heartdz-mortal-sex-aar", workbook_path=CHA_WORKBOOK_PATH).show()
+```

@@ -210,6 +210,23 @@ def _flat_slug(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
 
 
+def _build_master_indicator_lookup(
+    master_df: pd.DataFrame | None,
+) -> dict[str, tuple[str, str]]:
+    """Map indicator Name -> (Object ID, Figure ID) from the Master sheet."""
+    if master_df is None or master_df.empty:
+        return {}
+
+    lookup: dict[str, tuple[str, str]] = {}
+    for _, row in master_df.iterrows():
+        name = _as_text(row.iloc[5] if master_df.shape[1] > 5 else None)
+        object_id = _as_text(row.iloc[6] if master_df.shape[1] > 6 else None)
+        figure_id = _as_text(row.iloc[7] if master_df.shape[1] > 7 else None)
+        if name:
+            lookup[name] = (object_id, figure_id)
+    return lookup
+
+
 def _normalize_config_key(text: Any) -> str:
     raw = _as_text(text).lower()
     return re.sub(r"[^a-z0-9]+", " ", raw).strip()
@@ -446,6 +463,7 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
     source_specs: dict[str, SourceSpec] = {}
     data_frames: dict[str, pd.DataFrame] = {}
     order_counter = 0
+    master_lookup = _build_master_indicator_lookup(raw_sheets.get("Master"))
 
     for sheet_name, sheet_df in raw_sheets.items():
         if sheet_name in skip_sheets:
@@ -488,8 +506,16 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
         raw_type = _as_text(_config_value(config, "Table/Figure/Both", "both")).lower()
         sheet_slug = _flat_slug(sheet_name)
 
+        indicator_name = _as_text(_config_value(config, "Name", sheet_name))
         object_id_override = _as_text(_config_value(config, "Object ID", ""))
         figure_id_override = _as_text(_config_value(config, "Figure ID", "")) or object_id_override
+        master_ids = master_lookup.get(indicator_name, ("", ""))
+        if not object_id_override and master_ids[0]:
+            object_id_override = master_ids[0]
+        if not figure_id_override and master_ids[1]:
+            figure_id_override = master_ids[1]
+        if not figure_id_override:
+            figure_id_override = object_id_override
 
         def _make_base_id(override: str) -> str:
             slug = _flat_slug(override) if override else sheet_slug
