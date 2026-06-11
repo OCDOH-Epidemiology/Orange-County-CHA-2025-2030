@@ -10,6 +10,11 @@ from scripts.cha_registry_renderer import render_table_object
 render_table_object(object_id="tbl-poverty-family-rande", workbook_path=CHA_WORKBOOK_PATH)
 ```
 
+::: {.callout-note collapse="true"}
+## Source
+US Census Bureau; American Community Survey, 2017–2021 American Community Survey 5-Year Estimates, Table S1702-Poverty Status in the Past 12 Months of Families, August 2025 https://data.census.gov/table/ACSST5Y2023.S1702?q=S1702:+POVERTY+STATUS+IN+THE+PAST+12+MONTHS+OF+FAMILIES& g=010XX00US_040XX00US36_050XX00US36071
+:::
+
 ::: {.callout-note}
 Note: The American Community Survey asks respondents their income in the past 12 months for all related members of the family living in the household. This is for income that is received on a regular basis before payments for taxes, social security, etc. and only includes those above 15 years old.
 :::

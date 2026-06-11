@@ -8,7 +8,7 @@ project:
   # (data/raw/workbook.xlsx) into chapters/_generated/objects/ before each render.
   # Add more lines pointing at other chapters as you build them out.
   pre-render:
-    - python3 scripts/generate_chapter_objects.py --workbook "data/raw/workbook.xlsx" --chapter "chapters/13-example-data-objects.qmd" --output-dir "chapters/_generated/objects" --include-source false
+    - python3 scripts/generate_chapter_objects.py --workbook "data/raw/workbook.xlsx" --chapter "chapters/13-example-data-objects.qmd" --output-dir "chapters/_generated/objects" --include-source true
   post-render:
     - node scripts/patch_quarto_search.js
 

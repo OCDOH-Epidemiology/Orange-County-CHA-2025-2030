@@ -10,6 +10,11 @@ from scripts.cha_registry_renderer import render_table_object
 render_table_object(object_id="tbl-graudation-rate-demographic", workbook_path=CHA_WORKBOOK_PATH)
 ```
 
+::: {.callout-note collapse="true"}
+## Source
+NYS Education Department, November 2025 https://data.nysed.gov/enrollment.php?county=44&year=2024&ethnicity5B5D=I&ethnicity5B5D=B&ethnicity5B5D=H&ethnicity5B5D=AP&ethnicity5B5D=W&ethnicity5B5D=M
+:::
+
 ::: {.callout-note}
 *: These school districts do not have high schools. Note: Race or races with which the student primarily identifies are indicated by the student or the parent/guardian. Multiracial includes Non-Hispanic students who reported more than one race. Dropout refers to students who were exited as a dropout on or before June 30th of the selected school year. Graduation rate is the percentage of students within a cohort earning a Regents, Regents with Advanced Designation, or a Local Diploma. Students earning a Non Diploma Credential are not counted as graduates.
 :::

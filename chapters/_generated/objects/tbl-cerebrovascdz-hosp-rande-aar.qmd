@@ -10,6 +10,11 @@ from scripts.cha_registry_renderer import render_table_object
 render_table_object(object_id="tbl-cerebrovascdz-hosp-rande-aar", workbook_path=CHA_WORKBOOK_PATH)
 ```
 
+::: {.callout-note collapse="true"}
+## Source
+NYS County Health Indicators by Race and Ethnicity, August 2025 https://www.health.ny.gov/community/health_equity/reports/county/orange.htm
+:::
+
 ::: {.callout-note}
 Note: Cerebrovascular Disease is also known as stroke. The ICD-10-CM codes used for Cerebrovascular Disease are: I60-I69. Standard population used for age-adjustment using the 2000 projected US. population.
 :::
