@@ -26,8 +26,9 @@ from scripts.cha_chapter_renderer import (  # noqa: E402
 from scripts.workbook_loader import load_cha_workbook  # noqa: E402
 
 
-DEFAULT_CHAPTER = PROJECT_ROOT / "chapters" / "04-OCDOH.qmd"
-DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "chapters" / "_generated" / "ch04-objects"
+DEFAULT_CHAPTER = PROJECT_ROOT / "chapters" / "13-example-data-objects.qmd"
+DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "chapters" / "_generated" / "objects"
+DEFAULT_CHAPTERS_DIR = PROJECT_ROOT / "chapters"
 
 
 _CROSSREF_RE = re.compile(r"\[@(fig-[A-Za-z0-9+\-]+|tbl-[A-Za-z0-9+\-]+)\]")
@@ -70,6 +71,50 @@ def _include_stems_from_chapters(chapters_dir: Path) -> set[str]:
     return stems
 
 
+def _file_hashes(output_dir: Path) -> dict[str, str]:
+    import hashlib
+
+    hashes: dict[str, str] = {}
+    if not output_dir.exists():
+        return hashes
+    for include_file in output_dir.glob("*.qmd"):
+        if include_file.name.startswith("._"):
+            continue
+        digest = hashlib.sha256(include_file.read_bytes()).hexdigest()
+        hashes[include_file.stem] = digest
+    return hashes
+
+
+def _summarize_generation(
+    before: dict[str, str],
+    after: dict[str, str],
+) -> tuple[list[str], list[str], list[str]]:
+    before_stems = set(before)
+    after_stems = set(after)
+    added = sorted(after_stems - before_stems)
+    removed = sorted(before_stems - after_stems)
+    updated = sorted(stem for stem in before_stems & after_stems if before[stem] != after[stem])
+    return added, removed, updated
+
+
+def _print_generation_summary(
+    added: list[str],
+    removed: list[str],
+    updated: list[str],
+    total: int,
+    output_dir: Path,
+) -> None:
+    print(f"Wrote {total} include files to {output_dir}")
+    if added:
+        print(f"  Added ({len(added)}): {', '.join(added)}")
+    if updated:
+        print(f"  Updated ({len(updated)}): {', '.join(updated)}")
+    if removed:
+        print(f"  Removed ({len(removed)}): {', '.join(removed)}")
+    if not added and not updated and not removed:
+        print("  No object files added, removed, or changed.")
+
+
 def _validate_chapter_references(chapter_text: str, registry_ids: set[str]) -> list[str]:
     errors: list[str] = []
     referenced_ids = set(_CROSSREF_RE.findall(chapter_text))
@@ -108,6 +153,24 @@ def _validate_include_directives(
                 f"Available stems with similar prefix: "
                 f"{sorted(s for s in written_stems if s.split('-')[0] == stem.split('-')[0])}"
             )
+    return errors
+
+
+def _validate_all_chapter_references(
+    chapters_dir: Path,
+    registry_ids: set[str],
+    output_dir: Path,
+    written_stems: set[str],
+) -> list[str]:
+    errors: list[str] = []
+    for chapter_file in sorted(_iter_chapter_qmd_files(chapters_dir)):
+        chapter_text = chapter_file.read_text(encoding="utf-8")
+        chapter_errors = _validate_chapter_references(chapter_text, registry_ids)
+        for err in chapter_errors:
+            errors.append(f"{chapter_file.name}: {err}")
+        include_errors = _validate_include_directives(chapter_text, output_dir, written_stems)
+        for err in include_errors:
+            errors.append(f"{chapter_file.name}: {err}")
     return errors
 
 
@@ -264,6 +327,9 @@ def _write_indicator_files(
     preserve_set = preserve_stems or set()
     # Keep output directories in sync with current workbook metadata.
     for existing_file in output_dir.glob("*.qmd"):
+        if existing_file.name.startswith("._"):
+            existing_file.unlink()
+            continue
         if existing_file.stem not in written_set and existing_file.stem not in preserve_set:
             existing_file.unlink()
 
@@ -326,8 +392,13 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument(
         "--include-source",
         choices=["true", "false"],
-        default="false",
+        default="true",
         help="Whether generated include files should render source callouts",
+    )
+    parser.add_argument(
+        "--validate-all-chapters",
+        action="store_true",
+        help="Validate cross-references and include directives in every chapter QMD.",
     )
     parser.add_argument(
         "--rewrite-chapter",
@@ -364,6 +435,8 @@ def main(argv: list[str] | None = None) -> None:
         preserve_re = re.compile(re.escape(include_prefix) + r"/([A-Za-z0-9+-]+)\.qmd")
         preserve_stems.update(preserve_re.findall(chapter_body))
 
+    before_hashes = _file_hashes(output_dir) if output_dir.exists() else {}
+
     written_stems = _write_indicator_files(
         output_dir=output_dir,
         workbook_var=args.workbook_var,
@@ -380,15 +453,22 @@ def main(argv: list[str] | None = None) -> None:
         if stem.startswith(("fig-", "tbl-")):
             fallback_registry_ids.add(stem)
     include_stems_all_chapters = _include_stems_from_chapters(chapters_dir)
-    chapter_errors = _validate_chapter_references(
-        chapter_text,
-        set(model.registry.keys()) | fallback_registry_ids | include_stems_all_chapters,
-    )
+    registry_ids = set(model.registry.keys()) | fallback_registry_ids | include_stems_all_chapters
+    written_stem_set = set(written_stems) | fallback_registry_ids
 
-    include_errors = _validate_include_directives(
-        chapter_text, output_dir, set(written_stems) | fallback_registry_ids
-    )
-    chapter_errors.extend(include_errors)
+    if args.validate_all_chapters:
+        chapter_errors = _validate_all_chapter_references(
+            chapters_dir,
+            registry_ids,
+            output_dir,
+            written_stem_set,
+        )
+    else:
+        chapter_errors = _validate_chapter_references(chapter_text, registry_ids)
+        include_errors = _validate_include_directives(
+            chapter_text, output_dir, written_stem_set
+        )
+        chapter_errors.extend(include_errors)
 
     if chapter_errors and args.strict_refs:
         formatted = "\n".join(f"- {err}" for err in chapter_errors)
@@ -410,7 +490,9 @@ def main(argv: list[str] | None = None) -> None:
         chapter_path.write_text(updated, encoding="utf-8")
         print(f"Rewrote chapter with include directives: {chapter_path}")
 
-    print(f"Wrote {len(written_stems)} include files to {output_dir}")
+    after_hashes = _file_hashes(output_dir)
+    added, removed, updated = _summarize_generation(before_hashes, after_hashes)
+    _print_generation_summary(added, removed, updated, len(written_stems), output_dir)
 
 
 if __name__ == "__main__":

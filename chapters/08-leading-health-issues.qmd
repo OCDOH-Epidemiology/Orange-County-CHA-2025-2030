@@ -1,0 +1,75 @@
+---
+title: "Leading Health Issues"
+jupyter: python3
+execute:
+  freeze: false
+---
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+import sys
+from pathlib import Path
+
+# Ensure root-level modules (scripts/) are importable in both Quarto run contexts.
+cwd = Path.cwd()
+project_root = cwd if (cwd / "scripts").exists() else cwd.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+# Point this at your workbook in data/raw/ once you add it.
+CHA_WORKBOOK_PATH = project_root / "data" / "raw" / "workbook.xlsx"
+```
+
+<!-- WORKED EXAMPLE - the standard pattern for adding a data object to a section.
+     Generate the object file with scripts/generate_chapter_objects.py (it writes to
+     chapters/_generated/objects/<id>.qmd), then reference it and document its source:
+
+{{</* include _generated/objects/<id>.qmd */>}}
+
+::: {.callout-note collapse="true"}
+## Source
+Data source citation, accessed Month Year.
+:::
+
+::: {.callout-note}
+Note: Methodology notes for this indicator.
+:::
+-->
+
+The Leading Health Issues section synthesizes information regarding major contributors to morbidity and mortality
+in Orange County. Indicators are organized into four subsections—Chronic Disease, Cancer, Communicable
+Disease, and Maternal Child Health—to align measures that are typically reported through different surveillance
+and reporting streams. The Chronic Disease subsection focuses on non-cancer, non-communicable conditions
+captured across mortality, healthcare utilization, and prevalence indicators. 
+
+## Chronic Disease
+### Diseases of the Circulatory System
+Across 2020–2023, the age-adjusted diseases of the circulatory system mortality rate in Orange County
+remained within a relatively narrow band, ranging from 186.4 to 198.4 per 100,000, with a most recent value
+of 193.6 per 100,000 in 2023 (Figure 20). Sex-stratified trends show a persistent disparity across the full
+period: males experienced higher age-adjusted mortality than females each year, with 2023 rates of 238.7 per
+100,000 for males compared with 157.7 per 100,000 for females (Figure 23).
+Disparities were also evident by race and ethnicity. Over 2020–2023, diseases of the circulatory system
+mortality rate for Non-Hispanic White exceeded the rates reported for Non-Hispanic Black, Hispanic, and Other
+populations; in 2023, the rate was 275.9 per 100,000 among Non-Hispanic White residents compared with
+200.1 per 100,000 among Non-Hispanic Black residents and 79.1 per 100,000 among Hispanic residents
+(Table 29). Geographic variation was also present across zip code geographies in the workbook; in 2023, zip
+code 12550 had the highest listed circulatory disease mortality rate (413.9 per 100,000) compared with 235.4
+per 100,000 in zip code 10940 (Figure 22). 
+
+<!-- Table 29: Diseases of the Circulatory System Mortality, Case Counts and Rates per 100,000 Population by Age, Race and Ethnicity, and ZIP Code, 2020–2023 -->
+{{< include _generated/objects/tbl-dzcircsystem-count-rate-age-rande-zip.qmd >}}
+
+<!-- Figure 20: Diseases of the Circulatory System Mortality, Age-Adjusted Rate per 100,000, 2020–2023 -->
+{{< include _generated/objects/fig-dzcircsystem-mortal-aar.qmd >}}
+
+<!-- Figure 21: Diseases of the Circulatory System Mortality, Rate per 100,000 Population by Race and Ethnicity, 2020–2023 -->
+{{< include _generated/objects/fig-dzcircsystem-mortal-rande.qmd >}}
+
+<!-- Figure 22: Diseases of the Circulatory System Mortality, Rate per 100,000 Population by ZIP Code, 2020–2023 -->
+{{< include _generated/objects/fig-dzcircsystem-mortal-zip.qmd >}}
+
+<!-- Table 30: Diseases of the Circulatory System Mortality, Rate per 100,000 Population by Sex, 2020–2023 -->
+{{< include _generated/objects/tbl-dzcircsystem-mortal-sex-aar.qmd >}}

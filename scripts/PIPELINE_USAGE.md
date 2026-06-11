@@ -13,7 +13,7 @@ quarto render
 Pre-render command:
 
 ```bash
-python3 scripts/generate_chapter_objects.py --chapter "chapters/04-OCDOH.qmd" --output-dir "chapters/_generated/ch04-objects"
+./generate-objects
 ```
 
 This means you no longer need to run `generate_chapter_objects.py` manually for normal builds.

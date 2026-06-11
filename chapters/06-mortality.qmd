@@ -55,12 +55,16 @@ Differences by race and ethnicity were also observed in all-cause mortality. Age
 
 <!-- Figure 3: All-Cause Mortality, Rate per 100,000 Population by Race and Ethnicity, 2020–2022 -->
 {{< include _generated/objects/fig-all-cause-mortal-aar-rande.qmd >}}
+{{< include _generated/objects/tbl-all-cause-mortal-aar-rande.qmd >}}
 
 <!-- Figure 4: All-Cause Mortality, Rate per 100,000 Population by ZIP Code, 2020–2023 -->
 {{< include _generated/objects/fig-all-cause-mortal-rate-zip.qmd >}}
+{{< include _generated/objects/tbl-all-cause-mortal-rate-zip.qmd >}}}
+
 
 <!-- Figure 5: All-Cause Mortality, Rate per 100,000 Population by Sex, 2020–2023 -->
 {{< include _generated/objects/fig-all-cause-mortal-aar-sex.qmd >}}
+{{< include _generated/objects/tbl-all-cause-mortal-aar-sex.qmd >}}
 
 ## Leading Causes of Death
 
@@ -90,3 +94,4 @@ https://apps.health.ny.gov/public/tabvis/PHIG_Public/pa/
 
 <!-- Figure 7: Percentage of Deaths that are Premature, by Race and Ethnicity, 2018–2020 -->
 {{< include _generated/objects/fig-premature-deaths-rande.qmd >}}
+{{< include _generated/objects/tbl-premature-deaths-rande.qmd >}}

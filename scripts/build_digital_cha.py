@@ -48,7 +48,7 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument(
         "--include-source",
         choices=["true", "false"],
-        default="false",
+        default="true",
         help="Whether generated include files should render source callouts",
     )
     parser.add_argument("--docx", default="", help="Optional DOCX narrative input path")

@@ -60,10 +60,11 @@ Narrative text is **not** in the workbook - write it directly in the chapters (o
 
 **Convention:** the workbook lives at `data/raw/workbook.xlsx`. Keep that name (or update `CHA_WORKBOOK_PATH` in your chapters and the `--workbook` path in the `_quarto.yml` pre-render hook). Just dropping an arbitrary spreadsheet in `data/raw/` is **not** enough — it must follow the flat per-indicator schema in `scripts/WORKBOOK_SCHEMA.md`.
 
-> **When you add a brand-new indicator**, run the generator once before rendering so its include file exists (Quarto resolves includes before the pre-render hook runs):
+> **When you add or update indicators in the workbook**, regenerate include files before rendering (Quarto resolves includes before the pre-render hook runs on a *first* reference to a new object ID):
 > ```bash
-> python3 scripts/generate_chapter_objects.py --workbook "data/raw/workbook.xlsx" --chapter "chapters/13-example-data-objects.qmd" --output-dir "chapters/_generated/objects" --include-source true
+> ./generate-objects
 > ```
+> This reads `data/raw/workbook.xlsx`, writes `chapters/_generated/objects/<id>.qmd` for every active figure/table (with sources and notes), and validates cross-references in all chapters. The same script also runs automatically as a pre-render hook on every `./render`.
 
 ## Spinning up a new workbook
 
