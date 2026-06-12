@@ -22,7 +22,7 @@ from scripts.cha_table_styling import CHA_REGION_ALIASES, CHA_REGION_ORDER
 VALID_OBJECT_TYPES = {"table", "figure"}
 VALID_FIGURE_TYPES = {"line", "clustered_bar", "stacked_bar", "simple_bar", "horizontal_bar"}
 _VALID_FORMAT_CODES: frozenset[str] = frozenset(
-    {"integer", "number", "percent1", "percent2", "currency", "currency2", "ratio", "date"}
+    {"integer", "number", "percent1", "percent2", "currency", "currency2", "ratio", "date", "text"}
 )
 
 _X_COL_SYNONYM_GROUPS: tuple[frozenset[str], ...] = (
@@ -104,6 +104,14 @@ class FigureSpec:
 
 
 @dataclass(frozen=True)
+class CellStyle:
+    """Excel cell formatting metadata for table rendering."""
+
+    bold: bool = False
+    indent: int = 0
+
+
+@dataclass(frozen=True)
 class CellMerge:
     """A merged cell region relative to a table grid origin (0-based)."""
 
@@ -121,6 +129,7 @@ class MergedTableGrid:
     merges: tuple[CellMerge, ...]
     header_rows: int
     format_rules_by_col: tuple[str, ...] = ()
+    styles: tuple[tuple[CellStyle, ...], ...] | None = None
 
 
 @dataclass(frozen=True)
@@ -130,6 +139,7 @@ class TableSpec:
     format_rules: dict[str, str]
     row_label_col: str
     merged_grid: MergedTableGrid | None = None
+    cell_styles: tuple[tuple[CellStyle, ...], ...] | None = None
 
 
 @dataclass(frozen=True)
@@ -328,6 +338,44 @@ def _resolved_worksheet_value(ws: Any, row_1based: int, col_1based: int) -> Any:
     return ws.cell(row_1based, col_1based).value
 
 
+def _style_anchor_cell(ws: Any, row_1based: int, col_1based: int) -> tuple[int, int]:
+    """Return the top-left anchor of a merged region, or the cell itself."""
+    for mc in ws.merged_cells.ranges:
+        if mc.min_row <= row_1based <= mc.max_row and mc.min_col <= col_1based <= mc.max_col:
+            return mc.min_row, mc.min_col
+    return row_1based, col_1based
+
+
+def _read_cell_style(ws: Any, row_1based: int, col_1based: int) -> CellStyle:
+    anchor_row, anchor_col = _style_anchor_cell(ws, row_1based, col_1based)
+    cell = ws.cell(anchor_row, anchor_col)
+    bold = bool(cell.font and cell.font.bold)
+    indent = 0
+    if cell.alignment and cell.alignment.indent:
+        indent = int(cell.alignment.indent)
+    return CellStyle(bold=bold, indent=indent)
+
+
+def _extract_data_block_styles(
+    ws: Any,
+    *,
+    data_start_idx: int,
+    data_col_start_idx: int,
+    n_rows: int,
+    n_cols: int,
+) -> tuple[tuple[CellStyle, ...], ...]:
+    """Build a style grid aligned with parsed data_df rows and columns."""
+    styles: list[tuple[CellStyle, ...]] = []
+    for row_offset in range(n_rows):
+        row_1based = data_start_idx + row_offset + 1
+        row_styles: list[CellStyle] = []
+        for col_offset in range(n_cols):
+            col_1based = data_col_start_idx + col_offset + 1
+            row_styles.append(_read_cell_style(ws, row_1based, col_1based))
+        styles.append(tuple(row_styles))
+    return tuple(styles)
+
+
 def _flat_grid_stop_row(ws: Any, start_row_1based: int, data_col_start_1based: int, data_col_end_1based: int) -> int:
     """Find the last populated data row in the flat-sheet data block.
 
@@ -398,10 +446,17 @@ def _extract_merged_table_grid(ws: Any, df: pd.DataFrame) -> MergedTableGrid | N
         return None
 
     grid: list[list[Any]] = []
+    style_grid: list[list[CellStyle]] = []
     for row_1based in range(header_row_1based, last_row_1based + 1):
         grid.append(
             [
                 _resolved_worksheet_value(ws, row_1based, col_1based)
+                for col_1based in range(data_col_start_1based, data_col_end_1based)
+            ]
+        )
+        style_grid.append(
+            [
+                _read_cell_style(ws, row_1based, col_1based)
                 for col_1based in range(data_col_start_1based, data_col_end_1based)
             ]
         )
@@ -434,6 +489,7 @@ def _extract_merged_table_grid(ws: Any, df: pd.DataFrame) -> MergedTableGrid | N
         merges=tuple(merges),
         header_rows=1,
         format_rules_by_col=tuple(format_rules_by_col),
+        styles=tuple(tuple(row) for row in style_grid),
     )
 
 
@@ -455,7 +511,7 @@ def _is_flat_indicator_sheet(df: pd.DataFrame) -> bool:
 
 def _parse_flat_indicator_sheet(
     sheet_name: str, df: pd.DataFrame
-) -> tuple[dict[str, Any], pd.DataFrame, dict[str, str], bool]:
+) -> tuple[dict[str, Any], pd.DataFrame, dict[str, str], bool, tuple[int, int, int] | None]:
     config: dict[str, Any] = {}
     for i in range(len(df)):
         key = _as_text(df.iloc[i, 0] if df.shape[1] > 0 else None)
@@ -472,7 +528,7 @@ def _parse_flat_indicator_sheet(
     # are indicator data columns (first data column starts at index 5 / col F).
     data_col_start_idx = 5
     if data_header_idx is None or df.shape[1] <= data_col_start_idx:
-        return config, pd.DataFrame(), {}, False
+        return config, pd.DataFrame(), {}, False, None
 
     # Determine right-most used data column from a small header/data window.
     # This avoids trailing blank worksheet columns becoming ghost headers.
@@ -483,7 +539,7 @@ def _parse_flat_indicator_sheet(
             last_used_col = j
 
     if last_used_col < data_col_start_idx:
-        return config, pd.DataFrame(), {}, False
+        return config, pd.DataFrame(), {}, False, None
 
     data_col_end_idx = last_used_col + 1
     header_row_idx = data_header_idx
@@ -645,7 +701,8 @@ def _parse_flat_indicator_sheet(
     for col_name, fmt in format_rules.items():
         remapped_rules[_clean_header_label(col_name)] = fmt
 
-    return config, data_df, remapped_rules, auto_multilevel
+    data_region = (data_start_idx, data_col_start_idx, data_col_end_idx)
+    return config, data_df, remapped_rules, auto_multilevel, data_region
 
 
 def _load_flat_workbook(source_path: Path) -> WorkbookModel:
@@ -671,10 +728,23 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
         if not _is_flat_indicator_sheet(sheet_df):
             continue
 
-        config, data_df, format_rules, auto_multilevel = _parse_flat_indicator_sheet(sheet_name, sheet_df)
+        config, data_df, format_rules, auto_multilevel, data_region = _parse_flat_indicator_sheet(
+            sheet_name, sheet_df
+        )
         merged_grid: MergedTableGrid | None = None
+        cell_styles: tuple[tuple[CellStyle, ...], ...] | None = None
         if sheet_name in openpyxl_wb.sheetnames:
-            merged_grid = _extract_merged_table_grid(openpyxl_wb[sheet_name], sheet_df)
+            ws = openpyxl_wb[sheet_name]
+            merged_grid = _extract_merged_table_grid(ws, sheet_df)
+            if data_region and not data_df.empty:
+                data_start_idx, data_col_start_idx, _data_col_end_idx = data_region
+                cell_styles = _extract_data_block_styles(
+                    ws,
+                    data_start_idx=data_start_idx,
+                    data_col_start_idx=data_col_start_idx,
+                    n_rows=len(data_df),
+                    n_cols=len(data_df.columns),
+                )
 
         # When the user sets "X Column" but it doesn't match any data column,
         # reconcile the mismatch so the spec, y_cols, and renderer all agree.
@@ -815,6 +885,7 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
                     format_rules=format_rules,
                     row_label_col=(data_df.columns[0] if not data_df.empty else ""),
                     merged_grid=merged_grid,
+                    cell_styles=cell_styles,
                 )
 
             raw_source = _as_text(_config_value(config, "Source", ""))

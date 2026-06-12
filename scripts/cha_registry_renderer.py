@@ -239,6 +239,8 @@ def _format_value(value: Any, format_name: str) -> Any:
         return _format_short_date(value)
     if format_name == "ratio":
         return value
+    if format_name == "text":
+        return value
     return value
 
 
@@ -341,7 +343,9 @@ def render_table_object(
             source_df = model.data_frames[record.data_sheet].copy()
             source_df = _prepare_table_df(source_df, table_spec.format_rules)
             source_df.columns = [_strip_format_tokens_from_label(col) for col in source_df.columns]
-            return Latex(render_pdf_table_latex(object_id, source_df))
+            return Latex(
+                render_pdf_table_latex(object_id, source_df, cell_styles=table_spec.cell_styles)
+            )
         return render_merged_table(table_spec.merged_grid, format_fn=_format_value)
 
     source_df = model.data_frames[record.data_sheet].copy()
@@ -357,8 +361,14 @@ def render_table_object(
     if table_spec.has_multilevel_headers:
         source_df = _rebuild_multiindex(source_df)
     if is_pdf_render():
-        return Latex(render_pdf_table_latex(object_id, source_df))
-    return style_cha_table(source_df, has_multilevel_headers=table_spec.has_multilevel_headers)
+        return Latex(
+            render_pdf_table_latex(object_id, source_df, cell_styles=table_spec.cell_styles)
+        )
+    return style_cha_table(
+        source_df,
+        has_multilevel_headers=table_spec.has_multilevel_headers,
+        cell_styles=table_spec.cell_styles,
+    )
 
 
 def render_figure_object(

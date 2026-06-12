@@ -145,6 +145,7 @@ Supported formats in `format_rules_json`:
 - `currency2` - dollar sign prefix + comma-separated thousands, **two** decimals (e.g., `$2,000.50`)
 - `ratio` - table cells preserve the original ratio text (e.g., `1400:1`), while charts plot only the numeric segment before `:` (e.g., `1400`)
 - `date` - renders as `MM/DD/YYYY` with 4-digit year (e.g., `03/10/2026`)
+- `text` - leaves cell values unchanged (no numeric formatting)
 
 All values in `format_rules_json` must match names understood by the table formatter in `scripts/cha_registry_renderer.py` (`_format_value`).
 
@@ -215,6 +216,7 @@ In the flat per-sheet workbook format (one indicator per sheet):
     - `currency2`
     - `ratio`
     - `date`
+    - `text`
   - These codes are parsed as formatting metadata only and never appear in figure axes or table headers.
 - Data rows start on the row immediately below the `Enter Data` header row.
 

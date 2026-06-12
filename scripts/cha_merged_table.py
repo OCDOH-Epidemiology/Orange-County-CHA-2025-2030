@@ -12,7 +12,7 @@ from typing import Any
 from IPython.display import HTML
 
 from scripts.cha_table_styling import CHA_FONT_FAMILY
-from scripts.workbook_loader import CellMerge, MergedTableGrid
+from scripts.workbook_loader import CellMerge, CellStyle, MergedTableGrid
 
 _LABEL_BG = "#EAF5DB"
 _DATA_BG = "#FFFFFF"
@@ -64,6 +64,31 @@ def _build_merge_lookup(
                 if 0 <= pos[0] < n_rows and 0 <= pos[1] < n_cols:
                     covered.add(pos)
     return anchors, covered
+
+
+def _cell_style_props(
+    grid: MergedTableGrid,
+    row_idx: int,
+    col_idx: int,
+    *,
+    raw_value: Any,
+    is_header: bool,
+) -> tuple[str, list[str]]:
+    """Return font-weight and extra CSS props from Excel styles or heuristics."""
+    if grid.styles and row_idx < len(grid.styles):
+        row_styles = grid.styles[row_idx]
+        if col_idx < len(row_styles):
+            style: CellStyle = row_styles[col_idx]
+            weight = "bold" if style.bold else "normal"
+            extras: list[str] = []
+            if style.indent > 0:
+                extras.append(f"padding-left:{style.indent * 15}px")
+                extras.append("text-align:left")
+            return weight, extras
+
+    label_cell = _is_label_cell(raw_value, is_header=is_header)
+    weight = "bold" if label_cell else "normal"
+    return weight, []
 
 
 def _row_format_override(row: tuple[Any, ...]) -> str | None:
@@ -132,7 +157,13 @@ def _render_row(
         )
         label_cell = _is_label_cell(raw_value, is_header=is_header)
         bg = _LABEL_BG if label_cell else _DATA_BG
-        weight = "bold" if label_cell else "normal"
+        weight, style_extras = _cell_style_props(
+            grid,
+            row_idx,
+            col_idx,
+            raw_value=raw_value,
+            is_header=is_header,
+        )
 
         attrs = [
             "text-align:center",
@@ -142,6 +173,7 @@ def _render_row(
             f"font-family:{CHA_FONT_FAMILY}",
             f"background-color:{bg}",
             f"font-weight:{weight}",
+            *style_extras,
         ]
         style = ";".join(attrs).replace('"', "'")
         attr_parts = [f'style="{style}"']

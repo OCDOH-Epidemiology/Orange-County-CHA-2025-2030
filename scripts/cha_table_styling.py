@@ -182,7 +182,7 @@ def get_format_string(data_type: str | None) -> str | None:
     return None
 
 
-def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_col=None):
+def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_col=None, cell_styles=None):
     """
     Apply consistent CHA table styling to a pandas DataFrame.
     
@@ -222,6 +222,10 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
     row_label_col : str, optional
         Name of the column that contains row labels (e.g. years).  This column
         is never formatted as a number.  Defaults to the first column.
+    cell_styles : tuple of tuple of CellStyle, optional
+        Per-cell Excel formatting aligned with ``df`` rows and columns.  When
+        provided, bold and indent come from the workbook instead of structural
+        first-column bolding.
 
     Returns
     -------
@@ -264,14 +268,21 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
             ('padding', '10px'),
             ('border', '1px solid #ddd')
         ]},
-        # First column - bold, center-aligned
-        {'selector': 'td:first-child', 'props': [
-            ('font-weight', 'bold'), 
-            ('text-align', 'center'), 
+        # First column - bold, center-aligned (skipped when per-cell styles are provided)
+        *([] if cell_styles else [{'selector': 'td:first-child', 'props': [
+            ('font-weight', 'bold'),
+            ('text-align', 'center'),
             ('font-family', CHA_FONT_FAMILY),
             ('padding', '10px'),
             ('border', '1px solid #ddd')
-        ]},
+        ]}]),
+        # First column alignment when per-cell styles override bolding
+        *([{'selector': 'td:first-child', 'props': [
+            ('text-align', 'center'),
+            ('font-family', CHA_FONT_FAMILY),
+            ('padding', '10px'),
+            ('border', '1px solid #ddd')
+        ]}] if cell_styles else []),
         # Other columns - center-aligned
         {'selector': 'td:not(:first-child)', 'props': [
             ('text-align', 'center'), 
@@ -363,9 +374,27 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
             else:
                 first_val = first_val.iloc[0] if not first_val.empty else None
 
-        if first_val is not None and pd.notna(first_val) and str(first_val).strip().lower() == 'westchester':
-            return [f'{base_css}; border-bottom: 3px solid {dark_green}'] * len(row)
-        return [base_css] * len(row)
+        westchester_border = (
+            first_val is not None
+            and pd.notna(first_val)
+            and str(first_val).strip().lower() == 'westchester'
+        )
+
+        cell_css_list: list[str] = []
+        for col_idx, _col in enumerate(row.index):
+            parts = [base_css]
+            if westchester_border:
+                parts.append(f'border-bottom: 3px solid {dark_green}')
+            if cell_styles and row_pos < len(cell_styles):
+                row_styles = cell_styles[row_pos]
+                if col_idx < len(row_styles):
+                    style = row_styles[col_idx]
+                    parts.append('font-weight: bold' if style.bold else 'font-weight: normal')
+                    if style.indent > 0:
+                        parts.append(f'padding-left: {style.indent * 15}px')
+                        parts.append('text-align: left')
+            cell_css_list.append('; '.join(parts))
+        return cell_css_list
     
     # Apply row-level styling only when index/columns are unique;
     # pandas Styler does not support .apply with non-unique labels.

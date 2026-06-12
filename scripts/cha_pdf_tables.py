@@ -5,9 +5,12 @@ PDF-specific table rendering helpers for Quarto/Jupyter output.
 from __future__ import annotations
 
 import os
-from typing import Literal
+from typing import TYPE_CHECKING, Literal
 
 import pandas as pd
+
+if TYPE_CHECKING:
+    from scripts.workbook_loader import CellStyle
 
 TablePolicy = Literal["fit", "split"]
 ResolvedTablePolicy = Literal["fit", "split"]
@@ -49,6 +52,66 @@ def resolve_table_policy(table_id: str, df: pd.DataFrame) -> ResolvedTablePolicy
     return "split" if _looks_like_overflow(df) else "fit"
 
 
+_LATEX_ESCAPES: tuple[tuple[str, str], ...] = (
+    ("\\", r"\textbackslash{}"),
+    ("&", r"\&"),
+    ("%", r"\%"),
+    ("$", r"\$"),
+    ("#", r"\#"),
+    ("_", r"\_"),
+    ("{", r"\{"),
+    ("}", r"\}"),
+    ("~", r"\textasciitilde{}"),
+    ("^", r"\textasciicircum{}"),
+)
+
+
+def _latex_escape_text(text: str) -> str:
+    for char, replacement in _LATEX_ESCAPES:
+        text = text.replace(char, replacement)
+    return text
+
+
+def _latex_styled_cell(text: str, style: CellStyle) -> str:
+    escaped = _latex_escape_text(text)
+    if style.indent > 0:
+        escaped = (r"\hspace{1.5em}" * style.indent) + escaped
+    if style.bold:
+        escaped = r"\textbf{" + escaped + "}"
+    return escaped
+
+
+def _apply_cell_styles_for_pdf(
+    df: pd.DataFrame,
+    cell_styles: tuple[tuple[CellStyle, ...], ...] | None,
+) -> pd.DataFrame:
+    if not cell_styles:
+        return df
+
+    out = df.copy().astype(object)
+    for row_idx in range(len(df)):
+        for col_idx in range(len(df.columns)):
+            raw_value = df.iat[row_idx, col_idx]
+            if raw_value is None or (isinstance(raw_value, float) and pd.isna(raw_value)):
+                text = ""
+            else:
+                text = str(raw_value).strip()
+
+            style = None
+            if row_idx < len(cell_styles):
+                row_styles = cell_styles[row_idx]
+                if col_idx < len(row_styles):
+                    style = row_styles[col_idx]
+
+            if style and (style.bold or style.indent > 0) and text:
+                out.iat[row_idx, col_idx] = _latex_styled_cell(text, style)
+            elif text:
+                out.iat[row_idx, col_idx] = _latex_escape_text(text)
+            else:
+                out.iat[row_idx, col_idx] = ""
+    return out
+
+
 def _flatten_columns_for_pdf(df: pd.DataFrame) -> pd.DataFrame:
     out = df.copy()
     if isinstance(out.columns, pd.MultiIndex):
@@ -62,13 +125,13 @@ def _flatten_columns_for_pdf(df: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
-def _df_to_longtable_latex(df: pd.DataFrame) -> str:
+def _df_to_longtable_latex(df: pd.DataFrame, *, escape: bool = True) -> str:
     col_format = _column_format(df)
     body = df.to_latex(
         index=False,
         na_rep="",
         longtable=True,
-        escape=True,
+        escape=escape,
         column_format=col_format,
     )
     return "\n".join(
@@ -84,13 +147,13 @@ def _df_to_longtable_latex(df: pd.DataFrame) -> str:
     )
 
 
-def _df_to_fit_latex(df: pd.DataFrame) -> str:
+def _df_to_fit_latex(df: pd.DataFrame, *, escape: bool = True) -> str:
     col_format = _column_format(df)
     tabular = df.to_latex(
         index=False,
         na_rep="",
         longtable=False,
-        escape=True,
+        escape=escape,
         column_format=col_format,
     )
     return "\n".join(
@@ -174,16 +237,24 @@ def _column_format(df: pd.DataFrame) -> str:
     )
 
 
-def render_pdf_table_latex(table_id: str, df: pd.DataFrame) -> str:
+def render_pdf_table_latex(
+    table_id: str,
+    df: pd.DataFrame,
+    *,
+    cell_styles: tuple[tuple[CellStyle, ...], ...] | None = None,
+) -> str:
     table_df = _flatten_columns_for_pdf(df)
+    has_cell_styles = bool(cell_styles)
+    styled_df = _apply_cell_styles_for_pdf(table_df, cell_styles if has_cell_styles else None)
+    latex_escape = not has_cell_styles
     policy = resolve_table_policy(table_id, table_df)
 
     if policy == "split":
-        parts = _split_wide_columns(table_df)
+        parts = _split_wide_columns(styled_df)
         total = len(parts)
         rendered_parts = []
         for idx, part in enumerate(parts, start=1):
-            part_latex = _df_to_longtable_latex(part)
+            part_latex = _df_to_longtable_latex(part, escape=latex_escape)
             if total > 1:
                 rendered_parts.append(
                     "\n".join(
@@ -199,4 +270,4 @@ def render_pdf_table_latex(table_id: str, df: pd.DataFrame) -> str:
                 rendered_parts.append(part_latex)
         return "\n".join(rendered_parts)
 
-    return _df_to_fit_latex(table_df)
+    return _df_to_fit_latex(styled_df, escape=latex_escape)
