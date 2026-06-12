@@ -11,7 +11,7 @@ from typing import Any
 
 from IPython.display import HTML
 
-from scripts.cha_table_styling import CHA_FONT_FAMILY
+from scripts.cha_table_styling import CHA_FONT_FAMILY, EXCEL_INDENT_PX_PER_LEVEL
 from scripts.workbook_loader import CellMerge, CellStyle, MergedTableGrid
 
 _LABEL_BG = "#EAF5DB"
@@ -82,8 +82,11 @@ def _cell_style_props(
             weight = "bold" if style.bold else "normal"
             extras: list[str] = []
             if style.indent > 0:
-                extras.append(f"padding-left:{style.indent * 15}px")
-                extras.append("text-align:left")
+                indent_px = style.indent * EXCEL_INDENT_PX_PER_LEVEL
+                extras.append(f"text-indent:{indent_px}px")
+                extras.append("text-align:left !important")
+            elif col_idx == 0:
+                extras.append("text-align:left !important")
             return weight, extras
 
     label_cell = _is_label_cell(raw_value, is_header=is_header)

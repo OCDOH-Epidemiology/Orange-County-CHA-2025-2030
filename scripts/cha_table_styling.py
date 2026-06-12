@@ -15,6 +15,8 @@ Usage:
 import pandas as pd
 
 CHA_FONT_FAMILY = '"Tw Cen MT", "Tw Cen MT Std", "Century Gothic", "Trebuchet MS", "Segoe UI", sans-serif'
+# Approximate one Excel indent level (~3 character widths at 14px).
+EXCEL_INDENT_PX_PER_LEVEL = 27
 
 
 CHA_REGION_ORDER = [
@@ -276,12 +278,12 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
             ('padding', '10px'),
             ('border', '1px solid #ddd')
         ]}]),
-        # First column alignment when per-cell styles override bolding
+        # When Excel cell styles drive formatting, avoid text-align/padding on
+        # td:first-child — those shorthand rules override per-cell indent styles.
         *([{'selector': 'td:first-child', 'props': [
-            ('text-align', 'center'),
             ('font-family', CHA_FONT_FAMILY),
             ('padding', '10px'),
-            ('border', '1px solid #ddd')
+            ('border', '1px solid #ddd'),
         ]}] if cell_styles else []),
         # Other columns - center-aligned
         {'selector': 'td:not(:first-child)', 'props': [
@@ -390,9 +392,11 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
                 if col_idx < len(row_styles):
                     style = row_styles[col_idx]
                     parts.append('font-weight: bold' if style.bold else 'font-weight: normal')
-                    if style.indent > 0:
-                        parts.append(f'padding-left: {style.indent * 15}px')
-                        parts.append('text-align: left')
+                    if col_idx == 0:
+                        parts.append('text-align: left !important')
+                        if style.indent > 0:
+                            indent_px = style.indent * EXCEL_INDENT_PX_PER_LEVEL
+                            parts.append(f'text-indent: {indent_px}px !important')
             cell_css_list.append('; '.join(parts))
         return cell_css_list
     

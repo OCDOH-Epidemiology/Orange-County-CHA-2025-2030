@@ -75,7 +75,7 @@ def _latex_escape_text(text: str) -> str:
 def _latex_styled_cell(text: str, style: CellStyle) -> str:
     escaped = _latex_escape_text(text)
     if style.indent > 0:
-        escaped = (r"\hspace{1.5em}" * style.indent) + escaped
+        escaped = (r"\hspace{2em}" * style.indent) + escaped
     if style.bold:
         escaped = r"\textbf{" + escaped + "}"
     return escaped
