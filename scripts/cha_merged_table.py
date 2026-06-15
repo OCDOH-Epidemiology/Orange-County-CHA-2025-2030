@@ -14,8 +14,9 @@ from IPython.display import HTML
 from scripts.cha_table_styling import CHA_FONT_FAMILY, EXCEL_INDENT_PX_PER_LEVEL
 from scripts.workbook_loader import CellMerge, CellStyle, MergedTableGrid
 
-_LABEL_BG = "#EAF5DB"
-_DATA_BG = "#FFFFFF"
+_ROW_ODD_BG = "#EAF5DB"
+_ROW_EVEN_BG = "#FFFFFF"
+_HEADER_BG = "#FFFFFF"
 _BORDER_COLOR = "#5a8f3c"
 
 
@@ -138,11 +139,18 @@ def _render_row(
     anchors: dict[tuple[int, int], CellMerge],
     covered: set[tuple[int, int]],
     format_fn: Callable[[Any, str], Any],
+    body_row_index: int = 0,
 ) -> str:
     is_header = row_idx < grid.header_rows
     tag = "th" if is_header else "td"
     cells_html: list[str] = []
     row_format_override = None if is_header else _row_format_override(row)
+
+    # Alternating row background for body rows; headers use a fixed bg.
+    if is_header:
+        row_bg = _HEADER_BG
+    else:
+        row_bg = _ROW_ODD_BG if body_row_index % 2 == 0 else _ROW_EVEN_BG
 
     for col_idx, raw_value in enumerate(row):
         if (row_idx, col_idx) in covered:
@@ -158,8 +166,9 @@ def _render_row(
             format_fn,
             row_format_override=row_format_override,
         )
-        label_cell = _is_label_cell(raw_value, is_header=is_header)
-        bg = _LABEL_BG if label_cell else _DATA_BG
+
+        bg = row_bg
+
         weight, style_extras = _cell_style_props(
             grid,
             row_idx,
@@ -232,8 +241,14 @@ def render_merged_table(
             anchors=anchors,
             covered=covered,
             format_fn=format_fn,
+            body_row_index=body_idx,
         )
-        for row_idx, row in enumerate(grid.cells[grid.header_rows :], start=grid.header_rows)
+        for body_idx, (row_idx, row) in enumerate(
+            zip(
+                range(grid.header_rows, n_rows),
+                grid.cells[grid.header_rows :],
+            )
+        )
     ]
 
     table_style = (
