@@ -64,12 +64,15 @@ per 100,000 in zip code 10940 (Figure 22).
 
 <!-- Figure 20: Diseases of the Circulatory System Mortality, Age-Adjusted Rate per 100,000, 2020–2023 -->
 {{< include _generated/objects/fig-dzcircsystem-mortal-aar.qmd >}}
+{{< include _generated/objects/tbl-dzcircsystem-mortal-aar.qmd >}}
 
 <!-- Figure 21: Diseases of the Circulatory System Mortality, Rate per 100,000 Population by Race and Ethnicity, 2020–2023 -->
 {{< include _generated/objects/fig-dzcircsystem-mortal-rande.qmd >}}
+{{< include _generated/objects/tbl-dzcircsystem-mortal-rande.qmd >}}
 
 <!-- Figure 22: Diseases of the Circulatory System Mortality, Rate per 100,000 Population by ZIP Code, 2020–2023 -->
 {{< include _generated/objects/fig-dzcircsystem-mortal-zip.qmd >}}
+{{< include _generated/objects/tbl-dzcircsystem-mortal-zip.qmd >}}
 
 <!-- Table 30: Diseases of the Circulatory System Mortality, Rate per 100,000 Population by Sex, 2020–2023 -->
 {{< include _generated/objects/tbl-dzcircsystem-mortal-sex-aar.qmd >}}
