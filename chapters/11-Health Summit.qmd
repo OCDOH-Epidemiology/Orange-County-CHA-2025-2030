@@ -62,7 +62,7 @@ highlighted algorithmic realities (content that spreads anger), the importance o
 than partisan, the need for patient–clinician partnerships in an era of rapid information access, and emerging
 research efforts that integrate substance use, violence prevention, and HIV services to improve local impact.
 
-![Dr Marisa Donnelly presenting to community partners, OC Health Summit 2025](../pdfs/Pictures/Picture1.jpg){#fig-hanlon-method fig-cap="Dr Marisa Donnelly presenting to community partners, OC Health Summit 2025" fig-alt="Dr Marisa Donnelly presenting to community partners, OC Health Summit 2025" width="100%"}
+![Dr Marisa Donnelly presenting to community partners, OC Health Summit 2025](../pdfs/Pictures/Dr.%20Marisa%20Donnelly%20horizontal.jpg){#fig-dr-marisa-donnelly fig-cap="Dr Marisa Donnelly presenting to community partners, OC Health Summit 2025" fig-alt="Dr Marisa Donnelly presenting to community partners, OC Health Summit 2025" width="100%"}
 
 ### Data Update
 
@@ -84,8 +84,7 @@ the state rate, while essential immunizations by age two trail regional and stat
 Together, these results reinforce a CHIP that centers SDOH, pairs clinical and community strategies, and tracks
 progress over the six-year horizon.
 
-
-![Jackie Lawler presenting to community partners, OC Health Summit 2025](../pdfs/Pictures/Picture2.jpg){#fig-jackie-lawler fig-cap="Jackie Lawler presenting to community partners, OC Health Summit 2025" fig-alt="Jackie Lawler presenting to community partners, OC Health Summit 2025" width="100%"}
+![Jackie Lawler presenting to community partners, OC Health Summit 2025](../pdfs/Pictures/whole%20room.JPG){#fig-whole-room fig-cap="Jackie Lawler presenting to community partners, OC Health Summit 2025" fig-alt="Jackie Lawler presenting to community partners, OC Health Summit 2025" width="100%"}
 
 ### Priority Area Voting
 
@@ -110,7 +109,7 @@ shared concern. When the votes were tallied, three indicators emerged as clear p
 first with 80 votes, Cancer ranked second with 42 votes, and Opioid Burden ranked third with 35 votes. These
 selections guided the subsequent focus of planning and discussion for the Community Health Improvement Plan.
 
-![Summit participants voting on selected health indicator, OC Health Summit 2025](../pdfs/Pictures/Picture3.jpg){#fig-summit-participants-voting fig-cap="Summit participants voting on selected health indicator, OC Health Summit 2025" fig-alt="Summit participants voting on selected health indicator, OC Health Summit 2025" width="100%"}
+![Summit participants voting on selected health indicator, OC Health Summit 2025](../pdfs/Pictures/guests%20putting%20stickers%20on.JPG){#fig-guests-putting-stickers-on fig-cap="Summit participants voting on selected health indicator, OC Health Summit 2025" fig-alt="Summit participants voting on selected health indicator, OC Health Summit 2025" width="100%"}
 
 ### Forces of Change Discussion
 
@@ -156,8 +155,7 @@ them” in the hospital, in a nursing home, or at home during difficult times. T
 education, advocacy, coordination, and compassionate accompaniment, combined with stronger cross-sector
 networks, are essential to helping Orange County residents navigate complex systems, reduce the impact of
 economic and social stressors, and improve health across all priority areas.
-
-![Erin Ray Pascaretti presenting to community partners, OC Health Summit 2025](../pdfs/Pictures/Picture4.jpg){#fig-erin-ray-pascaretti fig-cap="Erin Ray Pascaretti presenting to community partners, OC Health Summit 2025" fig-alt="Erin Ray Pascaretti presenting to community partners, OC Health Summit 2025" width="100%"}
+![Erin Ray Pascaretti presenting to community partners, OC Health Summit 2025](../pdfs/Pictures/ERP%20Forces%20of%20Change%20Discussion.jpg){#fig-erp-forces-of-change-discussion fig-cap="Erin Ray Pascaretti presenting to community partners, OC Health Summit 2025" fig-alt="Erin Ray Pascaretti presenting to community partners, OC Health Summit 2025" width="100%"}
 
 ### Selected Priority Areas Discussion
 
