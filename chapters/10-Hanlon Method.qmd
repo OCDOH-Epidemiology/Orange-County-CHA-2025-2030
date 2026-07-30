@@ -38,58 +38,29 @@ Note: Methodology notes for this indicator.
 :::
 -->
 
-## Safety
 
-*TODO: Add narrative for this section.*
+![](../pdfs/2025%20Hanlon%20Priority/HANLON%20METHOD.png){#fig-hanlon-method fig-cap="The Hanlon Method" fig-alt="The Hanlon Method" width="100%"}
 
-### Injury
+![](../pdfs/2025%20Hanlon%20Priority/Health%20Priorities.png){#fig-health-priorities fig-cap="Health Priorities" fig-alt="Health Priorities based on use of Hanlon Method" width="100%"}
 
-*TODO: Add narrative for this section.*
-<!-- OBJECT: fig-unint-injury-mortal-aar -->
-<!-- OBJECT: tbl-unint-injury-mortal-aar -->
+![](../pdfs/2025%20Hanlon%20Priority/HEART%20DISEASE.png){#fig-hanlon-heart-disease fig-cap="Heart Disease" fig-alt="Heart Disease Hanlon Method priority" width="100%"}
 
-## Poisonings
+![](../pdfs/2025%20Hanlon%20Priority/Hypertension.png){#fig-hanlon-hypertension fig-cap="Hypertension" fig-alt="Hypertension Hanlon Method priority" width="100%"}
 
-*TODO: Add narrative for this section.*
-<!-- OBJECT: fig-poison-control-calls -->
-<!-- OBJECT: tbl-poison-control-calls -->
+![](../pdfs/2025%20Hanlon%20Priority/Childhood%20Immunizations.png){#fig-hanlon-childhood-immunizations fig-cap="Childhood Immunizations" fig-alt="Childhood Immunizations Hanlon Method priority" width="100%"}
 
-<!-- OBJECT: fig-child-under5-poison-control -->
-<!-- OBJECT: tbl-child-under5-poison-control -->
+![](../pdfs/2025%20Hanlon%20Priority/Physical%20Activity.png){#fig-hanlon-physical-activity fig-cap="Physical Activity" fig-alt="Physical Activity Hanlon Method priority" width="100%"}
 
-<!-- OBJECT: fig-poison-control-cannabis -->
-<!-- OBJECT: tbl-poison-control-cannabis -->
+![](../pdfs/2025%20Hanlon%20Priority/Cancer.png){#fig-hanlon-cancer fig-cap="Cancer" fig-alt="Cancer Hanlon Method priority" width="100%"}
 
-## Motor Vehicle Accidents
+![](../pdfs/2025%20Hanlon%20Priority/Adult%20Obesity.png){#fig-hanlon-adult-obesity fig-cap="Adult Obesity" fig-alt="Adult Obesity Hanlon Method priority" width="100%"}
 
-*TODO: Add narrative for this section.*
-<!-- OBJECT: fig-mva-mortal-rate -->
-<!-- OBJECT: tbl-mva-mortal-rate -->
+![](../pdfs/2025%20Hanlon%20Priority/Children%20Obesity.png){#fig-hanlon-children-obesity fig-cap="Children Obesity" fig-alt="Children Obesity Hanlon Method priority" width="100%"}
 
-<!-- OBJECT: fig-mva-alcohol-injury-death-crude -->
-<!-- OBJECT: tbl-mva-alcohol-injury-death-crude -->
+![](../pdfs/2025%20Hanlon%20Priority/Binge%20Drinking.png){#fig-hanlon-binge-drinking fig-cap="Binge Drinking" fig-alt="Binge Drinking Hanlon Method priority" width="100%"}
 
-<!-- OBJECT: fig-mva-mortal-rande-aar -->
-<!-- OBJECT: tbl-mva-mortal-rande-aar -->
+![](../pdfs/2025%20Hanlon%20Priority/Breast%20Cancer.png){#fig-hanlon-breast-cancer fig-cap="Breast Cancer" fig-alt="Breast Cancer Hanlon Method priority" width="100%"}
 
-## Falls
+![](../pdfs/2025%20Hanlon%20Priority/Food%20Security.png){#fig-hanlon-food-security fig-cap="Food Security" fig-alt="Food Security Hanlon Method priority" width="100%"}
 
-*TODO: Add narrative for this section.*
-<!-- OBJECT: fig-falls-hospital-aar -->
-<!-- OBJECT: tbl-falls-hospital-aar -->
-
-<!-- OBJECT: fig-85-falls-hospital -->
-<!-- OBJECT: tbl-85-falls-hospital -->
-
-<!-- OBJECT: fig-65-falls-hospital-rande-rate -->
-<!-- OBJECT: tbl-65-falls-hospital-rande-rate -->
-
-## Domestic Violence / Intrapersonal Violence
-
-*TODO: Add narrative for this section.*
-<!-- OBJECT: fig-mortal-homicide-aar -->
-<!-- OBJECT: tbl-mortal-homicide-aar -->
-<!-- OBJECT: fig-assault-hospital-aar -->
-<!-- OBJECT: tbl-assault-hospital-aar -->
-<!-- OBJECT: fig-dv-victim-rate -->
-<!-- OBJECT: tbl-dv-victim-rate -->
+![](../pdfs/2025%20Hanlon%20Priority/Smoking.png){#fig-hanlon-smoking fig-cap="Smoking" fig-alt="Smoking Hanlon Method priority" width="100%"}
