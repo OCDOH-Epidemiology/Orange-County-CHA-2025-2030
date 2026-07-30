@@ -1,5 +1,5 @@
 ---
-title: "Environmental Indicators"
+title: "Hanlon Method"
 jupyter: python3
 execute:
   freeze: false
@@ -39,28 +39,28 @@ Note: Methodology notes for this indicator.
 -->
 
 
-![](../pdfs/2025%20Hanlon%20Priority/HANLON%20METHOD.png){#fig-hanlon-method fig-cap="The Hanlon Method" fig-alt="The Hanlon Method" width="100%"}
+![The Hanlon Method](../pdfs/2025%20Hanlon%20Priority/HANLON%20METHOD.png){#fig-hanlon-method fig-cap="The Hanlon Method" fig-alt="The Hanlon Method" width="100%"}
 
-![](../pdfs/2025%20Hanlon%20Priority/Health%20Priorities.png){#fig-health-priorities fig-cap="Health Priorities" fig-alt="Health Priorities based on use of Hanlon Method" width="100%"}
+![Health Priorities](../pdfs/2025%20Hanlon%20Priority/Health%20Priorities.png){#fig-health-priorities fig-cap="Health Priorities" fig-alt="Health Priorities based on use of Hanlon Method" width="100%"}
 
-![](../pdfs/2025%20Hanlon%20Priority/HEART%20DISEASE.png){#fig-hanlon-heart-disease fig-cap="Heart Disease" fig-alt="Heart Disease Hanlon Method priority" width="100%"}
+![Heart Disease](../pdfs/2025%20Hanlon%20Priority/HEART%20DISEASE.png){#fig-hanlon-heart-disease fig-cap="Heart Disease" fig-alt="Heart Disease Hanlon Method priority" width="100%"}
 
-![](../pdfs/2025%20Hanlon%20Priority/Hypertension.png){#fig-hanlon-hypertension fig-cap="Hypertension" fig-alt="Hypertension Hanlon Method priority" width="100%"}
+![Hypertension](../pdfs/2025%20Hanlon%20Priority/Hypertension.png){#fig-hanlon-hypertension fig-cap="Hypertension" fig-alt="Hypertension Hanlon Method priority" width="100%"}
 
-![](../pdfs/2025%20Hanlon%20Priority/Childhood%20Immunizations.png){#fig-hanlon-childhood-immunizations fig-cap="Childhood Immunizations" fig-alt="Childhood Immunizations Hanlon Method priority" width="100%"}
+![Childhood Immunizations](../pdfs/2025%20Hanlon%20Priority/Childhood%20Immunizations.png){#fig-hanlon-childhood-immunizations fig-cap="Childhood Immunizations" fig-alt="Childhood Immunizations Hanlon Method priority" width="100%"}
 
-![](../pdfs/2025%20Hanlon%20Priority/Physical%20Activity.png){#fig-hanlon-physical-activity fig-cap="Physical Activity" fig-alt="Physical Activity Hanlon Method priority" width="100%"}
+![Physical Activity](../pdfs/2025%20Hanlon%20Priority/Physical%20Activity.png){#fig-hanlon-physical-activity fig-cap="Physical Activity" fig-alt="Physical Activity Hanlon Method priority" width="100%"}
 
-![](../pdfs/2025%20Hanlon%20Priority/Cancer.png){#fig-hanlon-cancer fig-cap="Cancer" fig-alt="Cancer Hanlon Method priority" width="100%"}
+![Cancer](../pdfs/2025%20Hanlon%20Priority/Cancer.png){#fig-hanlon-cancer fig-cap="Cancer" fig-alt="Cancer Hanlon Method priority" width="100%"}
 
-![](../pdfs/2025%20Hanlon%20Priority/Adult%20Obesity.png){#fig-hanlon-adult-obesity fig-cap="Adult Obesity" fig-alt="Adult Obesity Hanlon Method priority" width="100%"}
+![Adult Obesity](../pdfs/2025%20Hanlon%20Priority/Adult%20Obesity.png){#fig-hanlon-adult-obesity fig-cap="Adult Obesity" fig-alt="Adult Obesity Hanlon Method priority" width="100%"}
 
-![](../pdfs/2025%20Hanlon%20Priority/Children%20Obesity.png){#fig-hanlon-children-obesity fig-cap="Children Obesity" fig-alt="Children Obesity Hanlon Method priority" width="100%"}
+![Children Obesity](../pdfs/2025%20Hanlon%20Priority/Children%20Obesity.png){#fig-hanlon-children-obesity fig-cap="Children Obesity" fig-alt="Children Obesity Hanlon Method priority" width="100%"}
 
-![](../pdfs/2025%20Hanlon%20Priority/Binge%20Drinking.png){#fig-hanlon-binge-drinking fig-cap="Binge Drinking" fig-alt="Binge Drinking Hanlon Method priority" width="100%"}
+![Binge Drinking](../pdfs/2025%20Hanlon%20Priority/Binge%20Drinking.png){#fig-hanlon-binge-drinking fig-cap="Binge Drinking" fig-alt="Binge Drinking Hanlon Method priority" width="100%"}
 
-![](../pdfs/2025%20Hanlon%20Priority/Breast%20Cancer.png){#fig-hanlon-breast-cancer fig-cap="Breast Cancer" fig-alt="Breast Cancer Hanlon Method priority" width="100%"}
+![Breast Cancer](../pdfs/2025%20Hanlon%20Priority/Breast%20Cancer.png){#fig-hanlon-breast-cancer fig-cap="Breast Cancer" fig-alt="Breast Cancer Hanlon Method priority" width="100%"}
 
-![](../pdfs/2025%20Hanlon%20Priority/Food%20Security.png){#fig-hanlon-food-security fig-cap="Food Security" fig-alt="Food Security Hanlon Method priority" width="100%"}
+![Food Security](../pdfs/2025%20Hanlon%20Priority/Food%20Security.png){#fig-hanlon-food-security fig-cap="Food Security" fig-alt="Food Security Hanlon Method priority" width="100%"}
 
-![](../pdfs/2025%20Hanlon%20Priority/Smoking.png){#fig-hanlon-smoking fig-cap="Smoking" fig-alt="Smoking Hanlon Method priority" width="100%"}
+![Smoking](../pdfs/2025%20Hanlon%20Priority/Smoking.png){#fig-hanlon-smoking fig-cap="Smoking" fig-alt="Smoking Hanlon Method priority" width="100%"}

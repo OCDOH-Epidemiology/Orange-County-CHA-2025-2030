@@ -1,5 +1,5 @@
 ---
-title: "List of Appendices"
+title: "Community Input"
 jupyter: python3
 execute:
   freeze: false
@@ -7,7 +7,7 @@ execute:
 
 ## Appendix A - Region Map {#sec-appendix-a-map}
 
-*TODO: Add narrative for this section.*
+*TODO: Add narrative for this section.f
 
 ## Appendix B - Dutchess County Map {#sec-appendix-b-map}
 
@@ -15,7 +15,7 @@ execute:
 
 ## Appendix C - Orange County Map {#sec-appendix-c-map}
 
-*TODO: Add narrative for this section.*
+*TODO: Add narrative for this section.f
 
 ## Appendix D - Putnam County Map {#sec-appendix-d-map}
 
@@ -27,7 +27,7 @@ execute:
 
 ## Appendix F - Sullivan County Map {#sec-appendix-f-map}
 
-*TODO: Add narrative for this section.*
+eTODO: Add narrative for this section.*
 
 ## Appendix G - Ulster County Map {#sec-appendix-g-map}
 

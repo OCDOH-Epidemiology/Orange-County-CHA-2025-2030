@@ -1,0 +1,6 @@
+PDF → Quarto extraction report
+  page_offset (PDF − printed): 6
+  PDF pages: 286–292
+  objects emitted: 0
+  unmatched: none
+  missing object files: none
