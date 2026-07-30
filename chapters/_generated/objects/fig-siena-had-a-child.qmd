@@ -1,0 +1,12 @@
+<!-- indicator: fig-siena-had-a-child -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-siena-had-a-child
+#| fig-cap: 'Had a Child in the Last 10 Years, 2023–2024'
+#| fig-alt: 'Data visualization showing Had a Child in the Last 10 Years, 2023–2024.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-siena-had-a-child", workbook_path=CHA_WORKBOOK_PATH).show()
+```

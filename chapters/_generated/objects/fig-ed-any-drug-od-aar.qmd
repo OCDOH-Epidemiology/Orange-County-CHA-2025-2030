@@ -1,0 +1,12 @@
+<!-- indicator: fig-ed-any-drug-od-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-ed-any-drug-od-aar
+#| fig-cap: 'Emergency Department Visits Involving Any Drug Overdose, Age-Adjusted Rate per 100,000 Population, 2019–2022'
+#| fig-alt: 'Data visualization showing Emergency Department Visits Involving Any Drug Overdose, Age-Adjusted Rate per 100,000 Population, 2019–2022.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-ed-any-drug-od-aar", workbook_path=CHA_WORKBOOK_PATH).show()
+```

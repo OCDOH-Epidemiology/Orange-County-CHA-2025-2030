@@ -1,0 +1,12 @@
+<!-- indicator: fig-siena-routine-mh-visit -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-siena-routine-mh-visit
+#| fig-cap: 'Mental Health Visitation Within the Last 12 Months, 2022–2024'
+#| fig-alt: 'Data visualization showing Mental Health Visitation Within the Last 12 Months, 2022–2024.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-siena-routine-mh-visit", workbook_path=CHA_WORKBOOK_PATH).show()
+```

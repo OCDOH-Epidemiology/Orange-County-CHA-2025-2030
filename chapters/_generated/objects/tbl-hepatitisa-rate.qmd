@@ -1,0 +1,16 @@
+<!-- indicator: tbl-hepatitisa-rate -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-hepatitisa-rate
+#| tbl-cap: 'Hepatitis A, Rate per 100,000 Population, 2020–2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-hepatitisa-rate", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Communicable Disease Annual Reports, August 2025 [https://www.health.ny.gov/statistics/diseases/communicable/](https://www.health.ny.gov/statistics/diseases/communicable/)
+:::

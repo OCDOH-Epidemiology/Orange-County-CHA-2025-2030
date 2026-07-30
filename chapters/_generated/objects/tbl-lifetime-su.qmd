@@ -1,0 +1,20 @@
+<!-- indicator: tbl-lifetime-su -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-lifetime-su
+#| tbl-cap: 'Lifetime Use of Substance by Grade'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-lifetime-su", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+Community-Level Youth Development Evaluation Survey, Orange County, NY, October 2025
+:::
+
+::: {.callout-note}
+Note: "Lifetime use" refers to whether a student has ever used a particular substance at least once in their entire lifetime.
+:::

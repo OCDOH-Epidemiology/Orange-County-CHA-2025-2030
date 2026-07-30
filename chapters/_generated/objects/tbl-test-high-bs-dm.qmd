@@ -1,0 +1,20 @@
+<!-- indicator: tbl-test-high-bs-dm -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-test-high-bs-dm
+#| tbl-cap: 'Percentage of Adults Who Had a Test for High Blood Sugar or Diabetes Within the Past Three Years, 2013–2014, 2016, 2018, and 2021'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-test-high-bs-dm", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, April 2025 [https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/about_data](https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/about_data)
+:::
+
+::: {.callout-note}
+Note: Y-axis does not begin at zero in order to clearly display trend lines. The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents, " Have you had a test for high blood sugar or diabetes within the past three years?" This excludes females who were told this only while they were pregnant.
+:::

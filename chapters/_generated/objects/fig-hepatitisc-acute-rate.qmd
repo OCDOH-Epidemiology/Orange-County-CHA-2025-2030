@@ -1,0 +1,12 @@
+<!-- indicator: fig-hepatitisc-acute-rate -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-hepatitisc-acute-rate
+#| fig-cap: 'Acute Hepatitis C, Rate per 100,000 Population, 2020–2023'
+#| fig-alt: 'Data visualization showing Acute Hepatitis C, Rate per 100,000 Population, 2020–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-hepatitisc-acute-rate", workbook_path=CHA_WORKBOOK_PATH).show()
+```

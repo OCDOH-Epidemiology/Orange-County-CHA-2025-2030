@@ -1,0 +1,12 @@
+<!-- indicator: fig-siena-reason-ed-not-emergency -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-siena-reason-ed-not-emergency
+#| fig-cap: 'Reasons for Visiting an Emergency Room for Non-Emergencies, 2024'
+#| fig-alt: 'Data visualization showing Reasons for Visiting an Emergency Room for Non-Emergencies, 2024.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-siena-reason-ed-not-emergency", workbook_path=CHA_WORKBOOK_PATH).show()
+```

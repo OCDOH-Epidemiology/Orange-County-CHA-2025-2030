@@ -1,0 +1,16 @@
+<!-- indicator: tbl-excerpt -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-excerpt
+#| tbl-cap: 'Excerpt from Data Update'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-excerpt", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+[https://www.orangecountygov.com/DocumentCenter/View/35422/Orange-County-Annual-Health-Summit-Slides](https://www.orangecountygov.com/DocumentCenter/View/35422/Orange-County-Annual-Health-Summit-Slides)
+:::

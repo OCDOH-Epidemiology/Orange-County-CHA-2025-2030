@@ -1,0 +1,11 @@
+<!-- indicator: tbl-siena-restless-fidgety -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-siena-restless-fidgety
+#| tbl-cap: 'Feeling Restless or Fidgety, 2023–2024'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-siena-restless-fidgety", workbook_path=CHA_WORKBOOK_PATH)
+```

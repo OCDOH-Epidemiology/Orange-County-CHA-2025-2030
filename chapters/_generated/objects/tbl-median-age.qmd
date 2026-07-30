@@ -1,0 +1,11 @@
+<!-- indicator: tbl-median-age -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-median-age
+#| tbl-cap: 'Median Age by Municipality, 2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-median-age", workbook_path=CHA_WORKBOOK_PATH)
+```

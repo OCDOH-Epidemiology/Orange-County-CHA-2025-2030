@@ -1,0 +1,20 @@
+<!-- indicator: tbl-binge-drinking-last-month -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-binge-drinking-last-month
+#| tbl-cap: 'Percentage of Adults Binge Drinking During the Past Month, 2016, 2018, and 2021'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-binge-drinking-last-month", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents, "Considering all types of alcoholic beverages, how many times during the past 30 days did you have (for men) 5 or more drinks on an occasion or (for women) 4 or more drinks on an occasion?" Based on the responses to this question “binge drinking” is defined as consuming 4 or more drinks for women and 5 or more drinks for men on a single occasion.
+:::
+
+::: {.callout-note}
+Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents, "Considering all types of alcoholic beverages, how many times during the past 30 days did you have (for men) 5 or more drinks on an occasion or (for women) 4 or more drinks on an occasion?" Based on the responses to this question “binge drinking” is defined as consuming 4 or more drinks for women and 5 or more drinks for men on a single occasion.
+:::

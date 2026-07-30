@@ -1,0 +1,12 @@
+<!-- indicator: fig-hepatitisb-chronic-rate -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-hepatitisb-chronic-rate
+#| fig-cap: 'Chronic Hepatitis B, Rate per 100,000 Population, 2020–2023'
+#| fig-alt: 'Data visualization showing Chronic Hepatitis B, Rate per 100,000 Population, 2020–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-hepatitisb-chronic-rate", workbook_path=CHA_WORKBOOK_PATH).show()
+```

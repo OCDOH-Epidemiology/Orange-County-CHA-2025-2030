@@ -1,0 +1,12 @@
+<!-- indicator: fig-current-smoker -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-current-smoker
+#| fig-cap: 'Percentage of Adults Who Are Current Smokers, 2016, 2018, and 2021'
+#| fig-alt: 'Data visualization showing Percentage of Adults Who Are Current Smokers, 2016, 2018, and 2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-current-smoker", workbook_path=CHA_WORKBOOK_PATH).show()
+```

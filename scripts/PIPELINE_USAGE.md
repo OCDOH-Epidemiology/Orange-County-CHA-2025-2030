@@ -101,3 +101,35 @@ python3 scripts/build_digital_cha.py \
 3. Rewrite chapter object blocks to include directives (or author with include mode from DOCX).
 4. Run strict reference validation and fix any unresolved IDs.
 5. Render chapter/site and review output.
+
+## 6) PDF narrative extraction (native text, not OCR)
+
+For a published CHA PDF with a text layer, extract prose + figure/table include stubs:
+
+```bash
+python3 scripts/extract_pdf_to_qmd.py \
+  --pdf "/path/to/Orange County CHA.pdf" \
+  --from-page 196 --to-page 228 \
+  --out drafts/pdf-extract/ch08-remainder.qmd \
+  --report drafts/pdf-extract/ch08-remainder.report.txt
+```
+
+**Page numbers:** `--from-page` / `--to-page` are **printed footer** pages by default.
+This CHA’s offset is **PDF page = printed + 6** (auto-calibrated; override with
+`--page-offset 6`). Use `--pdf-pages` to pass raw 1-based PDF indices instead.
+
+**What it does:**
+- Keeps narrative wording; only reflows soft line wraps
+- Skips chart axes / table grids (workbook already renders those)
+- Maps `Figure N` / `Table N` via workbook Master `F or T #` → Object ID
+- Emits `fig-` then `tbl-` includes for figures; `tbl-` only for tables
+
+**Workflow:** review the draft → paste/append into the chapter → run
+`prompts/convert-figure-table-crossrefs.md` to turn `(Figure N)` into `[@fig-…]`.
+
+Optional append after review:
+
+```bash
+python3 scripts/extract_pdf_to_qmd.py ... --append chapters/08-leading-health-issues.qmd
+```
+

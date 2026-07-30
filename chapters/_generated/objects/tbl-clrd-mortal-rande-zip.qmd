@@ -1,0 +1,10 @@
+<!-- indicator: tbl-clrd-mortal-rande-zip (fallback) -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-clrd-mortal-rande-zip
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-clrd-mortal-rande-zip", workbook_path=CHA_WORKBOOK_PATH)
+```

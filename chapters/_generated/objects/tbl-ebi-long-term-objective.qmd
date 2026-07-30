@@ -1,0 +1,11 @@
+<!-- indicator: tbl-ebi-long-term-objective -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-ebi-long-term-objective
+#| tbl-cap: 'Evidence-Based Strategies and Long-Term Objectives'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-ebi-long-term-objective", workbook_path=CHA_WORKBOOK_PATH)
+```

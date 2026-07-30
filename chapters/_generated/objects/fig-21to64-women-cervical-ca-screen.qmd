@@ -1,0 +1,12 @@
+<!-- indicator: fig-21to64-women-cervical-ca-screen -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-21to64-women-cervical-ca-screen
+#| fig-cap: 'Percentage of Women 21–65 Years Old Receiving Cervical Cancer Screening Based on Most Recent Guidelines, 2018'
+#| fig-alt: 'Data visualization showing Percentage of Women 21–65 Years Old Receiving Cervical Cancer Screening Based on Most Recent Guidelines, 2018.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-21to64-women-cervical-ca-screen", workbook_path=CHA_WORKBOOK_PATH).show()
+```

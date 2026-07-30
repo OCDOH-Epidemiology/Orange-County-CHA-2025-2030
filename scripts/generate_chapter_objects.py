@@ -328,10 +328,11 @@ def _write_indicator_files(
     # Keep output directories in sync with current workbook metadata.
     for existing_file in output_dir.glob("*.qmd"):
         if existing_file.name.startswith("._"):
-            existing_file.unlink()
+            # AppleDouble sidecars on network volumes can vanish between glob and unlink.
+            existing_file.unlink(missing_ok=True)
             continue
         if existing_file.stem not in written_set and existing_file.stem not in preserve_set:
-            existing_file.unlink()
+            existing_file.unlink(missing_ok=True)
 
     # Ensure preserved include stems referenced by chapters always resolve,
     # even when workbook metadata no longer contains those object IDs.

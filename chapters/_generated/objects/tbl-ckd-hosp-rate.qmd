@@ -1,0 +1,20 @@
+<!-- indicator: tbl-ckd-hosp-rate -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-ckd-hosp-rate
+#| tbl-cap: 'Chronic Kidney Disease Hospitalization, Rate per 10,000, 2017–2022'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-ckd-hosp-rate", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, November 2025 [https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&](https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&) p=ch&cos=33
+:::
+
+::: {.callout-note}
+Note: This includes hospitalizations with any diagnosis of chronic kidney disease. The ICD-10-CM code for chronic kidney disease is N18. Three-year averages for Orange County and single-year estimates for the Mid-Hudson Region, NYS excl NYC, and NYS. The standard population used for age adjustment was the 2000 US population.
+:::

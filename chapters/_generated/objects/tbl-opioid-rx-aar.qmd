@@ -1,0 +1,20 @@
+<!-- indicator: tbl-opioid-rx-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-opioid-rx-aar
+#| tbl-cap: 'Opioid Analgesics Prescriptions, Age-Adjusted Rate per 1,000 Person-Years, 2021–2024'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-opioid-rx-aar", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+Special request from the NYS Prescription Monitoring Program, October 2025
+:::
+
+::: {.callout-note}
+Note: This rate is for controlled substance (Schedule II, III and IV opioid analgesics) prescription rates per population and is not a rate of the number of different people who are receiving a controlled substance prescription in OC. Buprenorphine prescriptions for the treatment of substance use disorder were excluded.
+:::

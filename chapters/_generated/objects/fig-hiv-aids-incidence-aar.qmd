@@ -1,0 +1,12 @@
+<!-- indicator: fig-hiv-aids-incidence-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-hiv-aids-incidence-aar
+#| fig-cap: 'HIV and AIDS Incidence, Age-Adjusted Rate per 100,000 Population, 2020–2023'
+#| fig-alt: 'Data visualization showing HIV and AIDS Incidence, Age-Adjusted Rate per 100,000 Population, 2020–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-hiv-aids-incidence-aar", workbook_path=CHA_WORKBOOK_PATH).show()
+```

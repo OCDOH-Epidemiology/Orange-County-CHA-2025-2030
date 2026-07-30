@@ -1,0 +1,12 @@
+<!-- indicator: fig-tlb-past-30day-su -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-tlb-past-30day-su
+#| fig-cap: 'Past 30 Day Use of Substance by Grade'
+#| fig-alt: 'Data visualization showing Past 30 Day Use of Substance by Grade.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-tlb-past-30day-su", workbook_path=CHA_WORKBOOK_PATH).show()
+```

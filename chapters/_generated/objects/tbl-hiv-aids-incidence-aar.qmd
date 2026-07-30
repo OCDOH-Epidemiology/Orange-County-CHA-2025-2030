@@ -1,0 +1,20 @@
+<!-- indicator: tbl-hiv-aids-incidence-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-hiv-aids-incidence-aar
+#| tbl-cap: 'HIV and AIDS Incidence, Age-Adjusted Rate per 100,000 Population, 2020–2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-hiv-aids-incidence-aar", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYS HIV/AIDS Annual Surveillance Reports, August 2025 [https://www.health.ny.gov/diseases/aids/general/statistics/](https://www.health.ny.gov/diseases/aids/general/statistics/)
+:::
+
+::: {.callout-note}
+Note: Rates exclude persons incarcerated. Persons diagnosed with HIV may also be diagnosed with AIDS in the same year or a later year and their AIDS diagnosis will be counted in the AIDS diagnosis tables. HIV and AIDS diagnoses cannot be added together in a meaningful way. Rates are age-adjusted to the 2000 US Standard Population.
+:::

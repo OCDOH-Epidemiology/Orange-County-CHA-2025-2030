@@ -1,0 +1,12 @@
+<!-- indicator: fig-siena-difficulty-help-for-child -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-siena-difficulty-help-for-child
+#| fig-cap: 'Information or Help'
+#| fig-alt: 'Data visualization showing Information or Help.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-siena-difficulty-help-for-child", workbook_path=CHA_WORKBOOK_PATH).show()
+```

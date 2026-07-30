@@ -1,0 +1,12 @@
+<!-- indicator: fig-perception-harm-su -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-perception-harm-su
+#| fig-cap: 'Percentage Perception of Harm of Substance use, Moderate Risk or Great Risk, 2025'
+#| fig-alt: 'Data visualization showing Percentage Perception of Harm of Substance use, Moderate Risk or Great Risk, 2025.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-perception-harm-su", workbook_path=CHA_WORKBOOK_PATH).show()
+```

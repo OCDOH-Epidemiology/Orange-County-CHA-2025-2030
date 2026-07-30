@@ -1,0 +1,20 @@
+<!-- indicator: tbl-hiv-prevalence-transmission-category -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-hiv-prevalence-transmission-category
+#| tbl-cap: 'HIV Prevalence by Transmission Category, Count, 2020–2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-hiv-prevalence-transmission-category", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+National Center for HIV, Viral Hepatitis, STD, and Tuberculosis Prevention AtlasPlus, August 2025 [https://gis.cdc.gov/grasp/nchhstpatlas/tables.html](https://gis.cdc.gov/grasp/nchhstpatlas/tables.html)
+:::
+
+::: {.callout-note}
+Note: Data for 2024 are considered preliminary subject to a 12-month reporting delay.
+:::

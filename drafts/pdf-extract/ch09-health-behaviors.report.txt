@@ -1,0 +1,11 @@
+PDF → Quarto extraction report
+  page_offset (PDF − printed): 6
+  PDF pages: 235–272
+  objects emitted: 37
+  F121:ed-any-drug-od-aar, F122:outpatiented-hopsitaldc-opioid-abuse-depend-crude, F123:neonatal-withdraw-maternal-drug-crude, F124:opioid-rx-aar, F125:opioid-naïve-7day-rx, F126:benzo-rx-aar, F127:overlap-opioid-benzo-rx, F128:opioidud-atleast1rx-bup-aar, F129:opioidud-continuous-bup-rx, T51:lifetime-su, T52:past-30day-su, T53:source-marijuana-ifused, F130:perception-harm-su, T54:opioid-od-fatal-age-sex, F131:opioid-od-fatal, F132:opioid-od-fatal-age, F133:opioid-od-fatal-sex, T55:source-alcohol-ifused, F134:binge-drinking-last-month, F135:alcohol-mva-injury-death, F136:current-smoker, T56:unintent-injury-mortal-age-rande-zip, F137:unintent-injury-hospital-rande-aar, F138:unintent-injury-mortal-aar, F139:unintent-injury-mortal-age, F140:unintent-injury-mortal-zip, F141:unintent-injury-mortal-sex-aar, F142:falls-65-rande, F143:self-inflict-injury-hospital-aar, F144:self-inflict-injury-hospital-15-19, F145:suicide-mortal-aar, F146:50to64-colorectal-screen, F147:21to64-women-cervical-ca-screen, F148:50to74-women-breast-ca-screen, F149:adults-asthma, F150:md-dx-dm-predm, F151:test-high-bs-dm
+  unmatched: none
+  MISSING object files:
+    - fig-opioid-od-fatal-sex.qmd
+    - fig-overlap-opioid-benzo-rx.qmd
+    - tbl-opioid-od-fatal-sex.qmd
+    - tbl-overlap-opioid-benzo-rx.qmd

@@ -1,0 +1,12 @@
+<!-- indicator: fig-siena-unable-childcare -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-siena-unable-childcare
+#| fig-cap: 'Unable to Get Childcare, 2018–2024'
+#| fig-alt: 'Data visualization showing Unable to Get Childcare, 2018–2024.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-siena-unable-childcare", workbook_path=CHA_WORKBOOK_PATH).show()
+```

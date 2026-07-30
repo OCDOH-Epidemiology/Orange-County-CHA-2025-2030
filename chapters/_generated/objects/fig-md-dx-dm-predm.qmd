@@ -1,0 +1,12 @@
+<!-- indicator: fig-md-dx-dm-predm -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-md-dx-dm-predm
+#| fig-cap: 'Percentage of Adults with Physician Diagnosed Prediabetes and Diabetes, 2021'
+#| fig-alt: 'Data visualization showing Percentage of Adults with Physician Diagnosed Prediabetes and Diabetes, 2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-md-dx-dm-predm", workbook_path=CHA_WORKBOOK_PATH).show()
+```

@@ -1,0 +1,20 @@
+<!-- indicator: tbl-dm-mortal-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-dm-mortal-aar
+#| tbl-cap: 'Diabetes Mortality, Age-Adjusted Rate per 100,000, 2020–2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-dm-mortal-aar", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+Special request from NYSDOH Bureau of Vital Records, July 2025
+:::
+
+::: {.callout-note}
+Note: See Data Note section for more information regarding this request. This includes Diabetes Mellitus as a primary cause of death with ICD-10-CM codes of: E10-E14. Birth and death data for Orange County excludes events recorded in NYC. All rates use ACS 5-year population estimates, except for the ages under 1 year and 1-9 years, which are based on crude live births in Orange County.
+:::

@@ -1,0 +1,16 @@
+<!-- indicator: tbl-chlamydia-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-chlamydia-aar
+#| tbl-cap: 'Chlamydia, Age-Adjusted Rate per 100,000 Population, 2020–2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-chlamydia-aar", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Sexually Transmitted Infections Data and Statistics Dashboard, August 2025 [https://www.health.ny.gov/statistics/diseases/communicable/std](https://www.health.ny.gov/statistics/diseases/communicable/std)
+:::

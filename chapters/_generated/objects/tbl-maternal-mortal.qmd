@@ -1,0 +1,20 @@
+<!-- indicator: tbl-maternal-mortal -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-maternal-mortal
+#| tbl-cap: 'Maternal Mortality, Rate per 100,000 Live Births, 2018–2021'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-maternal-mortal", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Prevention Agenda Tracking Dashboard, November 2025 [https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fdashboard%2Fpa_dashboard&p=ch](https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fdashboard%2Fpa_dashboard&p=ch) &cos=33
+:::
+
+::: {.callout-note}
+*: The rate is unstable or unreliable. Note: This rate includes deaths to women from any causes related to or aggravated by pregnancy or its management that occurred while pregnant or within 42 days of termination of pregnancy. The ICD-10-CM codes included are: O00-95 (Pregnancy, Childbirth, and the Puerperium), O98 (Maternal Infectious/Parasitic Diseases), O99 (Other Maternal Diseases), and A34 (Obstetrical Tetanus). The maternal mortality definition is consistent with the definition used by the World Health Organization. Three-year averages are used for Orange County and single-year estimates are used for the Mid-Hudson, NYS, and NYS excl NYC.
+:::

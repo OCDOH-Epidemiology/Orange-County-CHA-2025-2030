@@ -1,0 +1,11 @@
+<!-- indicator: tbl-siena-unable-internet-income -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-siena-unable-internet-income
+#| tbl-cap: 'Unable to Get Access to the Internet by Income, 2024'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-siena-unable-internet-income", workbook_path=CHA_WORKBOOK_PATH)
+```

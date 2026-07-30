@@ -1,0 +1,12 @@
+<!-- indicator: fig-obese-adult -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-obese-adult
+#| fig-cap: 'Percentage of Adults who are Obese, 2013–2014, 2016, 2018, and 2021'
+#| fig-alt: 'Data visualization showing Percentage of Adults who are Obese, 2013–2014, 2016, 2018, and 2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-obese-adult", workbook_path=CHA_WORKBOOK_PATH).show()
+```

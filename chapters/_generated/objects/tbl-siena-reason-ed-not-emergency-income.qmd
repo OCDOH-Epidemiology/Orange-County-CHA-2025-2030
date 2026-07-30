@@ -1,0 +1,11 @@
+<!-- indicator: tbl-siena-reason-ed-not-emergency-income -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-siena-reason-ed-not-emergency-income
+#| tbl-cap: 'Reasons for Visiting an Emergency Room for Non-Emergencies by Income, 2024'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-siena-reason-ed-not-emergency-income", workbook_path=CHA_WORKBOOK_PATH)
+```

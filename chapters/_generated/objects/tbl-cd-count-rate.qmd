@@ -1,0 +1,20 @@
+<!-- indicator: tbl-cd-count-rate -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-cd-count-rate
+#| tbl-cap: 'General Communicable Diseases, Case Counts and Rates per 100,000 Residents, 2021–2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-cd-count-rate", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Communicable Disease Electronic Surveillance System, July 2025
+:::
+
+::: {.callout-note}
+*: From 2013-2021 counties investigated a sample of positive laboratory results. The number of cases was extrapolated to generated estimates of the total number of cases. Beginning in 2022, all records received were used for case counting and no extrapolation was done. s: Data are suppressed due to not meeting reporting criteria. Note: Only confirmed cases are included.
+:::

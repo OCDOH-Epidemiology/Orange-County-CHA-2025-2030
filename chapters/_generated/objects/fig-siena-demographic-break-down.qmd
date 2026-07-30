@@ -1,0 +1,12 @@
+<!-- indicator: fig-siena-demographic-break-down -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-siena-demographic-break-down
+#| fig-cap: 'Respondent Demographic Breakdown'
+#| fig-alt: 'Data visualization showing Respondent Demographic Breakdown.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-siena-demographic-break-down", workbook_path=CHA_WORKBOOK_PATH).show()
+```

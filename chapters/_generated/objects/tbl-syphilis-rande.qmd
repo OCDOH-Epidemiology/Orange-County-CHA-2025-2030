@@ -1,0 +1,20 @@
+<!-- indicator: tbl-syphilis-rande -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-syphilis-rande
+#| tbl-cap: 'Syphilis, Case Rate per 100,000 by Race and Ethnicity, 2021–2024'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-syphilis-rande", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+Note: Rates are calculated using American Community Survey 5-Year Census population estimates. 2023 Census data used for 2024.
+:::
+
+::: {.callout-note}
+Note: Rates are calculated using American Community Survey 5-Year Census population estimates. 2023 Census data used for 2024.
+:::

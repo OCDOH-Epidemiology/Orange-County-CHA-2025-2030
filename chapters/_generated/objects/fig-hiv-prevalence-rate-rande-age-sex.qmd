@@ -1,0 +1,12 @@
+<!-- indicator: fig-hiv-prevalence-rate-rande-age-sex -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-hiv-prevalence-rate-rande-age-sex
+#| fig-cap: 'HIV Prevalence, Rate per 100,000 Population by Race and Ethnicity, Age, and Sex, 2020–2023'
+#| fig-alt: 'Data visualization showing HIV Prevalence, Rate per 100,000 Population by Race and Ethnicity, Age, and Sex, 2020–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-hiv-prevalence-rate-rande-age-sex", workbook_path=CHA_WORKBOOK_PATH).show()
+```

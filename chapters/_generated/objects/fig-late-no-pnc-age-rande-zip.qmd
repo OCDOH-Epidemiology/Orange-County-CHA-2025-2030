@@ -1,0 +1,12 @@
+<!-- indicator: fig-late-no-pnc-age-rande-zip -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-late-no-pnc-age-rande-zip
+#| fig-cap: 'All Births with Late or No Prenatal Care, by Age, Race and Ethnicity, and ZIP Code, 2020–2023'
+#| fig-alt: 'Data visualization showing All Births with Late or No Prenatal Care, by Age, Race and Ethnicity, and ZIP Code, 2020–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-late-no-pnc-age-rande-zip", workbook_path=CHA_WORKBOOK_PATH).show()
+```

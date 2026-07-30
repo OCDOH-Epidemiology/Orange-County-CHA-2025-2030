@@ -1,0 +1,20 @@
+<!-- indicator: tbl-hiv-prevalence-rate-rande-age-sex -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-hiv-prevalence-rate-rande-age-sex
+#| tbl-cap: 'HIV Prevalence, Rate per 100,000 Population by Race and Ethnicity, Age, and Sex, 2020–2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-hiv-prevalence-rate-rande-age-sex", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Communicable Disease Electronic Surveillance System, August 2025
+:::
+
+::: {.callout-note}
+s: Data are suppressed. The data do not meet the criteria for confidentiality. Note: All rates are calculated using American Community Survey 5-Year Census population estimates. 2023 Census data used for 2024.
+:::

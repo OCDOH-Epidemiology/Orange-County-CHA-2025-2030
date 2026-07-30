@@ -1,0 +1,12 @@
+<!-- indicator: fig-adults-asthma -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-adults-asthma
+#| fig-cap: 'Percentage of Adults with Current Asthma, 2016, 2018, and 2021'
+#| fig-alt: 'Data visualization showing Percentage of Adults with Current Asthma, 2016, 2018, and 2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-adults-asthma", workbook_path=CHA_WORKBOOK_PATH).show()
+```

@@ -30,10 +30,10 @@ book:
     - chapters/06-mortality.qmd
     - chapters/07-SDOH.qmd
     - chapters/08-leading-health-issues.qmd
-    - chapters/09-Child-Health.qmd
-    - chapters/10-Environmental Indicators.qmd
-    - chapters/11-County-Health-Summaries.qmd
-    - chapters/12-Appendices.qmd
+    - chapters/09-Health Behaviors.qmd
+    - chapters/10-Hanlon Method.qmd
+    - chapters/11-Health Summit.qmd
+    - chapters/12-Community Input.qmd
     - chapters/13-example-data-objects.qmd
   sidebar:
     style: docked

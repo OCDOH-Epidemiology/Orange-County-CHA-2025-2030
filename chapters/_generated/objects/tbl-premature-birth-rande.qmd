@@ -1,0 +1,20 @@
+<!-- indicator: tbl-premature-birth-rande -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-premature-birth-rande
+#| tbl-cap: 'Percentage of Premature Births, by Race and Ethnicity, 2020–2022'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-premature-birth-rande", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYS County Health Indicators by Race and Ethnicity, November 2025 sourced from NY Statewide Planning and Research Cooperative System [https://www.health.ny.gov/community/health_equity/reports/county/](https://www.health.ny.gov/community/health_equity/reports/county/)
+:::
+
+::: {.callout-note}
+Note: Premature Birth includes any live birth that occurs before 37 completed weeks of gestation. The 2018 population estimates are used to calculate rates for 2019 and 2020. Later years are from the most recent Vintage estimates.
+:::

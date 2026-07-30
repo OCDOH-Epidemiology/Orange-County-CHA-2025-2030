@@ -1,0 +1,12 @@
+<!-- indicator: fig-alcohol-mva-injury-death -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-alcohol-mva-injury-death
+#| fig-cap: 'Alcohol Related Motor Vehicle Injuries and Deaths, Rate per 100,000 Population, 2018–2021'
+#| fig-alt: 'Data visualization showing Alcohol Related Motor Vehicle Injuries and Deaths, Rate per 100,000 Population, 2018–2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-alcohol-mva-injury-death", workbook_path=CHA_WORKBOOK_PATH).show()
+```

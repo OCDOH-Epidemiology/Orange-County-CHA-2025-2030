@@ -1,0 +1,12 @@
+<!-- indicator: fig-great-strengths-community -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-great-strengths-community
+#| fig-cap: 'Number of Responses to the Question: "What are the greatest strengths of our community?"'
+#| fig-alt: 'Data visualization showing Number of Responses to the Question: "What are the greatest strengths of our community?".'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-great-strengths-community", workbook_path=CHA_WORKBOOK_PATH).show()
+```

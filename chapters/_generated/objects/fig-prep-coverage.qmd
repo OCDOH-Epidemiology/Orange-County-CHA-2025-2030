@@ -1,0 +1,12 @@
+<!-- indicator: fig-prep-coverage -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-prep-coverage
+#| fig-cap: 'Percentage of PrEP Coverage, 2020–2023'
+#| fig-alt: 'Data visualization showing Percentage of PrEP Coverage, 2020–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-prep-coverage", workbook_path=CHA_WORKBOOK_PATH).show()
+```

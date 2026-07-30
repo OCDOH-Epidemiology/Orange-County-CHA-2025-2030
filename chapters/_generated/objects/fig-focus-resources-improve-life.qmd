@@ -1,0 +1,12 @@
+<!-- indicator: fig-focus-resources-improve-life -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-focus-resources-improve-life
+#| fig-cap: 'Number of Responses to the Question: "Where should the community focus its resources and attention to improve the quality of life in our community?"'
+#| fig-alt: 'Data visualization showing Number of Responses to the Question: "Where should the community focus its resources and attention to improve the quality of life in our community?".'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-focus-resources-improve-life", workbook_path=CHA_WORKBOOK_PATH).show()
+```

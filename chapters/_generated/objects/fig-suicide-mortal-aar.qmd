@@ -1,0 +1,12 @@
+<!-- indicator: fig-suicide-mortal-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-suicide-mortal-aar
+#| fig-cap: 'Suicide Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021'
+#| fig-alt: 'Data visualization showing Suicide Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-suicide-mortal-aar", workbook_path=CHA_WORKBOOK_PATH).show()
+```

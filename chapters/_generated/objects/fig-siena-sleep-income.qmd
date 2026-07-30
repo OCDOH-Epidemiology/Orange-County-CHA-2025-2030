@@ -1,0 +1,12 @@
+<!-- indicator: fig-siena-sleep-income -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-siena-sleep-income
+#| fig-cap: 'Average Days a Week: 7–9 Hours of Sleep a Night, by Income, 2024'
+#| fig-alt: 'Data visualization showing Average Days a Week: 7–9 Hours of Sleep a Night, by Income, 2024.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-siena-sleep-income", workbook_path=CHA_WORKBOOK_PATH).show()
+```

@@ -1,0 +1,11 @@
+<!-- indicator: tbl-siena-walk-bike-safe-income -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-siena-walk-bike-safe-income
+#| tbl-cap: 'Safety of Walking or Biking by Income, 2024'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-siena-walk-bike-safe-income", workbook_path=CHA_WORKBOOK_PATH)
+```

@@ -1,0 +1,12 @@
+<!-- indicator: fig-pppneumonia-adult-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-pppneumonia-adult-aar
+#| fig-cap: 'Potentially Preventable Community Acquired Pneumonia Admissions, Age-Adjusted Rate per 10,000 Adults, 2021–2024'
+#| fig-alt: 'Data visualization showing Potentially Preventable Community Acquired Pneumonia Admissions, Age-Adjusted Rate per 10,000 Adults, 2021–2024.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-pppneumonia-adult-aar", workbook_path=CHA_WORKBOOK_PATH).show()
+```

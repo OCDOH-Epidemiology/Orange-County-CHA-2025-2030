@@ -1,0 +1,20 @@
+<!-- indicator: tbl-child-adolescent-mortal -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-child-adolescent-mortal
+#| tbl-cap: 'Child and Adolescent Mortality, Rate per 100,000 Population Aged 10–19 Years, 2018–2021'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-child-adolescent-mortal", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, November 2025 [https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&](https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&) p=ch&cos=33
+:::
+
+::: {.callout-note}
+Note: Three-year averages are used for Orange County and single-year estimates are used for the Mid-Hudson, NYS, and NYS excl NYC
+:::

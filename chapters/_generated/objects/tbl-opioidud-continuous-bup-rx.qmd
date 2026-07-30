@@ -1,0 +1,20 @@
+<!-- indicator: tbl-opioidud-continuous-bup-rx -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-opioidud-continuous-bup-rx
+#| tbl-cap: 'Percentage of Patients Receiving Continuous Buprenorphine for Treatment of Opioid Use Disorder, 2021–2024'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-opioidud-continuous-bup-rx", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+Special request from the NYS Prescription Monitoring Program, October 2025
+:::
+
+::: {.callout-note}
+Note: This is for individuals with continuous dispensed buprenorphine prescriptions for 6 months or more for treatment of opioid use disorder (OUD) among patients receiving buprenorphine in a given measurement year. A cohort of patients has at least one buprenorphine prescription for treatment of OUD between July 1st of the year prior to the current measurement year and June 30th of the current measurement year. A measurement year is a calendar year for which the cohort patients were followed up for at least six months.
+:::

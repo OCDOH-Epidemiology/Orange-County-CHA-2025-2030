@@ -1,0 +1,12 @@
+<!-- indicator: fig-outpatiented-hopsitaldc-opioid-abuse-depend-crude -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-outpatiented-hopsitaldc-opioid-abuse-depend-crude
+#| fig-cap: 'Outpatient ED Visits and Hospital Discharges Involving Opioid Abuse, Dependence and Unspecified Use, Crude Rate per 100,000, 2019–2022'
+#| fig-alt: 'Data visualization showing Outpatient ED Visits and Hospital Discharges Involving Opioid Abuse, Dependence and Unspecified Use, Crude Rate per 100,000, 2019–2022.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-outpatiented-hopsitaldc-opioid-abuse-depend-crude", workbook_path=CHA_WORKBOOK_PATH).show()
+```

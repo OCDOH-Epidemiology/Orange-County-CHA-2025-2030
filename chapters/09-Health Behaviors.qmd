@@ -1,0 +1,219 @@
+---
+title: "Health Behaviors"
+jupyter: python3
+execute:
+  freeze: false
+---
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+import sys
+from pathlib import Path
+
+# Ensure root-level modules (scripts/) are importable in both Quarto run contexts.
+cwd = Path.cwd()
+project_root = cwd if (cwd / "scripts").exists() else cwd.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+# Point this at your workbook in data/raw/ once you add it.
+CHA_WORKBOOK_PATH = project_root / "data" / "raw" / "workbook.xlsx"
+```
+
+Health behaviors include the actions and habits that influence an individual’s health status, longevity, and risk of preventable disease and injury. This section summarizes key measures across two domains—Substance Use and Injury Prevention & Safety—using the tables and figures listed below.
+
+## Substance Use
+
+Substance use patterns reflect both individual behavior and broader community conditions that shape risk exposure, access to treatment, and the likelihood of adverse outcomes. In Orange County, substance-use–related indicators show improvement across several acute-care burden measures, while also demonstrating persistent concentration of overdose mortality by age and sex and ongoing youth access patterns driven largely by social sourcing.
+
+### Hospitalizations
+
+Substance use hospitalizations (ED visits) and neonatal abstinence show a decline over the years. ED visit rates for diagnoses related to any drug use declined from 194.5 per 100,000 (2019) to 178.0 (2022), after a higher value in 2020 [@fig-ed-any-drug-od-aar]. Opioid-related ED visit rates also declined from 175.5 (2019) to 114.1 (2022) [@fig-outpatiented-hopsitaldc-opioid-abuse-depend-crude]. Neonatal abstinence syndrome rates decreased from 9.2 per 1,000 births (2019) to 6.7 (2022) [@fig-neonatal-withdraw-maternal-drug-crude].
+
+<!-- Figure 121: Emergency Department Visits Involving Any Drug Overdose, Age-Adjusted Rate per 100,000 Population, 2019–2022 -->
+{{< include _generated/objects/fig-ed-any-drug-od-aar.qmd >}}
+{{< include _generated/objects/tbl-ed-any-drug-od-aar.qmd >}}
+
+<!-- Figure 122: Outpatient ED Visits and Hospital Discharges Involving Opioid Abuse, Dependence and Unspecified Use, Crude Rate per 100,000, 2019–2022 -->
+{{< include _generated/objects/fig-outpatiented-hopsitaldc-opioid-abuse-depend-crude.qmd >}}
+{{< include _generated/objects/tbl-outpatiented-hopsitaldc-opioid-abuse-depend-crude.qmd >}}
+
+<!-- Figure 123: Newborns with Neonatal Withdrawal Symptoms and/or Affected by Maternal Use of Drugs of Addiction, Crude Rate per 1,000 Newborn Discharges, 2019–2022 -->
+{{< include _generated/objects/fig-neonatal-withdraw-maternal-drug-crude.qmd >}}
+{{< include _generated/objects/tbl-neonatal-withdraw-maternal-drug-crude.qmd >}}
+
+### Controlled Substance Prescribing Patterns
+
+Controlled substance prescribing indicators trend downward overall, with one prescribing-risk metric increasing modestly. The opioid prescribing rate declined from 292.5 per 1,000 person-years (2021) to 261.8 (2024) [@fig-opioid-rx-aar], and benzodiazepine prescribing decreased from 245.1 (2021) to 221.3 (2024) [@fig-benzo-rx-aar]. Co-prescribing overlap (opioid + benzodiazepine) declined from 9.1% (2021) to 8.0% (2024) (Figure 127). In contrast, the share of opioid-naïve patients receiving a 7+ day supply increased from 14.9% (2021) to 15.8% (2024) [@fig-opioid-na-ve-7day-rx]. Treatment-related prescribing measures show buprenorphine prescribing declining from 610.5 (2021) to 499.6 (2024) [@fig-opioidud-atleast1rx-bup-aar], while the percentage receiving continuous buprenorphine increased from 71.3% (2021) to 74.2% (2024) [@fig-opioidud-continuous-bup-rx].
+
+<!-- Figure 124: Opioid Analgesics Prescriptions, Age-Adjusted Rate per 1,000 Person-Years, 2021–2024 -->
+{{< include _generated/objects/fig-opioid-rx-aar.qmd >}}
+{{< include _generated/objects/tbl-opioid-rx-aar.qmd >}}
+
+<!-- Figure 125: Percentage of Opioid Naïve Patients Receiving More than a 7-Day Supply, 2021–2024 -->
+{{< include _generated/objects/fig-opioid-na-ve-7day-rx.qmd >}}
+{{< include _generated/objects/tbl-opioid-na-ve-7day-rx.qmd >}}
+
+<!-- Figure 126: Benzodiazepine Prescriptions, Age-Adjusted Rate per 1,000 Person-Years, 2021–2024 -->
+{{< include _generated/objects/fig-benzo-rx-aar.qmd >}}
+{{< include _generated/objects/tbl-benzo-rx-aar.qmd >}}
+
+<!-- Figure 127: Percentage of Patients With Overlapping Opioid Analgesic and Benzodiazepine Prescriptions, 2021–2024 -->
+<!-- MISSING object file for Figure 127 (tbl-overlap-opioid-benzo-rx) -->
+<!-- MISSING paired table file for Figure 127 (tbl-overlap-opioid-benzo-rx) -->
+
+<!-- Figure 128: Patients Who Received at Least One Buprenorphine Prescription for Opioid Use Disorder, Age-Adjusted Rate per 100,000 Population, 2021–2024 -->
+{{< include _generated/objects/fig-opioidud-atleast1rx-bup-aar.qmd >}}
+{{< include _generated/objects/tbl-opioidud-atleast1rx-bup-aar.qmd >}}
+
+<!-- Figure 129: Percentage of Patients Receiving Continuous Buprenorphine for Treatment of Opioid Use Disorder, 2021–2024 -->
+{{< include _generated/objects/fig-opioidud-continuous-bup-rx.qmd >}}
+{{< include _generated/objects/tbl-opioidud-continuous-bup-rx.qmd >}}
+
+### Youth Substance Use and Perception
+
+Youth perception and use patterns show clear grade gradients for several substances, while marijuana stands out for lower perceived risk and measurable current use. Perceived “moderate/great risk” increases by grade for alcohol and cigarettes (e.g., cigarettes rise from 76.1% in grade 8 to 87.6% in grade 12), while marijuana shows lower perceived risk overall and declines by grade (65.0% grade 8 to 54.7% grade 12) [@fig-perception-harm-su]. Lifetime use also rises by grade across multiple substances; for example, lifetime alcohol use increases from 12.4% (grade 8) to 46.8% (grade 12), and lifetime marijuana use from 7.0% to 17.3% [@tbl-lifetime-su]. Past-30-day use is lower in absolute terms but identifies ongoing behaviors, including energy drink use (31.1% total), alcohol (13.0%), marijuana (5.4%), and nicotine vaping (5.4%) [@tbl-tlb-past-30day-su]. Among students reporting marijuana use, the most frequently reported access was getting it from someone under age 21 (49.2%), followed by someone age 21+ (21.5%) and a party (21.5%), with additional access from home without permission (18.0%) or with permission (10.6%) [@tbl-source-marijuana-ifused].
+
+<!-- Table 51: Lifetime Use of Substance by Grade -->
+{{< include _generated/objects/tbl-lifetime-su.qmd >}}
+
+<!-- Table 52: Past 30 Day Use of Substance by Grade -->
+{{< include _generated/objects/tbl-tlb-past-30day-su.qmd >}}
+
+<!-- Table 53: Percentage of Sources of Marijuana for Those Who Reported Use -->
+{{< include _generated/objects/tbl-source-marijuana-ifused.qmd >}}
+
+<!-- Figure 130: Percentage Perception of Harm of Substance use, Moderate Risk or Great Risk, 2025 -->
+{{< include _generated/objects/fig-perception-harm-su.qmd >}}
+{{< include _generated/objects/tbl-perception-harm-su.qmd >}}
+
+### Overdose Fatalities
+
+Overdose fatalities declined from 2021 to 2024 but remain highly concentrated by age and sex. The opioid-related overdose death rate decreased from 36.7 per 100,000 (2021) to 19.3 (2024) [@fig-opioid-od-fatal], with corresponding annual counts documented in the overdose fatality table [@tbl-opioid-od-fatal-age-sex]. Age-stratified rates show that adults ages 35–44 experienced the highest rates, reaching 110.6 per 100,000 in 2024 [@fig-opioid-od-fatal-age; @tbl-opioid-od-fatal-age-sex]. Sex disparities persist across all years shown, with male overdose death rates substantially higher than female rates (e.g., 53.6 vs. 20.1 per 100,000 in 2021 and 29.7 vs. 9.0 in 2024) [@tbl-opioid-od-fatal-age-sex].
+
+While key indicators are summarized here, the complete Annual Report on Drug-Related Mortality[^6] can be accessed via the OCDOH website.
+
+[^6]: Orange County Department of Health, Annual Report on Drug-Related Mortality, [https://www.orangecountygov.com/2325/Reports-Assessments](https://www.orangecountygov.com/2325/Reports-Assessments), accessed August 2025.
+
+<!-- Table 54: Opioid-Related Overdose Fatalities, Rate per 100,000 Population by Age and Sex, 2021–2024 -->
+{{< include _generated/objects/tbl-opioid-od-fatal-age-sex.qmd >}}
+
+<!-- Figure 131: Opioid-Related Overdose Fatalities, Rate per 100,000 Population, 2021–2024 -->
+{{< include _generated/objects/fig-opioid-od-fatal.qmd >}}
+{{< include _generated/objects/tbl-opioid-od-fatal.qmd >}}
+
+<!-- Figure 132: Opioid-Related Overdose Fatalities, Rate per 100,000 Population by Age, 2021–2024 -->
+{{< include _generated/objects/fig-opioid-od-fatal-age.qmd >}}
+{{< include _generated/objects/tbl-opioid-od-fatal-age.qmd >}}
+
+<!-- Figure 133: Opioid-Related Overdose Fatalities, Rate per 100,000 Population by Sex, 2021–2024 -->
+<!-- MISSING object file for Figure 133 (tbl-opioid-od-fatal-sex) -->
+<!-- MISSING paired table file for Figure 133 (tbl-opioid-od-fatal-sex) -->
+
+### Alcohol Use
+
+Alcohol indicators show improvement in some behaviors alongside continued harm signals. Adult binge drinking declined from 15.7% (2016) to 13.8% (2021) [@fig-binge-drinking-last-month]. In contrast, alcohol-involved motor vehicle mortality was 38.7 per 100,000 in 2021, higher than the state average of 25.4 per 100,000 [@fig-alcohol-mva-injury-death]. Youth alcohol access was largely social/family-mediated: the most common reported source was from home with parental permission (45.7%), followed by at a party (39.7%) and from someone under 21 (27.0%) [@tbl-tlb-source-alcohol-ifused].
+
+<!-- Table 55: Sources of Access to Alcohol by Grade -->
+{{< include _generated/objects/tbl-tlb-source-alcohol-ifused.qmd >}}
+
+<!-- Figure 134: Percentage of Adults Binge Drinking During the Past Month, 2016, 2018, and 2021 -->
+{{< include _generated/objects/fig-binge-drinking-last-month.qmd >}}
+{{< include _generated/objects/tbl-binge-drinking-last-month.qmd >}}
+
+<!-- Figure 135: Alcohol Related Motor Vehicle Injuries and Deaths, Rate per 100,000 Population, 2018–2021 -->
+{{< include _generated/objects/fig-alcohol-mva-injury-death.qmd >}}
+{{< include _generated/objects/tbl-alcohol-mva-injury-death.qmd >}}
+
+### Smoking
+
+Smoking indicators were comparatively stable across the years available. Adult current smoking was 13.2% (2016), 11.7% (2018), and 12.0% (2021) [@fig-current-smoker].
+
+<!-- Figure 136: Percentage of Adults Who Are Current Smokers, 2016, 2018, and 2021 -->
+{{< include _generated/objects/fig-current-smoker.qmd >}}
+{{< include _generated/objects/tbl-current-smoker.qmd >}}
+
+## Injury Prevention & Safety
+
+Injury prevention and safety behaviors reflect the decisions and environmental conditions that influence injury risk, avoidable hospitalization, and preventable mortality. Indicators in Orange County show differences by race/ethnicity, age, sex, and geography, with additional burden from falls among older adults and measurable adolescent vulnerability for self-inflicted injury hospitalizations.
+
+### Unintentional Injury
+
+Unintentional hospitalization and mortality show clear subgroup and geographic differences. Unintentional injury hospitalization rates (2020–2022 average) were 70.1 per 10,000 in Orange County, with variation by race/ethnicity (e.g., Non-Hispanic White: 68.4; Hispanic: 42.0; Non-Hispanic Asian: 26.6) [@fig-unintent-injury-hospital-rande-aar]. Unintentional injury mortality increases markedly with age; for example, the 85+ age group reached 455.8 per 100,000 in 2022 [@fig-unintent-injury-mortal-age; @tbl-tlb-source-alcohol-ifused]. Across the four city ZIP codes shown, the 2020–2023 average ranged from 68.2 (ZIP 10940) to 159.5 (ZIP 12550) [@fig-unintent-injury-mortal-zip; @tbl-tlb-source-alcohol-ifused]. Age-adjusted injury mortality rates, stratified by sex, show higher mortality among males than females across all years shown [@fig-unintent-injury-mortal-sex-aar].
+
+<!-- Table 56: Unintentional Injury Mortality, Rate per 100,000 Population by Age, Race and Ethnicity, and ZIP Code, 2020–2023 -->
+{{< include _generated/objects/tbl-unintent-injury-mortal-age-rande-zip.qmd >}}
+
+<!-- Figure 137: Unintentional Injury Hospitalization, Age-Adjusted Rate per 10,000 Population by Race and Ethnicity, 2020–2022 -->
+{{< include _generated/objects/fig-unintent-injury-hospital-rande-aar.qmd >}}
+{{< include _generated/objects/tbl-unintent-injury-hospital-rande-aar.qmd >}}
+
+<!-- Figure 138: Unintentional Injury Mortality, Age-Adjusted Rate per 100,000, 2020–2023 -->
+{{< include _generated/objects/fig-unintent-injury-mortal-aar.qmd >}}
+{{< include _generated/objects/tbl-unintent-injury-mortal-aar.qmd >}}
+
+<!-- Figure 139: Unintentional Injury Mortality, Rate per 100,000 Population by Age, 2020–2023 -->
+{{< include _generated/objects/fig-unintent-injury-mortal-age.qmd >}}
+{{< include _generated/objects/tbl-unintent-injury-mortal-age.qmd >}}
+
+<!-- Figure 140: Unintentional Injury Mortality, Rate per 100,000 Population by ZIP Code, 2020–2023 -->
+{{< include _generated/objects/fig-unintent-injury-mortal-zip.qmd >}}
+{{< include _generated/objects/tbl-unintent-injury-mortal-zip.qmd >}}
+
+<!-- Figure 141: Unintentional Injury Mortality, Age-Adjusted Rate per 100,000 by Sex, 2020–2023 -->
+{{< include _generated/objects/fig-unintent-injury-mortal-sex-aar.qmd >}}
+{{< include _generated/objects/tbl-unintent-injury-mortal-sex-aar.qmd >}}
+
+### Falls
+
+Falls among adults age 65+ represent a major injury driver, with subgroup differences present. Falls hospitalization rates among adults age 65+ (2020–2022 average) were 212.8 per 10,000 in Orange County, with higher rates among Non-Hispanic White older adults (222.8) compared with other groups shown [@fig-falls-65-rande].
+
+<!-- Figure 142: Falls Hospitalization, Rate per 10,000 Population Aged 65 Years and Older, by Race and Ethnicity, 2020–2022 -->
+{{< include _generated/objects/fig-falls-65-rande.qmd >}}
+{{< include _generated/objects/tbl-falls-65-rande.qmd >}}
+
+### Self-harm
+
+Self-harm and suicide indicators show adolescent vulnerability alongside broader injury-related mortality burden. Self-inflicted injury hospitalization rates declined from 5.7 per 10,000 (2018) to 4.5 (2021) [@fig-self-inflict-injury-hospital-aar]. Among ages 15–19, self-inflicted injury hospitalization increased from 8.3 (2018) to 10.2 (2021) [@fig-self-inflict-injury-hospital-15-19]. Suicide mortality in Orange County declined from 10.1 per 100,000 in 2018 to 9.1 in 2021. Despite this, it is still higher than the Mid-Hudson and state average [@fig-suicide-mortal-aar].
+
+<!-- Figure 143: Self Inflicted Injury Hospitalization, Age-Adjusted Rate per 10,000, 2018–2021 -->
+{{< include _generated/objects/fig-self-inflict-injury-hospital-aar.qmd >}}
+{{< include _generated/objects/tbl-self-inflict-injury-hospital-aar.qmd >}}
+
+<!-- Figure 144: Self-Inflicted Injury Hospitalization, Rate per 10,000 Aged 15-19 Years, 2018–2021 -->
+{{< include _generated/objects/fig-self-inflict-injury-hospital-15-19.qmd >}}
+{{< include _generated/objects/tbl-self-inflict-injury-hospital-15-19.qmd >}}
+
+<!-- Figure 145: Suicide Mortality, Age-Adjusted Rate per 100,000 Population, 2018–2021 -->
+{{< include _generated/objects/fig-suicide-mortal-aar.qmd >}}
+{{< include _generated/objects/tbl-suicide-mortal-aar.qmd >}}
+
+## Preventative Screenings
+
+Preventive screenings and chronic-condition monitoring show mixed performance across indicators. Colorectal cancer screening was 61.7% (2018) [@fig-50to64-colorectal-screen], cervical cancer screening was 88.8% (2018) [@fig-21to64-women-cervical-ca-screen], and mammography was 73.3% (2021) with prior values shown for comparison [@fig-50to74-women-breast-ca-screen].
+
+<!-- Figure 146: Percentage of Adults 50–64 Years Old Who Received a Colorectal Cancer Screening Based on the Most Recent Guidelines, 2016 and 2018 -->
+{{< include _generated/objects/fig-50to64-colorectal-screen.qmd >}}
+{{< include _generated/objects/tbl-50to64-colorectal-screen.qmd >}}
+
+<!-- Figure 147: Percentage of Women 21–65 Years Old Receiving Cervical Cancer Screening Based on Most Recent Guidelines, 2018 -->
+{{< include _generated/objects/fig-21to64-women-cervical-ca-screen.qmd >}}
+{{< include _generated/objects/tbl-21to64-women-cervical-ca-screen.qmd >}}
+
+<!-- Figure 148: Percentage of Women 50-74 Old Years Receiving Breast Cancer Screening Based on the Most Recent Guidelines, 2013-2014, 2016, 2018, and 2021 -->
+{{< include _generated/objects/fig-50to74-women-breast-ca-screen.qmd >}}
+{{< include _generated/objects/tbl-50to74-women-breast-ca-screen.qmd >}}
+
+<!-- Figure 149: Percentage of Adults with Current Asthma, 2016, 2018, and 2021 -->
+{{< include _generated/objects/fig-adults-asthma.qmd >}}
+{{< include _generated/objects/tbl-adults-asthma.qmd >}}
+
+<!-- Figure 150: Percentage of Adults with Physician Diagnosed Prediabetes and Diabetes, 2021 -->
+{{< include _generated/objects/fig-md-dx-dm-predm.qmd >}}
+{{< include _generated/objects/tbl-md-dx-dm-predm.qmd >}}
+
+<!-- Figure 151: Percentage of Adults Who Had a Test for High Blood Sugar or Diabetes Within the Past Three Years, 2013–2014, 2016, 2018, and 2021 -->
+{{< include _generated/objects/fig-test-high-bs-dm.qmd >}}
+{{< include _generated/objects/tbl-test-high-bs-dm.qmd >}}

@@ -1,0 +1,12 @@
+<!-- indicator: fig-syphilis-count-rate-sex-rande-age-zip -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-syphilis-count-rate-sex-rande-age-zip
+#| fig-cap: 'Syphilis, Case Counts and Infection Rates per 100,000 by Sex, Race and Ethnicity, Age, and ZIP Code, 2021–2024'
+#| fig-alt: 'Data visualization showing Syphilis, Case Counts and Infection Rates per 100,000 by Sex, Race and Ethnicity, Age, and ZIP Code, 2021–2024.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-syphilis-count-rate-sex-rande-age-zip", workbook_path=CHA_WORKBOOK_PATH).show()
+```

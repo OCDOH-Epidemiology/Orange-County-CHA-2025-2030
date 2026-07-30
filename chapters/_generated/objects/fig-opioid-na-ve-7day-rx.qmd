@@ -1,0 +1,12 @@
+<!-- indicator: fig-opioid-na-ve-7day-rx -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-opioid-na-ve-7day-rx
+#| fig-cap: 'Percentage of Opioid Naïve Patients Receiving More than a 7-Day Supply, 2021–2024'
+#| fig-alt: 'Data visualization showing Percentage of Opioid Naïve Patients Receiving More than a 7-Day Supply, 2021–2024.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-opioid-na-ve-7day-rx", workbook_path=CHA_WORKBOOK_PATH).show()
+```

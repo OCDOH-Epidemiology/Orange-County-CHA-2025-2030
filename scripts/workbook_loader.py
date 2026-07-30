@@ -710,7 +710,7 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
 
     raw_sheets = _read_excel_raw(source_path)
     openpyxl_wb = openpyxl.load_workbook(source_path, data_only=True)
-    skip_sheets = {"Master", "Dropdowns", "Template", "_Template", "_Template (2)"}
+    skip_sheets = {"Master", "Dropdowns", "Template", "Template2", "_Template", "_Template (2)"}
 
     registry: dict[str, RegistryRecord] = {}
     figure_specs: dict[str, FigureSpec] = {}

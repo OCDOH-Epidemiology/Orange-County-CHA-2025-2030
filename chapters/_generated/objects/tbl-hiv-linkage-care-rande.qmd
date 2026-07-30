@@ -1,0 +1,11 @@
+<!-- indicator: tbl-hiv-linkage-care-rande -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-hiv-linkage-care-rande
+#| tbl-cap: 'Percentage of HIV Linkage to Care by Race and Ethnicity, 2020–2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-hiv-linkage-care-rande", workbook_path=CHA_WORKBOOK_PATH)
+```

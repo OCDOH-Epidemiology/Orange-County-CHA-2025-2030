@@ -1,0 +1,12 @@
+<!-- indicator: fig-siena-rate-community-as-place-to-age -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-siena-rate-community-as-place-to-age
+#| fig-cap: 'How would you rate the community you live in as a place for people to live as they age?'
+#| fig-alt: 'Data visualization showing How would you rate the community you live in as a place for people to live as they age?.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-siena-rate-community-as-place-to-age", workbook_path=CHA_WORKBOOK_PATH).show()
+```

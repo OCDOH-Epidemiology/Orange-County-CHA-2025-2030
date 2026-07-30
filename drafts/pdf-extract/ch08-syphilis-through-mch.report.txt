@@ -1,0 +1,7 @@
+PDF → Quarto extraction report
+  page_offset (PDF − printed): 6
+  PDF pages: 202–234
+  objects emitted: 27
+  T43:syphilis-count-rate-sex-rande-age-zip, F102:syphilis-early-aar, F103:syphilis-rande, T44:fertility-rate-age-rande-zip, F104:fertility, F105:fertility-rande, F106:fertility-sex, T45:allbirths-under17-age-rande-zip, T46:allbirths-medicaid-selfpay-age-rande-zip, F107:maternal-mortal, F108:child-adolescent-mortal, F109:infant-mortal, T47:early-pnc-age-rande-zip, T48:late-no-pnc-age-rande-zip, F110:early-pnc, F111:early-pnc-rande, F112:early-pnc-zip, F113:late-no-pnc, F114:late-no-pnc-rande, F115:late-no-pnc-zip, F116:adequate-pnc, T49:premature-birth-age-rande-zip, T50:lbw-age-rande-zip, F117:premature-birth, F118:premature-birth-rande, F119:lbw-birth, F120:lbw-birth-rande
+  unmatched: none
+  missing object files: none

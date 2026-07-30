@@ -1,0 +1,20 @@
+<!-- indicator: tbl-opioid-na-ve-7day-rx -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-opioid-na-ve-7day-rx
+#| tbl-cap: 'Percentage of Opioid Naïve Patients Receiving More than a 7-Day Supply, 2021–2024'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-opioid-na-ve-7day-rx", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+Special request from the NYS Prescription Monitoring Program, October 2025
+:::
+
+::: {.callout-note}
+Note: Y-axis does not begin at zero in order to clearly display trend lines. This measure only looks at initial opioid prescriptions. Opioidnaive is defined as patients with no opioid prescription in the last 45 days. Buprenorphine prescriptions for the treatment of substance use disorder were excluded.
+:::

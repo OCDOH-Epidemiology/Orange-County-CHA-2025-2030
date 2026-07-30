@@ -1,0 +1,12 @@
+<!-- indicator: fig-hiv-prevalence-transmission-category -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-hiv-prevalence-transmission-category
+#| fig-cap: 'HIV Prevalence by Transmission Category, Count, 2020–2023'
+#| fig-alt: 'Data visualization showing HIV Prevalence by Transmission Category, Count, 2020–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-hiv-prevalence-transmission-category", workbook_path=CHA_WORKBOOK_PATH).show()
+```

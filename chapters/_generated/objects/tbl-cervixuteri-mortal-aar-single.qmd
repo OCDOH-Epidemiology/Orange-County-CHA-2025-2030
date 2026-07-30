@@ -1,0 +1,16 @@
+<!-- indicator: tbl-cervixuteri-mortal-aar-single -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-cervixuteri-mortal-aar-single
+#| tbl-cap: 'Cervix Uteri Cancer Mortality, Age-Adjusted Rate per 100,000 Population, 2017–2021'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-cervixuteri-mortal-aar-single", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, August 2025 sourced from NYS Cancer Registry [https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&](https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&) p=ch&cos=33
+:::

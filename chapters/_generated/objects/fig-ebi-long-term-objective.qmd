@@ -1,0 +1,12 @@
+<!-- indicator: fig-ebi-long-term-objective -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-ebi-long-term-objective
+#| fig-cap: 'Evidence-Based Strategies and Long-Term Objectives'
+#| fig-alt: 'Data visualization showing Evidence-Based Strategies and Long-Term Objectives.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-ebi-long-term-objective", workbook_path=CHA_WORKBOOK_PATH).show()
+```

@@ -1,0 +1,20 @@
+<!-- indicator: tbl-clrd-mortal-sex-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-clrd-mortal-sex-aar
+#| tbl-cap: 'Chronic Lower Respiratory Disease Mortality, Rate per 100,000 Population by Sex, 2020–2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-clrd-mortal-sex-aar", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+Special request from NYSDOH Bureau of Vital Records, July 2025
+:::
+
+::: {.callout-note}
+Note: The ICD-10-CM codes used for CLRD are: J40-J47. See Data Note section for more information regarding this request. Birth and death data for Orange County excludes events recorded in NYC. All rates use ACS 5-year population estimates, except for the ages under 1 year and 1-9 years, which are based on crude live births in Orange County.
+:::

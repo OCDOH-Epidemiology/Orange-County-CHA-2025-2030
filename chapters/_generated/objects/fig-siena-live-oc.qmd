@@ -1,0 +1,12 @@
+<!-- indicator: fig-siena-live-oc -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-siena-live-oc
+#| fig-cap: 'Lived in Orange County'
+#| fig-alt: 'Data visualization showing Lived in Orange County.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-siena-live-oc", workbook_path=CHA_WORKBOOK_PATH).show()
+```

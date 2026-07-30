@@ -1,0 +1,12 @@
+<!-- indicator: fig-themes-focus-group -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-themes-focus-group
+#| fig-cap: 'Themes Identified Across Focus Groups'
+#| fig-alt: 'Data visualization showing Themes Identified Across Focus Groups.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-themes-focus-group", workbook_path=CHA_WORKBOOK_PATH).show()
+```

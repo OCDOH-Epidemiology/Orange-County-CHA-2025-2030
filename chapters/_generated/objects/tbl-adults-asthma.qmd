@@ -1,0 +1,20 @@
+<!-- indicator: tbl-adults-asthma -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-adults-asthma
+#| tbl-cap: 'Percentage of Adults with Current Asthma, 2016, 2018, and 2021'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-adults-asthma", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, June 2025 [https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/data](https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/data)
+:::
+
+::: {.callout-note}
+Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents, “Has a doctor, nurse, or other health professional ever told you had asthma?” and “Do you still have asthma?”
+:::

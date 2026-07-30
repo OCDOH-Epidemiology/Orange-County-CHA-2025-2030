@@ -1,0 +1,20 @@
+<!-- indicator: tbl-current-smoker -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-current-smoker
+#| tbl-cap: 'Percentage of Adults Who Are Current Smokers, 2016, 2018, and 2021'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-current-smoker", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, May 2025 [https://www.health.ny.gov/statistics/brfss/expanded/](https://www.health.ny.gov/statistics/brfss/expanded/)
+:::
+
+::: {.callout-note}
+*: Percentage is unreliable due to large standard error. Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents, "Have you smoked at least 100 cigarettes in your entire life?" and "How long has it been since you last smoked a cigarette, even one or two puffs?" Based on responses to both questions, BRFSS defines “current smoker” as an adult over the age of 18 who has smoked at least 100 cigarettes in their lifetime and currently smokes on at least some days.
+:::

@@ -1,0 +1,20 @@
+<!-- indicator: tbl-50to64-colorectal-screen -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-50to64-colorectal-screen
+#| tbl-cap: 'Percentage of Adults 50–64 Years Old Who Received a Colorectal Cancer Screening Based on the Most Recent Guidelines, 2016 and 2018'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-50to64-colorectal-screen", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Prevention Agenda Tracking Dashboard, June 2025 sourced from NYSDOH Behavioral Risk Factor Surveillance System [https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fdashboard%2Fpa_dashboard&p=ch](https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fdashboard%2Fpa_dashboard&p=ch) &cos=33
+:::
+
+::: {.callout-note}
+Note: For colonoscopy and sigmoidoscopy, the Behavioral Risk Factor Surveillance System asks respondents, “Colonoscopy and sigmoidoscopy are exams to check for colon cancer. Have you ever had either of these exams?” and “Have you had a colonoscopy, a sigmoidoscopy, or both?” and “How long has it been since your most recent colonoscopy?” A general question asks respondents " and “Have you ever had any other kind of test for colorectal cancer, such as virtual colonoscopy, CT colonography, blood stool test, FIT DNA, or Cologuard test?" For CT colonography respondent is asked, “A virtual colonoscopy uses a series of X-rays to take pictures of inside the colon. Have you ever had a virtual colonoscopy?” and “When was your most recent CT colonography or virtual colonoscopy?” For fecal immunochemical test respondent is asked, “One stool test uses a special kit to obtain a small amount of stool at home and returns the kit to the doctor or the lab. Have you ever had this test?” and “How long has it been since you had this test?” Based on the responses to these questions a person meets the current United States Preventive Services Task Force guidance if they had a fecal occult blood test within the past year, a sigmoidoscopy within the past five years, or a colonoscopy within the past 10 years.
+:::

@@ -1,0 +1,12 @@
+<!-- indicator: fig-pneumoniaflu-mortal-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-pneumoniaflu-mortal-aar
+#| fig-cap: 'Pneumonia and Influenza Mortality, Rate per 100,000 Population, 2020–2023'
+#| fig-alt: 'Data visualization showing Pneumonia and Influenza Mortality, Rate per 100,000 Population, 2020–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-pneumoniaflu-mortal-aar", workbook_path=CHA_WORKBOOK_PATH).show()
+```

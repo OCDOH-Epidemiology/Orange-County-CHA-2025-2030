@@ -1,0 +1,12 @@
+<!-- indicator: fig-femalebreast-incidence-aar-single -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-femalebreast-incidence-aar-single
+#| fig-cap: 'Female Breast Cancer Incidence, Age-Adjusted Rate per 100,000 Population, 2017–2021'
+#| fig-alt: 'Data visualization showing Female Breast Cancer Incidence, Age-Adjusted Rate per 100,000 Population, 2017–2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-femalebreast-incidence-aar-single", workbook_path=CHA_WORKBOOK_PATH).show()
+```

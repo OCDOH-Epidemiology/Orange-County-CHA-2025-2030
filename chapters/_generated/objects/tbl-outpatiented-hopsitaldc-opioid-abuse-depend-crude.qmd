@@ -1,0 +1,20 @@
+<!-- indicator: tbl-outpatiented-hopsitaldc-opioid-abuse-depend-crude -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-outpatiented-hopsitaldc-opioid-abuse-depend-crude
+#| tbl-cap: 'Outpatient ED Visits and Hospital Discharges Involving Opioid Abuse, Dependence and Unspecified Use, Crude Rate per 100,000, 2019–2022'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-outpatiented-hopsitaldc-opioid-abuse-depend-crude", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Opioid Data Dashboard, August 2025 sourced from NY Statewide Planning and Research Cooperative System [https://apps.health.ny.gov/public/tabvis/PHIG_Public/opioid/#](https://apps.health.ny.gov/public/tabvis/PHIG_Public/opioid/#)
+:::
+
+::: {.callout-note}
+Note: This includes the following ICD-10 codes: Opioid abuse (principal diagnosis: F1110, F11120, F11121, F11122, F11129, F1114, F11150, F11151, F11159, F11181, F11182, F11188, F1119); Opioid dependence and unspecified use (principal diagnosis: F1120, F11220, F11221, F11222, F11229, F1123, F1124, F11250, F11251, F11259, F11281, F11282, F11288, F1129, F1190, F11920, F11921, F11922, F11929, F1193, F1194, F11950, F11951, F11959, F11981, F11982, F11988, F1199).
+:::

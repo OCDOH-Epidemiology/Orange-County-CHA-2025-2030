@@ -1,0 +1,11 @@
+<!-- indicator: fig-asthma-hosp-0-17-rande-aar (fallback) -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-asthma-hosp-0-17-rande-aar
+#| fig-alt: 'Figure for fig-asthma-hosp-0-17-rande-aar'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-asthma-hosp-0-17-rande-aar", workbook_path=CHA_WORKBOOK_PATH).show()
+```

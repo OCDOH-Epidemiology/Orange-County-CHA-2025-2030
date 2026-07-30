@@ -1,0 +1,20 @@
+<!-- indicator: tbl-health-problem-fix-first -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-health-problem-fix-first
+#| tbl-cap: 'Which of the following health problems in Orange County would you fix first?'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-health-problem-fix-first", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Communicable Disease Annual Reports [https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fdashboard%2Fpa_dashboard&p=ch](https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fdashboard%2Fpa_dashboard&p=ch) &cos=33
+:::
+
+::: {.callout-note}
+*: BRFSS - Percentage is unreliable due to large standard error. s: Data are suppressed due to not meeting reporting criteria. Note: Feeding America takes the CPS data and analyzes the relationships between food insecurity and its determinants (i.e., unemployment, poverty, disability, homeownership, and median income), as well as the percentage of the population that is Black and the percentage of the population that is Hispanic. Coefficient estimates from this analysis combined with information on the same variables defined at the county and congressional district levels are generated to estimate food insecurity.
+:::

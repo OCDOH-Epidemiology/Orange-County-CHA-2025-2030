@@ -1,0 +1,20 @@
+<!-- indicator: tbl-md-dx-dm-predm -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-md-dx-dm-predm
+#| tbl-cap: 'Percentage of Adults with Physician Diagnosed Prediabetes and Diabetes, 2021'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-md-dx-dm-predm", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYSDOH Behavioral Risk Factor Surveillance System, April 2025 [https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/about_data](https://health.data.ny.gov/Health/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/jsy7-eb4n/about_data)
+:::
+
+::: {.callout-note}
+Note: The percentage is age-adjusted. An adult is a person aged 18 years or older. The Behavioral Risk Factor Surveillance System asks respondents, "Have you ever been told by a doctor or other health professional that you have pre-diabetes or borderline diabetes?" This excludes females who were told this only while they were pregnant.
+:::

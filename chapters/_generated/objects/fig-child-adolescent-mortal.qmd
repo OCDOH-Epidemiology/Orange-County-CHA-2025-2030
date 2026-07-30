@@ -1,0 +1,12 @@
+<!-- indicator: fig-child-adolescent-mortal -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-child-adolescent-mortal
+#| fig-cap: 'Child and Adolescent Mortality, Rate per 100,000 Population Aged 10–19 Years, 2018–2021'
+#| fig-alt: 'Data visualization showing Child and Adolescent Mortality, Rate per 100,000 Population Aged 10–19 Years, 2018–2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-child-adolescent-mortal", workbook_path=CHA_WORKBOOK_PATH).show()
+```

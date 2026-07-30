@@ -1,0 +1,12 @@
+<!-- indicator: fig-liverdz-mortal-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-liverdz-mortal-aar
+#| fig-cap: 'Liver Disease and Cirrhosis Mortality, Age-Adjusted Rate per 100,000, 2020–2023'
+#| fig-alt: 'Data visualization showing Liver Disease and Cirrhosis Mortality, Age-Adjusted Rate per 100,000, 2020–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-liverdz-mortal-aar", workbook_path=CHA_WORKBOOK_PATH).show()
+```

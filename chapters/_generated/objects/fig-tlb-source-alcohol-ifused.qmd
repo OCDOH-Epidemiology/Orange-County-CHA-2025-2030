@@ -1,0 +1,12 @@
+<!-- indicator: fig-tlb-source-alcohol-ifused -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-tlb-source-alcohol-ifused
+#| fig-cap: 'Sources of Access to Alcohol by Grade'
+#| fig-alt: 'Data visualization showing Sources of Access to Alcohol by Grade.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-tlb-source-alcohol-ifused", workbook_path=CHA_WORKBOOK_PATH).show()
+```

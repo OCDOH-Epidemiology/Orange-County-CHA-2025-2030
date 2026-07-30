@@ -1,0 +1,12 @@
+<!-- indicator: fig-opioidud-atleast1rx-bup-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-opioidud-atleast1rx-bup-aar
+#| fig-cap: 'Patients Who Received at Least One Buprenorphine Prescription for Opioid Use Disorder, Age-Adjusted Rate per 100,000 Population, 2021–2024'
+#| fig-alt: 'Data visualization showing Patients Who Received at Least One Buprenorphine Prescription for Opioid Use Disorder, Age-Adjusted Rate per 100,000 Population, 2021–2024.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-opioidud-atleast1rx-bup-aar", workbook_path=CHA_WORKBOOK_PATH).show()
+```

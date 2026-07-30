@@ -1,0 +1,12 @@
+<!-- indicator: fig-colonrectum-incidence-rande-aar-five -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-colonrectum-incidence-rande-aar-five
+#| fig-cap: 'Colon and Rectum Cance Incidence, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2018–2022'
+#| fig-alt: 'Data visualization showing Colon and Rectum Cance Incidence, Age-Adjusted Rate per 100,000 Population by Race and Ethnicity, 2018–2022.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-colonrectum-incidence-rande-aar-five", workbook_path=CHA_WORKBOOK_PATH).show()
+```

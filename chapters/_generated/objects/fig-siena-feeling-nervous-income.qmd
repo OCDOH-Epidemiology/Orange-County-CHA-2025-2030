@@ -1,0 +1,12 @@
+<!-- indicator: fig-siena-feeling-nervous-income -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-siena-feeling-nervous-income
+#| fig-cap: 'Feeling Nervous by Income, 2024'
+#| fig-alt: 'Data visualization showing Feeling Nervous by Income, 2024.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-siena-feeling-nervous-income", workbook_path=CHA_WORKBOOK_PATH).show()
+```

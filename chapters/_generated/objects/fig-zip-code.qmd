@@ -1,0 +1,12 @@
+<!-- indicator: fig-zip-code -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-zip-code
+#| fig-cap: 'ZIP Code Representation'
+#| fig-alt: 'Data visualization showing ZIP Code Representation.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-zip-code", workbook_path=CHA_WORKBOOK_PATH).show()
+```

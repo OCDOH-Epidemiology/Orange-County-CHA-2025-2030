@@ -1,0 +1,20 @@
+<!-- indicator: tbl-opioid-od-fatal -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-opioid-od-fatal
+#| tbl-cap: 'Opioid-Related Overdose Fatalities, Rate per 100,000 Population, 2021–2024'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-opioid-od-fatal", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+Special request from the Orange County Medical Examiner's Office, March 2025
+:::
+
+::: {.callout-note}
+Note: The Office of the Medical Examiner is required to investigate deaths that occur in Orange County so these data include non-residents. These data do not include residents that died of an overdose outside of Orange County. These data include: accidental, suicide, and undetermined manner of death; and primary and secondary causes of death included are acute drug intoxication, acute mixed drug intoxication, and acute intoxication. When calculating rates, the 2023 5-Year American Community Survey from the US Census Bureau were used.
+:::

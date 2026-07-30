@@ -1,0 +1,20 @@
+<!-- indicator: tbl-ed-any-drug-od-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-ed-any-drug-od-aar
+#| tbl-cap: 'Emergency Department Visits Involving Any Drug Overdose, Age-Adjusted Rate per 100,000 Population, 2019–2022'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-ed-any-drug-od-aar", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Opioid Data Dashboard, August 2025 sourced from NY Statewide Planning and Research Cooperative System [https://apps.health.ny.gov/public/tabvis/PHIG_Public/opioid/#](https://apps.health.ny.gov/public/tabvis/PHIG_Public/opioid/#)
+:::
+
+::: {.callout-note}
+Note: This includes outpatients and admitted patients. The following ICD-10 codes were used: Principal Diagnosis: T36-T50 (excludes ‘adverse effect’ or ‘underdosing’ as indicated by the values of 5 and 6 in the 5th/6th character (for T36.9, T37.9, T39.9, T41.4, T42.7, T43.9, T45.9, T47.9, and T49.9, a 5th character; for all others, a 6th character); and ‘sequela’ as indicated by the value of ‘S’ in the 7th character; e.g., T400X5S, T400X6S).
+:::

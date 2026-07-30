@@ -1,0 +1,12 @@
+<!-- indicator: fig-test-high-bs-dm -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-test-high-bs-dm
+#| fig-cap: 'Percentage of Adults Who Had a Test for High Blood Sugar or Diabetes Within the Past Three Years, 2013–2014, 2016, 2018, and 2021'
+#| fig-alt: 'Data visualization showing Percentage of Adults Who Had a Test for High Blood Sugar or Diabetes Within the Past Three Years, 2013–2014, 2016, 2018, and 2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-test-high-bs-dm", workbook_path=CHA_WORKBOOK_PATH).show()
+```

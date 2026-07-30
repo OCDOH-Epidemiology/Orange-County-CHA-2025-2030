@@ -1,0 +1,12 @@
+<!-- indicator: fig-fertility-sex -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-fertility-sex
+#| fig-cap: 'Fertility, Rate per 1,000 Females Aged 15–44 Years by ZIP Code, 2020–2023'
+#| fig-alt: 'Data visualization showing Fertility, Rate per 1,000 Females Aged 15–44 Years by ZIP Code, 2020–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-fertility-sex", workbook_path=CHA_WORKBOOK_PATH).show()
+```

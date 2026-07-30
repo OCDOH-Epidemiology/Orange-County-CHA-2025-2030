@@ -1,0 +1,12 @@
+<!-- indicator: fig-allsitesca-incidence-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-allsitesca-incidence-aar
+#| fig-cap: 'All Sites Combined Cancer Incidence, Age-Adjusted Rate per 100,000 Population, 2018–2022'
+#| fig-alt: 'Data visualization showing All Sites Combined Cancer Incidence, Age-Adjusted Rate per 100,000 Population, 2018–2022.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-allsitesca-incidence-aar", workbook_path=CHA_WORKBOOK_PATH).show()
+```

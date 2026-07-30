@@ -1,0 +1,12 @@
+<!-- indicator: fig-neonatal-withdraw-maternal-drug-crude -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-neonatal-withdraw-maternal-drug-crude
+#| fig-cap: 'Newborns with Neonatal Withdrawal Symptoms and/or Affected by Maternal Use of Drugs of Addiction, Crude Rate per 1,000 Newborn Discharges, 2019–2022'
+#| fig-alt: 'Data visualization showing Newborns with Neonatal Withdrawal Symptoms and/or Affected by Maternal Use of Drugs of Addiction, Crude Rate per 1,000 Newborn Discharges, 2019–2022.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-neonatal-withdraw-maternal-drug-crude", workbook_path=CHA_WORKBOOK_PATH).show()
+```

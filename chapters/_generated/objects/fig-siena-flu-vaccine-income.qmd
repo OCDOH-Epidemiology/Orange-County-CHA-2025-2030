@@ -1,0 +1,12 @@
+<!-- indicator: fig-siena-flu-vaccine-income -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-siena-flu-vaccine-income
+#| fig-cap: 'Vaccinated for Flu by Income, 2024'
+#| fig-alt: 'Data visualization showing Vaccinated for Flu by Income, 2024.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-siena-flu-vaccine-income", workbook_path=CHA_WORKBOOK_PATH).show()
+```

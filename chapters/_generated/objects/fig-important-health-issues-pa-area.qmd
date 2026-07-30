@@ -1,0 +1,12 @@
+<!-- indicator: fig-important-health-issues-pa-area -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-important-health-issues-pa-area
+#| fig-cap: 'Responses to: "What are the most important health issues that our community should focus on?" by Prevention Agenda Area'
+#| fig-alt: 'Data visualization showing Responses to: "What are the most important health issues that our community should focus on?" by Prevention Agenda Area.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-important-health-issues-pa-area", workbook_path=CHA_WORKBOOK_PATH).show()
+```

@@ -127,24 +127,13 @@ Note: This includes adults aged 18 years and older. This indicator is defined as
 {{< include _generated/objects/fig-uninsured-rande.qmd >}}
 {{< include _generated/objects/tbl-uninsured-rande.qmd >}}
 
-## Neighborhood and Built Environment 
+## Neighborhood and Built Environment
 
-Transportation access differs across the county. In 2023, 11,823 households (8.6%) had no vehicle (Table 20).
-The share without a vehicle was substantially higher in the Town of Palm Tree (35.1%), and the cities of
-Newburgh (23.6%), and Port Jervis (19.4%) (Table 20). Commuting patterns also varied: the county’s mean
-travel time to work was 34.2 minutes, and 11.5% of workers worked from home (Table 21). Mean travel time
-ranged from 45.7 minutes in the Village of Woodbury to 19.0 minutes in the Town of Highlands (Table 21).
-Housing conditions show differences in tenure, costs, and crowding. Of 137,311 occupied housing units, 93,959
-(68.4%) were owner-occupied and 43,352 (31.6%) were renter-occupied (Table 22). Orange County had
-11,149 vacant housing units in 2023 (Table 22). For homeowners, the county’s median home value was
-$361,100 and median selected monthly owner costs (with a mortgage) were $2,653. Of these owner occupied
-homes, 30,065 were cost stressed (Table 24). For renters, the median gross rent was $1,580, and 24,456 renter
-households were cost-stressed (Table 25).
-Environmental and connectivity indicators provide additional context. Orange County’s incidence of confirmed
-high blood lead levels among tested children <72 months declined from 10.5 per 1,000 (2014) to 3.7 per
-1,000 (2021), while remaining above the Mid-Hudson Region in 2021 (2.8) (Figure 19). Digital access also
-varied: 9.7% of households lacked internet access and 9.2% relied on cellular data only, with markedly higher
-“no internet” prevalence in Palm Tree Town (74.7%) (Table 27). 
+Transportation access differs across the county. In 2023, 11,823 households (8.6%) had no vehicle [@tbl-cars-household]. The share without a vehicle was substantially higher in the Town of Palm Tree (35.1%), and the cities of Newburgh (23.6%), and Port Jervis (19.4%) [@tbl-cars-household]. Commuting patterns also varied: the county’s mean travel time to work was 34.2 minutes, and 11.5% of workers worked from home [@tbl-commute-work]. Mean travel time ranged from 45.7 minutes in the Village of Woodbury to 19.0 minutes in the Town of Highlands [@tbl-commute-work].
+
+Housing conditions show differences in tenure, costs, and crowding. Of 137,311 occupied housing units, 93,959 (68.4%) were owner-occupied and 43,352 (31.6%) were renter-occupied [@tbl-house-tenure-vacancy]. Orange County had 11,149 vacant housing units in 2023 [@tbl-house-tenure-vacancy]. For homeowners, the county’s median home value was $361,100 and median selected monthly owner costs (with a mortgage) were $2,653. Of these owner occupied homes, 30,065 were cost stressed [@tbl-house-characteristics-homeowner]. For renters, the median gross rent was $1,580, and 24,456 renter households were cost-stressed [@tbl-house-characteristics-renters].
+
+Environmental and connectivity indicators provide additional context. Orange County’s incidence of confirmed high blood lead levels among tested children <72 months declined from 10.5 per 1,000 (2014) to 3.7 per 1,000 (2021), while remaining above the Mid-Hudson Region in 2021 (2.8) [@fig-high-bll]. Digital access also varied: 9.7% of households lacked internet access and 9.2% relied on cellular data only, with markedly higher “no internet” prevalence in Palm Tree Town (74.7%) [@tbl-internet-access].
 
 <!-- Table 20: Percentage of Households with No Available Vehicles, 2023 -->
 {{< include _generated/objects/tbl-cars-household.qmd >}}
@@ -223,3 +212,4 @@ Indicators related to economic assistance and housing instability increased over
 
 <!-- Table 28: Population Served by Orange County Department of Social Services, 2022–2024 -->
 {{< include _generated/objects/tbl-pop-served-ocdss.qmd >}}
+

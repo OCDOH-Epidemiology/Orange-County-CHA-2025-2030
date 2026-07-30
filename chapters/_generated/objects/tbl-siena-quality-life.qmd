@@ -1,0 +1,11 @@
+<!-- indicator: tbl-siena-quality-life -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-siena-quality-life
+#| tbl-cap: 'Perception of Overall Quality of Life, 2024'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-siena-quality-life", workbook_path=CHA_WORKBOOK_PATH)
+```

@@ -1,0 +1,12 @@
+<!-- indicator: fig-gonorrhea-aar -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-gonorrhea-aar
+#| fig-cap: 'Gonorrhea, Age-Adjusted Case Rate per 100,000 Population, 2020–2023'
+#| fig-alt: 'Data visualization showing Gonorrhea, Age-Adjusted Case Rate per 100,000 Population, 2020–2023.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-gonorrhea-aar", workbook_path=CHA_WORKBOOK_PATH).show()
+```

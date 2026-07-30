@@ -1,0 +1,12 @@
+<!-- indicator: fig-maternal-mortal -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-maternal-mortal
+#| fig-cap: 'Maternal Mortality, Rate per 100,000 Live Births, 2018–2021'
+#| fig-alt: 'Data visualization showing Maternal Mortality, Rate per 100,000 Live Births, 2018–2021.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-maternal-mortal", workbook_path=CHA_WORKBOOK_PATH).show()
+```

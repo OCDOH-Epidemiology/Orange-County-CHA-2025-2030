@@ -1,0 +1,20 @@
+<!-- indicator: tbl-neonatal-withdraw-maternal-drug-crude -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-neonatal-withdraw-maternal-drug-crude
+#| tbl-cap: 'Newborns with Neonatal Withdrawal Symptoms and/or Affected by Maternal Use of Drugs of Addiction, Crude Rate per 1,000 Newborn Discharges, 2019–2022'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-neonatal-withdraw-maternal-drug-crude", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Opioid Data Dashboard, August 2025 sourced from NY Statewide Planning and Research Cooperative System [https://apps.health.ny.gov/public/tabvis/PHIG_Public/opioid/#](https://apps.health.ny.gov/public/tabvis/PHIG_Public/opioid/#)
+:::
+
+::: {.callout-note}
+Note: Neonatal withdrawal symptoms from maternal use of drugs of addiction, and/or newborns affected by maternal use of drugs of addiction (other than cocaine) including opiates, sedative-hypnotics and anxiolytics. ICD-10 Codes include: principal diagnosis: Z38 (liveborn infants) AND P96.1 (neonatal withdrawal symptoms from maternal use of drugs of addiction) or P04.49 (newborns affected by maternal use of drugs of addiction (other than cocaine)) or P04.14 (newborns affected by maternal use of opiates) or P04.17 (newborns affected by maternal use of sedative-hypnotics) or P04.1A (newborns affected by maternal use of anxiolytics) in any other diagnoses.
+:::

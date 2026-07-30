@@ -1,0 +1,12 @@
+<!-- indicator: fig-siena-unable-utilities -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-siena-unable-utilities
+#| fig-cap: 'Unable to Get Utilities, Including Heat and Electricity, 2018–2024'
+#| fig-alt: 'Data visualization showing Unable to Get Utilities, Including Heat and Electricity, 2018–2024.'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-siena-unable-utilities", workbook_path=CHA_WORKBOOK_PATH).show()
+```
