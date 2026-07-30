@@ -1,0 +1,6 @@
+---
+title: "Triangulate the Data"
+jupyter: python3
+execute:
+  freeze: false
+---

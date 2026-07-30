@@ -1,0 +1,40 @@
+PDF → Quarto extraction report
+  page_offset (PDF − printed): 6
+  PDF pages: 293–368
+  objects emitted: 107
+  T58:themes-focus-group, T59:zip-code, F152:great-strengths-community, F153:focus-resources-improve-life, F154:important-health-issues, F155:important-health-issues-PA-area, F156:cas-great-strength-community-longitude, F157:cas-focus-resources-improve-life-longitude, F158:cas-important-health-issues-longitude, F159:health-problem-fix-first, T60:siena-demographic-break-down, T61:siena-not-routine-physical-income, T62:siena-not-routine-dentist-income, T63:siena-reason-ed-not-emergency-income, T64:siena-reason-not-mh-visist-income, T65:siena-help-basic-needs, T66:siena-help-child-behavior-develop, F160:siena-live-oc, F161:siena-quality-life, F162:siena-quality-life-income, F163:siena-info-bad-weather, F164:siena-info-bad-weather-income, F165:siena-ph-emergency, F166:siena-ph-emergency-income, F167:siena-safe-place-walk-bike, F168:siena-safe-place-walk-bike-income, F169:siena-walk-bike-safe, F170:siena-walk-bike-safe-income, F171:siena-rate-community-as-place-to-age, F172:siena-rate-community-as-place-to-age-income, F173:siena-physical-health, F174:siena-physical-health-income, F175:siena-mental-health, F176:siena-mental-health-income, F177:siena-healthy-diet, F178:siena-healthy-diet-income, F179:siena-exercise, F180:siena-exercise-income, F181:siena-sleep, F182:siena-sleep-income
+  … and 67 more
+  unmatched: none
+  MISSING object files:
+    - fig-cas-focus-resources-improve-life-longitude.qmd
+    - fig-cas-great-strength-community-longitude.qmd
+    - fig-cas-important-health-issues-longitude.qmd
+    - fig-important-health-issues.qmd
+    - fig-siena-cannabis-income.qmd
+    - fig-siena-healthy-diet.qmd
+    - fig-siena-info-bad-weather.qmd
+    - fig-siena-mental-health.qmd
+    - fig-siena-not-routine-dentist.qmd
+    - fig-siena-physical-health-income.qmd
+    - fig-siena-routine-phsyical-income.qmd
+    - fig-siena-sleep.qmd
+    - fig-siena-stress.qmd
+    - fig-siena-unable-internet.qmd
+    - fig-siena-unable-transportation.qmd
+    - fig-siena-unable-utilities-income.qmd
+    - tbl-cas-focus-resources-improve-life-longitude.qmd
+    - tbl-cas-great-strength-community-longitude.qmd
+    - tbl-cas-important-health-issues-longitude.qmd
+    - tbl-important-health-issues.qmd
+    - tbl-siena-cannabis-income.qmd
+    - tbl-siena-healthy-diet.qmd
+    - tbl-siena-info-bad-weather.qmd
+    - tbl-siena-mental-health.qmd
+    - tbl-siena-not-routine-dentist.qmd
+    - tbl-siena-physical-health-income.qmd
+    - tbl-siena-routine-phsyical-income.qmd
+    - tbl-siena-sleep.qmd
+    - tbl-siena-stress.qmd
+    - tbl-siena-unable-internet.qmd
+    - tbl-siena-unable-transportation.qmd
+    - tbl-siena-unable-utilities-income.qmd
