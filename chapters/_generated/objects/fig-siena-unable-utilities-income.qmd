@@ -1,0 +1,11 @@
+<!-- indicator: fig-siena-unable-utilities-income (fallback) -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-siena-unable-utilities-income
+#| fig-alt: 'Figure for fig-siena-unable-utilities-income'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-siena-unable-utilities-income", workbook_path=CHA_WORKBOOK_PATH).show()
+```

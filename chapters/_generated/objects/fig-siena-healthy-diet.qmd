@@ -1,0 +1,11 @@
+<!-- indicator: fig-siena-healthy-diet (fallback) -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-siena-healthy-diet
+#| fig-alt: 'Figure for fig-siena-healthy-diet'
+from scripts.cha_registry_renderer import render_figure_object
+render_figure_object(figure_id="fig-siena-healthy-diet", workbook_path=CHA_WORKBOOK_PATH).show()
+```

@@ -126,6 +126,13 @@ The next question in the Community Asset Survey (CAS) asked respondents, “Wher
 
 The top five selected areas for improvement identified by Orange County residents were more affordable housing (360), better jobs and the local economy (303), improved public transportation (207), access to basic healthcare (177), and more programs, activities, and support for youth and teens during non-school hours (163). Fewer respondents selected more access to help during times of stress and crisis (79), lower violence and abuse (domestic, elder, child) (65), more parks and recreation (57), and more religious or spiritual values (29) as top areas for improvement. When residents wrote in responses that were not on the pre-selected list, recurring themes were: road maintenance, traffic and infrastructure, and senior programs and housing. [@fig-focus-resources-improve-life]
 
+
+<!-- Figure 152: Number of Responses to the Question: "What are the greatest strengths of our community?" -->
+{{< include _generated/objects/fig-great-strengths-community.qmd >}}
+
+<!-- Figure 153: Number of Responses to the Question: "Where should the community focus its resources and attention to improve the quality of life in our community?" -->
+{{< include _generated/objects/fig-focus-resources-improve-life.qmd >}}
+
 #### "WHAT ARE THE MOST IMPORTANT HEALTH ISSUES OUR COMMUNITY SHOULD FOCUS ON?"
 
 The final question in the Community Asset Survey (CAS) asked residents, “What are the most important health issues our community should focus on?” Respondents were able to select up to three responses from a predetermined list, as well as provide written feedback if their preferred responses were not listed as options.
@@ -134,26 +141,16 @@ The top five identified health issues among Orange County residents were mental 
 
 When residents provided written responses outside of the pre-selected options, recurring themes included concerns related to affordability, environmental conditions, access to healthcare services, inclusivity, and awareness and support for individuals with developmental disabilities.
 
-Residents’ responses to the most important health issues were categorized by the Prevention Agenda 2025-2030 priority areas [@fig-important-health-issues-PA-area]. Most responses fell into the domain of “Social and Community Context” (36.1%), with the concerns of mental health, substance use, suicide, and healthy eating as the most pressing issues. Nearly 20% of responses fell outside of the Prevention Agenda domains with residents listing aging problems (Alzheimer’s, arthritis, loss of hearing/vision), child abuse and neglect, domestic violence, heart disease and stroke, and infectious diseases as top concerns. Nearly 18% of responses fell within the domain of “Health Care Access & Quality”, with top concerns including cancer, obesity, lack of access to health care, and dental issues. Issues within the domain of Economic Stability included homelessness, safe and affordable housing and hunger, which accounted for 16.5% of responses.
+Residents’ responses to the most important health issues were categorized by the Prevention Agenda 2025-2030 priority areas [@fig-important-health-issues-pa-area]. Most responses fell into the domain of “Social and Community Context” (36.1%), with the concerns of mental health, substance use, suicide, and healthy eating as the most pressing issues. Nearly 20% of responses fell outside of the Prevention Agenda domains with residents listing aging problems (Alzheimer’s, arthritis, loss of hearing/vision), child abuse and neglect, domestic violence, heart disease and stroke, and infectious diseases as top concerns. Nearly 18% of responses fell within the domain of “Health Care Access & Quality”, with top concerns including cancer, obesity, lack of access to health care, and dental issues. Issues within the domain of Economic Stability included homelessness, safe and affordable housing and hunger, which accounted for 16.5% of responses.
 
 Overall, CAS responses indicate that residents view behavioral health, substance use, housing stability, aging-related needs, and community safety as priority areas for improving health and well-being in Orange County.
 
 
-<!-- Figure 152: Number of Responses to the Question: "What are the greatest strengths of our community?" -->
-{{< include _generated/objects/fig-great-strengths-community.qmd >}}
-{{< include _generated/objects/tbl-great-strengths-community.qmd >}}
-
-<!-- Figure 153: Number of Responses to the Question: "Where should the community focus its resources and attention to improve the quality of life in our community?" -->
-{{< include _generated/objects/fig-focus-resources-improve-life.qmd >}}
-{{< include _generated/objects/tbl-focus-resources-improve-life.qmd >}}
-
 <!-- Figure 154: Number of Responses to the Question: "What are the most important health issues that our community should focus on?" -->
-<!-- MISSING object file for Figure 154 (tbl-important-health-issues) -->
-<!-- MISSING paired table file for Figure 154 (tbl-important-health-issues) -->
+{{< include _generated/objects/fig-important-health-issues.qmd >}}
 
 <!-- Figure 155: Responses to: "What are the most important health issues that our community should focus on?" by Prevention Agenda Area -->
-{{< include _generated/objects/fig-important-health-issues-PA-area.qmd >}}
-{{< include _generated/objects/tbl-important-health-issues-PA-area.qmd >}}
+{{< include _generated/objects/fig-important-health-issues-pa-area.qmd >}}
 
 #### Survey Responses by ZIP Code and Geographic Classification
 
@@ -221,478 +218,394 @@ Portal, accessed August 2025
 Note: Percentages of the following figures may not add up to 100% due to rounding. ‘Don’t know’ and ‘Refused’ have been combined into ‘Don’t know/Refused’. Due to spacing issues, any values less than or equal to 3% may not appear on the chart.
 
 Survey Question 1: How long have you lived in Orange County?
+<!-- Figure 160: How long have you lived in Orange County? -->
+{{< include _generated/objects/fig-siena-live-oc.qmd >}}
 
 Survey Question 2: Do you think that the overall quality of life for people in Orange County is…
+<!-- Figure 161: Perception of overall quality of life in Orange County. -->
+{{< include _generated/objects/fig-siena-quality-life.qmd >}}
+
+<!-- Figure 162: Perception of overall quality of life in Orange County by income. -->
+{{< include _generated/objects/fig-siena-quality-life-income.qmd >}}
 
 Survey Question 3: Thinking now about the job county agencies are doing here in Orange County how would you rate the job county agencies are doing providing information to Orange County residents... during weather emergencies? Would you say they are doing an excellent job, good, fair, or poor job?
 
+<!-- Figure 163: Perception of job county agencies are doing providing information to Orange County residents during weather emergencies. -->
+{{< include _generated/objects/fig-siena-info-bad-weather.qmd >}}
+
+<!-- Figure 164: Information During Weather Emergencies by Income, 2024 -->
+{{< include _generated/objects/fig-siena-info-bad-weather-income.qmd >}}
+
 Survey Question 4: Thinking now about the job county agencies are doing here in Orange County how would you rate the job county agencies are doing providing information to Orange County residents... during public health emergencies? Would you say they are doing an excellent job, good, fair, or poor job?
+
+<!-- Figure 165: Information During Public Health Emergencies, 2024. -->
+{{< include _generated/objects/fig-siena-ph-emergency.qmd >}}
+
+<!-- Figure 166: Information During Public Health Emergencies by Income, 2024. -->
+{{< include _generated/objects/fig-siena-ph-emergency-income.qmd >}}
 
 Survey Question 5: For each of the following two statements about your neighborhood, please tell me to what degree you agree or disagree with each. There are places to walk or bicycle for recreation or exercise in my neighborhood that are safe from traffic.
 
+<!-- Figure 167: Places to Walk or Bicycle in the Neighborhood Safe from Traffic, 2024. -->
+{{< include _generated/objects/fig-siena-safe-place-walk-bike.qmd >}}
+
+<!-- Figure 168: Places to Walk or Bicycle in the Neighborhood Safe from Traffic by Income, 2024. -->
+{{< include _generated/objects/fig-siena-safe-place-walk-bike-income.qmd >}}
+
+Survey Question 6: For each of the following two statements about your neighborhood, please tell me to what
+degree you agree or disagree with each. I can safely walk or bicycle from my home to places such as stores,
+restaurants and other businesses.
+
+<!-- Figure 169: Safety of Walking or Biking, 2024. -->
+{{< include _generated/objects/fig-siena-walk-bike-safe.qmd >}}
+
+<!-- Figure 170: Safety of Walking or Biking by Income, 2024. -->
+{{< include _generated/objects/fig-siena-walk-bike-safe-income.qmd >}}
+
 Survey Question 7. Overall, how would you rate the community you live in as a place for people to live as they age?
+
+<!-- Figure 171: How would you rate the community you live in as a place for people to live as they age? -->
+{{< include _generated/objects/fig-siena-rate-community-as-place-to-age.qmd >}}
+
+<!-- Figure 172: How would you rate the community you live in as a place for people to live as they age by Income, 2024. -->
+{{< include _generated/objects/fig-siena-rate-community-as-place-to-age-income.qmd >}}
 
 Survey Question 8: In general, how would you rate your physical health? Would you say that your physical health is excellent, good, fair or poor? (Survey question 2018: Q6. In general, how would you rate your health? Would you say that your health is excellent, good, fair or poor?)
 
+<!-- Figure 173: Perception of Physical Health, 2018-2024. -->
+{{< include _generated/objects/fig-siena-physical-health.qmd >}}
+
+<!-- Figure 174: Perception of Physical Health by Income, 2018-2024. -->
+{{< include _generated/objects/fig-siena-physical-health-income.qmd >}}
+
 Survey Question 9: Mental health involves emotional, psychological and social wellbeing. How would you rate your overall mental health? Would you say that your mental health is excellent, good, fair or poor?
+
+<!-- Figure 175: Perception of Mental Health, 2018-2024. -->
+{{< include _generated/objects/fig-siena-mental-health.qmd >}}
+
+<!-- Figure 176: Perception of Mental Health by Income, 2018-2024. -->
+{{< include _generated/objects/fig-siena-mental-health-income.qmd >}}
 
 Survey Question 10: Thinking back over the past 12 months, for each of the following statements I read, tell me how many days in an AVERAGE WEEK you did each. Over the past 12 months how many days in an average week did you eat a balanced, healthy diet?
 
+<!-- Figure 177: Days in an Average Week Eating a Balanced, Healthy Diet, 2018-2024. -->
+{{< include _generated/objects/fig-siena-healthy-diet.qmd >}}
+
+<!-- Figure 178: Days in an Average Week Eating a Balanced, Healthy Diet by Income, 2018-2024. -->
+{{< include _generated/objects/fig-siena-healthy-diet-income.qmd >}}  
+
 Survey Question 11: Thinking back over the past 12 months, for each of the following statements I read, tell me how many days in an AVERAGE WEEK you did each. Over the past 12 months how many days in an average week did you exercise for 30 minutes or more a day?
+
+<!-- Figure 179: Days in an Average Week Exercising for 30 Minutes or More a Day, 2018-2024. -->
+{{< include _generated/objects/fig-siena-exercise.qmd >}}
+
+<!-- Figure 180: Days in an Average Week Exercising for 30 Minutes or More a Day by Income, 2018-2024. -->
+{{< include _generated/objects/fig-siena-exercise-income.qmd >}}
 
 Survey Question 12: Thinking back over the past 12 months, for each of the following statements I read, tell me how many days in an AVERAGE WEEK you did each. Over the past 12 months how many days in an average week did you get 7 to 9 hours of sleep in a night?
 
+<!-- Figure 181: Days in an Average Week Getting 7 to 9 Hours of Sleep in a Night, 2018-2024. -->
+{{< include _generated/objects/fig-siena-sleep.qmd >}}
+
+<!-- Figure 182: Days in an Average Week Getting 7 to 9 Hours of Sleep in a Night by Income, 2018-2024. -->
+{{< include _generated/objects/fig-siena-sleep-income.qmd >}}
+
 Survey Question 13: On an average day, how stressed do you feel?
+
+<!-- Figure 183: On an Average Day, How Stressed Do You Feel? -->
+{{< include _generated/objects/fig-siena-stress.qmd >}}
+
+<!-- Figure 184: On an Average Day, How Stressed Do You Feel by Income, 2018-2024. -->
+{{< include _generated/objects/fig-siena-stress-income.qmd >}}
 
 Survey Question 14: In your everyday life, how often do you feel that you have quality encounters with friends, family, and neighbors that make you feel that people care about you?
 
+<!-- Figure 185: In your Everyday Life, How Often Do You Feel That You Have Quality Encounters with Friends, Family, and Neighbors that Make You Feel That People Care About You? -->
+{{< include _generated/objects/fig-siena-quality-encounter.qmd >}}
+
+<!-- Figure 186: In your Everyday Life, How Often Do You Feel That You Have Quality Encounters with Friends, Family, and Neighbors that Make You Feel That People Care About You by Income, 2018-2024. -->
+{{< include _generated/objects/fig-siena-quality-encounter-income.qmd >}}
+
 Survey Question 15: How frequently in the past year, on average, did you drink alcohol?
+
+<!-- Figure 187: How Frequently in the Past Year, on Average, Did You Drink Alcohol? -->
+{{< include _generated/objects/fig-siena-alcohol.qmd >}}
+
+<!-- Figure 188: How Frequently in the Past Year, on Average, Did You Drink Alcohol by Income, 2018-2024. -->
+{{< include _generated/objects/fig-siena-alcohol-income.qmd >}}
 
 Survey Question 16: How frequently in the past year have you used a drug whether it was a prescription medication or not, for non-medical reasons? (2018 survey question: How frequently in the past year have you used an illegal drug or used a prescription medication for non-medical reasons?).
 
-Survey Question 17. During the past 30 days, did you consume cannabis every day, some days or not at all?
+<!-- Figure 189: How Frequently in the Past Year, on Average, Did You Use a Drug Whether it was a Prescription Medication or not, for Non-Medical Reasons? -->
+{{< include _generated/objects/fig-siena-non-medical-drug-use.qmd >}}
+
+<!-- Figure 190: How Frequently in the Past Year, on Average, Did You Use a Drug Whether it was a Prescription Medication or not, for Non-Medical Reasons by Income, 2018-2024. -->
+{{< include _generated/objects/fig-siena-non-medical-drug-use-income.qmd >}}  
+
+Survey Question 17: During the past 30 days, did you consume cannabis every day, some days or not at all?
+
+<!-- Figure 191: During the past 30 days, did you consume cannabis every day, some days or not at all? -->
+{{< include _generated/objects/fig-siena-cannabis.qmd >}}
+
+<!-- Figure 192: During the past 30 days, did you consume cannabis every day, some days or not at all by Income, 2018-2024. -->
+{{< include _generated/objects/fig-siena-cannabis-income.qmd >}}
 
 Survey Question 18: In the past 12 months, have you or any other member of your household been unable to get any of the following when it was really needed? Please answer yes or no for each item. Food…
+<!-- Figure 193: In the past 12 months, have you or any other member of your household been unable to get any of the following when it was really needed? Please answer yes or no for each item. Food... -->
+{{< include _generated/objects/fig-siena-unable-food.qmd >}}
+
+<!-- Figure 194: In the past 12 months, have you or any other member of your household been unable to get any of the following when it was really needed? Please answer yes or no for each item. Food... by Income, 2018-2024. -->
+{{< include _generated/objects/fig-siena-unable-food-income.qmd >}}
 
 Survey Question 19: In the past 12 months, have you or any other member of your household been unable to get any of the following when it was really needed? Please answer yes or no for each item…Utilities, including heat and electric
 
+<!-- Figure 195: In the past 12 months, have you or any other member of your household been unable to get any of the following when it was really needed? Please answer yes or no for each item…Utilities, including heat and electric -->
+{{< include _generated/objects/fig-siena-unable-utilities.qmd >}}
+
+<!-- Figure 196: In the past 12 months, have you or any other member of your household been unable to get any of the following when it was really needed? Please answer yes or no for each item…Utilities, including heat and electric by Income, 2018-2024. -->
+{{< include _generated/objects/fig-siena-unable-utilities-income.qmd >}}
+
 Survey Question 20: In the past 12 months, have you or any other member of your household been unable to get any of the following when it was really needed? Please answer yes or no for each item…Any healthcare, including dental or vision
+
+<!-- Figure 197: Unable to Get Healthcare, Including Dental or Vision, 2018-2024. -->
+{{< include _generated/objects/fig-siena-unable-dental-vision.qmd >}}
+
+<!-- Figure 198: Unable to Get Healthcare, Including Dental or Vision by Income, 2024. -->
+{{< include _generated/objects/fig-siena-unable-dental-vision-income.qmd >}}
 
 Survey Question 21: In the past 12 months, have you or any other member of your household been unable to get any of the following when it was really needed? Please answer yes or no for each item…Phone service
 
+<!-- Figure 199: Unable to Get Phone Service, 2018-2024. -->
+{{< include _generated/objects/fig-siena-unable-phone.qmd >}}
+
+<!-- Figure 200: Unable to Get Phone Service by Income,2024. -->
+{{< include _generated/objects/fig-siena-unable-phone-income.qmd >}}
+
 Survey Question 22: In the past 12 months, have you or any other member of your household been unable to get any of the following when it was really needed? Please answer yes or no for each item…Transportation
+
+<!-- Figure 201: Unable to Get Transportation, 2018-2024. -->
+{{< include _generated/objects/fig-siena-unable-transportation.qmd >}}
+
+<!-- Figure 202: Unable to Get Transportation by Income, 2024. -->
+{{< include _generated/objects/fig-siena-unable-transportation-income.qmd >}}
 
 Survey Question 23: In the past 12 months, have you or any other member of your household been unable to get any of the following when it was really needed? Please answer yes or no for each item…Housing
 
+<!-- Figure 203: Unable to Get Housing, 2018-2024. -->
+{{< include _generated/objects/fig-siena-unable-housing.qmd >}}
+
+<!-- Figure 204: Unable to Get Housing by Income, 2024. -->
+{{< include _generated/objects/fig-siena-unable-housing-income.qmd >}}
+
 Survey Question 24: In the past 12 months, have you or any other member of your household been unable to get any of the following when it was really needed? Please answer yes or no for each item…Childcare
+
+<!-- Figure 205: Unable to Get Childcare, 2018-2024. -->
+{{< include _generated/objects/fig-siena-unable-childcare.qmd >}}
+
+<!-- Figure 206: Unable to Get Childcare by Income, 2024. -->
+{{< include _generated/objects/fig-siena-unable-childcare-income.qmd >}}
 
 Survey Question 25: In the past 12 months, have you or any other member of your household been unable to get any of the following when it was really needed? Please answer yes or no for each item…Access to the internet
 
+<!-- Figure 207: Unable to Get Access to the Internet, 2018-2024. -->
+{{< include _generated/objects/fig-siena-unable-internet.qmd >}}
+
+<!-- Figure 208: Unable to Get Access to the Internet by Income, 2024. -->
+{{< include _generated/objects/fig-siena-unable-internet-income.qmd >}}
+
 Survey Question 26: Have you visited a primary care physician for a routine physical or checkup within the last 12 months?
+
+<!-- Figure 209: Did not Visit Primary Care Provider in the Past Year, 2018-2024. -->
+{{< include _generated/objects/fig-siena-routine-physical.qmd >}}
+
+<!-- Figure 210: Did not Visit Primary Care Provider in the Past Year by Income, 2024. -->
+{{< include _generated/objects/fig-siena-routine-physical-income.qmd >}}
 
 Survey Question 27: (If did not visit primary care provider in the past year) In the last 12 months, were any of the following reasons that you did not visit a primary care provider for a routine physical or checkup?
 
+<!-- Figure 211: Reasons for Not Visiting a Primary Care Provider, 2018-2024. -->
+{{< include _generated/objects/fig-siena-not-routine-physical.qmd >}}
+
+<!-- Table 61: Reasons for Not Visiting a Primary Care Provider by Income, 2024. -->
+{{< include _generated/objects/tbl-siena-not-routine-physical-income.qmd >}}
+
 Survey Question 28: Have you visited a dentist for a routine check-up or cleaning within the last 12 months?
+
+<!-- Figure 213: Did not Visit Dentist in the Past Year, 2018-2024. -->
+{{< include _generated/objects/fig-siena-routine-dentist.qmd >}}
+
+<!-- Figure 214: Did not Visit Dentist in the Past Year by Income, 2024. -->
+{{< include _generated/objects/fig-siena-routine-dentist-income.qmd >}}
 
 Survey Question 29: (If did not visit dentist in the past year) In the last 12 months, were any of the following reasons that you did not visit a dentist for a routine check-up or cleaning?
 
+<!-- Figure 215: Reasons for Not Visiting a Dentist, 2018-2024. -->
+{{< include _generated/objects/fig-siena-not-routine-dentist.qmd >}}
+
+<!-- Table 62: Reasons for Not Visiting a Dentist by Income, 2024. -->
+{{< include _generated/objects/tbl-siena-not-routine-dentist-income.qmd >}}
+
 Survey Question 30: Sometimes people visit the emergency room for medical conditions or illnesses that are not emergencies; that is, for health-related issues that may be treatable in a doctor’s office. Have you visited an emergency room for a medical issue that was not an emergency in the last 12 months? (2018 survey question: Have you visited an emergency room for a medical issue that was not an emergency in the last 12 months?)
+
+<!-- Figure 217: Visited Emergency Room for Non-Emergency, 2018-2024. -->
+{{< include _generated/objects/fig-siena-ed-not-for-emergency.qmd >}}
+
+<!-- Figure 218: Visited Emergency Room for Non-Emergency by Income, 2024. -->
+{{< include _generated/objects/fig-siena-ed-not-for-emergency-income.qmd >}}
 
 Survey Question 31: (If visited Emergency Room for non-emergency in the past year) In the last 12 months, for which of the following reasons did you visit the emergency room for a health-related issue or injury that was NOT an emergency? (2023 Survey Question: In the last 12 months, for which of the following reasons did you visit the emergency room for a non-health emergency rather than a doctor ́s office?)
 
+<!-- Figure 219: Reasons for Visiting an Emergency Room for Non-Emergencies, 2018-2024. -->
+{{< include _generated/objects/fig-siena-reason-ed-not-emergency.qmd >}}
+
+<!-- Table 63: Reasons for Visiting an Emergency Room for Non-Emergencies by Income, 2024. -->
+{{< include _generated/objects/tbl-siena-reason-ed-not-emergency-income.qmd >}}
+
 Survey Question 32: Have you visited a mental health provider, such as a psychiatrist, psychologist, social worker, therapist for 1-on-1 appointments or group-sessions (either in-person or online), etc. within the last 12 months?
+
+<!-- Figure 221: Did not Visit Mental Health Provider in the Past Year, 2018-2024. -->
+{{< include _generated/objects/fig-siena-routine-mh-visit.qmd >}}
+
+<!-- Figure 222: Did not Visit Mental Health Provider in the Past Year by Income, 2024. -->
+{{< include _generated/objects/fig-siena-routine-mh-visit-income.qmd >}}
 
 Survey Question 33: (If did not visit mental health provider in the past year) In the last 12 months, were any of the following reasons that you did not visit a mental health provider?
 
+<!-- Figure 223: Reasons for Not Visiting a Mental Health Provider, 2018-2024. -->
+{{< include _generated/objects/fig-siena-reason-not-mh-visist.qmd >}}
+
+<!-- Table 64: Reasons for Not Visiting a Mental Health Provider by Income, 2024. -->
+{{< include _generated/objects/tbl-siena-reason-not-mh-visist-income.qmd >}}
+
 Survey Question 34: Have you ever had COVID?
+
+<!-- Figure 225: Have you ever had COVID? -->
+{{< include _generated/objects/fig-siena-had-covid.qmd >}}
+
+<!-- Figure 226: Have you ever had COVID by Income, 2024. -->
+{{< include _generated/objects/fig-siena-had-covid-income.qmd >}}
 
 Survey Question 35: Have you or any other household member had ongoing COVID symptoms that have lasted more than four weeks - otherwise known as long-COVID?
 
+<!-- Figure 227: Have you or any other household member had ongoing COVID symptoms that have lasted more than four weeks - otherwise known as long-COVID? -->
+{{< include _generated/objects/fig-siena-had-long-covid.qmd >}}
+
+<!-- Figure 228: Have you or any other household member had ongoing COVID symptoms that have lasted more than four weeks - otherwise known as long-COVID by Income, 2024. -->
+{{< include _generated/objects/fig-siena-had-long-covid-income.qmd >}}
+
 Survey Question 36: Have you ever been vaccinated for COVID?
+
+<!-- Figure 229: Have you ever been vaccinated for COVID? -->
+{{< include _generated/objects/fig-siena-covid-vaccine.qmd >}}
+
+<!-- Figure 230: Have you ever been vaccinated for COVID by Income, 2024. -->
+{{< include _generated/objects/fig-siena-covid-vaccine-income.qmd >}}
 
 Survey Question 37: How likely are you to get an updated COVID vaccine?
 
+<!-- Figure 231: How likely are you to get an updated COVID vaccine? -->
+{{< include _generated/objects/fig-siena-updated-covid-vaccine.qmd >}}
+
+<!-- Figure 232: How likely are you to get an updated COVID vaccine by Income, 2024. -->
+{{< include _generated/objects/fig-siena-updated-covid-vaccine-income.qmd >}}
+
 Survey Question 38: During the past 12 months, did you get a flu vaccine?
+
+<!-- Figure 233: During the past 12 months, did you get a flu vaccine? -->
+{{< include _generated/objects/fig-siena-flu-vaccine.qmd >}}
+
+<!-- Figure 234: During the past 12 months, did you get a flu vaccine by Income, 2024. -->
+{{< include _generated/objects/fig-siena-flu-vaccine-income.qmd >}}
 
 Survey Question 39 (If age 60 or older) During the past 12 months, did you get an RSV vaccine?
 
+<!-- Figure 235: During the past 12 months, did you get an RSV vaccine? -->
+{{< include _generated/objects/fig-siena-rsv-vaccine.qmd >}}
+
+<!-- Figure 236: During the past 12 months, did you get an RSV vaccine by Income, 2024. -->
+{{< include _generated/objects/fig-siena-rsv-vaccine-income.qmd >}}
+
 Survey Question 40: The next questions are about how you have been feeling during the past 30 days. Thinking back over the past 30 days, please tell me if you felt this way, all of the time, most of the time, some of the time, a little of the time, or none of the time. About how often during the past 30 days did you feel nervous?
+
+<!-- Figure 237: About how often during the past 30 days did you feel nervous? -->
+{{< include _generated/objects/fig-siena-feeling-nervous.qmd >}}
+
+<!-- Figure 238: About how often during the past 30 days did you feel nervous? by Income, 2024. -->
+{{< include _generated/objects/fig-siena-feeling-nervous-income.qmd >}}
 
 Survey Question 41: The next questions are about how you have been feeling during the past 30 days. Thinking back over the past 30 days, please tell me if you felt this way, all of the time, most of the time, some of the time, a little of the time, or none of the time. About how often during the past 30 days did you feel hopeless?
 
+<!-- Figure 239: About how often during the past 30 days did you feel hopeless? -->
+{{< include _generated/objects/fig-siena-feeling-hopeless.qmd >}}
+
+<!-- Figure 240: About how often during the past 30 days did you feel hopeless? by Income, 2024. -->
+{{< include _generated/objects/fig-siena-feeling-hopeless-income.qmd >}}
+
 Survey Question 42: The next questions are about how you have been feeling during the past 30 days. Thinking back over the past 30 days, please tell me if you felt this way, all of the time, most of the time, some of the time, a little of the time, or none of the time. About how often during the past 30 days did you feel restless or fidgety?
+
+<!-- Figure 241: About how often during the past 30 days did you feel restless or fidgety? -->
+{{< include _generated/objects/fig-siena-restless-fidgety.qmd >}}
+
+<!-- Figure 242: About how often during the past 30 days did you feel restless or fidgety? by Income, 2024. -->
+{{< include _generated/objects/fig-siena-restless-fidgety-income.qmd >}}
 
 Survey Question 43: The next questions are about how you have been feeling during the past 30 days. Thinking back over the past 30 days, please tell me if you felt this way, all of the time, most of the time, some of the time, a little of the time, or none of the time. About how often during the past 30 days did you feel so depressed that nothing could cheer you up?
 
+<!-- Figure 243: About how often during the past 30 days did you feel so depressed that nothing could cheer you up? -->
+{{< include _generated/objects/fig-siena-depressed.qmd >}}
+
+<!-- Figure 244: About how often during the past 30 days did you feel so depressed that nothing could cheer you up? by Income, 2024. -->
+{{< include _generated/objects/fig-siena-depressed-income.qmd >}}
+
 Survey Question 44: The next questions are about how you have been feeling during the past 30 days. Thinking back over the past 30 days, please tell me if you felt this way, all of the time, most of the time, some of the time, a little of the time, or none of the time. About how often during the past 30 days did you feel that everything was an effort?
+
+<!-- Figure 245: About how often during the past 30 days did you feel that everything was an effort? -->
+{{< include _generated/objects/fig-siena-everything-effort.qmd >}}
+
+<!-- Figure 246: About how often during the past 30 days did you feel that everything was an effort? by Income, 2024. -->
+{{< include _generated/objects/fig-siena-everything-effort-income.qmd >}}
 
 Survey Question 45: The next questions are about how you have been feeling during the past 30 days. Thinking back over the past 30 days, please tell me if you felt this way, all of the time, most of the time, some of the time, a little of the time, or none of the time. About how often during the past 30 days did you feel worthless?
 
+<!-- Figure 247: About how often during the past 30 days did you feel worthless? -->
+{{< include _generated/objects/fig-siena-worthless.qmd >}}
+
+<!-- Figure 248: About how often during the past 30 days did you feel worthless? by Income, 2024. -->
+{{< include _generated/objects/fig-siena-worthless-income.qmd >}}
+
 Survey Question 40-45: Kessler Score
+
+<!-- Figure 249: Kessler Score, 2018-2024. -->
+{{< include _generated/objects/fig-siena-kessler.qmd >}}
+
+<!-- Figure 250: Kessler Score by Income, 2024. -->
+{{< include _generated/objects/fig-siena-kessler-income.qmd >}}
 
 Survey Question 47: (If female) Have you had a child in the last 10 years?
 
+<!-- Figure 251: Have you had a child in the last 10 years? -->
+{{< include _generated/objects/fig-siena-had-a-child.qmd >}}
+
 Survey Question 48: (If had a child in last 10 years) Did you breastfeed any of your children (this includes expressing milk or pumping including using milk from a milk bank)?
+
+<!-- Figure 253: Did you breastfeed any of your children (this includes expressing milk or pumping including using milk from a milk bank)? -->
+{{< include _generated/objects/fig-siena-breastfed.qmd >}}
 
 Survey Question 49: (if had a child in last 10 years and breastfed) On average, how long did you breastfeed your child(ren) for?
 
+<!-- Figure 254: On average, how long did you breastfeed your child(ren) for? -->
+{{< include _generated/objects/fig-siena-breastfed-duration.qmd >}}
+
 Survey Question 50: (If have child under age 6) Who would you be most likely to contact if you needed help with basic needs, for example, housing, transportation, food, diapers, etc.?
 
-Survey Question Q52: (If have child under age 6) Have you ever had difficulty getting information or help pertaining to your child?
-
-<!-- Table 61: Reasons for Not Visiting a Primary Care Provider by Income, 2024 -->
-{{< include _generated/objects/tbl-siena-not-routine-physical-income.qmd >}}
-
-<!-- Table 62: Reasons for Not Visiting a Dentist by Income, 2024 -->
-{{< include _generated/objects/tbl-siena-not-routine-dentist-income.qmd >}}
-
-<!-- Table 63: Reasons for Visiting an Emergency Room for Non-Emergencies by Income, 2024 -->
-{{< include _generated/objects/tbl-siena-reason-ed-not-emergency-income.qmd >}}
-
-<!-- Table 64: Reasons for Not Visiting a Mental Health Provider by Income, 2024 -->
-{{< include _generated/objects/tbl-siena-reason-not-mh-visist-income.qmd >}}
-
-<!-- Table 65: Who would you contact if you needed help with basic needs -->
+<!-- Table 65: Who would you be most likely to contact if you needed help with basic needs, for example, housing, transportation, food, diapers, etc.? -->
 {{< include _generated/objects/tbl-siena-help-basic-needs.qmd >}}
+
+Survey Question 51: (If have child under age 6) Have you ever had difficulty getting information or help pertaining to your child?
 
 <!-- Table 66: Who would you contact if you had concerns about a child's behavior or development -->
 {{< include _generated/objects/tbl-siena-help-child-behavior-develop.qmd >}}
 
-<!-- Figure 160: Lived in Orange County -->
-{{< include _generated/objects/fig-siena-live-oc.qmd >}}
-{{< include _generated/objects/tbl-siena-live-oc.qmd >}}
-
-<!-- Figure 161: Perception of Overall Quality of Life, 2024 -->
-{{< include _generated/objects/fig-siena-quality-life.qmd >}}
-{{< include _generated/objects/tbl-siena-quality-life.qmd >}}
-
-<!-- Figure 162: Perception of Overall Quality of Life by Income, 2024 -->
-{{< include _generated/objects/fig-siena-quality-life-income.qmd >}}
-{{< include _generated/objects/tbl-siena-quality-life-income.qmd >}}
-
-<!-- Figure 163: Information During Weather Emergencies, 2024 -->
-<!-- MISSING object file for Figure 163 (tbl-siena-info-bad-weather) -->
-<!-- MISSING paired table file for Figure 163 (tbl-siena-info-bad-weather) -->
-
-<!-- Figure 164: Information During Weather Emergencies by Income, 2024 -->
-{{< include _generated/objects/fig-siena-info-bad-weather-income.qmd >}}
-{{< include _generated/objects/tbl-siena-info-bad-weather-income.qmd >}}
-
-<!-- Figure 165: Information During Public Health Emergencies, 2024 -->
-{{< include _generated/objects/fig-siena-ph-emergency.qmd >}}
-{{< include _generated/objects/tbl-siena-ph-emergency.qmd >}}
-
-<!-- Figure 166: Information During Public Health Emergencies by Income, 2024 -->
-{{< include _generated/objects/fig-siena-ph-emergency-income.qmd >}}
-{{< include _generated/objects/tbl-siena-ph-emergency-income.qmd >}}
-
-<!-- Figure 167: Places to Walk or Bicycle in the Neighborhood Safe from Traffic, 2024 -->
-{{< include _generated/objects/fig-siena-safe-place-walk-bike.qmd >}}
-{{< include _generated/objects/tbl-siena-safe-place-walk-bike.qmd >}}
-
-<!-- Figure 168: Places to Walk or Bicycle in the Neighborhood Safe from Traffic by Income, 2024 -->
-{{< include _generated/objects/fig-siena-safe-place-walk-bike-income.qmd >}}
-{{< include _generated/objects/tbl-siena-safe-place-walk-bike-income.qmd >}}
-
-<!-- Figure 169: Safety of Walking or Biking, 2024 -->
-{{< include _generated/objects/fig-siena-walk-bike-safe.qmd >}}
-{{< include _generated/objects/tbl-siena-walk-bike-safe.qmd >}}
-
-<!-- Figure 170: Safety of Walking or Biking by Income, 2024 -->
-{{< include _generated/objects/fig-siena-walk-bike-safe-income.qmd >}}
-{{< include _generated/objects/tbl-siena-walk-bike-safe-income.qmd >}}
-
-<!-- Figure 171: How would you rate the community you live in as a place for people to live as they age? -->
-{{< include _generated/objects/fig-siena-rate-community-as-place-to-age.qmd >}}
-{{< include _generated/objects/tbl-siena-rate-community-as-place-to-age.qmd >}}
-
-<!-- Figure 172: Rating the Community by Income, 2024 -->
-{{< include _generated/objects/fig-siena-rate-community-as-place-to-age-income.qmd >}}
-{{< include _generated/objects/tbl-siena-rate-community-as-place-to-age-income.qmd >}}
-
-<!-- Figure 173: Perception of Physical Health, 2018-2024 -->
-{{< include _generated/objects/fig-siena-physical-health.qmd >}}
-{{< include _generated/objects/tbl-siena-physical-health.qmd >}}
-
-<!-- Figure 174: Perception of Physical Health by Income, 2024 -->
-<!-- MISSING object file for Figure 174 (tbl-siena-physical-health-income) -->
-<!-- MISSING paired table file for Figure 174 (tbl-siena-physical-health-income) -->
-
-<!-- Figure 175: Perception of Mental Health, 2018-2024 -->
-<!-- MISSING object file for Figure 175 (tbl-siena-mental-health) -->
-<!-- MISSING paired table file for Figure 175 (tbl-siena-mental-health) -->
-
-<!-- Figure 176: Perception of Mental Health by Income, 2024 -->
-{{< include _generated/objects/fig-siena-mental-health-income.qmd >}}
-{{< include _generated/objects/tbl-siena-mental-health-income.qmd >}}
-
-<!-- Figure 177: Average Days a Week: Healthy Diet, 2018-2024 -->
-<!-- MISSING object file for Figure 177 (tbl-siena-healthy-diet) -->
-<!-- MISSING paired table file for Figure 177 (tbl-siena-healthy-diet) -->
-
-<!-- Figure 178: Average Days a Week: Healthy Diet, by Income, 2024 -->
-{{< include _generated/objects/fig-siena-healthy-diet-income.qmd >}}
-{{< include _generated/objects/tbl-siena-healthy-diet-income.qmd >}}
-
-<!-- Figure 179: Average Days a Week: Exercise, 2018-2024 -->
-{{< include _generated/objects/fig-siena-exercise.qmd >}}
-{{< include _generated/objects/tbl-siena-exercise.qmd >}}
-
-<!-- Figure 180: Average Days a Week: Exercise, by Income, 2024 -->
-{{< include _generated/objects/fig-siena-exercise-income.qmd >}}
-{{< include _generated/objects/tbl-siena-exercise-income.qmd >}}
-
-<!-- Figure 181: Average Days a Week: 7-9 Hours of Sleep a Night, 2018-2024 -->
-<!-- MISSING object file for Figure 181 (tbl-siena-sleep) -->
-<!-- MISSING paired table file for Figure 181 (tbl-siena-sleep) -->
-
-<!-- Figure 182: Average Days a Week: 7-9 Hours of Sleep a Night, by Income, 2024 -->
-{{< include _generated/objects/fig-siena-sleep-income.qmd >}}
-{{< include _generated/objects/tbl-siena-sleep-income.qmd >}}
-
-<!-- Figure 183: Level of Stress on an Average Day, 2018-2024 -->
-<!-- MISSING object file for Figure 183 (tbl-siena-stress) -->
-<!-- MISSING paired table file for Figure 183 (tbl-siena-stress) -->
-
-<!-- Figure 184: Level of Stress on an Average Day by Income, 2024 -->
-{{< include _generated/objects/fig-siena-stress-income.qmd >}}
-{{< include _generated/objects/tbl-siena-stress-income.qmd >}}
-
-<!-- Figure 185: Feelings of Quality Encounters, 2018-2024 -->
-{{< include _generated/objects/fig-siena-quality-encounter.qmd >}}
-{{< include _generated/objects/tbl-siena-quality-encounter.qmd >}}
-
-<!-- Figure 186: Feelings of Quality Encounters by Income, 2024 -->
-{{< include _generated/objects/fig-siena-quality-encounter-income.qmd >}}
-{{< include _generated/objects/tbl-siena-quality-encounter-income.qmd >}}
-
-<!-- Figure 187: Alcohol Consumption in the Past Year, 2022-2024 -->
-{{< include _generated/objects/fig-siena-alcohol.qmd >}}
-{{< include _generated/objects/tbl-siena-alcohol.qmd >}}
-
-<!-- Figure 188: Alcohol Consumption in the Past Year by Income, 2024 -->
-{{< include _generated/objects/fig-siena-alcohol-income.qmd >}}
-{{< include _generated/objects/tbl-siena-alcohol-income.qmd >}}
-
-<!-- Figure 189: Frequency of Drug Use for Non-Medical Reasons, 2018-2024 -->
-{{< include _generated/objects/fig-siena-non-medical-drug-use.qmd >}}
-{{< include _generated/objects/tbl-siena-non-medical-drug-use.qmd >}}
-
-<!-- Figure 190: Frequency of Drug Use for Non-Medical Reasons by Income, 2024 -->
-{{< include _generated/objects/fig-siena-non-medical-drug-use-income.qmd >}}
-{{< include _generated/objects/tbl-siena-non-medical-drug-use-income.qmd >}}
-
-<!-- Figure 191: Consume Cannabis, 2024 -->
-{{< include _generated/objects/fig-siena-cannabis.qmd >}}
-{{< include _generated/objects/tbl-siena-cannabis.qmd >}}
-
-<!-- Figure 192: Consume Cannabis by Income, 2024 -->
-<!-- MISSING object file for Figure 192 (tbl-siena-cannabis-income) -->
-<!-- MISSING paired table file for Figure 192 (tbl-siena-cannabis-income) -->
-
-<!-- Figure 193: Unable to Get Food, 2018-2024 -->
-{{< include _generated/objects/fig-siena-unable-food.qmd >}}
-{{< include _generated/objects/tbl-siena-unable-food.qmd >}}
-
-<!-- Figure 194: Unable to Get Food by Income, 2024 -->
-{{< include _generated/objects/fig-siena-unable-food-income.qmd >}}
-{{< include _generated/objects/tbl-siena-unable-food-income.qmd >}}
-
-<!-- Figure 195: Unable to Get Utilities, Including Heat and Electricity, 2018-2024 -->
-{{< include _generated/objects/fig-siena-unable-utilities.qmd >}}
-{{< include _generated/objects/tbl-siena-unable-utilities.qmd >}}
-
-<!-- Figure 196: Unable to Get Utilities, Including Heat and Electricity by Income, 2024 -->
-<!-- MISSING object file for Figure 196 (tbl-siena-unable-utilities-income) -->
-<!-- MISSING paired table file for Figure 196 (tbl-siena-unable-utilities-income) -->
-
-<!-- Figure 197: Unable to Get Healthcare, Including Dental or Vision, 2018-2024 -->
-{{< include _generated/objects/fig-siena-unable-dental-vision.qmd >}}
-{{< include _generated/objects/tbl-siena-unable-dental-vision.qmd >}}
-
-<!-- Figure 198: Unable to Get Healthcare, Including Dental or Vision by Income, 2024 -->
-{{< include _generated/objects/fig-siena-unable-dental-vision-income.qmd >}}
-{{< include _generated/objects/tbl-siena-unable-dental-vision-income.qmd >}}
-
-<!-- Figure 199: Unable to Get Phone Services, 2018-2024 -->
-{{< include _generated/objects/fig-siena-unable-phone.qmd >}}
-{{< include _generated/objects/tbl-siena-unable-phone.qmd >}}
-
-<!-- Figure 200: Unable to Get Phone Services by Income, 2024 -->
-{{< include _generated/objects/fig-siena-unable-phone-income.qmd >}}
-{{< include _generated/objects/tbl-siena-unable-phone-income.qmd >}}
-
-<!-- Figure 201: Unable to Get Transportation, 2018-2024 -->
-<!-- MISSING object file for Figure 201 (tbl-siena-unable-transportation) -->
-<!-- MISSING paired table file for Figure 201 (tbl-siena-unable-transportation) -->
-
-<!-- Figure 202: Unable to Get Transportation by Income, 2024 -->
-{{< include _generated/objects/fig-siena-unable-transportation-income.qmd >}}
-{{< include _generated/objects/tbl-siena-unable-transportation-income.qmd >}}
-
-<!-- Figure 203: Unable to Get Housing, 2018-2024 -->
-{{< include _generated/objects/fig-siena-unable-housing.qmd >}}
-{{< include _generated/objects/tbl-siena-unable-housing.qmd >}}
-
-<!-- Figure 204: Unable to Get Housing by Income, 2024 -->
-{{< include _generated/objects/fig-siena-unable-housing-income.qmd >}}
-{{< include _generated/objects/tbl-siena-unable-housing-income.qmd >}}
-
-<!-- Figure 205: Unable to Get Childcare, 2018-2024 -->
-{{< include _generated/objects/fig-siena-unable-childcare.qmd >}}
-{{< include _generated/objects/tbl-siena-unable-childcare.qmd >}}
-
-<!-- Figure 206: Unable to Get Childcare by Income, 2024 -->
-{{< include _generated/objects/fig-siena-unable-childcare-income.qmd >}}
-{{< include _generated/objects/tbl-siena-unable-childcare-income.qmd >}}
-
-<!-- Figure 207: Unable to Get Access to the Internet, 2022-2024 -->
-<!-- MISSING object file for Figure 207 (tbl-siena-unable-internet) -->
-<!-- MISSING paired table file for Figure 207 (tbl-siena-unable-internet) -->
-
-<!-- Figure 208: Unable to Get Access to the Internet by Income, 2024 -->
-{{< include _generated/objects/fig-siena-unable-internet-income.qmd >}}
-{{< include _generated/objects/tbl-siena-unable-internet-income.qmd >}}
-
-<!-- Figure 209: Visit to Primary Care Physician for Routine Physical, 2018-2024 -->
-{{< include _generated/objects/fig-siena-routine-phsyical.qmd >}}
-{{< include _generated/objects/tbl-siena-routine-phsyical.qmd >}}
-
-<!-- Figure 210: Visit to Primary Care Physician for Routine Physical by Income, 2024 -->
-<!-- MISSING object file for Figure 210 (tbl-siena-routine-phsyical-income) -->
-<!-- MISSING paired table file for Figure 210 (tbl-siena-routine-phsyical-income) -->
-
-<!-- Figure 211: Reasons for Not Visiting a Primary Care Provider, 2022-2024 -->
-{{< include _generated/objects/fig-siena-not-routine-physical.qmd >}}
-{{< include _generated/objects/tbl-siena-not-routine-physical.qmd >}}
-
-<!-- Figure 212: Dentist Visitation Within the Last 12 Months, 2018-2024 -->
-{{< include _generated/objects/fig-siena-routine-dentist.qmd >}}
-{{< include _generated/objects/tbl-siena-routine-dentist.qmd >}}
-
-<!-- Figure 213: Dentist Visitation Within the Last 12 Months by Income, 2024 -->
-{{< include _generated/objects/fig-siena-routine-dentist-income.qmd >}}
-{{< include _generated/objects/tbl-siena-routine-dentist-income.qmd >}}
-
-<!-- Figure 214: Reasons for Not Visiting a Dentist, 2022-2024 -->
-<!-- MISSING object file for Figure 214 (tbl-siena-not-routine-dentist) -->
-<!-- MISSING paired table file for Figure 214 (tbl-siena-not-routine-dentist) -->
-
-<!-- Figure 215: Emergency Room Visitation for Non-Emergency Medical Issues, 2018-2024 -->
-{{< include _generated/objects/fig-siena-ed-not-for-emergency.qmd >}}
-{{< include _generated/objects/tbl-siena-ed-not-for-emergency.qmd >}}
-
-<!-- Figure 216: Emergency Room Visitation for Non-Emergency Medical Issues by Income, 2024 -->
-{{< include _generated/objects/fig-siena-ed-not-for-emergency-income.qmd >}}
-{{< include _generated/objects/tbl-siena-ed-not-for-emergency-income.qmd >}}
-
-<!-- Figure 217: Reasons for Visiting an Emergency Room for Non-Emergencies, 2024 -->
-{{< include _generated/objects/fig-siena-reason-ed-not-emergency.qmd >}}
-{{< include _generated/objects/tbl-siena-reason-ed-not-emergency.qmd >}}
-
-<!-- Figure 218: Mental Health Visitation Within the Last 12 Months, 2022-2024 -->
-{{< include _generated/objects/fig-siena-routine-mh-visit.qmd >}}
-{{< include _generated/objects/tbl-siena-routine-mh-visit.qmd >}}
-
-<!-- Figure 219: Mental Health Visitation Within the Last 12 Months by Income, 2024 -->
-{{< include _generated/objects/fig-siena-routine-mh-visit-income.qmd >}}
-{{< include _generated/objects/tbl-siena-routine-mh-visit-income.qmd >}}
-
-<!-- Figure 220: Reasons for Not Visiting a Mental Health Provider, 2022-2024 -->
-{{< include _generated/objects/fig-siena-reason-not-mh-visist.qmd >}}
-{{< include _generated/objects/tbl-siena-reason-not-mh-visist.qmd >}}
-
-<!-- Figure 221: Had COVID, 2022-2024 -->
-{{< include _generated/objects/fig-siena-had-covid.qmd >}}
-{{< include _generated/objects/tbl-siena-had-covid.qmd >}}
-
-<!-- Figure 222: Had COVID by Income, 2024 -->
-{{< include _generated/objects/fig-siena-had-covid-income.qmd >}}
-{{< include _generated/objects/tbl-siena-had-covid-income.qmd >}}
-
-<!-- Figure 223: Had Long-COVID, 2022-2024 -->
-{{< include _generated/objects/fig-siena-had-long-covid.qmd >}}
-{{< include _generated/objects/tbl-siena-had-long-covid.qmd >}}
-
-<!-- Figure 224: Long-COVID in Household by Income, 2024 -->
-{{< include _generated/objects/fig-siena-had-long-covid-income.qmd >}}
-{{< include _generated/objects/tbl-siena-had-long-covid-income.qmd >}}
-
-<!-- Figure 225: Vaccinated for COVID, 2024 -->
-{{< include _generated/objects/fig-siena-covid-vaccine.qmd >}}
-{{< include _generated/objects/tbl-siena-covid-vaccine.qmd >}}
-
-<!-- Figure 226: Vaccinated for COVID by Income, 2024 -->
-{{< include _generated/objects/fig-siena-covid-vaccine-income.qmd >}}
-{{< include _generated/objects/tbl-siena-covid-vaccine-income.qmd >}}
-
-<!-- Figure 227: Getting an Updated COVID Vaccine, 2024 -->
-{{< include _generated/objects/fig-siena-updated-covid-vaccine.qmd >}}
-{{< include _generated/objects/tbl-siena-updated-covid-vaccine.qmd >}}
-
-<!-- Figure 228: Getting an Updated COVID Vaccine by Income, 2024 -->
-{{< include _generated/objects/fig-siena-updated-covid-vaccine-income.qmd >}}
-{{< include _generated/objects/tbl-siena-updated-covid-vaccine-income.qmd >}}
-
-<!-- Figure 229: Vaccinated for Flu, 2024 -->
-{{< include _generated/objects/fig-siena-flu-vaccine.qmd >}}
-{{< include _generated/objects/tbl-siena-flu-vaccine.qmd >}}
-
-<!-- Figure 230: Vaccinated for Flu by Income, 2024 -->
-{{< include _generated/objects/fig-siena-flu-vaccine-income.qmd >}}
-{{< include _generated/objects/tbl-siena-flu-vaccine-income.qmd >}}
-
-<!-- Figure 231: Vaccinated for Flu 60+, 2024 -->
-{{< include _generated/objects/fig-siena-flu-vaccine-60yo.qmd >}}
-{{< include _generated/objects/tbl-siena-flu-vaccine-60yo.qmd >}}
-
-<!-- Figure 232: Feeling Nervous, 2023-2024 -->
-{{< include _generated/objects/fig-siena-feeling-nervous.qmd >}}
-{{< include _generated/objects/tbl-siena-feeling-nervous.qmd >}}
-
-<!-- Figure 233: Feeling Nervous by Income, 2024 -->
-{{< include _generated/objects/fig-siena-feeling-nervous-income.qmd >}}
-{{< include _generated/objects/tbl-siena-feeling-nervous-income.qmd >}}
-
-<!-- Figure 234: Feeling Hopeless, 2023-2024 -->
-{{< include _generated/objects/fig-siena-feeling-hopeless.qmd >}}
-{{< include _generated/objects/tbl-siena-feeling-hopeless.qmd >}}
-
-<!-- Figure 235: Feeling Hopeless by Income, 2024 -->
-{{< include _generated/objects/fig-siena-feeling-hopeless-income.qmd >}}
-{{< include _generated/objects/tbl-siena-feeling-hopeless-income.qmd >}}
-
-<!-- Figure 236: Feeling Restless or Fidgety, 2023-2024 -->
-{{< include _generated/objects/fig-siena-restless-fidgety.qmd >}}
-{{< include _generated/objects/tbl-siena-restless-fidgety.qmd >}}
-
-<!-- Figure 237: Feeling Restless or Fidgety by Income, 2024 -->
-{{< include _generated/objects/fig-siena-restless-fidgety-income.qmd >}}
-{{< include _generated/objects/tbl-siena-restless-fidgety-income.qmd >}}
-
-<!-- Figure 238: Feeling Depressed, 2023-2024 -->
-{{< include _generated/objects/fig-siena-depressed.qmd >}}
-{{< include _generated/objects/tbl-siena-depressed.qmd >}}
-
-<!-- Figure 239: Feeling Depressed by Income, 2024 -->
-{{< include _generated/objects/fig-siena-depressed-income.qmd >}}
-{{< include _generated/objects/tbl-siena-depressed-income.qmd >}}
-
-<!-- Figure 240: Feeling that Everything was an Effort, 2023-2024 -->
-{{< include _generated/objects/fig-siena-everything-effort.qmd >}}
-{{< include _generated/objects/tbl-siena-everything-effort.qmd >}}
-
-<!-- Figure 241: Feeling that Everything was an Effort by Income, 2024 -->
-{{< include _generated/objects/fig-siena-everything-effort-income.qmd >}}
-{{< include _generated/objects/tbl-siena-everything-effort-income.qmd >}}
-
-<!-- Figure 242: Feeling Worthless, 2023-2024 -->
-{{< include _generated/objects/fig-siena-worthless.qmd >}}
-{{< include _generated/objects/tbl-siena-worthless.qmd >}}
-
-<!-- Figure 243: Feeling Worthless by Income, 2024 -->
-{{< include _generated/objects/fig-siena-worthless-income.qmd >}}
-{{< include _generated/objects/tbl-siena-worthless-income.qmd >}}
-
-<!-- Figure 244: Kessler Score, 2023-2024 -->
-{{< include _generated/objects/fig-siena-kessler.qmd >}}
-{{< include _generated/objects/tbl-siena-kessler.qmd >}}
-
-<!-- Figure 245: Kessler Score by Income, 2024 -->
-{{< include _generated/objects/fig-siena-kessler-income.qmd >}}
-{{< include _generated/objects/tbl-siena-kessler-income.qmd >}}
-
-<!-- Figure 246: Had a Child in the Last 10 Years, 2023-2024 -->
-{{< include _generated/objects/fig-siena-had-a-child.qmd >}}
-{{< include _generated/objects/tbl-siena-had-a-child.qmd >}}
-
-<!-- Figure 247: Breastfed Any Children, 2024 -->
-{{< include _generated/objects/fig-siena-bf-any-child.qmd >}}
-{{< include _generated/objects/tbl-siena-bf-any-child.qmd >}}
-
-<!-- Figure 248: Breastfed Duration, 2024 -->
-{{< include _generated/objects/fig-siena-bf-duration.qmd >}}
-{{< include _generated/objects/tbl-siena-bf-duration.qmd >}}
-
-<!-- Figure 249: Information or Help -->
+<!-- Figure 256: Have you ever had difficulty getting information or help pertaining to your child? -->
 {{< include _generated/objects/fig-siena-difficulty-help-for-child.qmd >}}
+

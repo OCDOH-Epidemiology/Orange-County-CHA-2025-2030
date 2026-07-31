@@ -161,6 +161,26 @@ def _load_model(workbook_path: str | Path | None) -> WorkbookModel:
     return load_cha_workbook(path)
 
 
+def _placeholder_figure(message: str, title: str | None = None) -> go.Figure:
+    fig = go.Figure()
+    fig.update_layout(
+        title_text=title or message,
+        xaxis=dict(visible=False),
+        yaxis=dict(visible=False),
+        annotations=[
+            dict(
+                text=message,
+                x=0.5,
+                y=0.5,
+                xref="paper",
+                yref="paper",
+                showarrow=False,
+            )
+        ],
+    )
+    return fig
+
+
 # Legacy include labels that differ from Master-sheet object IDs.
 OBJECT_ID_ALIASES: dict[str, str] = {
     "tbl-selected-housing-renters": "tbl-house-characteristics-renters",
@@ -338,9 +358,15 @@ def render_table_object(
         raise ValueError(f"Object '{object_id}' is not a table.")
 
     table_spec = model.table_specs[object_id]
+    source_df = model.data_frames.get(record.data_sheet, pd.DataFrame()).copy()
+    if source_df.empty or source_df.shape[1] == 0:
+        placeholder = pd.DataFrame({"": ["Add to CHA"]})
+        if is_pdf_render():
+            return Latex(render_pdf_table_latex(object_id, placeholder))
+        return style_cha_table(placeholder, has_multilevel_headers=False)
+
     if table_spec.merged_grid is not None:
         if is_pdf_render():
-            source_df = model.data_frames[record.data_sheet].copy()
             source_df = _prepare_table_df(source_df, table_spec.format_rules)
             source_df.columns = [_strip_format_tokens_from_label(col) for col in source_df.columns]
             return Latex(
@@ -348,7 +374,6 @@ def render_table_object(
             )
         return render_merged_table(table_spec.merged_grid, format_fn=_format_value)
 
-    source_df = model.data_frames[record.data_sheet].copy()
     source_df = _prepare_table_df(source_df, table_spec.format_rules)
     source_df.columns = [_strip_format_tokens_from_label(col) for col in source_df.columns]
     # Some figure-oriented sheets use "County" as configured X metadata even when
@@ -378,30 +403,18 @@ def render_figure_object(
     figure_id = _resolve_object_id(figure_id)
     model = _load_model(workbook_path)
     if figure_id not in model.registry:
-        fig = go.Figure()
-        fig.update_layout(
-            title_text=f"Figure '{figure_id}' not found in workbook",
-            xaxis=dict(visible=False),
-            yaxis=dict(visible=False),
-            annotations=[
-                dict(
-                    text=f"Figure '{figure_id}' not found in workbook.",
-                    x=0.5,
-                    y=0.5,
-                    xref="paper",
-                    yref="paper",
-                    showarrow=False,
-                )
-            ],
-        )
-        return fig
+        return _placeholder_figure(f"Figure '{figure_id}' not found in workbook.")
 
     record = model.registry[figure_id]
     if record.object_type != "figure":
         raise ValueError(f"Object '{figure_id}' is not a figure.")
 
     spec = model.figure_specs[figure_id]
-    df = model.data_frames[record.data_sheet].copy()
+    df = model.data_frames.get(record.data_sheet, pd.DataFrame()).copy()
+    if df.empty or df.shape[1] == 0:
+        caption = record.caption or figure_id
+        return _placeholder_figure("Add to CHA", title=caption)
+
     df.columns = [_strip_format_tokens_from_label(col) for col in df.columns]
     df.columns = _ensure_unique_column_labels(list(df.columns))
     first_col = df.columns[0]
