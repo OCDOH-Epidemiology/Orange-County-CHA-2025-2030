@@ -1,0 +1,15 @@
+<!-- indicator: tbl-cas-focus-resources-improve-life-longitude -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-cas-focus-resources-improve-life-longitude
+#| tbl-cap: 'Community Priorities to Improve Quality of Life in 2022 and 2025'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-cas-focus-resources-improve-life-longitude", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note}
+Note: Estimates are unweighted percentages of respondents with 95% confidence intervals. Respondents could select up to three focus areas.
+:::

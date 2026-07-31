@@ -15,6 +15,7 @@ import plotly.graph_objects as go
 
 from scripts.cha_figure_builder import (
     build_clustered_bar_figure,
+    build_dot_whisker_figure,
     build_horizontal_bar_figure,
     build_line_figure,
     build_simple_bar_figure,
@@ -619,6 +620,17 @@ def render_figure_object(
             x_axis_title=x_axis_title,
             y_axis_title=y_axis_title,
             start_at_zero=spec.start_at_zero,
+            hover_value_format=".1f",
+            hover_suffix=spec.hover_suffix,
+        )
+    if spec.figure_type == "dot_whisker":
+        return build_dot_whisker_figure(
+            df=df,
+            x_col=x_col,
+            y_cols=y_cols,
+            x_axis_title=x_axis_title,
+            y_axis_title=y_axis_title or "Percent",
+            start_at_zero=spec.start_at_zero if spec.start_at_zero is not None else True,
             hover_value_format=".1f",
             hover_suffix=spec.hover_suffix,
         )

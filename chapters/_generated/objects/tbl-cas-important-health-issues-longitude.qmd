@@ -1,0 +1,15 @@
+<!-- indicator: tbl-cas-important-health-issues-longitude -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-cas-important-health-issues-longitude
+#| tbl-cap: 'Community Perceptions on the Most Important Health Issues in 2022 and 2025'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-cas-important-health-issues-longitude", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note}
+Note: Estimates are unweighted percentages of respondents with 95% confidence intervals. Respondents could select up to three health issues.
+:::

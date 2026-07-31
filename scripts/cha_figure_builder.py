@@ -1,9 +1,9 @@
 """
 CHA Figure Builder
 
-Utilities for creating CHA figures (lines, clustered bars, stacked bars, simple bars)
-with consistent styling and ordering. Includes a helper to display a
-figure above its table output in Quarto/Jupyter.
+Utilities for creating CHA figures (lines, clustered bars, stacked bars, simple bars,
+horizontal bars, and dot-whisker / CI plots) with consistent styling and ordering.
+Includes a helper to display a figure above its table output in Quarto/Jupyter.
 """
 
 from __future__ import annotations
@@ -33,6 +33,15 @@ CHA_COLOR_PALETTE = [
     "#EBE603",
     "#D91AC4",
     "#18AC93",
+]
+
+# Blue / orange pairing for 2022 vs 2025 (and similar) comparison dots.
+DOT_WHISKER_PALETTE = [
+    "#63A0CC",
+    "#FAA83B",
+    "#9ACD4B",
+    "#D35840",
+    "#9941B1",
 ]
 
 DEFAULT_DASHED_SERIES = {"NYS": "dash", "US": "dash"}
@@ -681,6 +690,182 @@ def build_horizontal_bar_figure(
         title=dict(text=category_axis_title, font=dict(size=14, family=font_family)),
         showgrid=False,
         ticklabelstandoff=10,
+        automargin=True,
+    )
+    return fig
+
+
+def _resolve_ci_column(columns: list[str], series_name: str) -> str | None:
+    """Find a confidence-interval column paired with a value series."""
+    candidates = [
+        f"{series_name} CI",
+        f"{series_name} (±)",
+        f"{series_name} (+/-)",
+        f"{series_name}_ci",
+        f"{series_name} ci",
+    ]
+    lower_map = {str(col).strip().lower(): col for col in columns}
+    for candidate in candidates:
+        match = lower_map.get(candidate.lower())
+        if match is not None:
+            return match
+    return None
+
+
+def _is_ci_column_label(label: str) -> bool:
+    text = str(label).strip().lower()
+    return (
+        text.endswith(" ci")
+        or text.endswith("_ci")
+        or "(±)" in str(label)
+        or "(+/-)" in str(label)
+    )
+
+
+def build_dot_whisker_figure(
+    df: pd.DataFrame,
+    x_col: str,
+    y_cols: list[str] | None = None,
+    *,
+    x_axis_title: str | None = None,
+    y_axis_title: str,
+    start_at_zero: bool = True,
+    y_padding: float = 0.1,
+    palette: list[str] | None = None,
+    width: int = 1000,
+    height: int | None = None,
+    font_family: str = CHA_FONT_FAMILY,
+    hover_value_format: str = ".1f",
+    hover_suffix: str = "",
+) -> go.Figure:
+    """
+    Build a horizontal dot plot with whiskers (error bars / CIs).
+
+    Expected columns: category column plus value columns (e.g. 2022, 2025),
+    optionally paired with CI half-widths named ``{series} CI``.
+    Categories keep workbook row order (first row at bottom, matching matplotlib).
+    """
+    if y_cols:
+        value_cols = [col for col in y_cols if col in df.columns and col != x_col]
+    else:
+        value_cols = [col for col in df.columns if col != x_col]
+    value_cols = [col for col in value_cols if not _is_ci_column_label(col)]
+    if not value_cols:
+        raise ValueError("No value series found for dot whisker chart.")
+
+    category_axis_title = x_axis_title or x_col
+    value_axis_title = y_axis_title or "Percent"
+    colors = palette or DOT_WHISKER_PALETTE
+    symbols = _series_symbols(value_cols)
+
+    plot_df = df.copy()
+    plot_df[x_col] = plot_df[x_col].astype(str)
+    categories = plot_df[x_col].tolist()
+    category_index = {cat: i for i, cat in enumerate(categories)}
+    n_cats = max(len(categories), 1)
+    fig_height = height if height is not None else max(480, 28 * n_cats + 120)
+
+    # Slight vertical offsets so overlapping year markers remain readable.
+    offsets = {
+        name: (idx - (len(value_cols) - 1) / 2) * 0.18
+        for idx, name in enumerate(value_cols)
+    }
+
+    fig = go.Figure()
+    all_values: list[float] = []
+
+    for idx, series_name in enumerate(value_cols):
+        values = pd.to_numeric(plot_df[series_name], errors="coerce")
+        ci_col = _resolve_ci_column(list(plot_df.columns), series_name)
+        if ci_col is not None:
+            ci = pd.to_numeric(plot_df[ci_col], errors="coerce").fillna(0.0)
+        else:
+            ci = pd.Series(0.0, index=plot_df.index)
+
+        valid = values.notna()
+        x_vals = values[valid]
+        y_positions = [
+            category_index[cat] + offsets[series_name]
+            for cat in plot_df.loc[valid, x_col]
+        ]
+        ci_vals = ci[valid]
+        all_values.extend((x_vals - ci_vals).tolist())
+        all_values.extend((x_vals + ci_vals).tolist())
+
+        lower = (x_vals - ci_vals).round(1)
+        upper = (x_vals + ci_vals).round(1)
+        custom = list(
+            zip(
+                plot_df.loc[valid, x_col].astype(str),
+                lower.tolist(),
+                upper.tolist(),
+            )
+        )
+
+        fig.add_trace(
+            go.Scatter(
+                x=x_vals,
+                y=y_positions,
+                mode="markers",
+                name=str(series_name),
+                marker=dict(
+                    color=colors[idx % len(colors)],
+                    size=10,
+                    symbol=symbols[series_name],
+                    line=dict(width=0.5, color="rgba(0,0,0,0.35)"),
+                ),
+                error_x=dict(
+                    type="data",
+                    array=ci_vals,
+                    visible=True,
+                    color=colors[idx % len(colors)],
+                    thickness=1.5,
+                    width=4,
+                ),
+                customdata=custom,
+                hovertemplate=(
+                    f"<b>{series_name}</b><br>"
+                    f"{category_axis_title}: %{{customdata[0]}}<br>"
+                    f"{value_axis_title}: %{{x:{hover_value_format}}}{hover_suffix}<br>"
+                    f"95% CI: %{{customdata[1]:{hover_value_format}}}–"
+                    f"%{{customdata[2]:{hover_value_format}}}{hover_suffix}"
+                    "<extra></extra>"
+                ),
+            )
+        )
+
+    value_series = pd.Series(all_values, dtype=float).dropna()
+    if value_series.empty:
+        value_series = pd.Series([0.0, 1.0])
+    x_range = _y_range(value_series, start_at_zero, y_padding, is_bar_graph=True)
+
+    left_margin = 280 if max((len(c) for c in categories), default=10) > 40 else 220
+    fig.update_layout(
+        showlegend=True,
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
+        paper_bgcolor="#f2f2f2",
+        plot_bgcolor="#f2f2f2",
+        width=width,
+        height=fig_height,
+        margin=dict(l=left_margin, r=40, t=60, b=70),
+        font=dict(family=font_family),
+    )
+    fig.update_xaxes(
+        title=dict(text=value_axis_title, font=dict(size=14, family=font_family)),
+        range=x_range,
+        gridcolor="rgba(0, 0, 0, 0.15)",
+        zerolinecolor="rgba(0, 0, 0, 0.2)",
+        **_y_axis_tick_settings(value_series, x_range),
+    )
+    fig.update_yaxes(
+        title=dict(text="", font=dict(size=14, family=font_family)),
+        tickmode="array",
+        tickvals=list(range(n_cats)),
+        ticktext=categories,
+        range=[-0.6, n_cats - 0.4],
+        showgrid=True,
+        gridcolor="rgba(0, 0, 0, 0.08)",
+        zeroline=False,
         automargin=True,
     )
     return fig

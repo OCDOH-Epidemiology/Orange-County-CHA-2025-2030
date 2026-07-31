@@ -20,7 +20,14 @@ from scripts.cha_table_styling import CHA_REGION_ALIASES, CHA_REGION_ORDER
 
 
 VALID_OBJECT_TYPES = {"table", "figure"}
-VALID_FIGURE_TYPES = {"line", "clustered_bar", "stacked_bar", "simple_bar", "horizontal_bar"}
+VALID_FIGURE_TYPES = {
+    "line",
+    "clustered_bar",
+    "stacked_bar",
+    "simple_bar",
+    "horizontal_bar",
+    "dot_whisker",
+}
 _VALID_FORMAT_CODES: frozenset[str] = frozenset(
     {"integer", "number", "percent1", "percent2", "currency", "currency2", "ratio", "date", "text"}
 )
@@ -74,6 +81,13 @@ _FIGURE_TYPE_ALIASES: dict[str, str] = {
     "5": "horizontal_bar",
     "horizontal_bar": "horizontal_bar",
     "horizontal bar": "horizontal_bar",
+    "6": "dot_whisker",
+    "dot_whisker": "dot_whisker",
+    "dot whisker": "dot_whisker",
+    "dot plot": "dot_whisker",
+    "dot_plot": "dot_whisker",
+    "error bar": "dot_whisker",
+    "error_bar": "dot_whisker",
 }
 
 
