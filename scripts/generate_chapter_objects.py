@@ -26,7 +26,7 @@ from scripts.cha_chapter_renderer import (  # noqa: E402
 from scripts.workbook_loader import load_cha_workbook  # noqa: E402
 
 
-DEFAULT_CHAPTER = PROJECT_ROOT / "chapters" / "13-example-data-objects.qmd"
+DEFAULT_CHAPTER = PROJECT_ROOT / "chapters" / "13-Triangulate the Data.qmd"
 DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "chapters" / "_generated" / "objects"
 DEFAULT_CHAPTERS_DIR = PROJECT_ROOT / "chapters"
 

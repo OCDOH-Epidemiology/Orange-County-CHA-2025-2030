@@ -1,0 +1,34 @@
+---
+title: "Appendices"
+jupyter: python3
+execute:
+  freeze: false
+---
+
+The following appendices provide supplementary documentation to support the methodology of the previously
+discussed surveys and the findings of the 2022–2024 Community Health Improvement workgroup progress found
+in three Annual Reports.
+
+>-Appendix A – LGBTQ+ Survey Tool
+>-Appendix B – Community Asset Survey Tool
+>-Appendix C – Community Provider Survey Tool
+>-Appendix D – Community Health Survey Tool
+>-Appendix E – OCDOH Annual Community Health Status Report for 2024
+>-Appendix F – OCDOH Annual Community Health Status Report for 2023
+>-Appendix G – OCDOH Annual Community Health Status Report for 2022
+
+
+## Appendix A – LGBTQ+ Survey Tool
+
+
+## Appendix B – Community Asset Survey Tool
+
+## Appendix C – Community Provider Survey Tool 
+
+## Appendix D – Community Health Survey Tool
+
+## Appendix E – OCDOH Annual Community Health Status Report for 2024
+https://www.orangecountygov.com/DocumentCenter/View/35424/CHIP-Annual-Report-for-2024
+## Appendix F – OCDOH Annual Community Health Status Report for 2023
+https://www.orangecountygov.com/DocumentCenter/View/31890/Community-Health-Improvement-Plan-Annual-Report-2023
+## Appendix G – OCDOH Annual Community Health Status Report for 2022

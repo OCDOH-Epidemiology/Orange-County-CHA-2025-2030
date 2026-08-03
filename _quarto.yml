@@ -34,7 +34,9 @@ book:
     - chapters/10-Hanlon Method.qmd
     - chapters/11-Health Summit.qmd
     - chapters/12-Community Input.qmd
-    - chapters/13-example-data-objects.qmd
+    - chapters/13-Triangulate the Data.qmd
+    - chapters/14-Community Health Improvement Foundation.qmd
+    - chapters/15-Appendices.qmd
   sidebar:
     style: docked
     search: true

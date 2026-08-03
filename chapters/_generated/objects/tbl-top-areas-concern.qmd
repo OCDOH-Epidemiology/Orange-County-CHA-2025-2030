@@ -1,0 +1,19 @@
+<!-- Static crosswalk table (not in workbook registry). Preserved by generate_objects via chapter include. -->
+
+| Priority | Community Asset Survey | Community Health Survey | Focus Groups | Hanlon Method | Health Summit Voting | Online Priority Selection | Provider Survey | Secondary Data Review |
+|----------|:----------------------:|:-----------------------:|:------------:|:-------------:|:--------------------:|:-------------------------:|:---------------:|:---------------------:|
+| Access to Care | ✓ |  | ✓ |  |  |  | ✓ |  |
+| Aging Issues |  |  |  |  |  |  |  | ✓ |
+| Cancer |  |  |  | ✓ | ✓ | ✓ |  | ✓ |
+| Cardiovascular Disease |  |  |  | ✓ |  |  |  | ✓ |
+| Childhood Immunizations |  |  |  | ✓ |  |  |  | ✓ |
+| Chronic Diseases |  |  |  |  |  |  | ✓ |  |
+| Food Security |  | ✓ |  |  | ✓ | ✓ |  |  |
+| Housing |  |  |  |  |  |  |  | ✓ |
+| Mental Health | ✓ | ✓ | ✓ |  |  |  | ✓ |  |
+| Obesity |  |  |  | ✓ |  |  |  | ✓ |
+| Physical Activity |  |  |  | ✓ |  |  |  |  |
+| Substance Use | ✓ |  |  |  | ✓ | ✓ |  |  |
+| Transportation |  | ✓ | ✓ |  |  |  |  |  |
+
+: Top Areas of Concern Across All Assessments {#tbl-top-areas-concern}

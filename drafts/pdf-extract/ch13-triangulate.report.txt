@@ -1,0 +1,12 @@
+PDF → Quarto extraction report
+  page_offset (PDF − printed): 6
+  PDF pages: 369–375
+  objects emitted: 3
+  F250:data-review-guide, T67:top-areas-concern, F251:data-review-process
+  unmatched: none
+  MISSING object files:
+    - fig-data-review-guide.qmd
+    - fig-data-review-process.qmd
+    - tbl-data-review-guide.qmd
+    - tbl-data-review-process.qmd
+    - tbl-top-areas-concern.qmd

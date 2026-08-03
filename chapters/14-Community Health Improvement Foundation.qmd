@@ -1,0 +1,99 @@
+---
+title: "Community Health Improvement Foundation"
+jupyter: python3
+execute:
+  freeze: false
+---
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+import sys
+from pathlib import Path
+
+# Ensure root-level modules (scripts/) are importable in both Quarto run contexts.
+cwd = Path.cwd()
+project_root = cwd if (cwd / "scripts").exists() else cwd.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+CHA_WORKBOOK_PATH = project_root / "data" / "raw" / "workbook.xlsx"
+```
+
+In the MAPP 2.0 framework, creating a Community Health Improvement Plan is essential because it translates
+data and assessments into a roadmap for collective action. It allows a community to move beyond simply
+identifying problems to aligning resources across sectors to tackle root causes of health inequities. The foundation
+of an effective CHIP rests on broad community ownership, a strategic focus on upstream root causes, and a
+commitment to actionable accountability through measurable goals and continuous evaluation.
+
+## 2022–2024 CHIP Final Review
+
+In the 2022–2024 Orange County CHIP, two overarching priority areas were selected from the 2019–2024
+New York State DOH Prevention Agenda: Preventing Chronic Disease and Promoting Well-Being and
+Preventing Mental Health and Substance Use Disorders.
+
+### Focus Areas
+
+Within the priority area of Preventing Chronic Disease, the following focus areas and goals were chosen
+(numbers corresponding to the 2019–2024 New York State Prevention Agenda):
+
+**Focus Area 1: Healthy Eating and Food Security**
+
+>- Goal 1.1: Increase access to healthy and affordable foods and beverages
+>- Goal 1.3: Increase food security
+
+**Focus Area 4: Preventative Care and Management**
+
+>- Goal 4.1: Increase cancer screening rates for breast, cervical, and colorectal cancer
+
+Within the priority area of Promoting Well-Being and Preventing Mental Health and Substance Use Disorders,
+the following focus areas and goals were chosen (numbers corresponding to the 2019–2024 New York State
+Prevention Agenda):
+
+**Focus Area 2: Mental and Substance Use Disorders Prevention**
+
+>- Goal 2.2: Prevent Opioid and other Substance Misuse and Deaths
+
+### Evidence-Based Strategies and Long-Term Objectives
+
+The CHIP outlines evidence-based strategies that will be used to address the chosen priority areas, including
+goals, objectives, evidence-based interventions, responsible partners, a timeframe for completion, evaluation
+measures, and both short-term and long-term outcome measures. [@tbl-ebi-long-term-objective] summarizes the
+CHIP focus areas, evidence-based strategies and whether long-term objectives were met by December 31, 2024.
+
+[@tbl-short-term-process] summarizes the short-term indicators for each CHIP Focus Area and note whether
+process indicators were met in 2024. Annual CHIP reports are developed through the ongoing efforts of the CHIP
+Focus Area Committees and presented at the Annual Orange County Health Summit.
+
+For a comprehensive history of CHIP progress, please refer to Appendices E–G. This includes the 2024 Annual
+Report (Appendix E), the 2023 Annual Report (Appendix F) and the 2022 CHIP Annual Report (Appendix G).
+
+<!-- Table 68: Evidence-Based Strategies and Long-Term Objectives -->
+{{< include _generated/objects/tbl-ebi-long-term-objective.qmd >}}
+
+<!-- Table 69: Short Term Process Indicators and Progress at of 2024 -->
+{{< include _generated/objects/tbl-short-term-process.qmd >}}
+
+## 2026–2030 CHIP Roadmap
+
+To drive the Community Health Improvement Plan (CHIP) process, OCDOH established a Steering Committee
+comprising over 20 diverse stakeholders, including area hospitals, community-based organizations, business
+owners, schools, Federally Qualified Health Centers, and the broader community. The Steering Committee is
+tasked with reviewing assessments to collectively select priority areas and evidence-based strategies; drafting
+goals and objectives; and establishing partner assignments, evaluation measures, and outcome metrics.
+
+In January, the Steering Committee conducted a comprehensive review of the Orange County Community Health
+Assessment, the Mid-Hudson Regional Community Health Assessment, and qualitative insights from the OC Health
+Summit, surveys, and focus groups. To synthesize this vast dataset, the committee analyzed trend data, regional
+comparisons, and health disparities, prioritizing issues based on the availability of evidence-based interventions
+and measurable outcome data.
+
+In February, the Steering Committee finalized the selection of three priority areas: Food Security, Cancer
+Screening, and Mental Health. Each priority area will be supported by an OCDOH-led workgroup that
+leverages existing partnerships to actively recruit residents and community partners. The Steering Committee will
+meet monthly to develop the final 2026–2030 CHIP for submission to the NYSDOH by June 30, 2026.
+
+Following submission, the Committee will shift to quarterly meetings to monitor progress, review current data,
+identify the need for resources, and implement the MAPP 2.0 Action Cycle. This ongoing evaluation ensures each
+strategy remains responsive to community needs and is effectively executed through 2030.

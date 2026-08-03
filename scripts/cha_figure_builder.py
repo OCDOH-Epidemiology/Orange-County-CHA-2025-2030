@@ -843,8 +843,8 @@ def build_dot_whisker_figure(
     fig.update_layout(
         showlegend=True,
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
-        paper_bgcolor="#f2f2f2",
-        plot_bgcolor="#f2f2f2",
+        paper_bgcolor="white",
+        plot_bgcolor="white",
         width=width,
         height=fig_height,
         margin=dict(l=left_margin, r=40, t=60, b=70),

@@ -1,0 +1,7 @@
+PDF → Quarto extraction report
+  page_offset (PDF − printed): 6
+  PDF pages: 376–380
+  objects emitted: 2
+  T68:ebi-long-term-objective, T69:short-term-process
+  unmatched: none
+  missing object files: none
