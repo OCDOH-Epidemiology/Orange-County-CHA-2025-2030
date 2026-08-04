@@ -9,26 +9,39 @@ The following appendices provide supplementary documentation to support the meth
 discussed surveys and the findings of the 2022–2024 Community Health Improvement workgroup progress found
 in three Annual Reports.
 
->-Appendix A – LGBTQ+ Survey Tool
->-Appendix B – Community Asset Survey Tool
->-Appendix C – Community Provider Survey Tool
->-Appendix D – Community Health Survey Tool
->-Appendix E – OCDOH Annual Community Health Status Report for 2024
->-Appendix F – OCDOH Annual Community Health Status Report for 2023
->-Appendix G – OCDOH Annual Community Health Status Report for 2022
+> - [Appendix A – LGBTQ+ Survey Tool](#appendix-a)
+> - [Appendix B – Community Asset Survey Tool](#appendix-b)
+> - [Appendix C – Community Provider Survey Tool](#appendix-c)
+> - [Appendix D – Community Health Survey Tool](#appendix-d)
+> - [Appendix E – OCDOH Annual Community Health Status Report for 2024](#appendix-e)
+> - [Appendix F – OCDOH Annual Community Health Status Report for 2023](#appendix-f)
+> - [Appendix G – OCDOH Annual Community Health Status Report for 2022](#appendix-g)
 
 
-## Appendix A – LGBTQ+ Survey Tool
+## Appendix A – LGBTQ+ Survey Tool {#appendix-a}
 
+[Appendix A – LGBTQ+ Survey Final](../pdfs/Appendices/Appendix%20A%20-%20LGBTQ%2B%20Survey%20Final.pdf)
 
-## Appendix B – Community Asset Survey Tool
+## Appendix B – Community Asset Survey Tool {#appendix-b}
 
-## Appendix C – Community Provider Survey Tool 
+[Appendix B – Community Asset Survey 2025](../pdfs/Appendices/Appendix%20B%20-%20FINAL%20English%20Community%20Asset%20Survey%202025.pdf)
 
-## Appendix D – Community Health Survey Tool
+## Appendix C – Community Provider Survey Tool {#appendix-c}
 
-## Appendix E – OCDOH Annual Community Health Status Report for 2024
-https://www.orangecountygov.com/DocumentCenter/View/35424/CHIP-Annual-Report-for-2024
-## Appendix F – OCDOH Annual Community Health Status Report for 2023
-https://www.orangecountygov.com/DocumentCenter/View/31890/Community-Health-Improvement-Plan-Annual-Report-2023
-## Appendix G – OCDOH Annual Community Health Status Report for 2022
+[Appendix C – Community Provider Survey 2025](../pdfs/Appendices/Appendix%20C%20-%20Community%20Provider%20Survey%202025.pdf)
+
+## Appendix D – Community Health Survey Tool {#appendix-d}
+
+[Appendix D – 2024 Siena Survey Question Guide](../pdfs/Appendices/Appendix%20D%20-%202024%20Siena%20Survey%20Question%20Guide.pdf)
+
+## Appendix E – OCDOH Annual Community Health Status Report for 2024 {#appendix-e}
+
+[CHIP Annual Report for 2024](https://www.orangecountygov.com/DocumentCenter/View/35424/CHIP-Annual-Report-for-2024)
+
+## Appendix F – OCDOH Annual Community Health Status Report for 2023 {#appendix-f}
+
+[Community Health Improvement Plan Annual Report 2023](https://www.orangecountygov.com/DocumentCenter/View/31890/Community-Health-Improvement-Plan-Annual-Report-2023)
+
+## Appendix G – OCDOH Annual Community Health Status Report for 2022 {#appendix-g}
+
+[Appendix G – CHIP Annual Report 2023 for 2022](../pdfs/Appendices/Appendix%20G%20-%20CHIP%20Annual%20Report%202023%20for%202022.pdf)

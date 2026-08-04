@@ -66,8 +66,8 @@ CHIP focus areas, evidence-based strategies and whether long-term objectives wer
 process indicators were met in 2024. Annual CHIP reports are developed through the ongoing efforts of the CHIP
 Focus Area Committees and presented at the Annual Orange County Health Summit.
 
-For a comprehensive history of CHIP progress, please refer to Appendices E–G. This includes the 2024 Annual
-Report (Appendix E), the 2023 Annual Report (Appendix F) and the 2022 CHIP Annual Report (Appendix G).
+For a comprehensive history of CHIP progress, please refer to [Appendices E–G](15-Appendices.qmd#appendix-e-ocdoh-annual-community-health-status-report-for-2024)-[Appendix G](15-Appendices.qmd#appendix-g-ocdoh-annual-community-health-status-report-for-2022). This includes the 2024 Annual
+Report ([Appendix E](15-Appendices.qmd#appendix-e)), the 2023 Annual Report ([Appendix F](15-Appendices.qmd#appendix-f)) and the 2022 CHIP Annual Report ([Appendix G](15-Appendices.qmd#appendix-g)).
 
 <!-- Table 68: Evidence-Based Strategies and Long-Term Objectives -->
 {{< include _generated/objects/tbl-ebi-long-term-objective.qmd >}}
