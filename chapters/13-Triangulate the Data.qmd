@@ -69,4 +69,4 @@ concludes with the selection of the final CHIP priority areas. This visual ensur
 Steering Committee moved from raw data to community-validated priorities.
 
 <!-- ! Figure 164: Data Review and Priority Selection Process -->
-![Data Review and Priority Selection Process](../pdfs/Appendices/Santa Clara Priorities Narrowed Graphic for OC CHA CHIP 2026.pdf){#fig-data-review-process fig-cap="Data Review and Priority Selection Process" fig-alt="Diagram showing evolution from comprehensive data review to major concerns across assessments to final CHIP priority areas." width="100%"}
+![Data Review and Priority Selection Process](../pdfs/triangulate/fig-data-review-process.png){#fig-data-review-process fig-cap="Data Review and Priority Selection Process" fig-alt="Diagram showing evolution from comprehensive data review to major concerns across assessments to final CHIP priority areas." width="100%"}
