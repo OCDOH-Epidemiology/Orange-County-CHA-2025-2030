@@ -1,19 +1,11 @@
-<!-- Static crosswalk table (not in workbook registry). Preserved by generate_objects via chapter include. -->
+<!-- indicator: tbl-top-areas-concern -->
 
-| Priority | Community Asset Survey | Community Health Survey | Focus Groups | Hanlon Method | Health Summit Voting | Online Priority Selection | Provider Survey | Secondary Data Review |
-|----------|:----------------------:|:-----------------------:|:------------:|:-------------:|:--------------------:|:-------------------------:|:---------------:|:---------------------:|
-| Access to Care | ✓ |  | ✓ |  |  |  | ✓ |  |
-| Aging Issues |  |  |  |  |  |  |  | ✓ |
-| Cancer |  |  |  | ✓ | ✓ | ✓ |  | ✓ |
-| Cardiovascular Disease |  |  |  | ✓ |  |  |  | ✓ |
-| Childhood Immunizations |  |  |  | ✓ |  |  |  | ✓ |
-| Chronic Diseases |  |  |  |  |  |  | ✓ |  |
-| Food Security |  | ✓ |  |  | ✓ | ✓ |  |  |
-| Housing |  |  |  |  |  |  |  | ✓ |
-| Mental Health | ✓ | ✓ | ✓ |  |  |  | ✓ |  |
-| Obesity |  |  |  | ✓ |  |  |  | ✓ |
-| Physical Activity |  |  |  | ✓ |  |  |  |  |
-| Substance Use | ✓ |  |  |  | ✓ | ✓ |  |  |
-| Transportation |  | ✓ | ✓ |  |  |  |  |  |
-
-: Top Areas of Concern Across All Assessments {#tbl-top-areas-concern}
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-top-areas-concern
+#| tbl-cap: 'Top Areas of Concern Across All Assessments'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-top-areas-concern", workbook_path=CHA_WORKBOOK_PATH)
+```

@@ -328,13 +328,18 @@ def _ensure_unique_column_labels(columns: list[Any]) -> list[str]:
 
 
 def _rebuild_multiindex(df: pd.DataFrame) -> pd.DataFrame:
-    tuples = []
+    parts_list: list[list[str]] = []
+    max_levels = 1
     for col in df.columns:
-        if "|" in str(col):
-            top, sub = str(col).split("|", 1)
-            tuples.append((top.strip(), sub.strip()))
+        text = str(col)
+        if "|" in text:
+            parts = [part.strip() for part in text.split("|")]
         else:
-            tuples.append((" ", str(col)))
+            # Blank top level keeps single-column labels aligned under grouped headers.
+            parts = [" ", text]
+        parts_list.append(parts)
+        max_levels = max(max_levels, len(parts))
+    tuples = [tuple(parts + [""] * (max_levels - len(parts))) for parts in parts_list]
     out = df.copy()
     out.columns = pd.MultiIndex.from_tuples(tuples)
     return out

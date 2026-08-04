@@ -646,16 +646,23 @@ def _parse_flat_indicator_sheet(
             ]
             merged: list[str] = []
             last_top = ""
+            last_sub = ""
             for col_idx, (h_top, h_sub) in enumerate(zip(headers, sub_headers)):
-                effective_top = h_top if h_top else last_top
+                # New non-blank top group resets mid-level forward-fill so
+                # categories do not leak across unrelated column groups.
                 if h_top:
                     last_top = h_top
+                    last_sub = h_sub
+                elif h_sub:
+                    last_sub = h_sub
+                effective_top = last_top
+                effective_sub = h_sub or last_sub
                 if col_idx == 0:
                     merged.append(h_sub or h_top)
-                elif effective_top and h_sub:
-                    merged.append(f"{effective_top}|{h_sub}")
-                elif h_sub:
-                    merged.append(h_sub)
+                elif effective_top and effective_sub:
+                    merged.append(f"{effective_top}|{effective_sub}")
+                elif effective_sub:
+                    merged.append(effective_sub)
                 else:
                     merged.append(effective_top)
             headers = merged
@@ -666,6 +673,56 @@ def _parse_flat_indicator_sheet(
                 "|" in col and _as_text(col.split("|", 1)[0]).lower() not in _VALID_FORMAT_CODES
                 for col in headers
             )
+
+        # Tertiary header row: category names on row 2, then "#" / "%" units on
+        # row 3 (e.g. Educ Person 25+). Consume that unit row before data.
+        unit_row_idx = data_start_idx
+        if unit_row_idx < len(df):
+            unit_row_label_blank = _as_text(df.iloc[unit_row_idx, data_col_start_idx]) == ""
+            unit_cells = [
+                df.iloc[unit_row_idx, j]
+                for j in range(data_col_start_idx + 1, data_col_end_idx)
+            ]
+            unit_labels = [_as_text(cell) for cell in unit_cells if _as_text(cell)]
+            unit_numeric_count = sum(1 for cell in unit_cells if _looks_numeric_cell(cell))
+            known_unit_tokens = {"#", "%", "n", "no.", "number", "count", "rate"}
+            looks_like_unit_row = (
+                unit_row_label_blank
+                and len(unit_labels) >= 2
+                and unit_numeric_count == 0
+                and all(
+                    label.lower() in known_unit_tokens or len(label) <= 3
+                    for label in unit_labels
+                )
+            )
+            next_row_idx = unit_row_idx + 1
+            next_row_numeric_count = 0
+            if next_row_idx < len(df):
+                next_row_cells = [
+                    df.iloc[next_row_idx, j]
+                    for j in range(data_col_start_idx + 1, data_col_end_idx)
+                ]
+                next_row_numeric_count = sum(
+                    1 for cell in next_row_cells if _looks_numeric_cell(cell)
+                )
+            if looks_like_unit_row and next_row_numeric_count >= 2:
+                unit_headers = [
+                    _as_text(df.iloc[unit_row_idx, j])
+                    for j in range(data_col_start_idx, data_col_end_idx)
+                ]
+                with_units: list[str] = []
+                for col_idx, (h_base, h_unit) in enumerate(zip(headers, unit_headers)):
+                    if col_idx == 0:
+                        with_units.append(h_base)
+                    elif h_base and h_unit:
+                        with_units.append(f"{h_base}|{h_unit}")
+                    elif h_unit:
+                        with_units.append(h_unit)
+                    else:
+                        with_units.append(h_base)
+                headers = with_units
+                data_start_idx = unit_row_idx + 1
+                auto_multilevel = True
 
     # Read per-column format rules from row above Enter Data.
     format_rules: dict[str, str] = {}
