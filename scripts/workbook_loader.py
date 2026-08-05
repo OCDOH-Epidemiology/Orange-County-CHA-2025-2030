@@ -205,6 +205,9 @@ def _as_bool(value: Any, default: bool = False) -> bool:
 def _as_text(value: Any, default: str = "") -> str:
     if value is None or (isinstance(value, float) and pd.isna(value)):
         return default
+    # Whole-number floats (e.g. year headers 2020.0) render as plain integers.
+    if isinstance(value, float) and value.is_integer():
+        return str(int(value))
     return str(value).strip()
 
 

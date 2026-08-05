@@ -312,13 +312,26 @@ def _prepare_table_df(df: pd.DataFrame, format_rules: dict[str, str]) -> pd.Data
 
 
 def _strip_format_tokens_from_label(label: Any) -> str:
-    text = str(label).strip()
+    text = _as_text(label)
     if not text:
         return text
     if "|" in text:
         left, right = text.split("|", 1)
-        if _as_text(left) in _VALID_FORMAT_CODES:
-            return _as_text(right)
+        if _as_text(left).lower() in _VALID_FORMAT_CODES:
+            text = _as_text(right)
+        else:
+            # Clean whole-number floats in each header level (e.g. "2020.0|#").
+            parts = [part.strip() for part in text.split("|")]
+            cleaned = []
+            for part in parts:
+                if re.fullmatch(r"-?\d+\.0+", part):
+                    cleaned.append(part.split(".", 1)[0])
+                else:
+                    cleaned.append(part)
+            return "|".join(cleaned)
+    # Whole-number floats stored as strings (e.g. year headers "2020.0").
+    if re.fullmatch(r"-?\d+\.0+", text):
+        return text.split(".", 1)[0]
     return text
 
 

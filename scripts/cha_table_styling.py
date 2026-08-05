@@ -190,9 +190,10 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
     
     Styling specifications:
     - Header: Light green (#EAF5DB) background, bold, centered
-    - Row 1: #EAF5DB (light green)
-    - Row 2: White
-    - Row 3: #EAF5DB (light green)
+      (both levels stay green when multilevel headers are applied)
+    - Row 1: White
+    - Row 2: #EAF5DB (light green)
+    - Row 3: White
     - Alternates: white, #EAF5DB, white, #EAF5DB...
     - First column: Bold (or workbook-driven), left-aligned when hierarchy styles apply
     - Other columns: Right-aligned (numeric)
@@ -292,13 +293,14 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
             ('padding', '10px'),
             ('border', '1px solid #ddd')
         ]},
-        # Ensure row striping starts with row 1 (green), then white, then alternate.
+        # Body striping: first data row white, then green, then alternate.
+        # Header rows stay green (including multiheader sub-header rows).
         # Target td cells directly with !important to win against framework defaults.
         {'selector': 'tbody tr:nth-child(odd) td', 'props': [
-            ('background-color', '#EAF5DB !important')
+            ('background-color', '#FFFFFF !important')
         ]},
         {'selector': 'tbody tr:nth-child(even) td', 'props': [
-            ('background-color', '#FFFFFF !important')
+            ('background-color', '#EAF5DB !important')
         ]},
         # Table container
         {'selector': 'table', 'props': [
@@ -363,9 +365,9 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
     row_position_lookup = {idx: pos for pos, idx in enumerate(df.index)}
 
     def style_row(row):
-        # Row 1 should be green, then white, then alternate.
+        # Row 1 should be white, then green, then alternate.
         row_pos = row_position_lookup.get(row.name, 0)
-        base_bg = '#EAF5DB' if row_pos % 2 == 0 else '#FFFFFF'
+        base_bg = '#FFFFFF' if row_pos % 2 == 0 else '#EAF5DB'
         base_css = f'background-color: {base_bg} !important'
 
         # Check if this row contains "Westchester" in the first column.

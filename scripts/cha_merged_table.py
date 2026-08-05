@@ -9,13 +9,16 @@ import re
 from collections.abc import Callable
 from typing import Any
 
+import pandas as pd
 from IPython.display import HTML
 
 from scripts.cha_table_styling import CHA_FONT_FAMILY, EXCEL_INDENT_PX_PER_LEVEL
 from scripts.workbook_loader import CellMerge, CellStyle, MergedTableGrid
 
-_ROW_ODD_BG = "#EAF5DB"
-_ROW_EVEN_BG = "#FFFFFF"
+# Body striping: first data row white, then green, then alternate.
+# Header rows always use _HEADER_BG (including multiheader sub-rows).
+_ROW_ODD_BG = "#FFFFFF"
+_ROW_EVEN_BG = "#EAF5DB"
 _HEADER_BG = "#EAF5DB"
 _BORDER_COLOR = "#5a8f3c"
 
@@ -107,15 +110,42 @@ def _row_format_override(row: tuple[Any, ...]) -> str | None:
     return None
 
 
+def _header_display_text(value: Any) -> str:
+    """Render header cells as plain text (never percent/number formats)."""
+    if value is None:
+        return ""
+    if isinstance(value, bool):
+        return str(value)
+    if isinstance(value, int):
+        return str(value)
+    if isinstance(value, float):
+        if pd.isna(value):
+            return ""
+        if value.is_integer():
+            return str(int(value))
+        return str(value).strip()
+    text = str(value).strip()
+    if re.fullmatch(r"-?\d+\.0+", text):
+        return text.split(".", 1)[0]
+    return text
+
+
 def _format_grid_value(
     value: Any,
     col_idx: int,
     format_rules_by_col: tuple[str, ...],
     format_fn: Callable[[Any, str], Any],
     row_format_override: str | None = None,
+    *,
+    is_header: bool = False,
 ) -> str:
     if value is None:
         return ""
+    # Headers are always plain text — never apply percent1/percent2/etc.
+    if is_header:
+        text = _header_display_text(value)
+        return html.escape(text).replace("\n", "<br>") if text else ""
+
     text = str(value).strip()
     if text == "":
         return ""
@@ -165,6 +195,7 @@ def _render_row(
             grid.format_rules_by_col,
             format_fn,
             row_format_override=row_format_override,
+            is_header=is_header,
         )
 
         bg = row_bg
