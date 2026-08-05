@@ -1,12 +1,12 @@
-<!-- indicator: fig-top-areas-concern -->
+<!-- indicator: fig-top-areas-of-concern -->
 
 ```{python}
 #| echo: false
 #| warning: false
 #| message: false
-#| label: fig-top-areas-concern
+#| label: fig-top-areas-of-concern
 #| fig-cap: 'Top Areas of Concern Across All Assessments'
 #| fig-alt: 'Data visualization showing Top Areas of Concern Across All Assessments.'
 from scripts.cha_registry_renderer import render_figure_object
-render_figure_object(figure_id="fig-top-areas-concern", workbook_path=CHA_WORKBOOK_PATH).show()
+render_figure_object(figure_id="fig-top-areas-of-concern", workbook_path=CHA_WORKBOOK_PATH).show()
 ```

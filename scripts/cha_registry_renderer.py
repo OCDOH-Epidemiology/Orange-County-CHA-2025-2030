@@ -29,7 +29,13 @@ from scripts.cha_table_styling import (
 )
 from scripts.cha_merged_table import render_merged_table
 from scripts.cha_pdf_tables import is_pdf_render, render_pdf_table_latex
-from scripts.workbook_loader import WorkbookModel, load_cha_workbook, _VALID_FORMAT_CODES, _as_text
+from scripts.workbook_loader import (
+    CellStyle,
+    WorkbookModel,
+    load_cha_workbook,
+    _VALID_FORMAT_CODES,
+    _as_text,
+)
 
 
 def _resolve_default_workbook_path() -> Path:
@@ -223,17 +229,20 @@ def _format_value(value: Any, format_name: str) -> Any:
         return str(int(round(_to_float(v))))
 
     if format_name == "number":
+        # Always use thousands separators. Do not treat 1900–2100 counts as
+        # years — that incorrectly formats values like 2,067 as "2067".
         try:
-            if _is_time_like_value(value):
-                return _format_year_like_whole(value)
             return f"{_to_float(value):,.0f}"
         except (ValueError, TypeError):
             return value
     if format_name == "integer":
         try:
-            if _is_time_like_value(value):
-                return _format_year_like_whole(value)
             return f"{int(round(_to_float(value))):,}"
+        except (ValueError, TypeError):
+            return value
+    if format_name == "year":
+        try:
+            return _format_year_like_whole(value)
         except (ValueError, TypeError):
             return value
     if format_name == "percent1":
@@ -345,6 +354,61 @@ def _rebuild_multiindex(df: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
+def _first_column_display_label(df: pd.DataFrame) -> str:
+    col = df.columns[0]
+    if isinstance(col, tuple):
+        parts = [str(part).strip() for part in col if str(part).strip() and str(part).strip() != ""]
+        return parts[-1] if parts else str(col[-1]).strip()
+    return str(col).strip()
+
+
+def _is_village_geo_label(label: Any) -> bool:
+    return bool(re.search(r"\bVillage\b", str(label)))
+
+
+def _is_parent_geo_label(label: Any) -> bool:
+    return bool(re.search(r"\b(County|Town|City)\b", str(label)))
+
+
+def _enhance_geographic_area_styles(
+    df: pd.DataFrame,
+    cell_styles: tuple[tuple[CellStyle, ...], ...] | None,
+) -> tuple[tuple[CellStyle, ...], ...] | None:
+    """Bold parent geos and indent villages for Geographic Area municipality tables.
+
+    Workbook indent/bold is often incomplete for these sheets; infer hierarchy from
+    labels so HTML/PDF match the published CHA table layout.
+    """
+    if df.empty or _first_column_display_label(df) != "Geographic Area":
+        return cell_styles
+
+    labels = ["" if pd.isna(v) else str(v) for v in df.iloc[:, 0].tolist()]
+    n_village = sum(1 for label in labels if _is_village_geo_label(label))
+    n_parent = sum(1 for label in labels if _is_parent_geo_label(label))
+    if n_village < 2 or n_parent < 2:
+        return cell_styles
+
+    n_rows = len(df)
+    n_cols = len(df.columns)
+    base_rows: list[list[CellStyle]] = []
+    for row_idx in range(n_rows):
+        if cell_styles and row_idx < len(cell_styles):
+            row = list(cell_styles[row_idx])
+            while len(row) < n_cols:
+                row.append(CellStyle())
+            base_rows.append(row[:n_cols])
+        else:
+            base_rows.append([CellStyle() for _ in range(n_cols)])
+
+    for row_idx, label in enumerate(labels):
+        if _is_village_geo_label(label):
+            base_rows[row_idx][0] = CellStyle(bold=False, indent=1)
+        else:
+            base_rows[row_idx][0] = CellStyle(bold=True, indent=0)
+
+    return tuple(tuple(row) for row in base_rows)
+
+
 def render_table_object(
     object_id: str,
     workbook_path: str | Path | None = None,
@@ -391,14 +455,15 @@ def render_table_object(
             source_df = source_df.rename(columns={first_col: "Year"})
     if table_spec.has_multilevel_headers:
         source_df = _rebuild_multiindex(source_df)
+    cell_styles = _enhance_geographic_area_styles(source_df, table_spec.cell_styles)
     if is_pdf_render():
         return Latex(
-            render_pdf_table_latex(object_id, source_df, cell_styles=table_spec.cell_styles)
+            render_pdf_table_latex(object_id, source_df, cell_styles=cell_styles)
         )
     return style_cha_table(
         source_df,
         has_multilevel_headers=table_spec.has_multilevel_headers,
-        cell_styles=table_spec.cell_styles,
+        cell_styles=cell_styles,
     )
 
 

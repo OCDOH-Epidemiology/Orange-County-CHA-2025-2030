@@ -16,7 +16,7 @@ from scripts.workbook_loader import CellMerge, CellStyle, MergedTableGrid
 
 _ROW_ODD_BG = "#EAF5DB"
 _ROW_EVEN_BG = "#FFFFFF"
-_HEADER_BG = "#FFFFFF"
+_HEADER_BG = "#EAF5DB"
 _BORDER_COLOR = "#5a8f3c"
 
 

@@ -189,13 +189,13 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
     Apply consistent CHA table styling to a pandas DataFrame.
     
     Styling specifications:
-    - Header: White background, bold, centered
+    - Header: Light green (#EAF5DB) background, bold, centered
     - Row 1: #EAF5DB (light green)
     - Row 2: White
     - Row 3: #EAF5DB (light green)
     - Alternates: white, #EAF5DB, white, #EAF5DB...
-    - First column: Bold, center-aligned
-    - Other columns: Center-aligned
+    - First column: Bold (or workbook-driven), left-aligned when hierarchy styles apply
+    - Other columns: Right-aligned (numeric)
     - Dark green separator line after "Westchester" row to separate county data from grouped areas
     
     Parameters
@@ -261,19 +261,19 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
     # ─────────────────────────────────────────────────────────────────────────
 
     styles = [
-        # Header styling - white background
+        # Header styling - sage green to match published CHA tables
         {'selector': 'th', 'props': [
             ('font-weight', 'bold'), 
             ('text-align', 'center'), 
-            ('background-color', '#FFFFFF'), 
+            ('background-color', '#EAF5DB'), 
             ('font-family', CHA_FONT_FAMILY),
             ('padding', '10px'),
             ('border', '1px solid #ddd')
         ]},
-        # First column - bold, center-aligned (skipped when per-cell styles are provided)
+        # First column - bold, left-aligned (skipped when per-cell styles are provided)
         *([] if cell_styles else [{'selector': 'td:first-child', 'props': [
             ('font-weight', 'bold'),
-            ('text-align', 'center'),
+            ('text-align', 'left'),
             ('font-family', CHA_FONT_FAMILY),
             ('padding', '10px'),
             ('border', '1px solid #ddd')
@@ -285,9 +285,9 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
             ('padding', '10px'),
             ('border', '1px solid #ddd'),
         ]}] if cell_styles else []),
-        # Other columns - center-aligned
+        # Other columns - right-aligned for numeric readability
         {'selector': 'td:not(:first-child)', 'props': [
-            ('text-align', 'center'), 
+            ('text-align', 'right'), 
             ('font-family', CHA_FONT_FAMILY),
             ('padding', '10px'),
             ('border', '1px solid #ddd')
@@ -319,7 +319,7 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
             'props': [
                 ('border-bottom', '2px solid #333'),
                 ('font-weight', 'bold'),
-                ('background-color', '#FFFFFF'),
+                ('background-color', '#EAF5DB'),
                 ('text-align', 'center'),
                 ('vertical-align', 'middle'),
                 ('padding', '10px')
@@ -332,7 +332,7 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
                 ('font-weight', 'normal'),
                 ('font-size', '0.9em'),
                 ('text-align', 'center'),
-                ('background-color', '#FFFFFF'),
+                ('background-color', '#EAF5DB'),
                 ('padding', '10px')
             ]
         })

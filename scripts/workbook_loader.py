@@ -29,7 +29,18 @@ VALID_FIGURE_TYPES = {
     "dot_whisker",
 }
 _VALID_FORMAT_CODES: frozenset[str] = frozenset(
-    {"integer", "number", "percent1", "percent2", "currency", "currency2", "ratio", "date", "text"}
+    {
+        "integer",
+        "number",
+        "year",
+        "percent1",
+        "percent2",
+        "currency",
+        "currency2",
+        "ratio",
+        "date",
+        "text",
+    }
 )
 
 _X_COL_SYNONYM_GROUPS: tuple[frozenset[str], ...] = (
@@ -497,11 +508,12 @@ def _extract_merged_table_grid(ws: Any, df: pd.DataFrame) -> MergedTableGrid | N
             fmt_val = _as_text(ws.cell(format_row_idx + 1, col_1based).value).lower()
             format_rules_by_col.append(fmt_val if fmt_val in _VALID_FORMAT_CODES else "")
 
-    # Grid-mode tables use only the Enter Data row as the rendered header.
+    # Include detected sub-header rows (e.g. None/One/Two under a merged group).
+    header_rows = last_header_row_1based - header_row_1based + 1
     return MergedTableGrid(
         cells=tuple(tuple(row) for row in grid),
         merges=tuple(merges),
-        header_rows=1,
+        header_rows=header_rows,
         format_rules_by_col=tuple(format_rules_by_col),
         styles=tuple(tuple(row) for row in style_grid),
     )

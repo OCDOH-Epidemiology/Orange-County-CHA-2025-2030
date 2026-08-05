@@ -79,10 +79,10 @@ per 100,000 in zip code 10940 [@fig-dzcircsystem-mortal-zip].
 {{< include _generated/objects/tbl-dzcircsystem-mortal-sex-aar.qmd >}}
 
 ### Diseases of the Heart
-Diseases of the heart mortality in Orange County ranged from 157.5 to 179.8 per 100,000 during 2020–2023, with a most recent value of 167.4 per 100,000 in 2023 (676 deaths) [@tbl-heartdz-mortal-rande-zip]. The age-adjusted heart disease mortality rate ranged from 144.8 to 161.2 per 100,000 over the same period and was 155.8 per 100,000 in 2023 [@fig-heartdz-mortal-aar]. A consistent sex disparity was present across 2020–2023: in 2023, the age-adjusted heart disease mortality rate was 202.9 per 100,000 among males and 119.2 per 100,000 among females [@fig-heartdz-mortal-sex-aar]. By race and ethnicity, the heart disease mortality rate in 2023 was highest among Non-Hispanic White residents (196.9 per 100,000) compared with 113.9 per 100,000 among Non-Hispanic Black residents and 81.2 per 100,000 among Hispanic residents [@tbl-heartdz-mortal-rande-zip]. Zip code variation was also observed; in 2023, zip code 12550 had the highest listed heart disease mortality rate (315.0 per 100,000) compared with 199.6 per 100,000 in zip code 10940 [@fig-heartdz-mortal-zip]. As with other mortality indicators, rates increased substantially with age; in 2023, the heart disease mortality rate among residents age 85+ was 3,651.8 per 100,000 [@tbl-heartdz-mortal-rande-zip].
+Diseases of the heart mortality in Orange County ranged from 157.5 to 179.8 per 100,000 during 2020–2023, with a most recent value of 167.4 per 100,000 in 2023 (676 deaths) [@tbl-heartdz-count-rate-age-rande-zip]. The age-adjusted heart disease mortality rate ranged from 144.8 to 161.2 per 100,000 over the same period and was 155.8 per 100,000 in 2023 [@fig-heartdz-mortal-aar]. A consistent sex disparity was present across 2020–2023: in 2023, the age-adjusted heart disease mortality rate was 202.9 per 100,000 among males and 119.2 per 100,000 among females [@fig-heartdz-mortal-sex-aar]. By race and ethnicity, the heart disease mortality rate in 2023 was highest among Non-Hispanic White residents (196.9 per 100,000) compared with 113.9 per 100,000 among Non-Hispanic Black residents and 81.2 per 100,000 among Hispanic residents [@tbl-heartdz-mortal-rande-zip]. Zip code variation was also observed; in 2023, zip code 12550 had the highest listed heart disease mortality rate (315.0 per 100,000) compared with 199.6 per 100,000 in zip code 10940 [@fig-heartdz-mortal-zip]. As with other mortality indicators, rates increased substantially with age; in 2023, the heart disease mortality rate among residents age 85+ was 3,651.8 per 100,000 [@tbl-heartdz-mortal-rande-zip].
 
 <!-- Table 30: Heart Disease Mortality, Case Counts and Rates per 100,000 Population by Age, Race and Ethnicity, and ZIP Code, 2020–2023 -->
-{{< include _generated/objects/tbl-heartdz-mortal-rande-zip.qmd >}}
+{{< include _generated/objects/tbl-heartdz-count-rate-age-rande-zip.qmd >}}
 
 <!-- Figure 24: Diseases of the Heart Mortality, Age-Adjusted Rate per 100,000,2020–2023 -->
 {{< include _generated/objects/fig-heartdz-mortal-aar.qmd >}}
@@ -141,16 +141,16 @@ Age-Adjusted Rate per 100,000, 2020–2023 -->
 
 <!-- Figure 33: Circulatory System Disease Mortality,
 Rate per 100,000 by ZIP Code, 2020–2023 -->
-{{< include _generated/objects/fig-other-dzcircsystem-mortal-zip.qmd >}}
-{{< include _generated/objects/tbl-other-dzcircsystem-mortal-zip.qmd >}}
+{{< include _generated/objects/fig-circsystemdz-mortal-zip.qmd >}}
+{{< include _generated/objects/tbl-circsystemdz-mortal-zip.qmd >}}
 
 <!-- Figure 34: Circulatory System Disease Mortality, Age-Adjusted Rate per 100,000 by Sex, 2020–2023 -->
-{{< include _generated/objects/fig-other-dzcircsystem-mortal-sex-aar.qmd >}}
-{{< include _generated/objects/tbl-other-dzcircsystem-mortal-sex-aar.qmd >}}
+{{< include _generated/objects/fig-circsystemdz-mortal-sex-aar.qmd >}}
+{{< include _generated/objects/tbl-circsystemdz-mortal-sex-aar.qmd >}}
 
 ### Chronic Lower Respiratory Disease
 
-Chronic lower respiratory disease (CLRD) mortality declined across 2020–2023, ranging from 20.3 to 35.6 per 100,000, with 20.3 per 100,000 in 2023 (82 deaths) [@tbl-clrd-mortal-rande-zip]. The age-adjusted CLRD mortality rate ranged
+Chronic lower respiratory disease (CLRD) mortality declined across 2020–2023, ranging from 20.3 to 35.6 per 100,000, with 20.3 per 100,000 in 2023 (82 deaths) [@tbl-clrd-count-rate-age-rande-zip]. The age-adjusted CLRD mortality rate ranged
 from 20.4 to 32.8 per 100,000 and was 20.4 per 100,000 in 2023 [@fig-clrd-mortal-aar]. In 2023, the age-adjusted CLRD mortality rate was higher among males (21.8 per 100,000) than females (19.7 per 100,000) [@fig-clrd-mortal-sex-aar].
 
 The Orange County CLRD hospitalization (2020–2022) rate was 11.9 per 10,000, with a higher rate among Non-Hispanic Black residents (22.5 per 10,000) than among Non-Hispanic White residents (11.7 per 10,000) [@fig-clrd-hosp-rande-aar].
@@ -161,7 +161,7 @@ Rate per 10,000 Population by Race and Ethnicity, 2020–2022 -->
 {{< include _generated/objects/tbl-clrd-hosp-rande-aar.qmd >}}
 
 <!-- Table 33: Chronic Lower Respiratory Disease Mortality, Case Counts and Rates per 100,000 Population by Age, Race and Ethnicity, and ZIP Code, 2020–2023  -->
-{{< include _generated/objects/tbl-clrd-mortal-rande-zip.qmd >}}
+{{< include _generated/objects/tbl-clrd-count-rate-age-rande-zip.qmd >}}
 
 <!-- Figure 36: Chronic Lower Respiratory Disease Mortality, Age-Adjusted Rate per 100,000, 2020–2023 -->
 {{< include _generated/objects/fig-clrd-mortal-aar.qmd >}}
@@ -173,26 +173,26 @@ Rate per 10,000 Population by Race and Ethnicity, 2020–2022 -->
 
 ### Asthma
 The asthma quality indicator (QI) rate in Orange County ranged from 55.6 to 59.1 per 10,000 during 2021–
-2024, with 58.1 per 10,000 in 2024 [@fig-asthma-pp-admissions-crude-rate-2-17-years]. In 2024, Orange County’s value (58.1 per 10,000) was higher
+2024, with 58.1 per 10,000 in 2024 [@fig-ppasthma-2to17-crude]. In 2024, Orange County’s value (58.1 per 10,000) was higher
 than Mid-Hudson (52.9 per 10,000) and higher than New York State excluding NYC (56.8 per 10,000), while
-New York State was 60.6 per 10,000 [@fig-asthma-pp-admissions-crude-rate-2-17-years].
+New York State was 60.6 per 10,000 [@fig-ppasthma-2to17-crude].
 Asthma hospitalizations (2020–2022) showed substantial race and ethnicity disparities. For 2020–2022, the
 total Orange County asthma hospitalization rate was 7.2 per 10,000, and the rate among Non-Hispanic Black
 residents (24.0 per 10,000) was notably higher than among Non-Hispanic White residents (4.7 per 10,000)
 [@fig-asthma-hosp-rande-aar]. A similar pattern was observed for child asthma hospitalizations (2020–2022), where the Orange
-County total was 6.9 per 10,000, and the Non-Hispanic Black rate (21.5 per 10,000) exceeded the NonHispanic White rate (5.1 per 10,000) [@fig-asthma-hosp-0-17-rande-aar]. 
+County total was 6.9 per 10,000, and the Non-Hispanic Black rate (21.5 per 10,000) exceeded the NonHispanic White rate (5.1 per 10,000) [@fig-asthma-hosp-0to17-rande-aar]. 
 
 <!-- Figure 38: Asthma Hospitalization, Age-Adjusted Rate per 10,000 Population by Race and Ethnicity, 2020–2022 -->
 {{< include _generated/objects/fig-asthma-hosp-rande-aar.qmd >}}
 {{< include _generated/objects/tbl-asthma-hosp-rande-aar.qmd >}}
 
 <!-- Figure 39: Asthma Hospitalization, Age-Adjusted Rate per 10,000, Aged 0–17 Years Population by Race and Ethnicity, 2020–2022 -->
-{{< include _generated/objects/fig-asthma-hosp-0-17-rande-aar.qmd >}}
-{{< include _generated/objects/tbl-asthma-hosp-0-17-rande-aar.qmd >}}
+{{< include _generated/objects/fig-asthma-hosp-0to17-rande-aar.qmd >}}
+{{< include _generated/objects/tbl-asthma-hosp-0to17-rande-aar.qmd >}}
 
 <!-- Figure 40: Potentially Preventable Asthma Admissions, Crude Rate per 10,000 Children Aged 2–17 Years, 2021–2024 -->
-{{< include _generated/objects/fig-asthma-pp-admissions-crude-rate-2-17-years.qmd >}}
-{{< include _generated/objects/tbl-asthma-pp-admissions-crude-rate-2-17-years.qmd >}}
+{{< include _generated/objects/fig-ppasthma-2to17-crude.qmd >}}
+{{< include _generated/objects/tbl-ppasthma-2to17-crude.qmd >}}
 
 ## Pneumonia and Influenza
 Pneumonia mortality ranged from 15.3 to 19.9 per 100,000 during 2020–2023, with 17.4 per 100,000 in
