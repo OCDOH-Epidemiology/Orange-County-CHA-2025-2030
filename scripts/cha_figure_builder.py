@@ -327,6 +327,7 @@ def _apply_layout(
             borderwidth=1,
         ),
         plot_bgcolor="white",
+        paper_bgcolor="white",
         width=width,
         height=height,
         margin=dict(l=80, r=200, t=40, b=60),
@@ -438,8 +439,8 @@ def build_clustered_bar_figure(
         barmode="group",
         bargap=0.30,
         bargroupgap=0.10,
-        paper_bgcolor="#f2f2f2",
-        plot_bgcolor="#f2f2f2",
+        paper_bgcolor="white",
+        plot_bgcolor="white",
         legend=dict(
             orientation="h",
             x=0.5,
@@ -672,8 +673,8 @@ def build_horizontal_bar_figure(
     x_range = _y_range(plot_df[value_col], start_at_zero, y_padding, is_bar_graph=True)
     fig.update_layout(
         showlegend=False,
-        paper_bgcolor="#f2f2f2",
-        plot_bgcolor="#f2f2f2",
+        paper_bgcolor="white",
+        plot_bgcolor="white",
         width=width,
         height=height,
         margin=dict(l=250, r=40, t=40, b=70),

@@ -12,7 +12,11 @@ from typing import Any
 import pandas as pd
 from IPython.display import HTML
 
-from scripts.cha_table_styling import CHA_FONT_FAMILY, EXCEL_INDENT_PX_PER_LEVEL
+from scripts.cha_table_styling import (
+    CELL_PADDING_PX,
+    CHA_FONT_FAMILY,
+    EXCEL_INDENT_PX_PER_LEVEL,
+)
 from scripts.workbook_loader import CellMerge, CellStyle, MergedTableGrid
 
 # Body striping: first data row white, then green, then alternate.
@@ -87,7 +91,8 @@ def _cell_style_props(
             extras: list[str] = []
             if style.indent > 0:
                 indent_px = style.indent * EXCEL_INDENT_PX_PER_LEVEL
-                extras.append(f"text-indent:{indent_px}px")
+                # padding-left indents every line; text-indent only indents the first.
+                extras.append(f"padding-left:{CELL_PADDING_PX + indent_px}px")
                 extras.append("text-align:left !important")
             elif col_idx == 0:
                 extras.append("text-align:left !important")
@@ -215,6 +220,12 @@ def _render_row(
             f"border:1px solid {_BORDER_COLOR}",
             f"font-family:{CHA_FONT_FAMILY}",
             f"background-color:{bg}",
+            # Quarto wraps tables with Bootstrap table-striped; kill its grey overlay.
+            "box-shadow:none !important",
+            "--bs-table-bg-type:transparent",
+            "--bs-table-accent-bg:transparent",
+            # Keep labels on one line unless Excel Alt+Enter added an explicit break.
+            "white-space:nowrap",
             f"font-weight:{weight}",
             *style_extras,
         ]

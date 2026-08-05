@@ -85,6 +85,15 @@ figure figcaption p {
   margin-bottom: 0;
 }
 
+/* Quarto adds Bootstrap .table-striped, which greys odd rows with an inset
+   box-shadow overlay. CHA tables already set white/green backgrounds, so
+   disable the Bootstrap accent so the first body row stays true white. */
+.table.table-striped > tbody > tr > * {
+  --bs-table-bg-type: transparent;
+  --bs-table-accent-bg: transparent;
+  box-shadow: none !important;
+}
+
 section.footnotes {
   font-size: 0.875rem;
 }

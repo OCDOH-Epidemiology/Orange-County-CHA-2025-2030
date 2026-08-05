@@ -174,6 +174,8 @@ def _placeholder_figure(message: str, title: str | None = None) -> go.Figure:
         title_text=title or message,
         xaxis=dict(visible=False),
         yaxis=dict(visible=False),
+        paper_bgcolor="white",
+        plot_bgcolor="white",
         annotations=[
             dict(
                 text=message,

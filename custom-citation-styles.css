@@ -86,3 +86,11 @@ a[role="doc-biblioref"]:focus {
   margin-bottom: 0.5em;
   margin-top: 0;
 }
+
+/* Quarto adds Bootstrap .table-striped grey overlay via inset box-shadow.
+   CHA tables use their own white/green striping — keep true white rows. */
+.table.table-striped > tbody > tr > * {
+  --bs-table-bg-type: transparent;
+  --bs-table-accent-bg: transparent;
+  box-shadow: none !important;
+}

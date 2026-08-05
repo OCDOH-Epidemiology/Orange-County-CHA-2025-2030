@@ -12,12 +12,37 @@ Usage:
     styled_table  # Display in Quarto
 """
 
+import html
+
 import pandas as pd
 
 CHA_FONT_FAMILY = '"Tw Cen MT", "Tw Cen MT Std", "Century Gothic", "Trebuchet MS", "Segoe UI", sans-serif'
 # Approximate one Excel indent level (~3 character widths at 14px).
 EXCEL_INDENT_PX_PER_LEVEL = 27
+# Base cell padding; hierarchy indent is added on top via padding-left.
+CELL_PADDING_PX = 10
 
+
+def _htmlize_cell_value(value) -> str:
+    """Escape cell text; convert Excel Alt+Enter newlines to <br>."""
+    if value is None or (isinstance(value, float) and pd.isna(value)):
+        return ""
+    text = str(value)
+    if text.strip().lower() in {"", "nan"}:
+        return ""
+    return (
+        html.escape(text)
+        .replace("\r\n", "<br>")
+        .replace("\n", "<br>")
+        .replace("\r", "<br>")
+    )
+
+
+def _htmlize_dataframe_cells(df: pd.DataFrame) -> pd.DataFrame:
+    """Prepare DataFrame values for HTML display (escape + explicit line breaks)."""
+    # pandas 2.1+ has DataFrame.map; fall back to applymap for older versions.
+    mapper = getattr(df, "map", None) or df.applymap
+    return mapper(_htmlize_cell_value)
 
 CHA_REGION_ORDER = [
     "Dutchess",
@@ -196,7 +221,7 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
     - Row 3: White
     - Alternates: white, #EAF5DB, white, #EAF5DB...
     - First column: Bold (or workbook-driven), left-aligned when hierarchy styles apply
-    - Other columns: Right-aligned (numeric)
+    - Other columns: Centered
     - Dark green separator line after "Westchester" row to separate county data from grouped areas
     
     Parameters
@@ -259,6 +284,24 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
         for col in df.columns:
             if col != _row_label_col:
                 _format_dict[col] = _fmt_str
+    if _format_dict:
+        # Format numerics before HTML-escaping so format strings see raw values.
+        df = df.copy()
+        for col, fmt in _format_dict.items():
+            if col not in df.columns:
+                continue
+            col_data = df[col]
+            if isinstance(col_data, pd.DataFrame):
+                continue
+            df[col] = col_data.map(
+                lambda v, f=fmt: (
+                    ""
+                    if v is None or (isinstance(v, float) and pd.isna(v))
+                    else (f.format(v) if isinstance(v, (int, float)) and not isinstance(v, bool) else v)
+                )
+            )
+    # Escape HTML and keep Excel Alt+Enter newlines as <br>.
+    df = _htmlize_dataframe_cells(df)
     # ─────────────────────────────────────────────────────────────────────────
 
     styles = [
@@ -277,7 +320,8 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
             ('text-align', 'left'),
             ('font-family', CHA_FONT_FAMILY),
             ('padding', '10px'),
-            ('border', '1px solid #ddd')
+            ('border', '1px solid #ddd'),
+            ('white-space', 'nowrap'),
         ]}]),
         # When Excel cell styles drive formatting, avoid text-align/padding on
         # td:first-child — those shorthand rules override per-cell indent styles.
@@ -285,13 +329,24 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
             ('font-family', CHA_FONT_FAMILY),
             ('padding', '10px'),
             ('border', '1px solid #ddd'),
+            ('white-space', 'nowrap'),
         ]}] if cell_styles else []),
-        # Other columns - right-aligned for numeric readability
+        # Other columns - centered to match headers; keep on one line unless
+        # Excel Alt+Enter inserted an explicit break (rendered as <br>).
         {'selector': 'td:not(:first-child)', 'props': [
-            ('text-align', 'right'), 
+            ('text-align', 'center'), 
             ('font-family', CHA_FONT_FAMILY),
             ('padding', '10px'),
-            ('border', '1px solid #ddd')
+            ('border', '1px solid #ddd'),
+            ('white-space', 'nowrap'),
+        ]},
+        # Quarto adds Bootstrap table-striped, which greys odd rows via an
+        # inset box-shadow overlay. Neutralize it so CHA white/green wins.
+        {'selector': 'td', 'props': [
+            ('box-shadow', 'none !important'),
+            ('--bs-table-bg-type', 'transparent'),
+            ('--bs-table-accent-bg', 'transparent'),
+            ('white-space', 'nowrap'),
         ]},
         # Body striping: first data row white, then green, then alternate.
         # Header rows stay green (including multiheader sub-header rows).
@@ -352,9 +407,8 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
     
     # Create the styled table
     styled = df.style.set_table_styles(styles).hide(axis="index")
-    # Apply number formatting if a data_type was provided
-    if _format_dict:
-        styled = styled.format(_format_dict, na_rep="")
+    # Values are already HTML-escaped (with <br> for Excel newlines).
+    styled = styled.format(lambda v: v if v is not None else "", escape=None)
     
     # Add dark green border-bottom to the Westchester row if found
     # Dark green color: using a dark green shade
@@ -368,7 +422,14 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
         # Row 1 should be white, then green, then alternate.
         row_pos = row_position_lookup.get(row.name, 0)
         base_bg = '#FFFFFF' if row_pos % 2 == 0 else '#EAF5DB'
-        base_css = f'background-color: {base_bg} !important'
+        # Also clear Bootstrap table-striped inset overlay (see td selector above).
+        base_css = (
+            f'background-color: {base_bg} !important; '
+            'box-shadow: none !important; '
+            '--bs-table-bg-type: transparent; '
+            '--bs-table-accent-bg: transparent; '
+            'white-space: nowrap'
+        )
 
         # Check if this row contains "Westchester" in the first column.
         first_val = row[first_col] if first_col in row.index else None
@@ -397,8 +458,12 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
                     if col_idx == 0:
                         parts.append('text-align: left !important')
                         if style.indent > 0:
+                            # padding-left indents the whole block (all lines),
+                            # unlike text-indent which only affects the first line.
                             indent_px = style.indent * EXCEL_INDENT_PX_PER_LEVEL
-                            parts.append(f'text-indent: {indent_px}px !important')
+                            parts.append(
+                                f'padding-left: {CELL_PADDING_PX + indent_px}px !important'
+                            )
             cell_css_list.append('; '.join(parts))
         return cell_css_list
     
