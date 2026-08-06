@@ -90,10 +90,8 @@ See `scripts/` for the full pipeline and guides:
 The book renders to `docs/index.html`. GitHub must serve **that folder**, not the repo root (root shows `README.md`).
 
 1. Render: `quarto render` or `./render` (Work Drive / external volumes).
-2. Commit the `docs/` folder and push to `main`.
-3. On GitHub: **Settings → Pages → Build and deployment → Deploy from a branch**
-   - Branch: `main`
-   - Folder: **`/docs`** (not `/ (root)`)
+2. Commit the `docs/` folder (including `docs/.nojekyll`) and push to `main`.
+3. Pages is published by `.github/workflows/deploy-pages.yml` (**Settings → Pages → Source: GitHub Actions**).
 
 Site URL: `https://ocdoh-epidemiology.github.io/Orange-County-CHA-2025-2030/`
 

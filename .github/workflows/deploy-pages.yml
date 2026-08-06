@@ -38,6 +38,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
-        with:
-          # Built-in branch deploys abort at 10m; allow more time if Pages is slow.
-          timeout: 1200000
+        # Note: deploy-pages caps timeout at 600000ms (10m). concurrency.cancel-in-progress
+        # avoids wedged overlapping deploys that leave status stuck on deployment_in_progress.
