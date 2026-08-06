@@ -64,6 +64,7 @@ Optional columns:
 - `pivot_for_chart` (`TRUE`/`FALSE`, default `FALSE`)
 - `group_by` (`x_col`/`series`, optional; overrides `pivot_for_chart` when provided)
 - `show_data_labels` (`TRUE`/`FALSE`, optional; bar charts default to `FALSE` when blank)
+- `color_by` (optional column name; colors horizontal bars by this grouping field)
 
 Column explanations:
 
@@ -91,6 +92,10 @@ Column explanations:
   - set `TRUE` to show labels for selected charts
   - `x_col`: group bars by values in `x_col` (counties become x-axis after pivot)
   - `series`: group bars by existing series columns (no pivot; `x_col` stays on axis)
+- `color_by`: for long-format survey charts (category | group | value), colors each
+  horizontal bar by the group column and builds a legend. Use with
+  `horizontal_bar` or `horizontal_clustered_bar`. Keep `pivot_for_chart = FALSE`.
+  Flat workbook key: `Color By`.
 
 #### `x_col`, `group_by`, and `pivot_for_chart` behavior
 
@@ -120,6 +125,7 @@ Flat per-indicator workbook key names map to the same settings:
 - `Group By` -> `group_by`
 - `Pivot For Chart` -> `pivot_for_chart`
 - `Show Data Labels` -> `show_data_labels`
+- `Color By` -> `color_by`
 
 ### 3) `_table_specs` (required)
 

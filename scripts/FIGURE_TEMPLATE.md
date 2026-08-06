@@ -245,6 +245,56 @@ fig.show()
 ```
 ```
 
+## Horizontal Color-Grouped Bar Figure
+
+Long-format survey data: one row per category, colored by a group column
+(Excel-style “clustered” bars where each category belongs to one color group).
+
+Workbook Figure Rules:
+
+- Figure Type: `Horizontal Clustered Bar` (or `Horizontal Bar`)
+- X Column: category column (e.g. `Health Issue`)
+- Y Column: value column (e.g. `Count`)
+- Color By: group column (e.g. `Prevention Agenda Area`)
+- Pivot For Chart: `FALSE`
+- Y Axis Title: e.g. `Number of Responses`
+- Show Data Labels: `TRUE` (optional)
+- Hover Suffix: leave blank for counts
+
+```python
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-horizontal-color-example
+#| fig-cap: "Horizontal Color-Grouped Bar Example"
+import pandas as pd
+from scripts.cha_figure_builder import build_horizontal_color_bar_figure
+
+data = {
+    "Health Issue": ["Homelessness", "Hunger", "Mental health", "Drug use"],
+    "Prevention Agenda Area": [
+        "Economic Stability",
+        "Economic Stability",
+        "Social & Community Context",
+        "Social & Community Context",
+    ],
+    "Count": [173, 56, 258, 243],
+}
+df = pd.DataFrame(data)
+fig = build_horizontal_color_bar_figure(
+    df,
+    x_col="Health Issue",
+    y_cols=["Count"],
+    color_by="Prevention Agenda Area",
+    y_axis_title="Number of Responses",
+    hover_value_format=",.0f",
+    hover_suffix="",
+)
+fig.show()
+```
+```
+
 ## Pie Chart
 
 ```python

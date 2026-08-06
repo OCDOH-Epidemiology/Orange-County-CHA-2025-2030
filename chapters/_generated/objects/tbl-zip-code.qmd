@@ -9,3 +9,7 @@
 from scripts.cha_registry_renderer import render_table_object
 render_table_object(object_id="tbl-zip-code", workbook_path=CHA_WORKBOOK_PATH)
 ```
+
+::: {.callout-note}
+Note: Certain zip codes denote a P.O. Box and do not have a population estimate.
+:::

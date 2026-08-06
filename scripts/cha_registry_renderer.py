@@ -18,6 +18,7 @@ from scripts.cha_figure_builder import (
     build_dot_whisker_figure,
     build_horizontal_bar_figure,
     build_horizontal_clustered_bar_figure,
+    build_horizontal_color_bar_figure,
     build_horizontal_stacked_bar_figure,
     build_line_figure,
     build_pie_figure,
@@ -164,6 +165,22 @@ def _resolve_show_data_labels(spec: Any, default: bool = False) -> bool:
     if getattr(spec, "show_data_labels", None) is not None:
         return bool(spec.show_data_labels)
     return default
+
+
+def _resolve_color_by(spec: Any, df: pd.DataFrame) -> str:
+    color_by = str(getattr(spec, "color_by", "") or "").strip()
+    if color_by and color_by in df.columns:
+        return color_by
+    return ""
+
+
+def _hover_value_format_for_rules(figure_rules: dict[str, str], y_cols: list[str]) -> str:
+    """Prefer integer labels for count-like series; otherwise one decimal."""
+    for col in y_cols:
+        fmt = str(figure_rules.get(col, "")).strip().lower()
+        if fmt in {"integer", "number"}:
+            return ",.0f"
+    return ".1f"
 
 
 def _load_model(workbook_path: str | Path | None) -> WorkbookModel:
@@ -510,6 +527,9 @@ def render_figure_object(
     first_col_is_time_like = _is_time_like_column(df[first_col])
 
     used_region_pivot = False
+    color_by = _resolve_color_by(spec, df)
+    # Color-by charts are long-format (category | group | value). Never region-pivot
+    # or transpose them — that destroys the grouping column.
     # For bar charts with region columns, pivot so counties appear on the X-axis
     # when the row dimension is *not* time (e.g. one row per category) or there
     # is only one data row (single-period snapshot).  Multi-row year×county
@@ -524,9 +544,9 @@ def render_figure_object(
         "horizontal_stacked_bar",
         "horizontal_clustered_bar",
     }
-    region_cols = _detect_region_columns(df) if is_bar_type else []
+    region_cols = _detect_region_columns(df) if is_bar_type and not color_by else []
     allow_region_pivot = False
-    if is_bar_type and region_cols:
+    if is_bar_type and region_cols and not color_by:
         force_region_pivot = str(spec.x_col).strip().lower() == "county"
         if force_region_pivot:
             # Honor explicit metadata intent: grouped bars by year on county X-axis.
@@ -570,7 +590,11 @@ def render_figure_object(
             used_region_pivot = True
 
     if not used_region_pivot:
-        if spec.pivot_for_chart:
+        if color_by:
+            # Long-format color-grouped bars: keep rows as-is.
+            x_col = spec.x_col if spec.x_col in df.columns else first_col
+            needs_pivot = False
+        elif spec.pivot_for_chart:
             if spec.figure_type == "line" and first_col_is_time_like:
                 x_col = first_col
                 needs_pivot = False
@@ -631,6 +655,8 @@ def render_figure_object(
         y_cols = [col for col in spec.y_cols if col in df.columns and col != x_col]
         if not y_cols:
             y_cols = [col for col in df.columns if col != x_col]
+        if color_by:
+            y_cols = [col for col in y_cols if col != color_by]
         if spec.figure_type in {"simple_bar", "horizontal_bar", "pie"}:
             y_cols = y_cols[:1]
         x_axis_title = spec.x_axis_title or x_col
@@ -667,6 +693,34 @@ def render_figure_object(
         df.iloc[:, col_idx] = series
 
     y_axis_title = spec.y_axis_title or ("Percent" if str(spec.hover_suffix).strip() == "%" else "Value")
+    hover_value_format = _hover_value_format_for_rules(figure_rules, y_cols)
+
+    if color_by and spec.figure_type in {
+        "horizontal_bar",
+        "horizontal_clustered_bar",
+        "simple_bar",
+        "clustered_bar",
+    }:
+        # Suppress default "%" hover suffix when the sheet left Hover Suffix blank
+        # but the loader defaulted it — counts should not show as percents.
+        hover_suffix = spec.hover_suffix
+        if hover_suffix == "%" and hover_value_format.endswith("0f"):
+            hover_suffix = ""
+        if not str(y_axis_title).strip() or y_axis_title == "Value":
+            if hover_suffix != "%":
+                y_axis_title = y_axis_title if str(spec.y_axis_title).strip() else "Number of Responses"
+        return build_horizontal_color_bar_figure(
+            df=df,
+            x_col=x_col,
+            y_cols=y_cols,
+            color_by=color_by,
+            x_axis_title="" if not str(spec.x_axis_title).strip() else x_axis_title,
+            y_axis_title=y_axis_title,
+            start_at_zero=True,
+            hover_value_format=hover_value_format,
+            hover_suffix=hover_suffix,
+            show_data_labels=_resolve_show_data_labels(spec, default=True),
+        )
 
     if spec.figure_type == "line":
         return build_line_figure(
@@ -676,7 +730,7 @@ def render_figure_object(
             x_axis_title=x_axis_title,
             y_axis_title=y_axis_title,
             start_at_zero=spec.start_at_zero,
-            hover_value_format=".1f",
+            hover_value_format=hover_value_format,
             hover_suffix=spec.hover_suffix,
         )
     if spec.figure_type == "clustered_bar":

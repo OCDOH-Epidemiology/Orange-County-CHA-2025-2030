@@ -923,6 +923,170 @@ def build_horizontal_clustered_bar_figure(
     return fig
 
 
+def build_horizontal_color_bar_figure(
+    df: pd.DataFrame,
+    x_col: str,
+    y_cols: list[str] | None = None,
+    *,
+    color_by: str,
+    x_axis_title: str | None = None,
+    y_axis_title: str,
+    start_at_zero: bool = True,
+    y_padding: float = 0.1,
+    palette: list[str] | None = None,
+    width: int = 1000,
+    height: int | None = None,
+    font_family: str = CHA_FONT_FAMILY,
+    hover_value_format: str = ".0f",
+    hover_suffix: str = "",
+    show_data_labels: bool = True,
+) -> go.Figure:
+    """
+    Build a horizontal bar chart colored by a grouping column.
+
+    Long-format input: one row per category (x_col), a numeric value column, and
+    a color_by group. Row order is preserved (first workbook row at the top), with
+    small spacer gaps between color groups — matching Excel color-clustered bars.
+    """
+    series = y_cols or [col for col in df.columns if col not in {x_col, color_by}]
+    if not series:
+        raise ValueError("No value series found for horizontal color bar chart.")
+    if color_by not in df.columns:
+        raise ValueError(f"Color-by column '{color_by}' not found in data.")
+    value_col = series[0]
+    category_axis_title = x_axis_title if x_axis_title is not None else ""
+    value_axis_title = y_axis_title or "Value"
+
+    plot_df = df[[x_col, color_by, value_col]].copy()
+    plot_df[value_col] = pd.to_numeric(plot_df[value_col], errors="coerce")
+    plot_df[x_col] = plot_df[x_col].astype(str)
+    plot_df[color_by] = plot_df[color_by].astype(str)
+    plot_df = plot_df.dropna(subset=[value_col, x_col, color_by])
+    if plot_df.empty:
+        raise ValueError("No plottable rows for horizontal color bar chart.")
+
+    # Preserve workbook order; insert blank spacer categories between groups.
+    ordered_rows: list[dict[str, object]] = []
+    category_order_top_first: list[str] = []
+    prev_group: str | None = None
+    spacer_idx = 0
+    for row in plot_df.itertuples(index=False):
+        category, group, value = row[0], row[1], row[2]
+        if prev_group is not None and group != prev_group:
+            spacer = f"\u200b{spacer_idx}"
+            spacer_idx += 1
+            category_order_top_first.append(spacer)
+            ordered_rows.append(
+                {x_col: spacer, color_by: prev_group, value_col: None, "__spacer__": True}
+            )
+        category_order_top_first.append(str(category))
+        ordered_rows.append(
+            {x_col: str(category), color_by: str(group), value_col: value, "__spacer__": False}
+        )
+        prev_group = str(group)
+
+    long_df = pd.DataFrame(ordered_rows)
+    # Plotly draws the first categoryarray entry at the bottom.
+    category_array = list(reversed(category_order_top_first))
+
+    group_order = list(dict.fromkeys(plot_df[color_by].tolist()))
+    colors = _series_colors(group_order, palette)
+    # Match Excel CHA export: "Other" is black.
+    for group in group_order:
+        if group.strip().lower() == "other":
+            colors[group] = "#1A1A1A"
+
+    fig = go.Figure()
+    data_label_settings = _bar_data_label_settings(
+        show_data_labels,
+        hover_value_format,
+        hover_suffix,
+        orientation="h",
+    )
+    # Prefer end-of-bar labels like the Excel reference.
+    if show_data_labels:
+        data_label_settings = {
+            **data_label_settings,
+            "textposition": "inside",
+            "insidetextanchor": "end",
+            "textfont": dict(color="white", size=11, family=font_family),
+            "cliponaxis": False,
+        }
+
+    for group in group_order:
+        subset = long_df[long_df[color_by] == group].copy()
+        # Keep spacers belonging to the previous group out of value traces.
+        subset = subset[subset["__spacer__"] == False]  # noqa: E712
+        fig.add_trace(
+            go.Bar(
+                x=subset[value_col],
+                y=subset[x_col],
+                orientation="h",
+                name=group,
+                marker=dict(color=colors[group]),
+                customdata=subset[x_col],
+                hovertemplate=(
+                    f"<b>%{{customdata}}</b><br>"
+                    f"{group}<br>"
+                    f"{value_axis_title}: %{{x:{hover_value_format}}}{hover_suffix}"
+                    "<extra></extra>"
+                ),
+                **data_label_settings,
+            )
+        )
+
+    x_series = pd.to_numeric(plot_df[value_col], errors="coerce").dropna()
+    x_range = _y_range(x_series, start_at_zero, y_padding, is_bar_graph=True)
+    n_categories = len(category_order_top_first)
+    fig_height = height if height is not None else _horizontal_category_height(n_categories)
+
+    max_label_len = max((len(c) for c in plot_df[x_col].astype(str)), default=10)
+    left_margin = 300 if max_label_len > 40 else 240
+    fig.update_layout(
+        barmode="overlay",
+        bargap=0.12,
+        paper_bgcolor="white",
+        plot_bgcolor="white",
+        width=width,
+        height=fig_height,
+        margin=dict(l=left_margin, r=40, t=40, b=110),
+        font=dict(family=font_family),
+        legend=dict(
+            orientation="h",
+            x=0.5,
+            y=-0.14,
+            xanchor="center",
+            yanchor="top",
+            font=dict(size=11),
+            bgcolor="rgba(0,0,0,0)",
+            borderwidth=0,
+            title=dict(text=""),
+        ),
+        hovermode="closest",
+    )
+    fig.update_xaxes(
+        title=dict(text=value_axis_title, font=dict(size=14, family=font_family)),
+        range=x_range,
+        gridcolor="rgba(0, 0, 0, 0.15)",
+        zerolinecolor="rgba(0, 0, 0, 0.2)",
+        **_y_axis_tick_settings(x_series, x_range),
+    )
+    # Hide spacer tick labels while preserving gap categories.
+    ticktext = ["" if c.startswith("\u200b") else c for c in category_array]
+    fig.update_yaxes(
+        title=dict(text=category_axis_title, font=dict(size=14, family=font_family)),
+        showgrid=False,
+        ticklabelstandoff=10,
+        automargin=True,
+        categoryorder="array",
+        categoryarray=category_array,
+        tickmode="array",
+        tickvals=category_array,
+        ticktext=ticktext,
+    )
+    return fig
+
+
 def build_pie_figure(
     df: pd.DataFrame,
     x_col: str,

@@ -143,6 +143,7 @@ class FigureSpec:
     hover_suffix: str
     pivot_for_chart: bool = False
     show_data_labels: bool | None = None
+    color_by: str = ""
 
 
 @dataclass(frozen=True)
@@ -940,11 +941,15 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
             if obj_type == "figure":
                 figure_type = _normalize_figure_type(_config_value(config, "Figure Type", "line"), default="line")
                 x_col = _as_text(_config_value(config, "X Column", "")) or (data_df.columns[0] if not data_df.empty else "")
+                color_by = _as_text(_config_value(config, "Color By", ""))
+                if color_by and color_by not in data_df.columns:
+                    color_by = ""
                 y_cols_cfg = _parse_string_list(_config_value(config, "Y Column", ""))
+                exclude_cols = {x_col, color_by} if color_by else {x_col}
                 if y_cols_cfg:
-                    y_cols = [col for col in y_cols_cfg if col in data_df.columns and col != x_col]
+                    y_cols = [col for col in y_cols_cfg if col in data_df.columns and col not in exclude_cols]
                 else:
-                    y_cols = [col for col in data_df.columns if col != x_col]
+                    y_cols = [col for col in data_df.columns if col not in exclude_cols]
                 group_by_override = _group_by_to_pivot_for_chart(_config_value(config, "Group By", ""))
                 pivot_for_chart = (
                     group_by_override
@@ -967,6 +972,7 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
                         if _as_text(show_data_labels_raw) != ""
                         else None
                     ),
+                    color_by=color_by,
                 )
             else:
                 has_multilevel = auto_multilevel or _as_bool(_config_value(config, "Multilevel Headers", False))
@@ -1081,6 +1087,7 @@ def _load_normalized_workbook(source_path: Path) -> WorkbookModel:
                 if str(row.get("show_data_labels", "")).strip() != ""
                 else None
             ),
+            color_by=_as_text(row.get("color_by", "")),
         )
 
     table_specs: dict[str, TableSpec] = {}
