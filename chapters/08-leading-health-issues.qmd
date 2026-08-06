@@ -204,8 +204,8 @@ Potentially preventable community acquired pneumonia admissions in Orange County
 (84.7 per 10,000) was lower than the Mid-Hudson region (92.2 per 10,000) and substantially lower than New
 York State excluding NYC (111.6 per 10,000) [@fig-pppneumonia-adult-aar].
 While key indicators are summarized here, during the respiratory disease season, more data offering insights
-into respiratory health trends in Orange County are found in the Respiratory Illness Dashboard[^2] that can be
-accessed via the <a href="https://www.orangecountygov.com/2361/Dashboard-Portal">OCDOH website</a>. 
+into respiratory health trends in Orange County are found in the Respiratory Illness Dashboard<a href="#cite-2"><sup>2</sup></a> that can be
+accessed via the <a href="https://www.orangecountygov.com/2361/Dashboard-Portal">OCDOH website</a>.
 
 <!-- Figure 41: Potentially Preventable Community Acquired Pneumonia Admissions, Crude Rate per 10,000, 2021–2024 -->
 {{< include _generated/objects/fig-pppneumonia-adult-aar.qmd >}}
@@ -328,9 +328,6 @@ per 10,000), New York State excluding NYC (22.2 per 10,000), and New York State 
 <!-- Figure 54: Chronic Kidney Disease Hospitalizations, Rate per 10,000, 2018–2021 -->
 {{< include _generated/objects/fig-ckd-hosp-rate.qmd >}}
 {{< include _generated/objects/tbl-ckd-hosp-rate.qmd >}}
-
-[^2]: Orange County Department of Health, Respiratory Illness Dashboard, [https://www.orangecountygov.com/2361/Dashboard-Portal](https://www.orangecountygov.com/2361/Dashboard-Portal), accessed August 2025. 
-
 
 ## Cancer
 
@@ -782,9 +779,7 @@ Syphilis indicators show variation across time, demographic concentration, and p
 
 This section summarizes maternal and child health indicators, including fertility [@tbl-fertility-rate-age-rande-zip; @fig-fertility-rande; @fig-fertility-sex], births to mothers aged 17 years and younger and payer at delivery [@tbl-allbirths-under17-age-rande-zip; @tbl-allbirths-medicaid-selfpay-age-rande-zip], maternal and youth mortality and infant mortality by race and ethnicity [@fig-maternal-mortal; @fig-child-adolescent-mortal; @fig-infant-mortal], prenatal care utilization [@tbl-early-pnc-age-rande-zip; @tbl-late-no-pnc-age-rande-zip; @fig-early-pnc; @fig-early-pnc-rande; @fig-early-pnc-zip; @fig-late-no-pnc; @fig-late-no-pnc-rande; @fig-late-no-pnc-zip; @fig-adequate-pnc], and birth outcomes including premature birth and low birthweight [@tbl-premature-birth-age-rande-zip; @tbl-lbw-age-rande-zip; @fig-premature-birth; @fig-premature-birth-rande; @fig-lbw-birth-rande].
 
-While key indicators are summarized here, complete Statewide Perinatal Data System reports and the Adolescent Health Profiles[^5] can be accessed via the OCDOH website.
-
-[^5]: Orange County Department of Health, 2024 Child and Adolescent Health Profile and MICHC data, [https://www.orangecountygov.com/2325/Reports-Assessments](https://www.orangecountygov.com/2325/Reports-Assessments), accessed August 2025.
+While key indicators are summarized here, complete Statewide Perinatal Data System reports and the Adolescent Health Profiles<a href="#cite-5"><sup>5</sup></a> can be accessed via the OCDOH website.
 
 ### Fertility
 
@@ -913,3 +908,9 @@ The percentage of low birthweight births was 6.9% in 2020 and 6.6% in 2023 [@tbl
 <!-- Figure 120: Percentage of Infants Born Low Birthweight, by Race and Ethnicity, 2020–2022 -->
 {{< include _generated/objects/fig-lbw-birth-rande.qmd >}}
 {{< include _generated/objects/tbl-lbw-birth-rande.qmd >}}
+
+## Citations
+
+2. <a id="cite-2"></a>Orange County Department of Health, Respiratory Illness Dashboard, [https://www.orangecountygov.com/2361/Dashboard-Portal](https://www.orangecountygov.com/2361/Dashboard-Portal), accessed August 2025.
+
+5. <a id="cite-5"></a>Orange County Department of Health, 2024 Child and Adolescent Health Profile and MICHC data, [https://www.orangecountygov.com/2325/Reports-Assessments](https://www.orangecountygov.com/2325/Reports-Assessments), accessed August 2025.

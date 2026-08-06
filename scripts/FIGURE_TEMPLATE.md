@@ -186,6 +186,93 @@ fig.show()
 ```
 ```
 
+## Horizontal Stacked Bar Figure
+
+```python
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-horizontal-stacked-example
+#| fig-cap: "Horizontal Stacked Bar Example"
+import pandas as pd
+from scripts.cha_figure_builder import build_horizontal_stacked_bar_figure
+
+data = {
+    "Year": [2024, 2023],
+    "None/Low": [0.64, 0.61],
+    "Moderate": [0.28, 0.30],
+    "Serious": [0.08, 0.09],
+}
+df = pd.DataFrame(data)
+fig = build_horizontal_stacked_bar_figure(
+    df,
+    x_col="Year",
+    y_axis_title="Percent",
+    hover_suffix="",
+)
+fig.show()
+```
+```
+
+## Horizontal Clustered Bar Figure
+
+```python
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-horizontal-clustered-example
+#| fig-cap: "Horizontal Clustered Bar Example"
+import pandas as pd
+from scripts.cha_figure_builder import build_horizontal_clustered_bar_figure
+
+data = {
+    "Income": ["<$35k", "$35k–$75k", ">$75k"],
+    "Excellent": [12, 18, 25],
+    "Good": [40, 45, 48],
+    "Fair": [30, 25, 20],
+    "Poor": [18, 12, 7],
+}
+df = pd.DataFrame(data)
+fig = build_horizontal_clustered_bar_figure(
+    df,
+    x_col="Income",
+    y_axis_title="Percent (%)",
+    hover_suffix="%",
+)
+fig.show()
+```
+```
+
+## Pie Chart
+
+```python
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-pie-example
+#| fig-cap: "Pie Chart Example"
+import pandas as pd
+from scripts.cha_figure_builder import build_pie_figure
+
+data = {
+    "Response": ["Yes", "No"],
+    "Percentage": [12, 88],
+}
+df = pd.DataFrame(data)
+fig = build_pie_figure(
+    df,
+    x_col="Response",
+    y_cols=["Percentage"],
+    y_axis_title="Percent",
+    hover_suffix="%",
+)
+fig.show()
+```
+```
+
 ## Notes
 
 - If you need separate `fig-` and `tbl-` references, keep the figure and

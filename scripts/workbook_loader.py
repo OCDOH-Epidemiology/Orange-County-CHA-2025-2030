@@ -26,6 +26,9 @@ VALID_FIGURE_TYPES = {
     "stacked_bar",
     "simple_bar",
     "horizontal_bar",
+    "horizontal_stacked_bar",
+    "horizontal_clustered_bar",
+    "pie",
     "dot_whisker",
 }
 _VALID_FORMAT_CODES: frozenset[str] = frozenset(
@@ -84,7 +87,6 @@ _FIGURE_TYPE_ALIASES: dict[str, str] = {
     "stacked_bar": "stacked_bar",
     "stacked bar": "stacked_bar",
     "stack bar": "stacked_bar",
-    "horizontal stacked bar": "stacked_bar",
     "4": "simple_bar",
     "simple_bar": "simple_bar",
     "simple bar": "simple_bar",
@@ -99,6 +101,21 @@ _FIGURE_TYPE_ALIASES: dict[str, str] = {
     "dot_plot": "dot_whisker",
     "error bar": "dot_whisker",
     "error_bar": "dot_whisker",
+    "7": "horizontal_stacked_bar",
+    "horizontal_stacked_bar": "horizontal_stacked_bar",
+    "horizontal stacked bar": "horizontal_stacked_bar",
+    "horizontal stacked": "horizontal_stacked_bar",
+    "stacked horizontal bar": "horizontal_stacked_bar",
+    "8": "horizontal_clustered_bar",
+    "horizontal_clustered_bar": "horizontal_clustered_bar",
+    "horizontal clustered bar": "horizontal_clustered_bar",
+    "clustered horizontal bar": "horizontal_clustered_bar",
+    "cluster horizontal bar": "horizontal_clustered_bar",
+    "horizontal cluster bar": "horizontal_clustered_bar",
+    "9": "pie",
+    "pie": "pie",
+    "pie chart": "pie",
+    "pie_chart": "pie",
 }
 
 

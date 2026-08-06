@@ -51,7 +51,7 @@ One row per figure object.
 Expected columns:
 
 - `object_id`
-- `figure_type` (`line`/`clustered_bar`/`stacked_bar`/`simple_bar`/`horizontal_bar`)
+- `figure_type` (`line`/`clustered_bar`/`stacked_bar`/`simple_bar`/`horizontal_bar`/`horizontal_stacked_bar`/`horizontal_clustered_bar`/`pie`/`dot_whisker`)
 - `x_col`
 - `y_cols` (comma-separated column list)
 - `x_axis_title`
@@ -74,6 +74,10 @@ Column explanations:
   - `stacked_bar` for stacked totals
   - `simple_bar` for one-series bars
   - `horizontal_bar` for one-series horizontal bars
+  - `horizontal_stacked_bar` for multi-series horizontal stacked bars
+  - `horizontal_clustered_bar` for multi-series horizontal grouped bars
+  - `pie` for pie charts
+  - `dot_whisker` for horizontal dots with confidence-interval whiskers
 - `x_col`: column used for x-axis after any pivot/reshape logic.
 - `y_cols`: explicit series order; if blank, all non-`x_col` columns are used.
 - `x_axis_title`: x-axis label text shown on the chart.
@@ -255,3 +259,7 @@ Figure type values accepted by the normalizer:
 - `3` = `stacked_bar`
 - `4` = `simple_bar` (single-series bar chart)
 - `5` = `horizontal_bar` (single-series horizontal bar chart)
+- `6` = `dot_whisker` (horizontal dot plot with CI whiskers)
+- `7` = `horizontal_stacked_bar`
+- `8` = `horizontal_clustered_bar`
+- `9` = `pie`

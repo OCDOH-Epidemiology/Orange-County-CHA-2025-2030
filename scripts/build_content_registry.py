@@ -14,7 +14,7 @@ Row N+4+   : data rows
 
 Config keys
 -----------
-chart_type          : line | clustered_bar | stacked_bar | simple_bar | horizontal_bar | dot_whisker | table_only
+chart_type          : line | clustered_bar | stacked_bar | simple_bar | horizontal_bar | horizontal_stacked_bar | horizontal_clustered_bar | pie | dot_whisker | table_only
 figure_id           : Quarto label for the figure block (empty for table-only)
 fig_label           : legacy alias for figure_id (kept for compatibility)
 tbl_label           : quarto label for the table block

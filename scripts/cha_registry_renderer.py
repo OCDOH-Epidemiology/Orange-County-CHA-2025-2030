@@ -17,7 +17,10 @@ from scripts.cha_figure_builder import (
     build_clustered_bar_figure,
     build_dot_whisker_figure,
     build_horizontal_bar_figure,
+    build_horizontal_clustered_bar_figure,
+    build_horizontal_stacked_bar_figure,
     build_line_figure,
+    build_pie_figure,
     build_simple_bar_figure,
     build_stacked_bar_figure,
 )
@@ -157,10 +160,10 @@ def _first_col_is_region_rows(df: pd.DataFrame) -> bool:
     return matches / len(non_null) >= 0.8
 
 
-def _resolve_show_data_labels(spec: Any) -> bool:
+def _resolve_show_data_labels(spec: Any, default: bool = False) -> bool:
     if getattr(spec, "show_data_labels", None) is not None:
         return bool(spec.show_data_labels)
-    return False
+    return default
 
 
 def _load_model(workbook_path: str | Path | None) -> WorkbookModel:
@@ -513,7 +516,14 @@ def render_figure_object(
     # wide tables stay as-is: years on the X axis, counties as grouped series.
     # (Excel often stores years as floats; first_col_is_time_like must catch that
     # or we would wrongly pivot — see _is_time_like_value.)
-    is_bar_type = spec.figure_type in {"clustered_bar", "stacked_bar", "simple_bar", "horizontal_bar"}
+    is_bar_type = spec.figure_type in {
+        "clustered_bar",
+        "stacked_bar",
+        "simple_bar",
+        "horizontal_bar",
+        "horizontal_stacked_bar",
+        "horizontal_clustered_bar",
+    }
     region_cols = _detect_region_columns(df) if is_bar_type else []
     allow_region_pivot = False
     if is_bar_type and region_cols:
@@ -586,7 +596,15 @@ def render_figure_object(
                 and spec.x_col not in df.columns
                 and not region_cols_check
                 and len(df) <= 2
-                and spec.figure_type in {"simple_bar", "clustered_bar", "stacked_bar", "horizontal_bar"}
+                and spec.figure_type in {
+                    "simple_bar",
+                    "clustered_bar",
+                    "stacked_bar",
+                    "horizontal_bar",
+                    "horizontal_stacked_bar",
+                    "horizontal_clustered_bar",
+                    "pie",
+                }
             )
             if is_wide_category:
                 x_col = spec.x_col or "Category"
@@ -613,7 +631,7 @@ def render_figure_object(
         y_cols = [col for col in spec.y_cols if col in df.columns and col != x_col]
         if not y_cols:
             y_cols = [col for col in df.columns if col != x_col]
-        if spec.figure_type in {"simple_bar", "horizontal_bar"}:
+        if spec.figure_type in {"simple_bar", "horizontal_bar", "pie"}:
             y_cols = y_cols[:1]
         x_axis_title = spec.x_axis_title or x_col
         if x_col == first_col and not str(spec.x_axis_title).strip() and first_col_is_time_like:
@@ -707,6 +725,41 @@ def render_figure_object(
             start_at_zero=spec.start_at_zero,
             hover_value_format=".1f",
             hover_suffix=spec.hover_suffix,
+        )
+    if spec.figure_type == "horizontal_stacked_bar":
+        return build_horizontal_stacked_bar_figure(
+            df=df,
+            x_col=x_col,
+            y_cols=y_cols,
+            x_axis_title=x_axis_title,
+            y_axis_title=y_axis_title,
+            start_at_zero=spec.start_at_zero if spec.start_at_zero is not None else True,
+            hover_value_format=".1f",
+            hover_suffix=spec.hover_suffix,
+            show_data_labels=_resolve_show_data_labels(spec),
+        )
+    if spec.figure_type == "horizontal_clustered_bar":
+        return build_horizontal_clustered_bar_figure(
+            df=df,
+            x_col=x_col,
+            y_cols=y_cols,
+            x_axis_title=x_axis_title,
+            y_axis_title=y_axis_title,
+            start_at_zero=True,
+            hover_value_format=".1f",
+            hover_suffix=spec.hover_suffix,
+            show_data_labels=_resolve_show_data_labels(spec),
+        )
+    if spec.figure_type == "pie":
+        return build_pie_figure(
+            df=df,
+            x_col=x_col,
+            y_cols=y_cols,
+            x_axis_title=x_axis_title,
+            y_axis_title=y_axis_title,
+            hover_value_format=".1f",
+            hover_suffix=spec.hover_suffix,
+            show_data_labels=_resolve_show_data_labels(spec, default=True),
         )
     if spec.figure_type == "dot_whisker":
         return build_dot_whisker_figure(

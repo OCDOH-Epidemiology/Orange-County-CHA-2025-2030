@@ -2,7 +2,8 @@
 CHA Figure Builder
 
 Utilities for creating CHA figures (lines, clustered bars, stacked bars, simple bars,
-horizontal bars, and dot-whisker / CI plots) with consistent styling and ordering.
+horizontal bars, horizontal stacked/clustered bars, pie charts, and dot-whisker / CI
+plots) with consistent styling and ordering.
 Includes a helper to display a figure above its table output in Quarto/Jupyter.
 """
 
@@ -269,14 +270,23 @@ def _bar_data_label_settings(
     show_data_labels: bool,
     value_format: str,
     value_suffix: str,
+    *,
+    orientation: str = "v",
 ) -> dict[str, object]:
     if not show_data_labels:
         return {}
+    value_token = "x" if orientation == "h" else "y"
     return {
-        "texttemplate": f"%{{y:{value_format}}}{value_suffix}",
+        "texttemplate": f"%{{{value_token}:{value_format}}}{value_suffix}",
         "textposition": "outside",
         "cliponaxis": False,
     }
+
+
+def _horizontal_category_height(n_categories: int, n_series: int = 1, *, grouped: bool = False) -> int:
+    """Choose a readable figure height for horizontal multi-series bars."""
+    per_category = 28 if not grouped else max(28, 18 * max(n_series, 1))
+    return max(420, per_category * max(n_categories, 1) + 140)
 
 
 def _apply_layout(
@@ -692,6 +702,311 @@ def build_horizontal_bar_figure(
         showgrid=False,
         ticklabelstandoff=10,
         automargin=True,
+    )
+    return fig
+
+
+def build_horizontal_stacked_bar_figure(
+    df: pd.DataFrame,
+    x_col: str,
+    y_cols: list[str] | None = None,
+    *,
+    x_axis_title: str | None = None,
+    y_axis_title: str,
+    start_at_zero: bool = True,
+    y_padding: float = 0.1,
+    palette: list[str] | None = None,
+    width: int = 1000,
+    height: int | None = None,
+    font_family: str = CHA_FONT_FAMILY,
+    hover_value_format: str = ".1f",
+    hover_suffix: str = "",
+    show_data_labels: bool = False,
+) -> go.Figure:
+    """
+    Build a horizontal stacked bar chart (categories on Y, stacked values on X).
+    """
+    series = y_cols or [col for col in df.columns if col != x_col]
+    ordered = _ordered_series(series)
+    if not ordered:
+        raise ValueError("No value series found for horizontal stacked bar chart.")
+    colors = _series_colors(ordered, palette)
+    patterns = _series_patterns(ordered)
+    category_axis_title = x_axis_title or x_col
+    value_axis_title = y_axis_title or "Value"
+
+    plot_df = df.copy()
+    categories = plot_df[x_col].astype(str).tolist()
+    # First workbook row at top (matches survey reading order).
+    categories_plot = list(reversed(categories))
+    plot_df = plot_df.iloc[::-1].reset_index(drop=True)
+
+    fig = go.Figure()
+    data_label_settings = _bar_data_label_settings(
+        show_data_labels,
+        hover_value_format,
+        hover_suffix,
+        orientation="h",
+    )
+    for col in ordered:
+        fig.add_trace(
+            go.Bar(
+                x=plot_df[col],
+                y=categories_plot,
+                orientation="h",
+                name=col,
+                marker=dict(
+                    color=colors[col],
+                    pattern=dict(shape=patterns[col], solidity=0.22),
+                ),
+                customdata=categories_plot,
+                hovertemplate=(
+                    f"<b>{col}</b><br>{category_axis_title}: %{{customdata}}<br>"
+                    f"{value_axis_title}: %{{x:{hover_value_format}}}{hover_suffix}"
+                    "<extra></extra>"
+                ),
+                **data_label_settings,
+            )
+        )
+
+    totals = plot_df[ordered].sum(axis=1)
+    x_series = pd.Series(totals)
+    x_range = _y_range(x_series, start_at_zero, y_padding, is_bar_graph=True)
+    fig_height = height if height is not None else _horizontal_category_height(len(categories))
+
+    max_label_len = max((len(c) for c in categories), default=10)
+    left_margin = 280 if max_label_len > 40 else 220
+    fig.update_layout(
+        barmode="stack",
+        paper_bgcolor="white",
+        plot_bgcolor="white",
+        width=width,
+        height=fig_height,
+        margin=dict(l=left_margin, r=40, t=40, b=90),
+        font=dict(family=font_family),
+        legend=dict(
+            orientation="h",
+            x=0.5,
+            y=-0.12,
+            xanchor="center",
+            yanchor="top",
+            font=dict(size=11),
+            bgcolor="rgba(0,0,0,0)",
+            borderwidth=0,
+        ),
+        hovermode="y unified",
+    )
+    fig.update_xaxes(
+        title=dict(text=value_axis_title, font=dict(size=14, family=font_family)),
+        range=x_range,
+        gridcolor="rgba(0, 0, 0, 0.15)",
+        zerolinecolor="rgba(0, 0, 0, 0.2)",
+        **_y_axis_tick_settings(x_series, x_range),
+    )
+    fig.update_yaxes(
+        title=dict(text=category_axis_title, font=dict(size=14, family=font_family)),
+        showgrid=False,
+        ticklabelstandoff=10,
+        automargin=True,
+    )
+    return fig
+
+
+def build_horizontal_clustered_bar_figure(
+    df: pd.DataFrame,
+    x_col: str,
+    y_cols: list[str] | None = None,
+    *,
+    x_axis_title: str | None = None,
+    y_axis_title: str,
+    start_at_zero: bool = True,
+    y_padding: float = 0.1,
+    palette: list[str] | None = None,
+    width: int = 1000,
+    height: int | None = None,
+    font_family: str = CHA_FONT_FAMILY,
+    hover_value_format: str = ".1f",
+    hover_suffix: str = "",
+    show_data_labels: bool = False,
+) -> go.Figure:
+    """
+    Build a horizontal clustered (grouped) bar chart (categories on Y, grouped values on X).
+    """
+    series = y_cols or [col for col in df.columns if col != x_col]
+    ordered = _ordered_series(series)
+    if not ordered:
+        raise ValueError("No value series found for horizontal clustered bar chart.")
+    colors = _series_colors(ordered, palette)
+    patterns = _series_patterns(ordered)
+    category_axis_title = x_axis_title or x_col
+    value_axis_title = y_axis_title or "Value"
+
+    plot_df = df.copy()
+    categories = plot_df[x_col].astype(str).tolist()
+    categories_plot = list(reversed(categories))
+    plot_df = plot_df.iloc[::-1].reset_index(drop=True)
+
+    fig = go.Figure()
+    data_label_settings = _bar_data_label_settings(
+        show_data_labels,
+        hover_value_format,
+        hover_suffix,
+        orientation="h",
+    )
+    for col in ordered:
+        fig.add_trace(
+            go.Bar(
+                x=plot_df[col],
+                y=categories_plot,
+                orientation="h",
+                name=col,
+                marker=dict(
+                    color=colors[col],
+                    pattern=dict(shape=patterns[col], solidity=0.22),
+                ),
+                customdata=categories_plot,
+                hovertemplate=(
+                    f"<b>{col}</b><br>{category_axis_title}: %{{customdata}}<br>"
+                    f"{value_axis_title}: %{{x:{hover_value_format}}}{hover_suffix}"
+                    "<extra></extra>"
+                ),
+                **data_label_settings,
+            )
+        )
+
+    y_values = plot_df[ordered].to_numpy().flatten()
+    x_series = pd.Series(y_values)
+    x_range = _y_range(x_series, start_at_zero, y_padding, is_bar_graph=True)
+    fig_height = height if height is not None else _horizontal_category_height(
+        len(categories),
+        len(ordered),
+        grouped=True,
+    )
+
+    max_label_len = max((len(c) for c in categories), default=10)
+    left_margin = 280 if max_label_len > 40 else 220
+    fig.update_layout(
+        barmode="group",
+        bargap=0.25,
+        bargroupgap=0.08,
+        paper_bgcolor="white",
+        plot_bgcolor="white",
+        width=width,
+        height=fig_height,
+        margin=dict(l=left_margin, r=40, t=40, b=90),
+        font=dict(family=font_family),
+        legend=dict(
+            orientation="h",
+            x=0.5,
+            y=-0.12,
+            xanchor="center",
+            yanchor="top",
+            font=dict(size=11),
+            bgcolor="rgba(0,0,0,0)",
+            borderwidth=0,
+        ),
+        hovermode="y unified",
+    )
+    fig.update_xaxes(
+        title=dict(text=value_axis_title, font=dict(size=14, family=font_family)),
+        range=x_range,
+        gridcolor="rgba(0, 0, 0, 0.15)",
+        zerolinecolor="rgba(0, 0, 0, 0.2)",
+        **_y_axis_tick_settings(x_series, x_range),
+    )
+    fig.update_yaxes(
+        title=dict(text=category_axis_title, font=dict(size=14, family=font_family)),
+        showgrid=False,
+        ticklabelstandoff=10,
+        automargin=True,
+    )
+    return fig
+
+
+def build_pie_figure(
+    df: pd.DataFrame,
+    x_col: str,
+    y_cols: list[str] | None = None,
+    *,
+    x_axis_title: str | None = None,
+    y_axis_title: str | None = None,
+    start_at_zero: bool = True,
+    y_padding: float = 0.1,
+    palette: list[str] | None = None,
+    width: int = 900,
+    height: int = 600,
+    font_family: str = CHA_FONT_FAMILY,
+    hover_value_format: str = ".1f",
+    hover_suffix: str = "",
+    show_data_labels: bool = True,
+) -> go.Figure:
+    """
+    Build a pie chart from a category column and a single value series.
+    """
+    del start_at_zero, y_padding  # Unused; kept for a shared renderer call signature.
+    series = y_cols or [col for col in df.columns if col != x_col]
+    if not series:
+        raise ValueError("No value series found for pie chart.")
+    value_col = series[0]
+    category_title = x_axis_title or x_col
+    value_title = y_axis_title or value_col or "Value"
+
+    plot_df = df[[x_col, value_col]].copy()
+    plot_df[value_col] = pd.to_numeric(plot_df[value_col], errors="coerce")
+    plot_df = plot_df.dropna(subset=[value_col, x_col])
+    labels = plot_df[x_col].astype(str).tolist()
+    values = plot_df[value_col].tolist()
+    colors = (palette or CHA_COLOR_PALETTE)[: max(len(labels), 1)]
+    # Cycle palette when there are more slices than colors.
+    while len(colors) < len(labels):
+        colors.extend(palette or CHA_COLOR_PALETTE)
+    colors = colors[: len(labels)]
+
+    textinfo = "percent" if show_data_labels else "none"
+    fig = go.Figure(
+        data=[
+            go.Pie(
+                labels=labels,
+                values=values,
+                sort=False,
+                direction="clockwise",
+                hole=0.0,
+                marker=dict(
+                    colors=colors,
+                    line=dict(color="white", width=1.5),
+                ),
+                textinfo=textinfo,
+                textposition="outside",
+                textfont=dict(size=12, family=font_family),
+                hovertemplate=(
+                    f"<b>%{{label}}</b><br>"
+                    f"{value_title}: %{{value:{hover_value_format}}}{hover_suffix}<br>"
+                    f"Share: %{{percent}}"
+                    "<extra></extra>"
+                ),
+            )
+        ]
+    )
+    fig.update_layout(
+        showlegend=True,
+        legend=dict(
+            orientation="v",
+            x=1.02,
+            y=0.5,
+            xanchor="left",
+            yanchor="middle",
+            font=dict(size=11),
+            bgcolor="rgba(255, 255, 255, 0.9)",
+            bordercolor="rgba(0, 0, 0, 0.2)",
+            borderwidth=1,
+            title=dict(text=category_title, font=dict(size=12)),
+        ),
+        paper_bgcolor="white",
+        plot_bgcolor="white",
+        width=width,
+        height=height,
+        margin=dict(l=40, r=200, t=40, b=40),
+        font=dict(family=font_family),
     )
     return fig
 
