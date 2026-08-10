@@ -1,11 +1,12 @@
-<!-- indicator: fig-siena-mental-health (fallback) -->
+<!-- indicator: fig-siena-mental-health -->
 
 ```{python}
 #| echo: false
 #| warning: false
 #| message: false
 #| label: fig-siena-mental-health
-#| fig-alt: 'Figure for fig-siena-mental-health'
+#| fig-cap: 'Perception of Mental Health, 2018–2024'
+#| fig-alt: 'Data visualization showing Perception of Mental Health, 2018–2024.'
 from scripts.cha_registry_renderer import render_figure_object
 render_figure_object(figure_id="fig-siena-mental-health", workbook_path=CHA_WORKBOOK_PATH).show()
 ```

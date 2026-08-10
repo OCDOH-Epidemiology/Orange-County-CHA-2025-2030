@@ -1,11 +1,12 @@
-<!-- indicator: fig-siena-info-bad-weather (fallback) -->
+<!-- indicator: fig-siena-info-bad-weather -->
 
 ```{python}
 #| echo: false
 #| warning: false
 #| message: false
 #| label: fig-siena-info-bad-weather
-#| fig-alt: 'Figure for fig-siena-info-bad-weather'
+#| fig-cap: 'Information During Weather Emergencies, 2024'
+#| fig-alt: 'Data visualization showing Information During Weather Emergencies, 2024.'
 from scripts.cha_registry_renderer import render_figure_object
 render_figure_object(figure_id="fig-siena-info-bad-weather", workbook_path=CHA_WORKBOOK_PATH).show()
 ```
