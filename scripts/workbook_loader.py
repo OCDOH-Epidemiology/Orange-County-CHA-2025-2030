@@ -814,7 +814,9 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
 
     raw_sheets = _read_excel_raw(source_path)
     openpyxl_wb = openpyxl.load_workbook(source_path, data_only=True)
-    skip_sheets = {"Master", "Dropdowns", "Template", "Template2", "_Template", "_Template (2)"}
+    # Exact non-indicator sheets. Template copies (Template, Template2,
+    # Template2 (3), …) are skipped by name prefix below.
+    skip_sheets = {"Master", "Dropdowns"}
 
     registry: dict[str, RegistryRecord] = {}
     figure_specs: dict[str, FigureSpec] = {}
@@ -827,7 +829,7 @@ def _load_flat_workbook(source_path: Path) -> WorkbookModel:
     for sheet_name, sheet_df in raw_sheets.items():
         if sheet_name in skip_sheets:
             continue
-        if sheet_name.startswith("_"):
+        if sheet_name.startswith("_") or sheet_name.startswith("Template"):
             continue
         if not _is_flat_indicator_sheet(sheet_df):
             continue
