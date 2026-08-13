@@ -516,10 +516,7 @@ Survey Question 38: During the past 12 months, did you get a flu vaccine?
 Survey Question 39 (If age 60 or older) During the past 12 months, did you get an RSV vaccine?
 
 <!-- Figure 235: During the past 12 months, did you get an RSV vaccine? -->
-{{< include _generated/objects/fig-siena-rsv-vaccine.qmd >}}
-
-<!-- Figure 236: During the past 12 months, did you get an RSV vaccine by Income, 2024. -->
-{{< include _generated/objects/fig-siena-rsv-vaccine-income.qmd >}}
+{{< include _generated/objects/fig-siena-flu-vaccine-60yo.qmd >}}
 
 Survey Question 40: The next questions are about how you have been feeling during the past 30 days. Thinking back over the past 30 days, please tell me if you felt this way, all of the time, most of the time, some of the time, a little of the time, or none of the time. About how often during the past 30 days did you feel nervous?
 
@@ -585,12 +582,12 @@ Survey Question 47: (If female) Have you had a child in the last 10 years?
 Survey Question 48: (If had a child in last 10 years) Did you breastfeed any of your children (this includes expressing milk or pumping including using milk from a milk bank)?
 
 <!-- Figure 253: Did you breastfeed any of your children (this includes expressing milk or pumping including using milk from a milk bank)? -->
-{{< include _generated/objects/fig-siena-breastfed.qmd >}}
+{{< include _generated/objects/fig-siena-bf-any-child.qmd >}}
 
 Survey Question 49: (if had a child in last 10 years and breastfed) On average, how long did you breastfeed your child(ren) for?
 
 <!-- Figure 254: On average, how long did you breastfeed your child(ren) for? -->
-{{< include _generated/objects/fig-siena-breastfed-duration.qmd >}}
+{{< include _generated/objects/fig-siena-bf-duration.qmd >}}
 
 Survey Question 50: (If have child under age 6) Who would you be most likely to contact if you needed help with basic needs, for example, housing, transportation, food, diapers, etc.?
 
