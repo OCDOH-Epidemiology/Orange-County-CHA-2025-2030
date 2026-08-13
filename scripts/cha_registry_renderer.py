@@ -598,6 +598,21 @@ def render_figure_object(
             if spec.figure_type == "line" and first_col_is_time_like:
                 x_col = first_col
                 needs_pivot = False
+            elif (
+                first_col_is_time_like
+                and not _detect_region_columns(df)
+                and spec.figure_type in {
+                    "horizontal_stacked_bar",
+                    "stacked_bar",
+                    "horizontal_bar",
+                    "horizontal_clustered_bar",
+                }
+            ):
+                # Year | response-option tables should keep Year on the axis even
+                # when Pivot For Chart is set and X Column is a placeholder
+                # (e.g. Category). Region×year wide tables still pivot below.
+                x_col = first_col
+                needs_pivot = False
             elif _first_col_is_region_rows(df) or spec.x_col not in df.columns:
                 # X Column names the post-pivot category column on the x-axis.
                 pivot_key = first_col
@@ -614,11 +629,14 @@ def render_figure_object(
         else:
             # Auto-detect wide single-row category data that needs pivoting:
             # all columns are non-region category names and x_col is absent.
+            # Skip when the first column is time-like (e.g. Year | Yes | No): keep
+            # Year as the axis and stack response series, matching multi-year sheets.
             region_cols_check = _detect_region_columns(df)
             is_wide_category = (
                 spec.x_col
                 and spec.x_col not in df.columns
                 and not region_cols_check
+                and not first_col_is_time_like
                 and len(df) <= 2
                 and spec.figure_type in {
                     "simple_bar",
