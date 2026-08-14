@@ -195,6 +195,23 @@ def _hover_value_format_for_rules(figure_rules: dict[str, str], y_cols: list[str
     return ".1f"
 
 
+def _text_looks_like_responses(text: Any) -> bool:
+    raw = str(text or "").strip().lower().replace("repsonse", "response")
+    return "response" in raw
+
+
+def _is_count_like_figure(spec: Any, y_cols: list[str]) -> bool:
+    """True for response-count charts that must not be labeled as percents."""
+    count_names = {"count", "counts", "n", "number"}
+    if any(str(col).strip().lower() in count_names for col in y_cols):
+        return True
+    if any(_text_looks_like_responses(col) for col in y_cols):
+        return True
+    return _text_looks_like_responses(getattr(spec, "x_axis_title", "")) or _text_looks_like_responses(
+        getattr(spec, "y_axis_title", "")
+    )
+
+
 def _load_model(workbook_path: str | Path | None) -> WorkbookModel:
     path = Path(workbook_path) if workbook_path else DEFAULT_WORKBOOK_PATH
     return load_cha_workbook(path)
@@ -722,8 +739,17 @@ def render_figure_object(
             series = pd.to_numeric(series, errors="coerce")
         df.iloc[:, col_idx] = series
 
-    y_axis_title = spec.y_axis_title or ("Percent" if str(spec.hover_suffix).strip() == "%" else "Value")
+    hover_suffix = spec.hover_suffix
+    y_axis_title = spec.y_axis_title or ("Percent" if str(hover_suffix).strip() == "%" else "Value")
     hover_value_format = _hover_value_format_for_rules(figure_rules, y_cols)
+    if _is_count_like_figure(spec, y_cols):
+        hover_suffix = ""
+        hover_value_format = ",.0f"
+        if not str(spec.y_axis_title).strip() or str(spec.y_axis_title).strip().lower() == "percent":
+            y_axis_title = "Number of Responses"
+        # Workbook sometimes puts the value-axis title in X Axis Title.
+        if _text_looks_like_responses(spec.x_axis_title):
+            x_axis_title = ""
 
     if color_by and spec.figure_type in {
         "horizontal_bar",
@@ -733,7 +759,6 @@ def render_figure_object(
     }:
         # Suppress default "%" hover suffix when the sheet left Hover Suffix blank
         # but the loader defaulted it — counts should not show as percents.
-        hover_suffix = spec.hover_suffix
         if hover_suffix == "%" and hover_value_format.endswith("0f"):
             hover_suffix = ""
         if not str(y_axis_title).strip() or y_axis_title == "Value":
@@ -744,7 +769,7 @@ def render_figure_object(
             x_col=x_col,
             y_cols=y_cols,
             color_by=color_by,
-            x_axis_title="" if not str(spec.x_axis_title).strip() else x_axis_title,
+            x_axis_title=x_axis_title,
             y_axis_title=y_axis_title,
             start_at_zero=True,
             hover_value_format=hover_value_format,
@@ -761,7 +786,7 @@ def render_figure_object(
             y_axis_title=y_axis_title,
             start_at_zero=spec.start_at_zero,
             hover_value_format=hover_value_format,
-            hover_suffix=spec.hover_suffix,
+            hover_suffix=hover_suffix,
         )
     if spec.figure_type == "clustered_bar":
         return build_clustered_bar_figure(
@@ -772,7 +797,7 @@ def render_figure_object(
             y_axis_title=y_axis_title,
             start_at_zero=True,
             hover_value_format=".1f",
-            hover_suffix=spec.hover_suffix,
+            hover_suffix=hover_suffix,
             show_data_labels=_resolve_show_data_labels(spec),
         )
     if spec.figure_type == "stacked_bar":
@@ -784,7 +809,7 @@ def render_figure_object(
             y_axis_title=y_axis_title,
             start_at_zero=spec.start_at_zero,
             hover_value_format=".1f",
-            hover_suffix=spec.hover_suffix,
+            hover_suffix=hover_suffix,
             show_data_labels=_resolve_show_data_labels(spec),
         )
     if spec.figure_type == "simple_bar":
@@ -796,7 +821,7 @@ def render_figure_object(
             y_axis_title=y_axis_title,
             start_at_zero=spec.start_at_zero,
             hover_value_format=".1f",
-            hover_suffix=spec.hover_suffix,
+            hover_suffix=hover_suffix,
             show_data_labels=_resolve_show_data_labels(spec),
         )
     if spec.figure_type == "horizontal_bar":
@@ -808,7 +833,7 @@ def render_figure_object(
             y_axis_title=y_axis_title,
             start_at_zero=spec.start_at_zero,
             hover_value_format=".1f",
-            hover_suffix=spec.hover_suffix,
+            hover_suffix=hover_suffix,
         )
     if spec.figure_type == "horizontal_stacked_bar":
         return build_horizontal_stacked_bar_figure(
@@ -819,7 +844,7 @@ def render_figure_object(
             y_axis_title=y_axis_title,
             start_at_zero=spec.start_at_zero if spec.start_at_zero is not None else True,
             hover_value_format=".1f",
-            hover_suffix=spec.hover_suffix,
+            hover_suffix=hover_suffix,
             show_data_labels=_resolve_show_data_labels(spec),
         )
     if spec.figure_type == "horizontal_clustered_bar":
@@ -831,7 +856,7 @@ def render_figure_object(
             y_axis_title=y_axis_title,
             start_at_zero=True,
             hover_value_format=".1f",
-            hover_suffix=spec.hover_suffix,
+            hover_suffix=hover_suffix,
             show_data_labels=_resolve_show_data_labels(spec),
         )
     if spec.figure_type == "pie":
@@ -842,7 +867,7 @@ def render_figure_object(
             x_axis_title=x_axis_title,
             y_axis_title=y_axis_title,
             hover_value_format=".1f",
-            hover_suffix=spec.hover_suffix,
+            hover_suffix=hover_suffix,
             show_data_labels=_resolve_show_data_labels(spec, default=True),
         )
     if spec.figure_type == "dot_whisker":
@@ -854,7 +879,7 @@ def render_figure_object(
             y_axis_title=y_axis_title or "Percent",
             start_at_zero=spec.start_at_zero if spec.start_at_zero is not None else True,
             hover_value_format=".1f",
-            hover_suffix=spec.hover_suffix,
+            hover_suffix=hover_suffix,
         )
 
     raise ValueError(f"Unsupported figure_type '{spec.figure_type}' for '{figure_id}'.")
