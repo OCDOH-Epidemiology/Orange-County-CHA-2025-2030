@@ -136,8 +136,20 @@ def _line_chart_needs_pivot(
     *,
     first_col_is_time_like: bool,
 ) -> bool:
-    """True when regions are rows, years are column headers, and x_col is Year."""
-    if spec.figure_type != "line":
+    """True when categories are rows, years are column headers, and x_col is Year.
+
+    Honors workbook X Column = Year without requiring Pivot For Chart, so
+    clustered bars (e.g. Siena reason-by-year tables) put Year on the x-axis.
+    """
+    if spec.figure_type not in {
+        "line",
+        "clustered_bar",
+        "stacked_bar",
+        "simple_bar",
+        "horizontal_bar",
+        "horizontal_stacked_bar",
+        "horizontal_clustered_bar",
+    }:
         return False
     if not spec.x_col or spec.x_col in df.columns:
         return False
