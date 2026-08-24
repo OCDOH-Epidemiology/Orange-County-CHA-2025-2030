@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-096f8f7ccaf4dd6d27e1c4f24ecf1b67.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1733da126e92f605e30a9e900242d6bb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -157,6 +157,61 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.assign(anchor.href);
     }, 180);
   });
+});
+</script>
+<script>
+function googleTranslateElementInit() {
+  if (!window.google || !google.translate || !document.getElementById("google_translate_element")) {
+    return;
+  }
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "en",
+      autoDisplay: false,
+      includedLanguages: "ar,zh-CN,zh-TW,en,fr,ht,it,ko,pl,pt,ru,es,uk,yi",
+      layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+    },
+    "google_translate_element"
+  );
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("google_translate_element")) {
+    return;
+  }
+
+  var wrap = document.createElement("div");
+  wrap.className = "cha-google-translate notranslate";
+  wrap.setAttribute("translate", "no");
+
+  var label = document.createElement("div");
+  label.className = "cha-google-translate-label";
+  label.id = "cha-google-translate-label";
+  label.textContent = "Translate this page";
+
+  var mount = document.createElement("div");
+  mount.id = "google_translate_element";
+  mount.setAttribute("aria-labelledby", "cha-google-translate-label");
+
+  wrap.appendChild(label);
+  wrap.appendChild(mount);
+
+  var search = document.querySelector(".sidebar-search");
+  if (search && search.parentNode) {
+    search.parentNode.insertBefore(wrap, search.nextSibling);
+  } else {
+    var sidebar = document.getElementById("quarto-sidebar");
+    if (sidebar) {
+      sidebar.insertBefore(wrap, sidebar.firstChild);
+    } else {
+      document.body.insertBefore(wrap, document.body.firstChild);
+    }
+  }
+
+  var script = document.createElement("script");
+  script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  script.async = true;
+  document.body.appendChild(script);
 });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
@@ -385,7 +440,7 @@ Table&nbsp;15.1: Evidence-Based Strategies and Long-Term Objectives
 </figcaption>
 <div aria-describedby="tbl-ebi-long-term-objective-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="2">
-<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<table class="cha-merged-table do-not-create-environment cell caption-top table table-sm table-striped small">
 <colgroup>
 <col style="width: 33%">
 <col style="width: 33%">
@@ -393,14 +448,14 @@ Table&nbsp;15.1: Evidence-Based Strategies and Long-Term Objectives
 </colgroup>
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #EAF5DB; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">CHIP Focus Area</th>
+<th class="cha-freeze-col" data-quarto-table-cell-role="th" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #EAF5DB; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle; position: sticky; left: 0; z-index: 3;">CHIP Focus Area</th>
 <th data-quarto-table-cell-role="th" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #EAF5DB; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">Evidence-Based Strategies</th>
 <th data-quarto-table-cell-role="th" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #EAF5DB; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">Long-Term Objectives and Progress as of 2024</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td rowspan="3" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #FFFFFF; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">Healthy Eating and Food Security</td>
+<td rowspan="3" class="cha-freeze-col" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #FFFFFF; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle; position: sticky; left: 0; z-index: 2;">Healthy Eating and Food Security</td>
 <td rowspan="3" style="text-align: left; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #FFFFFF; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: normal; vertical-align: middle;">Screen for food insecurity; facilitate and actively support referrals<br>
 Connect and enroll families and individuals in any eligible nutrition and community programs<br>
 Expand availability of affordable healthy foods, especially in communities with limited access through sustaining OCDOH funded farm markets</td>
@@ -413,7 +468,7 @@ Increase the percentage of adults who consume less than one fruit and less than 
 <tr class="odd">
 </tr>
 <tr class="even">
-<td rowspan="3" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #EAF5DB; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">Preventative Care and Management</td>
+<td rowspan="3" class="cha-freeze-col" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #EAF5DB; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle; position: sticky; left: 0; z-index: 2;">Preventative Care and Management</td>
 <td rowspan="3" style="text-align: left; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #EAF5DB; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: normal; vertical-align: middle;">Remove structural barriers to cancer screening by working with employers to provide employees with paid leave or the option to use flex time for cancer screenings<br>
 Remove structural barriers to cancer screening by increasing primary care provider connections<br>
 Remove economic barriers to cancer screening by ensuring access to health insurance<br>
@@ -428,7 +483,7 @@ Increase the percentage of adults aged 50-75 receiving colorectal cancer screeni
 <tr class="even">
 </tr>
 <tr class="odd">
-<td style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #FFFFFF; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">Mental and Substance Use Disorders Prevention</td>
+<td class="cha-freeze-col" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #FFFFFF; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle; position: sticky; left: 0; z-index: 2;">Mental and Substance Use Disorders Prevention</td>
 <td style="text-align: left; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #FFFFFF; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: normal; vertical-align: middle;">Increase the availability of/access and linkages to medications for opioid use disorder (MOUD) including Buprenorphine<br>
 Increase the availability of access to MOUD including Buprenorphine<br>
 Promote and support the expansion of the Peer RX application for peer referrals at the emergency department<br>
@@ -452,17 +507,17 @@ Table&nbsp;15.2: Short Term Process Indicators and Progress at of 2024
 </figcaption>
 <div aria-describedby="tbl-short-term-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="3">
-<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<table class="cha-merged-table do-not-create-environment cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #EAF5DB; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">CHIP Focus Area</th>
+<th class="cha-freeze-col" data-quarto-table-cell-role="th" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #EAF5DB; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle; position: sticky; left: 0; z-index: 3;">CHIP Focus Area</th>
 <th data-quarto-table-cell-role="th" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #EAF5DB; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">Short Term Process Indicators</th>
 <th data-quarto-table-cell-role="th" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #EAF5DB; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">Progress as of 2024</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td rowspan="11" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #FFFFFF; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">Healthy Eating and Food Security</td>
+<td rowspan="11" class="cha-freeze-col" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #FFFFFF; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle; position: sticky; left: 0; z-index: 2;">Healthy Eating and Food Security</td>
 <td style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #FFFFFF; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: normal; vertical-align: middle;">Increase the number of healthcare practices that screen for food insecurity by 3</td>
 <td style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #FFFFFF; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">MET: 4</td>
 </tr>
@@ -507,7 +562,7 @@ Table&nbsp;15.2: Short Term Process Indicators and Progress at of 2024
 <td style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #FFFFFF; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">MET: $13,667 worth of coupons</td>
 </tr>
 <tr class="even">
-<td rowspan="5" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #EAF5DB; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">Preventative Care and Management</td>
+<td rowspan="5" class="cha-freeze-col" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #EAF5DB; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle; position: sticky; left: 0; z-index: 2;">Preventative Care and Management</td>
 <td style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #EAF5DB; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: normal; vertical-align: middle;">Determine a baseline of Chamber of Commerce members with policies that allow for paid time off or flex time for cancer screenings</td>
 <td style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #EAF5DB; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">Unable to determine</td>
 </tr>
@@ -528,7 +583,7 @@ Table&nbsp;15.2: Short Term Process Indicators and Progress at of 2024
 <td style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #EAF5DB; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">MET: 4 events held</td>
 </tr>
 <tr class="odd">
-<td rowspan="9" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #FFFFFF; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">Promote Well-Being and Prevent Mental Health and Substance Use Disorders</td>
+<td rowspan="9" class="cha-freeze-col" style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #FFFFFF; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle; position: sticky; left: 0; z-index: 2;">Promote Well-Being and Prevent Mental Health and Substance Use Disorders</td>
 <td style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #FFFFFF; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: normal; vertical-align: middle;">Increase the number of hospitals providing MOUD in the emergency departments from 1 to 4</td>
 <td style="text-align: center; padding: 10px; border: 1px solid #5a8f3c; font-family: 'Tw Cen MT', 'Tw Cen MT Std', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif; background-color: #FFFFFF; box-shadow: none !important; --bs-table-bg-type: transparent; --bs-table-accent-bg: transparent; white-space: nowrap; font-weight: bold; vertical-align: middle;">NOT MET: 2</td>
 </tr>

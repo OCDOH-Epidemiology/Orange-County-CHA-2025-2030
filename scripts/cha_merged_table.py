@@ -245,8 +245,20 @@ def _render_row(
             f"font-weight:{weight}",
             *style_extras,
         ]
+        if col_idx == 0:
+            attrs.extend(
+                [
+                    "position:sticky",
+                    "left:0",
+                    "z-index:3" if is_header else "z-index:2",
+                ]
+            )
         style = ";".join(attrs).replace('"', "'")
         attr_parts = [f'style="{style}"']
+        # Mark true first-column cells so freeze-pane CSS does not stick a
+        # later header cell when the first column uses rowspan.
+        if col_idx == 0:
+            attr_parts.append('class="cha-freeze-col"')
         if colspan > 1:
             attr_parts.append(f'colspan="{colspan}"')
         if rowspan > 1:
@@ -310,10 +322,10 @@ def render_merged_table(
     ]
 
     table_style = (
-        f"border-collapse:collapse;width:100%;margin:20px 0;"
+        f"border-collapse:separate;border-spacing:0;width:100%;margin:20px 0;"
         f"font-family:{CHA_FONT_FAMILY};font-size:14px;"
     ).replace('"', "'")
-    parts = [f'<table style="{table_style}">']
+    parts = [f'<table class="cha-merged-table" style="{table_style}">']
     if header_rows_html:
         parts.append(f"<thead>{''.join(header_rows_html)}</thead>")
     if body_rows_html:

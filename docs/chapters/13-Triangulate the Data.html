@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-096f8f7ccaf4dd6d27e1c4f24ecf1b67.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1733da126e92f605e30a9e900242d6bb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -157,6 +157,61 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.assign(anchor.href);
     }, 180);
   });
+});
+</script>
+<script>
+function googleTranslateElementInit() {
+  if (!window.google || !google.translate || !document.getElementById("google_translate_element")) {
+    return;
+  }
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "en",
+      autoDisplay: false,
+      includedLanguages: "ar,zh-CN,zh-TW,en,fr,ht,it,ko,pl,pt,ru,es,uk,yi",
+      layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+    },
+    "google_translate_element"
+  );
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("google_translate_element")) {
+    return;
+  }
+
+  var wrap = document.createElement("div");
+  wrap.className = "cha-google-translate notranslate";
+  wrap.setAttribute("translate", "no");
+
+  var label = document.createElement("div");
+  label.className = "cha-google-translate-label";
+  label.id = "cha-google-translate-label";
+  label.textContent = "Translate this page";
+
+  var mount = document.createElement("div");
+  mount.id = "google_translate_element";
+  mount.setAttribute("aria-labelledby", "cha-google-translate-label");
+
+  wrap.appendChild(label);
+  wrap.appendChild(mount);
+
+  var search = document.querySelector(".sidebar-search");
+  if (search && search.parentNode) {
+    search.parentNode.insertBefore(wrap, search.nextSibling);
+  } else {
+    var sidebar = document.getElementById("quarto-sidebar");
+    if (sidebar) {
+      sidebar.insertBefore(wrap, sidebar.firstChild);
+    } else {
+      document.body.insertBefore(wrap, document.body.firstChild);
+    }
+  }
+
+  var script = document.createElement("script");
+  script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  script.async = true;
+  document.body.appendChild(script);
 });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
@@ -356,74 +411,24 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- Table 67: Top Areas of Concern Across All Assessments -->
 <!-- indicator: tbl-top-areas-concern -->
 <div class="cell" data-message="false" data-execution_count="2">
-<div id="tbl-top-areas-concern" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="2" data-message="false">
+<div id="tbl-top-areas-concern" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-message="false" data-execution_count="2">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-top-areas-concern-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;14.1: Top Areas of Concern Across All Assessments
 </figcaption>
 <div aria-describedby="tbl-top-areas-concern-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="2">
-<style type="text/css">
-#T_e353a th {
-  font-weight: bold;
-  text-align: center;
-  background-color: #EAF5DB;
-  font-family: "Tw Cen MT", "Tw Cen MT Std", "Century Gothic", "Trebuchet MS", "Segoe UI", sans-serif;
-  padding: 10px;
-  border: 1px solid #ddd;
-}
-#T_e353a td:first-child {
-  font-weight: bold;
-  text-align: left;
-  font-family: "Tw Cen MT", "Tw Cen MT Std", "Century Gothic", "Trebuchet MS", "Segoe UI", sans-serif;
-  padding: 10px;
-  border: 1px solid #ddd;
-  white-space: nowrap;
-}
-#T_e353a td:not(:first-child) {
-  text-align: center;
-  font-family: "Tw Cen MT", "Tw Cen MT Std", "Century Gothic", "Trebuchet MS", "Segoe UI", sans-serif;
-  padding: 10px;
-  border: 1px solid #ddd;
-  white-space: nowrap;
-}
-#T_e353a td {
-  box-shadow: none !important;
-  --bs-table-bg-type: transparent;
-  --bs-table-accent-bg: transparent;
-  white-space: nowrap;
-}
-#T_e353a tbody tr:nth-child(odd) td {
-  background-color: #FFFFFF !important;
-}
-#T_e353a tbody tr:nth-child(even) td {
-  background-color: #EAF5DB !important;
-}
-#T_e353a table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 20px 0;
-  font-family: "Tw Cen MT", "Tw Cen MT Std", "Century Gothic", "Trebuchet MS", "Segoe UI", sans-serif;
-  font-size: 14px;
-}
-#T_e353a_row0_col0 {
-  background-color: #FFFFFF !important;
-  box-shadow: none !important;
-  --bs-table-bg-type: transparent;
-  --bs-table-accent-bg: transparent;
-  white-space: nowrap;
-}
-</style>
 
-<table id="T_e353a" class="do-not-create-environment cell caption-top table table-sm table-striped small">
+
+<table id="T_d5bc0" class="dataframe cha-table-freeze do-not-create-environment cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th id="T_e353a_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th"></th>
+<th id="T_d5bc0_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th"></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_e353a_row0_col0" class="data row0 col0">Table 'tbl-top-areas-concern' not found in workbook.</td>
+<td id="T_d5bc0_row0_col0" class="data row0 col0">Table 'tbl-top-areas-concern' not found in workbook.</td>
 </tr>
 </tbody>
 </table>

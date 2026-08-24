@@ -51,7 +51,9 @@ format:
       - default
       - theme.scss
     css: custom-citation-styles.css
-    include-in-header: includes/skip-link-head.html
+    include-in-header:
+      - includes/skip-link-head.html
+      - includes/google-translate.html
     include-before-body: includes/skip-to-main.html
     include-after-body: references-dropdown.html
     toc: true

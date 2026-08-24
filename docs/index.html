@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-096f8f7ccaf4dd6d27e1c4f24ecf1b67.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1733da126e92f605e30a9e900242d6bb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -156,6 +156,61 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.assign(anchor.href);
     }, 180);
   });
+});
+</script>
+<script>
+function googleTranslateElementInit() {
+  if (!window.google || !google.translate || !document.getElementById("google_translate_element")) {
+    return;
+  }
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "en",
+      autoDisplay: false,
+      includedLanguages: "ar,zh-CN,zh-TW,en,fr,ht,it,ko,pl,pt,ru,es,uk,yi",
+      layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+    },
+    "google_translate_element"
+  );
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("google_translate_element")) {
+    return;
+  }
+
+  var wrap = document.createElement("div");
+  wrap.className = "cha-google-translate notranslate";
+  wrap.setAttribute("translate", "no");
+
+  var label = document.createElement("div");
+  label.className = "cha-google-translate-label";
+  label.id = "cha-google-translate-label";
+  label.textContent = "Translate this page";
+
+  var mount = document.createElement("div");
+  mount.id = "google_translate_element";
+  mount.setAttribute("aria-labelledby", "cha-google-translate-label");
+
+  wrap.appendChild(label);
+  wrap.appendChild(mount);
+
+  var search = document.querySelector(".sidebar-search");
+  if (search && search.parentNode) {
+    search.parentNode.insertBefore(wrap, search.nextSibling);
+  } else {
+    var sidebar = document.getElementById("quarto-sidebar");
+    if (sidebar) {
+      sidebar.insertBefore(wrap, sidebar.firstChild);
+    } else {
+      document.body.insertBefore(wrap, document.body.firstChild);
+    }
+  }
+
+  var script = document.createElement("script");
+  script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  script.async = true;
+  document.body.appendChild(script);
 });
 </script>
 

@@ -94,3 +94,51 @@ a[role="doc-biblioref"]:focus {
   --bs-table-accent-bg: transparent;
   box-shadow: none !important;
 }
+
+/* Google Translate widget (sidebar, all HTML chapters). */
+.cha-google-translate {
+  padding: 0.35rem 0.15rem 0.85rem;
+}
+
+.cha-google-translate-label {
+  color: var(--cha-muted, #3d3d3d);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.cha-google-translate .goog-te-gadget {
+  color: var(--cha-muted, #3d3d3d);
+  font-family: inherit !important;
+  font-size: 0.75rem !important;
+}
+
+.cha-google-translate .goog-te-combo {
+  background: #ffffff;
+  border: 1px solid rgba(154, 205, 76, 0.6);
+  color: #000000;
+  font-family: inherit;
+  font-size: 0.95rem;
+  margin-top: 0.15rem;
+  min-height: 2.75rem;
+  padding: 0.35rem 0.45rem;
+  width: 100%;
+}
+
+.goog-te-banner-frame,
+.skiptranslate iframe,
+body > .skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}

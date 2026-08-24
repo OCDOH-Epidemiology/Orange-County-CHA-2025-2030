@@ -386,13 +386,25 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
         {'selector': 'tbody tr:nth-child(even) td', 'props': [
             ('background-color', '#EAF5DB !important')
         ]},
-        # Table container
+        # Table container. separate/0 is required for a sticky first column;
+        # collapse plus position:sticky is unreliable across browsers.
         {'selector': 'table', 'props': [
-            ('border-collapse', 'collapse'), 
-            ('width', '100%'), 
+            ('border-collapse', 'separate'),
+            ('border-spacing', '0'),
+            ('width', '100%'),
             ('margin', '20px 0'),
             ('font-family', CHA_FONT_FAMILY),
             ('font-size', '14px')
+        ]},
+        # Freeze the row-label column when the table scrolls horizontally.
+        {'selector': 'th:first-child, td:first-child', 'props': [
+            ('position', 'sticky'),
+            ('left', '0'),
+            ('z-index', '2'),
+        ]},
+        {'selector': 'thead th:first-child', 'props': [
+            ('z-index', '3'),
+            ('background-color', '#EAF5DB'),
         ]}
     ]
     
@@ -436,6 +448,7 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
     
     # Create the styled table
     styled = df.style.set_table_styles(styles).hide(axis="index")
+    styled = styled.set_table_attributes('class="dataframe cha-table-freeze"')
     # Values are already HTML-escaped (with <br> for Excel newlines).
     styled = styled.format(lambda v: v if v is not None else "", escape=None)
     

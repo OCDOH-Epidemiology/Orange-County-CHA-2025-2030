@@ -94,6 +94,36 @@ figure figcaption p {
   box-shadow: none !important;
 }
 
+/* Freeze the first column on wide tables (Excel-style freeze panes).
+   Horizontal scrolling lives on the cell output, so sticky left:0 lines
+   up with the table rather than the window/sidebar. */
+.cell-output-display {
+  overflow-x: auto;
+  max-width: 100%;
+  overscroll-behavior-x: contain;
+}
+
+.cell-output-display table.cha-table-freeze,
+.cell-output-display table.cha-merged-table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.cell-output-display table.cha-table-freeze > thead > tr > th:first-child,
+.cell-output-display table.cha-table-freeze > tbody > tr > td:first-child,
+.cell-output-display table.cha-table-freeze > tbody > tr > th:first-child,
+.cell-output-display table.cha-merged-table .cha-freeze-col {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+}
+
+.cell-output-display table.cha-table-freeze > thead > tr > th:first-child,
+.cell-output-display table.cha-merged-table thead .cha-freeze-col {
+  z-index: 3;
+  background-color: #eaf5db;
+}
+
 section.footnotes {
   font-size: 0.875rem;
 }

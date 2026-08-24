@@ -1,0 +1,55 @@
+<script>
+function googleTranslateElementInit() {
+  if (!window.google || !google.translate || !document.getElementById("google_translate_element")) {
+    return;
+  }
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "en",
+      autoDisplay: false,
+      includedLanguages: "ar,zh-CN,zh-TW,en,fr,ht,it,ko,pl,pt,ru,es,uk,yi",
+      layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+    },
+    "google_translate_element"
+  );
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("google_translate_element")) {
+    return;
+  }
+
+  var wrap = document.createElement("div");
+  wrap.className = "cha-google-translate notranslate";
+  wrap.setAttribute("translate", "no");
+
+  var label = document.createElement("div");
+  label.className = "cha-google-translate-label";
+  label.id = "cha-google-translate-label";
+  label.textContent = "Translate this page";
+
+  var mount = document.createElement("div");
+  mount.id = "google_translate_element";
+  mount.setAttribute("aria-labelledby", "cha-google-translate-label");
+
+  wrap.appendChild(label);
+  wrap.appendChild(mount);
+
+  var search = document.querySelector(".sidebar-search");
+  if (search && search.parentNode) {
+    search.parentNode.insertBefore(wrap, search.nextSibling);
+  } else {
+    var sidebar = document.getElementById("quarto-sidebar");
+    if (sidebar) {
+      sidebar.insertBefore(wrap, sidebar.firstChild);
+    } else {
+      document.body.insertBefore(wrap, document.body.firstChild);
+    }
+  }
+
+  var script = document.createElement("script");
+  script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  script.async = true;
+  document.body.appendChild(script);
+});
+</script>

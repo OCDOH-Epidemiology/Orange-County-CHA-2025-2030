@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-096f8f7ccaf4dd6d27e1c4f24ecf1b67.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1733da126e92f605e30a9e900242d6bb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -157,6 +157,61 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.assign(anchor.href);
     }, 180);
   });
+});
+</script>
+<script>
+function googleTranslateElementInit() {
+  if (!window.google || !google.translate || !document.getElementById("google_translate_element")) {
+    return;
+  }
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "en",
+      autoDisplay: false,
+      includedLanguages: "ar,zh-CN,zh-TW,en,fr,ht,it,ko,pl,pt,ru,es,uk,yi",
+      layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+    },
+    "google_translate_element"
+  );
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("google_translate_element")) {
+    return;
+  }
+
+  var wrap = document.createElement("div");
+  wrap.className = "cha-google-translate notranslate";
+  wrap.setAttribute("translate", "no");
+
+  var label = document.createElement("div");
+  label.className = "cha-google-translate-label";
+  label.id = "cha-google-translate-label";
+  label.textContent = "Translate this page";
+
+  var mount = document.createElement("div");
+  mount.id = "google_translate_element";
+  mount.setAttribute("aria-labelledby", "cha-google-translate-label");
+
+  wrap.appendChild(label);
+  wrap.appendChild(mount);
+
+  var search = document.querySelector(".sidebar-search");
+  if (search && search.parentNode) {
+    search.parentNode.insertBefore(wrap, search.nextSibling);
+  } else {
+    var sidebar = document.getElementById("quarto-sidebar");
+    if (sidebar) {
+      sidebar.insertBefore(wrap, sidebar.firstChild);
+    } else {
+      document.body.insertBefore(wrap, document.body.firstChild);
+    }
+  }
+
+  var script = document.createElement("script");
+  script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  script.async = true;
+  document.body.appendChild(script);
 });
 </script>
 
@@ -343,7 +398,7 @@ Data source citation, accessed Month Year.
 Note: Methodology notes for this indicator.
 :::
 -->
-<div id="fig-hanlon-method" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The Hanlon Method" data-fig-cap="The Hanlon Method">
+<div id="fig-hanlon-method" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="The Hanlon Method" alt="The Hanlon Method">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hanlon-method-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11.1: The Hanlon Method
@@ -353,7 +408,7 @@ Figure&nbsp;11.1: The Hanlon Method
 </div>
 </figure>
 </div>
-<div id="fig-health-priorities" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Health Priorities based on use of Hanlon Method" data-fig-cap="Health Priorities">
+<div id="fig-health-priorities" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="Health Priorities" alt="Health Priorities based on use of Hanlon Method">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-health-priorities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11.2: Health Priorities
@@ -363,7 +418,7 @@ Figure&nbsp;11.2: Health Priorities
 </div>
 </figure>
 </div>
-<div id="fig-hanlon-heart-disease" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Heart Disease Hanlon Method priority" data-fig-cap="Heart Disease">
+<div id="fig-hanlon-heart-disease" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="Heart Disease" alt="Heart Disease Hanlon Method priority">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hanlon-heart-disease-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11.3: Heart Disease
@@ -373,7 +428,7 @@ Figure&nbsp;11.3: Heart Disease
 </div>
 </figure>
 </div>
-<div id="fig-hanlon-hypertension" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Hypertension Hanlon Method priority" data-fig-cap="Hypertension">
+<div id="fig-hanlon-hypertension" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="Hypertension" alt="Hypertension Hanlon Method priority">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hanlon-hypertension-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11.4: Hypertension
@@ -383,7 +438,7 @@ Figure&nbsp;11.4: Hypertension
 </div>
 </figure>
 </div>
-<div id="fig-hanlon-childhood-immunizations" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Childhood Immunizations Hanlon Method priority" data-fig-cap="Childhood Immunizations">
+<div id="fig-hanlon-childhood-immunizations" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="Childhood Immunizations" alt="Childhood Immunizations Hanlon Method priority">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hanlon-childhood-immunizations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11.5: Childhood Immunizations
@@ -393,7 +448,7 @@ Figure&nbsp;11.5: Childhood Immunizations
 </div>
 </figure>
 </div>
-<div id="fig-hanlon-physical-activity" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Physical Activity Hanlon Method priority" data-fig-cap="Physical Activity">
+<div id="fig-hanlon-physical-activity" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="Physical Activity" alt="Physical Activity Hanlon Method priority">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hanlon-physical-activity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11.6: Physical Activity
@@ -403,7 +458,7 @@ Figure&nbsp;11.6: Physical Activity
 </div>
 </figure>
 </div>
-<div id="fig-hanlon-cancer" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cancer Hanlon Method priority" data-fig-cap="Cancer">
+<div id="fig-hanlon-cancer" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="Cancer" alt="Cancer Hanlon Method priority">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hanlon-cancer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11.7: Cancer
@@ -413,7 +468,7 @@ Figure&nbsp;11.7: Cancer
 </div>
 </figure>
 </div>
-<div id="fig-hanlon-adult-obesity" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Adult Obesity Hanlon Method priority" data-fig-cap="Adult Obesity">
+<div id="fig-hanlon-adult-obesity" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="Adult Obesity" alt="Adult Obesity Hanlon Method priority">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hanlon-adult-obesity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11.8: Adult Obesity
@@ -423,7 +478,7 @@ Figure&nbsp;11.8: Adult Obesity
 </div>
 </figure>
 </div>
-<div id="fig-hanlon-children-obesity" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Children Obesity Hanlon Method priority" data-fig-cap="Children Obesity">
+<div id="fig-hanlon-children-obesity" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="Children Obesity" alt="Children Obesity Hanlon Method priority">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hanlon-children-obesity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11.9: Children Obesity
@@ -433,7 +488,7 @@ Figure&nbsp;11.9: Children Obesity
 </div>
 </figure>
 </div>
-<div id="fig-hanlon-binge-drinking" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Binge Drinking Hanlon Method priority" data-fig-cap="Binge Drinking">
+<div id="fig-hanlon-binge-drinking" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="Binge Drinking" alt="Binge Drinking Hanlon Method priority">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hanlon-binge-drinking-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11.10: Binge Drinking
@@ -443,7 +498,7 @@ Figure&nbsp;11.10: Binge Drinking
 </div>
 </figure>
 </div>
-<div id="fig-hanlon-breast-cancer" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Breast Cancer Hanlon Method priority" data-fig-cap="Breast Cancer">
+<div id="fig-hanlon-breast-cancer" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="Breast Cancer" alt="Breast Cancer Hanlon Method priority">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hanlon-breast-cancer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11.11: Breast Cancer
@@ -453,7 +508,7 @@ Figure&nbsp;11.11: Breast Cancer
 </div>
 </figure>
 </div>
-<div id="fig-hanlon-food-security" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Food Security Hanlon Method priority" data-fig-cap="Food Security">
+<div id="fig-hanlon-food-security" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="Food Security" alt="Food Security Hanlon Method priority">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hanlon-food-security-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11.12: Food Security
@@ -463,7 +518,7 @@ Figure&nbsp;11.12: Food Security
 </div>
 </figure>
 </div>
-<div id="fig-hanlon-smoking" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Smoking Hanlon Method priority" data-fig-cap="Smoking">
+<div id="fig-hanlon-smoking" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="Smoking" alt="Smoking Hanlon Method priority">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-hanlon-smoking-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11.13: Smoking
