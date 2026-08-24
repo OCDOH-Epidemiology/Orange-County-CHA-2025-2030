@@ -36,20 +36,20 @@ Where data are available across the M-H Region from 2019–2022, OC ranked fourt
 
 Other health areas where OC falls behind NYS or has worsened since the last assessment include:
 
->- Food security
->- Obesity in children and adults
->- Severely cost burdened households
->- Cardiovascular disease hospitalization rate
->- Adults with prediabetes
->- Lack of physical activity
->- Asthma hospitalization rate among adults
->- Emergency department visits for asthma in children 17 years and younger
->- Stroke hospitalization rate
->- Cancer mortality including all-cancer, female breast cancer, lung and bronchus, prostate, and colorectal cancer
->- Childhood immunization rates among children 24–35 months of age
->- Percentage of births with late or no prenatal care
->- Percentage of women age 50–74 years receiving breast cancer screening based on recent guidelines
->- Early syphilis case rate
+- Food security
+- Obesity in children and adults
+- Severely cost burdened households
+- Cardiovascular disease hospitalization rate
+- Adults with prediabetes
+- Lack of physical activity
+- Asthma hospitalization rate among adults
+- Emergency department visits for asthma in children 17 years and younger
+- Stroke hospitalization rate
+- Cancer mortality including all-cancer, female breast cancer, lung and bronchus, prostate, and colorectal cancer
+- Childhood immunization rates among children 24–35 months of age
+- Percentage of births with late or no prenatal care
+- Percentage of women age 50–74 years receiving breast cancer screening based on recent guidelines
+- Early syphilis case rate
 
 ## How Will the Priority Areas and Strategies to Address These Issues Be Chosen?
 

@@ -12,7 +12,7 @@ render_table_object(object_id="tbl-21to64-women-cervical-ca-screen", workbook_pa
 
 ::: {.callout-note collapse="true"}
 ## Source
-NYS Community Health Indicator Reports Dashboard, June 2025 sourced from NYSDOH Behavioral Risk Factor Surveillance System [https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&](https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&) p=ch&cos=33
+NYS Community Health Indicator Reports Dashboard, June 2025 sourced from NYSDOH Behavioral Risk Factor Surveillance System [https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33](https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33)
 :::
 
 ::: {.callout-note}

@@ -17,7 +17,6 @@ lang: en
 book:
   title: "Orange County Community Health Assessment 2025-2030"
   subtitle: ""
-  author: "Orange County Department of Health"
   # google-analytics: "G-XXXXXXXXXX"
   downloads: [pdf]
   chapters:

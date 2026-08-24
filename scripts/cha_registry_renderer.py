@@ -465,10 +465,21 @@ def _enhance_geographic_area_styles(
             base_rows.append([CellStyle() for _ in range(n_cols)])
 
     for row_idx, label in enumerate(labels):
+        prev = base_rows[row_idx][0]
         if _is_village_geo_label(label):
-            base_rows[row_idx][0] = CellStyle(bold=False, indent=1)
+            base_rows[row_idx][0] = CellStyle(
+                bold=False,
+                indent=1,
+                horizontal=prev.horizontal or "left",
+                vertical=prev.vertical,
+            )
         else:
-            base_rows[row_idx][0] = CellStyle(bold=True, indent=0)
+            base_rows[row_idx][0] = CellStyle(
+                bold=True,
+                indent=0,
+                horizontal=prev.horizontal,
+                vertical=prev.vertical,
+            )
 
     return tuple(tuple(row) for row in base_rows)
 

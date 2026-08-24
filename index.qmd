@@ -6,26 +6,25 @@ execute:
 page-layout: full
 ---
 
-::: {.hero}
-A living, data-driven assessment of the community's health status, priorities, and conditions.
-:::
-
 The Orange County Department of Health (OCDOH) extends its sincere gratitude to the many individuals, organizations, and community members who contributed to the development of the 2025–2030 Community Health Assessment (CHA). Whether you completed a survey, participated in a focus group, or facilitated data collection efforts, your collaboration was essential to this process. Your feedback provided the essential data needed to identify our county's most pressing health priorities and will directly inform the strategies implemented to improve public health outcomes over the next five years. Special thanks to the following individuals and organizations:
 
-::: {.hero}
+# Orange County Department of Health
+## Division of Epidemiology and Public Health Planning
 This report was coordinated by Jackie Lawler, MPH, CPH, Director of Epidemiology and Public Health Planning. The data analysis, content development, and final review were completed by the OCDOH Division of Epidemiology and Public Health Planning staff:
 
 >- Dayquan Crandell, Epidemiologist
 >- Erin Ray Pascaretti, Epidemiologist
 >- Frank Mikuszewski, Epidemiologist
 >- Adolfo Rivera, Biostatistician
-:::
+
+## Division of Health Equity
+**Laurisa E. Sampson**, Orange County Department of Health Director of Health Equity, for her instrumental role in planning and implementing the numerous community focus groups that informed this assessment.
+
+# Community Partners
 
 We would like to specifically recognize the following partners for their technical expertise and support:
 
-::: {.hero}
-**Laurisa E. Sampson**, Orange County Department of Health Director of Health Equity, for her instrumental role in planning and implementing the numerous community focus groups that informed this assessment.
-:::
+## Hospital Partners
 
 **Hospital Partners** for their shared commitment to the Community Health Assessment and Improvement process, and ensuring that our county's health priorities are addressed through a coordinated, data-driven approach that connects clinical care and public health:
 
@@ -33,23 +32,20 @@ We would like to specifically recognize the following partners for their technic
 >- Garnet Health Medical Center
 >- Montefiore St. Luke’s Cornwall Hospital
 
-::: {.hero}
+## Orange County Department of Planning
 **Orange County Department of Planning** for their expertise in Census data and GIS mapping, specifically:
 
 >- Megan Tennermann, Senior Planner
 >- Veronica Fernandez-Rogers, Planner
-:::
 
-::: {.hero}
+## Siena Research Institute
 **Siena Research Institute** for their technical guidance, methodology design, and implementation of the Community Health Survey, specifically:
 
 >- Leslie Foster, Business Development Manager
 >- Meghann Crawford, Director of Data Management
-:::
 
-::: {.hero}
+## Healthfirst and Affinity by Molina Healthcare
 **Healthfirst and Affinity by Molina Healthcare** for providing refreshments for our community partners and stakeholders supporting the Orange County Health Summit, specifically:
 
 >- Healthfirst: Melissa Wood, Community Relations Specialist
 >- Affinity by Molina: Felicita Colon-Cordero, Community Engagement Specialist
-:::

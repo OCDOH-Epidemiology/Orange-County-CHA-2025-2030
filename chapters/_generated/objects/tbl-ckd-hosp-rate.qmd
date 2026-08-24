@@ -12,7 +12,7 @@ render_table_object(object_id="tbl-ckd-hosp-rate", workbook_path=CHA_WORKBOOK_PA
 
 ::: {.callout-note collapse="true"}
 ## Source
-NYS Community Health Indicator Reports Dashboard, November 2025 [https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&](https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&) p=ch&cos=33
+NYS Community Health Indicator Reports Dashboard, November 2025 [https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33](https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33)
 :::
 
 ::: {.callout-note}

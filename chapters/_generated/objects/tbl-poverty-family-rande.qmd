@@ -12,7 +12,7 @@ render_table_object(object_id="tbl-poverty-family-rande", workbook_path=CHA_WORK
 
 ::: {.callout-note collapse="true"}
 ## Source
-US Census Bureau; American Community Survey, 2017–2021 American Community Survey 5-Year Estimates, Table S1702-Poverty Status in the Past 12 Months of Families, August 2025 [https://data.census.gov/table/ACSST5Y2023.S1702?q=S1702:+POVERTY+STATUS+IN+THE+PAST+12+MONTHS+OF+FAMILIES&](https://data.census.gov/table/ACSST5Y2023.S1702?q=S1702:+POVERTY+STATUS+IN+THE+PAST+12+MONTHS+OF+FAMILIES&) g=010XX00US_040XX00US36_050XX00US36071
+US Census Bureau; American Community Survey, 2017–2021 American Community Survey 5-Year Estimates, Table S1702-Poverty Status in the Past 12 Months of Families, August 2025 [https://data.census.gov/table/ACSST5Y2023.S1702?q=S1702:+POVERTY+STATUS+IN+THE+PAST+12+MONTHS+OF+FAMILIES&g=010XX00US_040XX00US36_050XX00US36071](https://data.census.gov/table/ACSST5Y2023.S1702?q=S1702:+POVERTY+STATUS+IN+THE+PAST+12+MONTHS+OF+FAMILIES&g=010XX00US_040XX00US36_050XX00US36071)
 :::
 
 ::: {.callout-note}

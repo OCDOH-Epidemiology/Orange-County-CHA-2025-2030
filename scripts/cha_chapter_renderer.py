@@ -228,10 +228,42 @@ def render_indicator_blocks(
     return "\n\n".join(parts)
 
 
+_URL_FRAGMENT_RE = re.compile(
+    r"^(\s+)([A-Za-z0-9._~:/?#\[\]@!$&'()*+,;=%-]+)"
+)
+
+
+def _unwrap_wrapped_urls(text: str) -> str:
+    """Join http(s) URLs that were soft-wrapped with spaces (common in Excel)."""
+    pieces: list[str] = []
+    pos = 0
+    for match in re.finditer(r"https?://[^\s<>\"']+", text):
+        pieces.append(text[pos : match.start()])
+        url = match.group(0)
+        end = match.end()
+        rest = text[end:]
+        while True:
+            cont = _URL_FRAGMENT_RE.match(rest)
+            if not cont:
+                break
+            fragment = cont.group(2)
+            if not re.search(r"[0-9_/=&%,]", fragment):
+                break
+            url += fragment
+            rest = rest[cont.end() :]
+            end += cont.end()
+        pieces.append(url)
+        pos = end
+    pieces.append(text[pos:])
+    return "".join(pieces)
+
+
 def _linkify_source_text(text: str) -> str:
     """Convert bare http(s) URLs to markdown links, preserving existing links."""
     if not text.strip():
         return text
+
+    text = _unwrap_wrapped_urls(text)
 
     def linkify_segment(segment: str) -> str:
         def repl(match: re.Match[str]) -> str:

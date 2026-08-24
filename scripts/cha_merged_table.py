@@ -1,5 +1,5 @@
 """
-Render workbook tables that use Excel merge-and-center within the data block.
+Render workbook tables that use Excel merge-and-center in headers or the data block.
 """
 
 from __future__ import annotations
@@ -16,6 +16,8 @@ from scripts.cha_table_styling import (
     CELL_PADDING_PX,
     CHA_FONT_FAMILY,
     EXCEL_INDENT_PX_PER_LEVEL,
+    css_text_align_from_excel,
+    css_vertical_align_from_excel,
 )
 from scripts.workbook_loader import CellMerge, CellStyle, MergedTableGrid
 
@@ -74,6 +76,14 @@ def _build_merge_lookup(
     return anchors, covered
 
 
+def _default_text_align(*, col_idx: int, is_header: bool, indent: int) -> str:
+    if indent > 0:
+        return "left"
+    if col_idx == 0 and not is_header:
+        return "left"
+    return "center"
+
+
 def _cell_style_props(
     grid: MergedTableGrid,
     row_idx: int,
@@ -87,20 +97,28 @@ def _cell_style_props(
         row_styles = grid.styles[row_idx]
         if col_idx < len(row_styles):
             style: CellStyle = row_styles[col_idx]
-            weight = "bold" if style.bold else "normal"
+            # Header labels stay bold to match the rest of the CHA tables,
+            # even when the Excel cell is not explicitly bold.
+            weight = "bold" if is_header or style.bold else "normal"
             extras: list[str] = []
+            default_align = _default_text_align(
+                col_idx=col_idx, is_header=is_header, indent=style.indent
+            )
+            text_align = css_text_align_from_excel(style.horizontal, default=default_align)
+            extras.append(f"text-align:{text_align}")
+            extras.append(
+                f"vertical-align:{css_vertical_align_from_excel(style.vertical)}"
+            )
             if style.indent > 0:
                 indent_px = style.indent * EXCEL_INDENT_PX_PER_LEVEL
                 # padding-left indents every line; text-indent only indents the first.
                 extras.append(f"padding-left:{CELL_PADDING_PX + indent_px}px")
-                extras.append("text-align:left !important")
-            elif col_idx == 0:
-                extras.append("text-align:left !important")
             return weight, extras
 
     label_cell = _is_label_cell(raw_value, is_header=is_header)
     weight = "bold" if label_cell else "normal"
-    return weight, []
+    default_align = _default_text_align(col_idx=col_idx, is_header=is_header, indent=0)
+    return weight, [f"text-align:{default_align}", "vertical-align:middle"]
 
 
 def _row_format_override(row: tuple[Any, ...]) -> str | None:
@@ -214,8 +232,6 @@ def _render_row(
         )
 
         attrs = [
-            "text-align:center",
-            "vertical-align:middle",
             "padding:10px",
             f"border:1px solid {_BORDER_COLOR}",
             f"font-family:{CHA_FONT_FAMILY}",

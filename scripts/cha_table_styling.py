@@ -22,6 +22,35 @@ EXCEL_INDENT_PX_PER_LEVEL = 27
 # Base cell padding; hierarchy indent is added on top via padding-left.
 CELL_PADDING_PX = 10
 
+_EXCEL_H_ALIGN_TO_CSS = {
+    "left": "left",
+    "center": "center",
+    "right": "right",
+    "justify": "justify",
+    "centercontinuous": "center",
+    "distributed": "justify",
+    "fill": "left",
+}
+_EXCEL_V_ALIGN_TO_CSS = {
+    "top": "top",
+    "center": "middle",
+    "bottom": "bottom",
+    "justify": "middle",
+    "distributed": "middle",
+}
+
+
+def css_text_align_from_excel(horizontal: str, *, default: str) -> str:
+    """Map Excel horizontal alignment to CSS; ``default`` when unset."""
+    token = (horizontal or "").strip().lower()
+    return _EXCEL_H_ALIGN_TO_CSS.get(token, default)
+
+
+def css_vertical_align_from_excel(vertical: str, *, default: str = "middle") -> str:
+    """Map Excel vertical alignment to CSS; ``default`` when unset."""
+    token = (vertical or "").strip().lower()
+    return _EXCEL_V_ALIGN_TO_CSS.get(token, default)
+
 
 def _htmlize_cell_value(value) -> str:
     """Escape cell text; convert Excel Alt+Enter newlines to <br>."""
@@ -455,15 +484,22 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
                 if col_idx < len(row_styles):
                     style = row_styles[col_idx]
                     parts.append('font-weight: bold' if style.bold else 'font-weight: normal')
-                    if col_idx == 0:
-                        parts.append('text-align: left !important')
-                        if style.indent > 0:
-                            # padding-left indents the whole block (all lines),
-                            # unlike text-indent which only affects the first line.
-                            indent_px = style.indent * EXCEL_INDENT_PX_PER_LEVEL
-                            parts.append(
-                                f'padding-left: {CELL_PADDING_PX + indent_px}px !important'
-                            )
+                    default_align = "left" if col_idx == 0 or style.indent > 0 else "center"
+                    text_align = css_text_align_from_excel(
+                        style.horizontal, default=default_align
+                    )
+                    parts.append(f'text-align: {text_align} !important')
+                    if style.vertical:
+                        parts.append(
+                            f'vertical-align: {css_vertical_align_from_excel(style.vertical)}'
+                        )
+                    if style.indent > 0:
+                        # padding-left indents the whole block (all lines),
+                        # unlike text-indent which only affects the first line.
+                        indent_px = style.indent * EXCEL_INDENT_PX_PER_LEVEL
+                        parts.append(
+                            f'padding-left: {CELL_PADDING_PX + indent_px}px !important'
+                        )
             cell_css_list.append('; '.join(parts))
         return cell_css_list
     

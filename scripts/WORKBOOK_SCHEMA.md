@@ -233,10 +233,12 @@ In the flat per-sheet workbook format (one indicator per sheet):
 Important guardrails:
 
 - Do not put `percent1`, `integer`, `currency`, etc. in the actual header row or data cells.
-- If merged headers are used (e.g., `Male` / `Female` groups with a second header row), keep format codes in the dedicated format row above `Enter Data`; the parser will:
+- If merged headers are used (e.g., `Geographic Area` spanning both header rows, or `Age` spanning several sub-columns), keep format codes in the dedicated format row above `Enter Data`; the parser will:
   - read that row into per-column format rules
   - exclude it from the data block entirely
   - strip accidental leading `percent1|` prefixes from labels before rendering
+  - preserve Excel `rowspan`/`colspan` merges in the live CHA HTML table
+  - preserve Excel horizontal/vertical cell alignment (center/left/right) in the live CHA HTML table
 
 ## Example object flow
 

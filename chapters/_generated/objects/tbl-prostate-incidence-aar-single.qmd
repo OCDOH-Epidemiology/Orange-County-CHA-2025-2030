@@ -12,7 +12,7 @@ render_table_object(object_id="tbl-prostate-incidence-aar-single", workbook_path
 
 ::: {.callout-note collapse="true"}
 ## Source
-NYS Community Health Indicator Reports Dashboard, August 2025 sourced from NYS Cancer Registry [https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&](https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&) p=ch&cos=33
+NYS Community Health Indicator Reports Dashboard, August 2025 sourced from NYS Cancer Registry [https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33](https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33)
 :::
 
 ::: {.callout-note}

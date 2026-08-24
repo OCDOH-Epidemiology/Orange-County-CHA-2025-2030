@@ -152,6 +152,8 @@ class CellStyle:
 
     bold: bool = False
     indent: int = 0
+    horizontal: str = ""
+    vertical: str = ""
 
 
 @dataclass(frozen=True)
@@ -361,19 +363,21 @@ def _flat_last_header_row_idx(df: pd.DataFrame, header_row_idx: int, data_col_en
     return header_row_idx
 
 
-def _worksheet_has_data_body_merges(
+def _worksheet_has_table_block_merges(
     ws: Any,
     *,
     header_row_1based: int,
-    last_header_row_1based: int,
     data_col_start_1based: int,
 ) -> bool:
-    """True when merges extend below the header block into table body rows."""
+    """True when Excel merges exist in the table header or body (data columns)."""
     for mc in ws.merged_cells.ranges:
         if mc.min_col < data_col_start_1based:
             continue
-        if mc.min_row > last_header_row_1based:
-            return True
+        if mc.max_row < header_row_1based:
+            continue
+        if mc.max_row == mc.min_row and mc.max_col == mc.min_col:
+            continue
+        return True
     return False
 
 
@@ -392,14 +396,27 @@ def _style_anchor_cell(ws: Any, row_1based: int, col_1based: int) -> tuple[int, 
     return row_1based, col_1based
 
 
+def _excel_alignment_token(value: Any) -> str:
+    """Normalize openpyxl alignment; treat General/blank as unset."""
+    text = _as_text(value).lower()
+    if text in {"", "general"}:
+        return ""
+    return text
+
+
 def _read_cell_style(ws: Any, row_1based: int, col_1based: int) -> CellStyle:
     anchor_row, anchor_col = _style_anchor_cell(ws, row_1based, col_1based)
     cell = ws.cell(anchor_row, anchor_col)
     bold = bool(cell.font and cell.font.bold)
     indent = 0
-    if cell.alignment and cell.alignment.indent:
-        indent = int(cell.alignment.indent)
-    return CellStyle(bold=bold, indent=indent)
+    horizontal = ""
+    vertical = ""
+    if cell.alignment:
+        if cell.alignment.indent:
+            indent = int(cell.alignment.indent)
+        horizontal = _excel_alignment_token(cell.alignment.horizontal)
+        vertical = _excel_alignment_token(cell.alignment.vertical)
+    return CellStyle(bold=bold, indent=indent, horizontal=horizontal, vertical=vertical)
 
 
 def _extract_data_block_styles(
@@ -461,7 +478,7 @@ def _extend_data_col_end_for_header_merges(
 
 
 def _extract_merged_table_grid(ws: Any, df: pd.DataFrame) -> MergedTableGrid | None:
-    """Build a merged cell grid when Excel merges extend into table body rows."""
+    """Build a cell grid when Excel merges exist in the table header or body."""
     bounds = _flat_data_bounds(df)
     if bounds is None:
         return None
@@ -477,10 +494,9 @@ def _extract_merged_table_grid(ws: Any, df: pd.DataFrame) -> MergedTableGrid | N
     )
     last_header_row_1based = _flat_last_header_row_idx(df, header_row_idx, data_col_end_idx) + 1
 
-    if not _worksheet_has_data_body_merges(
+    if not _worksheet_has_table_block_merges(
         ws,
         header_row_1based=header_row_1based,
-        last_header_row_1based=last_header_row_1based,
         data_col_start_1based=data_col_start_1based,
     ):
         return None
@@ -521,6 +537,9 @@ def _extract_merged_table_grid(ws: Any, df: pd.DataFrame) -> MergedTableGrid | N
                 colspan=mc.max_col - mc.min_col + 1,
             )
         )
+
+    if not merges:
+        return None
 
     format_row_idx = header_row_idx - 1
     format_rules_by_col: list[str] = []
