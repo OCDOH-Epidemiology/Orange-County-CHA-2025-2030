@@ -187,12 +187,14 @@ def _resolve_color_by(spec: Any, df: pd.DataFrame) -> str:
 
 
 def _hover_value_format_for_rules(figure_rules: dict[str, str], y_cols: list[str]) -> str:
-    """Prefer integer labels for count-like series; otherwise one decimal."""
+    """Prefer integer labels for count-like series; otherwise one decimal with commas."""
     for col in y_cols:
         fmt = str(figure_rules.get(col, "")).strip().lower()
         if fmt in {"integer", "number"}:
             return ",.0f"
-    return ".1f"
+        if fmt == "percent2":
+            return ",.2f"
+    return ",.1f"
 
 
 def _text_looks_like_responses(text: Any) -> bool:
@@ -298,12 +300,12 @@ def _format_value(value: Any, format_name: str) -> Any:
             return value
     if format_name == "percent1":
         try:
-            return f"{_to_float(value):.1f}"
+            return f"{_to_float(value):,.1f}"
         except (ValueError, TypeError):
             return value
     if format_name == "percent2":
         try:
-            return f"{_to_float(value):.2f}"
+            return f"{_to_float(value):,.2f}"
         except (ValueError, TypeError):
             return value
     if format_name == "currency":

@@ -149,8 +149,8 @@ Supported formats in `format_rules_json`:
 
 - `number` - comma separated, no decimals (e.g., `1,234`)
 - `integer` - rounded integer, comma separated (e.g., `1,234`)
-- `percent1` - one decimal place (e.g., `12.3`)
-- `percent2` - two decimals (e.g., `12.34`)
+- `percent1` - one decimal place with comma thousands (e.g., `12.3`, `2,000.0`)
+- `percent2` - two decimals with comma thousands (e.g., `12.34`, `2,000.00`)
 - `currency` - dollar sign prefix + comma-separated thousands, no decimals (e.g., `$2,000`)
 - `currency2` - dollar sign prefix + comma-separated thousands, **two** decimals (e.g., `$2,000.50`)
 - `ratio` - table cells preserve the original ratio text (e.g., `1400:1`), while charts plot only the numeric segment before `:` (e.g., `1400`)
