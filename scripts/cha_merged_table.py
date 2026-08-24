@@ -27,6 +27,7 @@ _ROW_ODD_BG = "#FFFFFF"
 _ROW_EVEN_BG = "#EAF5DB"
 _HEADER_BG = "#EAF5DB"
 _BORDER_COLOR = "#5a8f3c"
+_WESTCHESTER_BORDER = "#2d5016"
 
 
 def _looks_numeric(value: Any) -> bool:
@@ -205,6 +206,9 @@ def _render_row(
     else:
         row_bg = _ROW_ODD_BG if body_row_index % 2 == 0 else _ROW_EVEN_BG
 
+    first_body_label = "" if is_header or not row else str(row[0] or "").strip().lower()
+    westchester_border = not is_header and first_body_label == "westchester"
+
     for col_idx, raw_value in enumerate(row):
         if (row_idx, col_idx) in covered:
             continue
@@ -245,6 +249,8 @@ def _render_row(
             f"font-weight:{weight}",
             *style_extras,
         ]
+        if westchester_border:
+            attrs.append(f"border-bottom:3px solid {_WESTCHESTER_BORDER}")
         if col_idx == 0:
             attrs.extend(
                 [

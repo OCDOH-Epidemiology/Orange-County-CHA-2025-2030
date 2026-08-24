@@ -238,6 +238,121 @@ def get_format_string(data_type: str | None) -> str | None:
     return None
 
 
+def _blank_header_label(value) -> bool:
+    text = "" if value is None or (isinstance(value, float) and pd.isna(value)) else str(value).strip()
+    return text == ""
+
+
+def _header_label_text(value) -> str:
+    if value is None or (isinstance(value, float) and pd.isna(value)):
+        return ""
+    text = str(value).strip()
+    return "" if text == "" else text
+
+
+def _multiindex_header_grid(columns: pd.MultiIndex):
+    """Build header rows + colspan/rowspan merges for a MultiIndex."""
+    from scripts.workbook_loader import CellMerge
+
+    n_cols = len(columns)
+    n_levels = columns.nlevels
+    header_rows: list[list[object]] = [
+        [_header_label_text(columns[c][level]) for c in range(n_cols)]
+        for level in range(n_levels)
+    ]
+    merges: list[CellMerge] = []
+
+    # First column: blank upper levels → rowspan leaf label across header rows.
+    if n_cols > 0 and n_levels > 1:
+        first_parts = [_header_label_text(columns[0][level]) for level in range(n_levels)]
+        if all(_blank_header_label(part) for part in first_parts[:-1]) and not _blank_header_label(
+            first_parts[-1]
+        ):
+            header_rows[0][0] = first_parts[-1]
+            for level in range(1, n_levels):
+                header_rows[level][0] = ""
+            merges.append(CellMerge(row=0, col=0, rowspan=n_levels, colspan=1))
+
+    # Merge consecutive identical labels on each header level (skip blanks).
+    covered = {(m.row + dr, m.col + dc) for m in merges for dr in range(m.rowspan) for dc in range(m.colspan)}
+    for level in range(n_levels):
+        col = 0
+        while col < n_cols:
+            if (level, col) in covered:
+                col += 1
+                continue
+            label = header_rows[level][col]
+            if _blank_header_label(label):
+                col += 1
+                continue
+            end = col + 1
+            while (
+                end < n_cols
+                and (level, end) not in covered
+                and header_rows[level][end] == label
+            ):
+                end += 1
+            span = end - col
+            if span > 1:
+                merges.append(CellMerge(row=level, col=col, rowspan=1, colspan=span))
+                for extra in range(col + 1, end):
+                    header_rows[level][extra] = ""
+                    covered.add((level, extra))
+            col = end
+
+    return header_rows, merges
+
+
+def _dataframe_to_merged_grid(df: pd.DataFrame, cell_styles=None):
+    """Convert a (possibly MultiIndex) DataFrame into a MergedTableGrid."""
+    from scripts.workbook_loader import CellStyle, MergedTableGrid
+
+    n_cols = len(df.columns)
+    if isinstance(df.columns, pd.MultiIndex):
+        header_rows, merges = _multiindex_header_grid(df.columns)
+    else:
+        header_rows = [[_header_label_text(col) for col in df.columns]]
+        merges = []
+
+    header_count = len(header_rows)
+    body_rows = [
+        tuple("" if (isinstance(v, float) and pd.isna(v)) or v is None else v for v in df.iloc[i].tolist())
+        for i in range(len(df))
+    ]
+    cells = tuple(tuple(row) for row in header_rows) + tuple(body_rows)
+
+    # MergedTableGrid.styles includes header rows; cell_styles are body-only.
+    style_rows: list[tuple] = []
+    for _ in range(header_count):
+        style_rows.append(tuple(CellStyle(bold=True) for _ in range(n_cols)))
+    if cell_styles:
+        for row_idx in range(len(df)):
+            if row_idx < len(cell_styles):
+                row = list(cell_styles[row_idx])
+                while len(row) < n_cols:
+                    row.append(CellStyle())
+                style_rows.append(tuple(row[:n_cols]))
+            else:
+                style_rows.append(tuple(CellStyle() for _ in range(n_cols)))
+    elif n_cols > 0:
+        # Match prior Styler behavior: bold the first column when no Excel styles.
+        for _ in range(len(df)):
+            style_rows.append(
+                tuple(
+                    CellStyle(bold=(col_idx == 0), horizontal="left" if col_idx == 0 else "")
+                    for col_idx in range(n_cols)
+                )
+            )
+
+    return MergedTableGrid(
+        cells=cells,
+        merges=tuple(merges),
+        header_rows=header_count,
+        format_rules_by_col=tuple("" for _ in range(n_cols)),
+        styles=tuple(style_rows) if style_rows else None,
+    )
+
+
 def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_col=None, cell_styles=None):
     """
     Apply consistent CHA table styling to a pandas DataFrame.
@@ -252,6 +367,9 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
     - First column: Bold (or workbook-driven), left-aligned when hierarchy styles apply
     - Other columns: Centered
     - Dark green separator line after "Westchester" row to separate county data from grouped areas
+
+    Styles are emitted as inline CSS so Quarto HTML post-processing cannot strip
+    them (pandas Styler ``<style>`` blocks are removed from published pages).
     
     Parameters
     ----------
@@ -286,8 +404,8 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
 
     Returns
     -------
-    pandas.io.formats.style.Styler
-        A styled DataFrame ready for display in Quarto
+    IPython.display.HTML
+        Inline-styled HTML table ready for display in Quarto
 
     Example
     -------
@@ -299,6 +417,9 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
     >>> styled = style_cha_table(df, data_type="Percent")
     >>> styled  # Display in Quarto
     """
+    # Lazy import avoids a circular dependency with cha_merged_table.
+    from scripts.cha_merged_table import render_merged_table
+
     df = apply_cha_region_order(df)
 
     # ── Number formatting ────────────────────────────────────────────────────
@@ -306,7 +427,6 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
     _row_label_col = row_label_col if row_label_col is not None else (
         df.columns[0] if len(df.columns) > 0 else None
     )
-    # Build a per-column format dict for pandas Styler.format()
     _fmt_str = get_format_string(data_type)
     _format_dict: dict = {}
     if _fmt_str:
@@ -314,7 +434,8 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
             if col != _row_label_col:
                 _format_dict[col] = _fmt_str
     if _format_dict:
-        # Format numerics before HTML-escaping so format strings see raw values.
+        # Format numerics before render so format strings see raw values.
+        # HTML escaping happens in render_merged_table.
         df = df.copy()
         for col, fmt in _format_dict.items():
             if col not in df.columns:
@@ -329,199 +450,13 @@ def style_cha_table(df, has_multilevel_headers=False, data_type=None, row_label_
                     else (f.format(v) if isinstance(v, (int, float)) and not isinstance(v, bool) else v)
                 )
             )
-    # Escape HTML and keep Excel Alt+Enter newlines as <br>.
-    df = _htmlize_dataframe_cells(df)
     # ─────────────────────────────────────────────────────────────────────────
 
-    styles = [
-        # Header styling - sage green to match published CHA tables
-        {'selector': 'th', 'props': [
-            ('font-weight', 'bold'), 
-            ('text-align', 'center'), 
-            ('background-color', '#EAF5DB'), 
-            ('font-family', CHA_FONT_FAMILY),
-            ('padding', '10px'),
-            ('border', '1px solid #ddd')
-        ]},
-        # First column - bold, left-aligned (skipped when per-cell styles are provided)
-        *([] if cell_styles else [{'selector': 'td:first-child', 'props': [
-            ('font-weight', 'bold'),
-            ('text-align', 'left'),
-            ('font-family', CHA_FONT_FAMILY),
-            ('padding', '10px'),
-            ('border', '1px solid #ddd'),
-            ('white-space', 'nowrap'),
-        ]}]),
-        # When Excel cell styles drive formatting, avoid text-align/padding on
-        # td:first-child — those shorthand rules override per-cell indent styles.
-        *([{'selector': 'td:first-child', 'props': [
-            ('font-family', CHA_FONT_FAMILY),
-            ('padding', '10px'),
-            ('border', '1px solid #ddd'),
-            ('white-space', 'nowrap'),
-        ]}] if cell_styles else []),
-        # Other columns - centered to match headers; keep on one line unless
-        # Excel Alt+Enter inserted an explicit break (rendered as <br>).
-        {'selector': 'td:not(:first-child)', 'props': [
-            ('text-align', 'center'), 
-            ('font-family', CHA_FONT_FAMILY),
-            ('padding', '10px'),
-            ('border', '1px solid #ddd'),
-            ('white-space', 'nowrap'),
-        ]},
-        # Quarto adds Bootstrap table-striped, which greys odd rows via an
-        # inset box-shadow overlay. Neutralize it so CHA white/green wins.
-        {'selector': 'td', 'props': [
-            ('box-shadow', 'none !important'),
-            ('--bs-table-bg-type', 'transparent'),
-            ('--bs-table-accent-bg', 'transparent'),
-            ('white-space', 'nowrap'),
-        ]},
-        # Body striping: first data row white, then green, then alternate.
-        # Header rows stay green (including multiheader sub-header rows).
-        # Target td cells directly with !important to win against framework defaults.
-        {'selector': 'tbody tr:nth-child(odd) td', 'props': [
-            ('background-color', '#FFFFFF !important')
-        ]},
-        {'selector': 'tbody tr:nth-child(even) td', 'props': [
-            ('background-color', '#EAF5DB !important')
-        ]},
-        # Table container. separate/0 is required for a sticky first column;
-        # collapse plus position:sticky is unreliable across browsers.
-        {'selector': 'table', 'props': [
-            ('border-collapse', 'separate'),
-            ('border-spacing', '0'),
-            ('width', '100%'),
-            ('margin', '20px 0'),
-            ('font-family', CHA_FONT_FAMILY),
-            ('font-size', '14px')
-        ]},
-        # Freeze the row-label column when the table scrolls horizontally.
-        {'selector': 'th:first-child, td:first-child', 'props': [
-            ('position', 'sticky'),
-            ('left', '0'),
-            ('z-index', '2'),
-        ]},
-        {'selector': 'thead th:first-child', 'props': [
-            ('z-index', '3'),
-            ('background-color', '#EAF5DB'),
-        ]}
-    ]
-    
-    # Add MultiIndex header styling if needed
-    if has_multilevel_headers and isinstance(df.columns, pd.MultiIndex):
-        # Style for top-level headers (merged appearance)
-        # Target all top-level header cells
-        styles.append({
-            'selector': 'thead tr:first-child th', 
-            'props': [
-                ('border-bottom', '2px solid #333'),
-                ('font-weight', 'bold'),
-                ('background-color', '#EAF5DB'),
-                ('text-align', 'center'),
-                ('vertical-align', 'middle'),
-                ('padding', '10px')
-            ]
-        })
-        # Style for second-level headers
-        styles.append({
-            'selector': 'thead tr:last-child th', 
-            'props': [
-                ('font-weight', 'normal'),
-                ('font-size', '0.9em'),
-                ('text-align', 'center'),
-                ('background-color', '#EAF5DB'),
-                ('padding', '10px')
-            ]
-        })
-        # For MultiIndex, we need to handle the first column header separately
-        styles.append({
-            'selector': 'thead tr:first-child th:first-child', 
-            'props': [
-                ('text-align', 'left'),
-            ]
-        })
-    
-    # Find the row index where "Westchester" appears in the first column
-    # and add a dark green border-bottom separator
-    first_col = df.columns[0]
-    
-    # Create the styled table
-    styled = df.style.set_table_styles(styles).hide(axis="index")
-    styled = styled.set_table_attributes('class="dataframe cha-table-freeze"')
-    # Values are already HTML-escaped (with <br> for Excel newlines).
-    styled = styled.format(lambda v: v if v is not None else "", escape=None)
-    
-    # Add dark green border-bottom to the Westchester row if found
-    # Dark green color: using a dark green shade
-    dark_green = '#2d5016'  # Dark green color
-    
-    # Create a function that enforces zebra striping and (optionally)
-    # applies a dark green border below the Westchester row.
-    row_position_lookup = {idx: pos for pos, idx in enumerate(df.index)}
-
-    def style_row(row):
-        # Row 1 should be white, then green, then alternate.
-        row_pos = row_position_lookup.get(row.name, 0)
-        base_bg = '#FFFFFF' if row_pos % 2 == 0 else '#EAF5DB'
-        # Also clear Bootstrap table-striped inset overlay (see td selector above).
-        base_css = (
-            f'background-color: {base_bg} !important; '
-            'box-shadow: none !important; '
-            '--bs-table-bg-type: transparent; '
-            '--bs-table-accent-bg: transparent; '
-            'white-space: nowrap'
-        )
-
-        # Check if this row contains "Westchester" in the first column.
-        first_val = row[first_col] if first_col in row.index else None
-        if isinstance(first_val, (pd.Series, pd.DataFrame)):
-            if isinstance(first_val, pd.DataFrame):
-                first_val = first_val.iloc[0, 0] if not first_val.empty else None
-            else:
-                first_val = first_val.iloc[0] if not first_val.empty else None
-
-        westchester_border = (
-            first_val is not None
-            and pd.notna(first_val)
-            and str(first_val).strip().lower() == 'westchester'
-        )
-
-        cell_css_list: list[str] = []
-        for col_idx, _col in enumerate(row.index):
-            parts = [base_css]
-            if westchester_border:
-                parts.append(f'border-bottom: 3px solid {dark_green}')
-            if cell_styles and row_pos < len(cell_styles):
-                row_styles = cell_styles[row_pos]
-                if col_idx < len(row_styles):
-                    style = row_styles[col_idx]
-                    parts.append('font-weight: bold' if style.bold else 'font-weight: normal')
-                    default_align = "left" if col_idx == 0 or style.indent > 0 else "center"
-                    text_align = css_text_align_from_excel(
-                        style.horizontal, default=default_align
-                    )
-                    parts.append(f'text-align: {text_align} !important')
-                    if style.vertical:
-                        parts.append(
-                            f'vertical-align: {css_vertical_align_from_excel(style.vertical)}'
-                        )
-                    if style.indent > 0:
-                        # padding-left indents the whole block (all lines),
-                        # unlike text-indent which only affects the first line.
-                        indent_px = style.indent * EXCEL_INDENT_PX_PER_LEVEL
-                        parts.append(
-                            f'padding-left: {CELL_PADDING_PX + indent_px}px !important'
-                        )
-            cell_css_list.append('; '.join(parts))
-        return cell_css_list
-    
-    # Apply row-level styling only when index/columns are unique;
-    # pandas Styler does not support .apply with non-unique labels.
-    if df.index.is_unique and df.columns.is_unique:
-        styled = styled.apply(style_row, axis=1)
-    
-    return styled
+    # has_multilevel_headers is reserved for callers that already built a
+    # MultiIndex; detection is based on the column type either way.
+    _ = has_multilevel_headers
+    grid = _dataframe_to_merged_grid(df, cell_styles=cell_styles)
+    return render_merged_table(grid)
 
 
 def format_source_citation(table_id, url, data_year=2023, estimate_type="5-Year Estimates", citation_month="April", citation_year=2025, custom_text=None):
