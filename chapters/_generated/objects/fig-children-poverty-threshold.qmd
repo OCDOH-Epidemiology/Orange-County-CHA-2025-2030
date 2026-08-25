@@ -5,8 +5,8 @@
 #| warning: false
 #| message: false
 #| label: fig-children-poverty-threshold
-#| fig-cap: 'Children Living Below the Poverty Threshold, 2019–2022'
-#| fig-alt: 'Data visualization showing Children Living Below the Poverty Threshold, 2019–2022.'
+#| fig-cap: 'Percentage of Children Living Below the Poverty Threshold, 2019–2022'
+#| fig-alt: 'Data visualization showing Percentage of Children Living Below the Poverty Threshold, 2019–2022.'
 from scripts.cha_registry_renderer import render_figure_object
 render_figure_object(figure_id="fig-children-poverty-threshold", workbook_path=CHA_WORKBOOK_PATH).show()
 ```

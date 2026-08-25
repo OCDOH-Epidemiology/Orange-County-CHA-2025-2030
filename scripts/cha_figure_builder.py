@@ -238,7 +238,7 @@ def _format_categorical_tick_labels(labels: list[str], figure_width: int) -> tup
 
     # Approximate readable chars/line from figure width and category count.
     # Clamp to avoid overly narrow or overly wide wrapping behavior.
-    chars_per_line = max(8, min(24, int(figure_width / (category_count * 9))))
+    chars_per_line = max(12, min(28, int(figure_width / (category_count * 7))))
     wrapped = [_wrap_tick_label(label, chars_per_line) for label in labels]
     max_lines = max(str(label).count("<br>") + 1 for label in wrapped)
 
@@ -249,8 +249,8 @@ def _format_categorical_tick_labels(labels: list[str], figure_width: int) -> tup
     else:
         tick_font_size = 11
 
-    bottom_margin = 90 + ((max_lines - 1) * 18) + ((11 - tick_font_size) * 8)
-    bottom_margin = max(120, min(280, bottom_margin))
+    bottom_margin = 80 + ((max_lines - 1) * 16) + ((11 - tick_font_size) * 8)
+    bottom_margin = max(100, min(220, bottom_margin))
     return wrapped, tick_font_size, bottom_margin
 
 
@@ -454,15 +454,15 @@ def build_clustered_bar_figure(
         legend=dict(
             orientation="h",
             x=0.5,
-            y=-0.22,
+            y=-0.16,
             xanchor="center",
             yanchor="top",
             font=dict(size=11),
             bgcolor="rgba(0,0,0,0)",
             borderwidth=0,
         ),
-        # Reserve dedicated room for horizontal legend + x-axis title.
-        margin=dict(l=80, r=40, t=40, b=min(360, bottom_margin + 85)),
+        # Reserve room for horizontal legend + x-axis title without excess whitespace.
+        margin=dict(l=80, r=40, t=40, b=min(260, bottom_margin + 48)),
     )
     fig.update_yaxes(
         gridcolor="rgba(0, 0, 0, 0.15)",

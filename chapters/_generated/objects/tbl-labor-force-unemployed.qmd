@@ -1,0 +1,20 @@
+<!-- indicator: tbl-labor-force-unemployed -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-labor-force-unemployed
+#| tbl-cap: 'Percentage of Labor Force Unemployed, 2020–2023'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-labor-force-unemployed", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+NYS Community Health Indicator Reports Dashboard, June 2025 sourced from NYSDOH Behavioral Risk Factor Surveillance System [https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33](https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33)
+:::
+
+::: {.callout-note}
+Note: The US Preventative Services Task Force recommends screening for cervical cancer every 3 years with cervical cytology alone in women aged 21 to 29 years. For women aged 30 to 65 years, the USPSTF recommends screening every 3 years with cervical cytology alone, every 5 years with high-risk human papillomavirus (hrHPV) testing alone, or every 5 years with hrHPV testing in combination with cytology (cotesting). The Behavioral Risk Factor Surveillance System asks respondents, “Have you ever had a Pap test?”, “How long has it been since you had your last Pap test?”, and “How long has it been since you had your last H.P.V. test”
+:::
