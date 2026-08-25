@@ -12,9 +12,9 @@ render_table_object(object_id="tbl-labor-force-unemployed", workbook_path=CHA_WO
 
 ::: {.callout-note collapse="true"}
 ## Source
-NYS Community Health Indicator Reports Dashboard, June 2025 sourced from NYSDOH Behavioral Risk Factor Surveillance System [https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33](https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33)
+NYS Community Health Indicator Reports Dashboard, September 2024 sourced from US Department of Labor [https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33](https://webbi1.health.ny.gov/SASStoredProcess/guest?_program=%2FEBI%2FPHIG%2Fapps%2Fchir_dashboard%2Fchir_dashboard&p=ch&cos=33)
 :::
 
 ::: {.callout-note}
-Note: The US Preventative Services Task Force recommends screening for cervical cancer every 3 years with cervical cytology alone in women aged 21 to 29 years. For women aged 30 to 65 years, the USPSTF recommends screening every 3 years with cervical cytology alone, every 5 years with high-risk human papillomavirus (hrHPV) testing alone, or every 5 years with hrHPV testing in combination with cytology (cotesting). The Behavioral Risk Factor Surveillance System asks respondents, “Have you ever had a Pap test?”, “How long has it been since you had your last Pap test?”, and “How long has it been since you had your last H.P.V. test”
+Note: Unemployed is defined as a person actively seeking employment and available for work. Part-time workers are considered employed. The annual average "Percentage Unemployed" aged 16 years and older was calculated by dividing the number unemployed by the total labor force (employed and unemployed) times 100.
 :::

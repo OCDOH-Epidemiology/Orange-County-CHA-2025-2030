@@ -1,0 +1,20 @@
+<!-- indicator: tbl-overlap-opioid-benzo-rx -->
+
+```{python}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: tbl-overlap-opioid-benzo-rx
+#| tbl-cap: 'Percentage of Patients With Overlapping Opioid Analgesic and Benzodiazepine Prescriptions, 2021–2024'
+from scripts.cha_registry_renderer import render_table_object
+render_table_object(object_id="tbl-overlap-opioid-benzo-rx", workbook_path=CHA_WORKBOOK_PATH)
+```
+
+::: {.callout-note collapse="true"}
+## Source
+Special request from the NYS Prescription Monitoring Program, October 2025
+:::
+
+::: {.callout-note}
+Note: Y-axis does not begin at zero in order to clearly display trend lines. This is for patients with two or more calendar days of overlapping opioid analgesic and benzodiazepine prescriptions. Includes residents with at least one prescription for opioid analgesics or benzodiazepines during a given calendar year. Buprenorphine prescriptions for the treatment of substance use disorder were excluded.
+:::
