@@ -347,20 +347,35 @@ def _flat_data_bounds(df: pd.DataFrame) -> tuple[int, int, int] | None:
 
 
 def _flat_last_header_row_idx(df: pd.DataFrame, header_row_idx: int, data_col_end_idx: int) -> int:
-    """Best-effort last header row before data rows (supports two-row headers)."""
-    data_col_start_idx = _FLAT_DATA_COL_START
-    sub_header_row_idx = header_row_idx + 1
-    if sub_header_row_idx >= len(df):
-        return header_row_idx
+    """Best-effort last header row before data rows.
 
-    row_label_blank = _as_text(df.iloc[sub_header_row_idx, data_col_start_idx]) == ""
-    has_data_headers = any(
-        _as_text(df.iloc[sub_header_row_idx, j])
-        for j in range(data_col_start_idx + 1, data_col_end_idx)
-    )
-    if row_label_blank and has_data_headers:
-        return sub_header_row_idx
-    return header_row_idx
+    Supports multi-row headers such as:
+    - group labels (Geographic Area / Highest Level …)
+    - category labels (< 9th Grade, …)
+    - unit labels (# / %)
+    Sub-header rows are consecutive rows whose first data column is blank
+    while later columns still carry labels. The first row with a value in
+    the first data column is treated as the start of the body.
+    """
+    data_col_start_idx = _FLAT_DATA_COL_START
+    last = header_row_idx
+    max_header_rows = 5
+
+    for offset in range(1, max_header_rows):
+        row_idx = header_row_idx + offset
+        if row_idx >= len(df):
+            break
+        row_label = _as_text(df.iloc[row_idx, data_col_start_idx])
+        if row_label != "":
+            break
+        has_labels = any(
+            _as_text(df.iloc[row_idx, j])
+            for j in range(data_col_start_idx + 1, data_col_end_idx)
+        )
+        if not has_labels:
+            break
+        last = row_idx
+    return last
 
 
 def _worksheet_has_table_block_merges(
