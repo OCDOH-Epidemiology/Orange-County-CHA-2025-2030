@@ -37,7 +37,7 @@ When your text refers to a data table or figure from the Excel workbook, type th
 
 The ID after the colon must match the `object_id` in the workbook (without the `tbl-` or `fig-` prefix). The converter adds the prefix automatically and inserts the code block to render it.
 
-### Citations (Superscript Numbers)
+### Citations (Superscript Numbers in Word)
 
 To cite a source in the body text:
 
@@ -45,7 +45,7 @@ To cite a source in the body text:
 2. Select the number and make it superscript: **Ctrl+Shift+=** (Windows) or **Cmd+Shift+=** (Mac).
 3. Add the full citation details to the **Citations Table** at the end of the document.
 
-The converter turns each superscript number into an HTML anchor link and builds the References section automatically.
+The converter turns each superscript number into a parenthetical HTML anchor link (e.g. `(7)`) and builds the References section automatically.
 
 ### Notes (Callout Boxes)
 
@@ -77,7 +77,7 @@ The last table in the document must be the citations table with these columns:
 
 | Column | Description |
 |---|---|
-| Number | Citation number matching the superscript in the text |
+| Number | Citation number matching the superscript in the text (rendered as a parenthetical citation) |
 | Author / Organization | Name of the author or organization |
 | Year | Publication year |
 | Title | Title of the source |

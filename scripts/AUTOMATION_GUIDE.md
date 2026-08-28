@@ -94,7 +94,7 @@ python scripts/add_citations.py chapters/04-your-chapter.qmd --citations scripts
 ## What the Script Does
 
 1. ✅ Finds all citation markers like `[7]`, `[8]` in your QMD file
-2. ✅ Converts them to clickable superscript links: `<a href="#cite-7"><sup>7</sup></a>`
+2. ✅ Converts them to clickable parenthetical links: ` (<a href="#cite-7">7</a>)`
 3. ✅ Creates a References section at the end with all citations
 4. ✅ Formats URLs as `<https://...>` to match introduction.qmd style
 5. ✅ Won't overwrite existing references (safety feature)

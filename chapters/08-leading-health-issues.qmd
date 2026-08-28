@@ -204,7 +204,7 @@ Potentially preventable community acquired pneumonia admissions in Orange County
 (84.7 per 10,000) was lower than the Mid-Hudson region (92.2 per 10,000) and substantially lower than New
 York State excluding NYC (111.6 per 10,000) [@fig-pppneumonia-adult-aar].
 While key indicators are summarized here, during the respiratory disease season, more data offering insights
-into respiratory health trends in Orange County are found in the Respiratory Illness Dashboard<a href="#cite-2"><sup>2</sup></a> that can be
+into respiratory health trends in Orange County are found in the Respiratory Illness Dashboard (<a href="#cite-2">2</a>) that can be
 accessed via the <a href="https://www.orangecountygov.com/2361/Dashboard-Portal">OCDOH website</a>.
 
 <!-- Figure 41: Potentially Preventable Community Acquired Pneumonia Admissions, Crude Rate per 10,000, 2021–2024 -->
@@ -779,7 +779,7 @@ Syphilis indicators show variation across time, demographic concentration, and p
 
 This section summarizes maternal and child health indicators, including fertility [@tbl-fertility-rate-age-rande-zip; @fig-fertility-rande; @fig-fertility-sex], births to mothers aged 17 years and younger and payer at delivery [@tbl-allbirths-under17-age-rande-zip; @tbl-allbirths-medicaid-selfpay-age-rande-zip], maternal and youth mortality and infant mortality by race and ethnicity [@fig-maternal-mortal; @fig-child-adolescent-mortal; @fig-infant-mortal], prenatal care utilization [@tbl-early-pnc-age-rande-zip; @tbl-late-no-pnc-age-rande-zip; @fig-early-pnc; @fig-early-pnc-rande; @fig-early-pnc-zip; @fig-late-no-pnc; @fig-late-no-pnc-rande; @fig-late-no-pnc-zip; @fig-adequate-pnc], and birth outcomes including premature birth and low birthweight [@tbl-premature-birth-age-rande-zip; @tbl-lbw-age-rande-zip; @fig-premature-birth; @fig-premature-birth-rande; @fig-lbw-birth-rande].
 
-While key indicators are summarized here, complete Statewide Perinatal Data System reports and the Adolescent Health Profiles<a href="#cite-5"><sup>5</sup></a> can be accessed via the OCDOH website.
+While key indicators are summarized here, complete Statewide Perinatal Data System reports and the Adolescent Health Profiles (<a href="#cite-5">5</a>) can be accessed via the OCDOH website.
 
 ### Fertility
 

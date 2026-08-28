@@ -9,6 +9,8 @@ a[href^="#cite-"]:hover,
 a[href^="#cite-"]:active,
 a[href^="#cite-"]:focus,
 a[href^="#cite-"]:any-link {
+  font-size: inherit !important;
+  line-height: inherit !important;
   text-decoration: none !important;
   text-decoration-line: none !important;
   text-decoration-style: none !important;
@@ -19,42 +21,7 @@ a[href^="#cite-"]:any-link {
   box-shadow: none !important;
   -webkit-text-decoration: none !important;
   -moz-text-decoration: none !important;
-}
-
-a[href^="#cite-"] sup,
-a[href^="#cite-"]:link sup,
-a[href^="#cite-"]:visited sup,
-a[href^="#cite-"]:hover sup,
-a[href^="#cite-"]:active sup,
-a[href^="#cite-"]:focus sup,
-a[href^="#cite-"]:any-link sup {
-  text-decoration: none !important;
-  text-decoration-line: none !important;
-  text-decoration-style: none !important;
-  text-decoration-thickness: 0 !important;
-  text-underline-offset: 0 !important;
-  text-underline-position: unset !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
-  -webkit-text-decoration: none !important;
-  -moz-text-decoration: none !important;
-}
-
-sup a[href^="#cite-"],
-sup a[href^="#cite-"]:link,
-sup a[href^="#cite-"]:visited,
-sup a[href^="#cite-"]:hover,
-sup a[href^="#cite-"]:active,
-sup a[href^="#cite-"]:focus,
-sup a[href^="#cite-"]:any-link {
-  text-decoration: none !important;
-  text-decoration-line: none !important;
-  text-decoration-style: none !important;
-  text-decoration-thickness: 0 !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
-  -webkit-text-decoration: none !important;
-  -moz-text-decoration: none !important;
+  vertical-align: baseline !important;
 }
 
 /* Quarto/Pandoc citation links */

@@ -115,7 +115,8 @@ def _build_instructions_page(doc: Document):
     doc.add_paragraph(
         "To cite a source inline, type the citation number and format it as "
         "superscript using Word's superscript button (or Ctrl+Shift+=). "
-        "For example, to cite source #7, type 7 and make it superscript."
+        "For example, to cite source #7, type 7 and make it superscript. "
+        "The converter will render these as parenthetical citations, e.g. (7)."
     )
     p3 = doc.add_paragraph("Example: The population grew 4.7% from 2010 to 2020.")
     _add_run(p3, "7", superscript=True)

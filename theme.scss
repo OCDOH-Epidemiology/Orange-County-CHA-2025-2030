@@ -134,7 +134,7 @@ section.footnotes a {
   text-decoration: underline;
 }
 
-/* Citation links styling - no underline on superscripts */
+/* Citation links styling - parenthetical inline citations */
 /* Comprehensive override for all citation links - must come after Bootstrap */
 a[href^="#cite-"],
 a[href^="#cite-"]:link,
@@ -144,6 +144,9 @@ a[href^="#cite-"]:active,
 a[href^="#cite-"]:focus,
 a[href^="#cite-"]:any-link {
   color: var(--cha-link) !important;
+  font-size: inherit !important;
+  font-weight: 600 !important;
+  line-height: inherit !important;
   text-decoration: none !important;
   text-underline-offset: 0 !important;
   text-underline-position: unset !important;
@@ -153,6 +156,7 @@ a[href^="#cite-"]:any-link {
   border-bottom: none !important;
   box-shadow: none !important;
   transition: color 0.2s ease;
+  vertical-align: baseline !important;
 }
 
 a[href^="#cite-"]:hover,
@@ -162,57 +166,6 @@ a[href^="#cite-"]:hover:visited {
   text-decoration: none !important;
   text-decoration-line: none !important;
   border-bottom: none !important;
-  box-shadow: none !important;
-}
-
-/* Target sup inside citation links - comprehensive override */
-a[href^="#cite-"] sup,
-a[href^="#cite-"]:link sup,
-a[href^="#cite-"]:visited sup,
-a[href^="#cite-"]:hover sup,
-a[href^="#cite-"]:active sup,
-a[href^="#cite-"]:focus sup,
-a[href^="#cite-"]:any-link sup {
-  font-size: 0.75em !important;
-  vertical-align: super !important;
-  line-height: 0 !important;
-  color: var(--cha-link) !important;
-  font-weight: 600 !important;
-  text-decoration: none !important;
-  text-decoration-line: none !important;
-  text-underline-offset: 0 !important;
-  text-underline-position: unset !important;
-  text-decoration-style: none !important;
-  text-decoration-thickness: 0 !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
-}
-
-a[href^="#cite-"]:hover sup,
-a[href^="#cite-"]:hover:link sup,
-a[href^="#cite-"]:hover:visited sup {
-  color: $link-hover-color !important;
-  text-decoration: none !important;
-  text-decoration-line: none !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
-}
-
-/* Override any sup a rules for citation links */
-sup a[href^="#cite-"],
-sup a[href^="#cite-"]:link,
-sup a[href^="#cite-"]:visited,
-sup a[href^="#cite-"]:hover,
-sup a[href^="#cite-"]:active,
-sup a[href^="#cite-"]:focus,
-sup a[href^="#cite-"]:any-link {
-  text-decoration: none !important;
-  text-decoration-line: none !important;
-  border-bottom: none !important;
-  text-underline-offset: 0 !important;
-  text-underline-position: unset !important;
-  text-decoration-style: none !important;
-  text-decoration-thickness: 0 !important;
   box-shadow: none !important;
 }
 

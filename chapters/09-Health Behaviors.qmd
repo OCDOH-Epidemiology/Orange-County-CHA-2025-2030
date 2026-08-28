@@ -93,7 +93,7 @@ Youth perception and use patterns show clear grade gradients for several substan
 
 Overdose fatalities declined from 2021 to 2024 but remain highly concentrated by age and sex. The opioid-related overdose death rate decreased from 36.7 per 100,000 (2021) to 19.3 (2024) [@fig-opioid-od-fatal], with corresponding annual counts documented in the overdose fatality table [@tbl-opioid-od-fatal-age-sex]. Age-stratified rates show that adults ages 35–44 experienced the highest rates, reaching 110.6 per 100,000 in 2024 [@fig-opioid-od-fatal-age; @tbl-opioid-od-fatal-age-sex]. Sex disparities persist across all years shown, with male overdose death rates substantially higher than female rates (e.g., 53.6 vs. 20.1 per 100,000 in 2021 and 29.7 vs. 9.0 in 2024) [@tbl-opioid-od-fatal-age-sex].
 
-While key indicators are summarized here, the complete Annual Report on Drug-Related Mortality<a href="#cite-6"><sup>6</sup></a> can be accessed via the OCDOH website.
+While key indicators are summarized here, the complete Annual Report on Drug-Related Mortality (<a href="#cite-6">6</a>) can be accessed via the OCDOH website.
 
 <!-- Table 54: Opioid-Related Overdose Fatalities, Rate per 100,000 Population by Age and Sex, 2021–2024 -->
 {{< include _generated/objects/tbl-opioid-od-fatal-age-sex.qmd >}}

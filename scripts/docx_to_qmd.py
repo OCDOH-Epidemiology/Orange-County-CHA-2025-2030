@@ -9,7 +9,7 @@ The Word document must follow the conventions defined in the CHA Chapter Templat
 - List Bullet      -> Markdown bulleted list items
 - "NOTE: ..." para -> ::: {.callout-note} block
 - "SOURCE: ..." para -> ::: {.callout-note collapse="true"} source block
-- Superscript runs -> citation anchor HTML  (<a href="#cite-N"><sup>N</sup></a>)
+- Superscript runs -> parenthetical citation anchor HTML  ((<a href="#cite-N">N</a>))
 - [Table: id]      -> table cross-reference + render_table_object code block
 - [Figure: id]     -> figure cross-reference + render_figure_object code block
 - Last Word table  -> parsed as citations table for References section
@@ -131,8 +131,8 @@ def _run_to_markdown(run: Run, state: ConversionState) -> str:
         citation = next((c for c in state.citations if c.number == num), None)
         if citation and citation.url:
             tooltip = f"{citation.author}, {citation.year}, {citation.url}, accessed {citation.accessed}"
-            return f'<a href="#cite-{num}" title="{tooltip}"><sup>{num}</sup></a>'
-        return f"<sup>{num}</sup>"
+            return f' (<a href="#cite-{num}" title="{tooltip}">{num}</a>)'
+        return f" ({num})"
 
     is_bold = run.bold
     is_italic = run.italic
