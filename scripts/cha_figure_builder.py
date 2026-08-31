@@ -64,13 +64,6 @@ def _ordered_series(series: list[str]) -> list[str]:
     return ordered + remaining
 
 
-def _series_look_like_regions(series: list[str]) -> bool:
-    """True when every series label maps to a known CHA region/county."""
-    if not series:
-        return False
-    region_set = set(CHA_REGION_ORDER)
-    return all(_normalize_label(name) in region_set for name in series)
-
 
 def _series_colors(series: list[str], palette: list[str] | None = None) -> dict[str, str]:
     palette = palette or CHA_COLOR_PALETTE
@@ -301,8 +294,8 @@ def _bottom_horizontal_legend(*, y: float = -0.24, title: str | None = None) -> 
     """
     Shared bottom legend styling.
 
-    ``y`` is kept low enough that the x-axis title (or an optional legend title)
-    does not collide with the legend labels.
+    ``y`` is kept low enough that an optional legend title does not collide with
+    the legend labels.
     """
     legend: dict = dict(
         orientation="h",
@@ -336,6 +329,7 @@ def _apply_layout(
     font_family: str,
     is_bar_graph: bool = False,
 ) -> None:
+    del x_axis_title  # Category labels stay on tick labels; axis titles are suppressed globally.
     yaxis_dict = dict(
         title=dict(text=y_axis_title, font=dict(size=14, family=font_family)),
         showgrid=True,
@@ -353,7 +347,7 @@ def _apply_layout(
         font=dict(family=font_family),
         xaxis=dict(
             title=dict(
-                text=x_axis_title,
+                text="",
                 font=dict(size=14, family=font_family),
                 standoff=22,
             ),
@@ -440,14 +434,6 @@ def build_clustered_bar_figure(
     patterns = _series_patterns(ordered)
     x_axis_title = x_axis_title or x_col
     value_label = y_axis_title or "Value"
-    # When series are regions (Orange, NYS, …), the workbook often stores
-    # "Region/County" as the X-axis title. Put it on the legend instead so it
-    # labels the swatches and does not collide with them.
-    legend_title: str | None = None
-    layout_x_axis_title = x_axis_title
-    if _series_look_like_regions(ordered) and str(x_axis_title).strip():
-        legend_title = str(x_axis_title).strip()
-        layout_x_axis_title = ""
     x_values_raw, x_values_wrapped, tick_font_size, bottom_margin = _prepare_categorical_x_axis(
         df[x_col],
         width,
@@ -481,7 +467,7 @@ def build_clustered_bar_figure(
 
     _apply_layout(
         fig=fig,
-        x_axis_title=layout_x_axis_title,
+        x_axis_title="",
         y_axis_title=y_axis_title,
         y_range=y_range,
         width=width,
@@ -496,9 +482,8 @@ def build_clustered_bar_figure(
         bargroupgap=0.10,
         paper_bgcolor="white",
         plot_bgcolor="white",
-        legend=_bottom_horizontal_legend(y=-0.22, title=legend_title),
-        # Room for legend title + labels under the category ticks.
-        margin=dict(l=80, r=40, t=40, b=min(300, bottom_margin + (110 if legend_title else 72))),
+        legend=_bottom_horizontal_legend(y=-0.22),
+        margin=dict(l=80, r=40, t=40, b=min(300, bottom_margin + 72)),
     )
     fig.update_yaxes(
         gridcolor="rgba(0, 0, 0, 0.15)",
@@ -510,8 +495,6 @@ def build_clustered_bar_figure(
         automargin=True,
         tickfont=dict(size=tick_font_size),
         gridcolor="rgba(0, 0, 0, 0)",
-        # Keep the axis title nearer the ticks so it does not crowd the legend.
-        title_standoff=6,
     )
     return fig
 
@@ -736,7 +719,7 @@ def build_horizontal_bar_figure(
         **_y_axis_tick_settings(plot_df[value_col], x_range),
     )
     fig.update_yaxes(
-        title=dict(text=category_axis_title, font=dict(size=14, family=font_family)),
+        title=dict(text="", font=dict(size=14, family=font_family)),
         showgrid=False,
         ticklabelstandoff=10,
         automargin=True,
@@ -833,7 +816,7 @@ def build_horizontal_stacked_bar_figure(
         **_y_axis_tick_settings(x_series, x_range),
     )
     fig.update_yaxes(
-        title=dict(text=category_axis_title, font=dict(size=14, family=font_family)),
+        title=dict(text="", font=dict(size=14, family=font_family)),
         showgrid=False,
         ticklabelstandoff=10,
         automargin=True,
@@ -935,7 +918,7 @@ def build_horizontal_clustered_bar_figure(
         **_y_axis_tick_settings(x_series, x_range),
     )
     fig.update_yaxes(
-        title=dict(text=category_axis_title, font=dict(size=14, family=font_family)),
+        title=dict(text="", font=dict(size=14, family=font_family)),
         showgrid=False,
         ticklabelstandoff=10,
         automargin=True,
@@ -1084,7 +1067,7 @@ def build_horizontal_color_bar_figure(
     # Hide spacer tick labels while preserving gap categories.
     ticktext = ["" if c.startswith("\u200b") else c for c in category_array]
     fig.update_yaxes(
-        title=dict(text=category_axis_title, font=dict(size=14, family=font_family)),
+        title=dict(text="", font=dict(size=14, family=font_family)),
         showgrid=False,
         ticklabelstandoff=10,
         automargin=True,
@@ -1122,7 +1105,6 @@ def build_pie_figure(
     if not series:
         raise ValueError("No value series found for pie chart.")
     value_col = series[0]
-    category_title = x_axis_title or x_col
     value_title = y_axis_title or value_col or "Value"
 
     plot_df = df[[x_col, value_col]].copy()
@@ -1173,12 +1155,6 @@ def build_pie_figure(
             bgcolor="rgba(255, 255, 255, 0.9)",
             bordercolor="rgba(0, 0, 0, 0.2)",
             borderwidth=1,
-            # Extra blank line under the title — Plotly has no title-padding property.
-            title=dict(
-                text=f"{category_title}<br><br>\u00a0" if str(category_title).strip() else "",
-                font=dict(size=12),
-                side="top",
-            ),
             tracegroupgap=12,
         ),
         paper_bgcolor="white",
