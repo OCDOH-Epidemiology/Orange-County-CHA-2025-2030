@@ -112,7 +112,7 @@ Rate per 10,000 Population by Race and Ethnicity, 2020–2022 -->
 {{< include _generated/objects/tbl-cerebrovascdz-hosp-rande-aar.qmd >}}
 
 <!-- Table 31: Cerebrovascular Disease Mortality, Case Counts and Rates per 100,000 Population by Age, Sex, Race and Ethnicity, and ZIP Code, 2020–2023 -->
-{{< include _generated/objects/tbl-cerebrovascdz-mortal-rande-zip.qmd >}}
+{{< include _generated/objects/tbl-cerebrovascdz-count-rate-age-rande-zip.qmd >}}
 
 <!-- Figure 29: Cerebrovascular Disease Mortality, Age-Adjusted Rate per 100,000, 2020–2023 -->
 {{< include _generated/objects/fig-cerebrovascdz-mortal-aar.qmd >}}
