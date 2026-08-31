@@ -1431,6 +1431,8 @@ def build_interactive_line_figure(
         height=height,
         font_family=font_family,
     )
+    # Plotly hides the legend when only one trace is present unless forced on.
+    fig.update_layout(showlegend=True)
     fig.update_yaxes(**_y_axis_tick_settings(y_series, y_range))
     if x_axis_options:
         fig.update_xaxes(**x_axis_options)
