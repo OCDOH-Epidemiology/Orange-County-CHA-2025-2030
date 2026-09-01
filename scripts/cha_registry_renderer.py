@@ -130,6 +130,13 @@ def _time_like_column_headers(columns: list[Any]) -> bool:
     return all(_is_time_like_value(col) for col in columns)
 
 
+def _row_labels_by_time_columns(df: pd.DataFrame) -> bool:
+    """True when the first column holds row labels and remaining headers are years."""
+    if df.shape[1] <= 1:
+        return False
+    return _time_like_column_headers(list(df.columns[1:]))
+
+
 def _line_chart_needs_pivot(
     df: pd.DataFrame,
     spec: Any,
@@ -716,13 +723,14 @@ def render_figure_object(
 
         if needs_pivot:
             pivot_key = df.columns[0]
-            if len(df) <= 1:
+            if _row_labels_by_time_columns(df) or len(df) > 1:
+                # Region/category rows × year columns (including single Orange rows).
+                df = df.set_index(pivot_key).T.reset_index().rename(columns={"index": x_col})
+            else:
                 # Single-row wide data: column names become X values.
                 all_cols = list(df.columns)
                 values = df.iloc[0].tolist() if len(df) == 1 else [None] * len(all_cols)
                 df = pd.DataFrame({x_col: all_cols, "Value": values})
-            else:
-                df = df.set_index(pivot_key).T.reset_index().rename(columns={"index": x_col})
 
         y_cols = [col for col in spec.y_cols if col in df.columns and col != x_col]
         if not y_cols:
@@ -733,6 +741,12 @@ def render_figure_object(
             y_cols = y_cols[:1]
         x_axis_title = spec.x_axis_title or x_col
         if x_col == first_col and not str(spec.x_axis_title).strip() and first_col_is_time_like:
+            x_axis_title = "Year"
+        elif (
+            not str(spec.x_axis_title).strip()
+            and x_col in df.columns
+            and _is_time_like_column(df[x_col])
+        ):
             x_axis_title = "Year"
 
     figure_rules = _figure_format_rules(model, figure_id)
