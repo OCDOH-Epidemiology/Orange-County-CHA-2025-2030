@@ -436,14 +436,23 @@ def _is_parent_geo_label(label: Any) -> bool:
     return bool(re.search(r"\b(County|Town|City)\b", str(label)))
 
 
+def _first_column_has_workbook_indent(
+    styles: tuple[tuple[CellStyle, ...], ...] | None,
+) -> bool:
+    """True when column F already uses Excel indent levels in the workbook."""
+    if not styles:
+        return False
+    return any(row[0].indent > 0 for row in styles if row)
+
+
 def _enhance_geographic_area_styles(
     df: pd.DataFrame,
     cell_styles: tuple[tuple[CellStyle, ...], ...] | None,
 ) -> tuple[tuple[CellStyle, ...], ...] | None:
     """Bold parent geos and indent villages for Geographic Area municipality tables.
 
-    Workbook indent/bold is often incomplete for these sheets; infer hierarchy from
-    labels so HTML/PDF match the published CHA table layout.
+    When the workbook already sets indent on column F, those Excel styles are kept
+    as-is. Inference only runs for sheets that lack hierarchy formatting.
     """
     if df.empty or _first_column_display_label(df) != "Geographic Area":
         return cell_styles
@@ -452,6 +461,9 @@ def _enhance_geographic_area_styles(
     n_village = sum(1 for label in labels if _is_village_geo_label(label))
     n_parent = sum(1 for label in labels if _is_parent_geo_label(label))
     if n_village < 2 or n_parent < 2:
+        return cell_styles
+
+    if _first_column_has_workbook_indent(cell_styles):
         return cell_styles
 
     n_rows = len(df)
@@ -470,16 +482,16 @@ def _enhance_geographic_area_styles(
         prev = base_rows[row_idx][0]
         if _is_village_geo_label(label):
             base_rows[row_idx][0] = CellStyle(
-                bold=False,
+                bold=prev.bold,
                 indent=1,
-                horizontal=prev.horizontal or "left",
+                horizontal="left",
                 vertical=prev.vertical,
             )
-        else:
+        elif _is_parent_geo_label(label):
             base_rows[row_idx][0] = CellStyle(
                 bold=True,
                 indent=0,
-                horizontal=prev.horizontal,
+                horizontal=prev.horizontal or "left",
                 vertical=prev.vertical,
             )
 

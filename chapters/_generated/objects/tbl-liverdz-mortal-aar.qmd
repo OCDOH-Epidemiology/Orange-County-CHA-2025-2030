@@ -16,5 +16,5 @@ Special request from NYSDOH Bureau of Vital Records, July 2025
 :::
 
 ::: {.callout-note}
-Note: See Data Note section for more information regarding this request. This includes Liver Disease and Cirrhosis as a primary cause of death with ICD-10-CM codes of: K70, K73-K74. Birth and death data for Orange County excludes events recorded in NYC. All rates use ACS 5-year population estimates, except for the ages under 1 year and 1-9 years, which are based on crude live births in Orange County.
+Note: See Data Note section for more information regarding this request. This includes Liver Disease and Cirrhosis as a primary cause of death with ICD-10-CM codes of: K70, K73-K74. Birth and death data for Orange County excludes events recorded in NYC. All rates use ACS 5-year population estimates, except for the ages under 1 year and 1–9 years, which are based on crude live births in Orange County.
 :::

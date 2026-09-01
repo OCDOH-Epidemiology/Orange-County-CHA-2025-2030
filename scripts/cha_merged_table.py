@@ -105,7 +105,14 @@ def _cell_style_props(
             default_align = _default_text_align(
                 col_idx=col_idx, is_header=is_header, indent=style.indent
             )
-            text_align = css_text_align_from_excel(style.horizontal, default=default_align)
+            # Indented row labels (column F) are always left-aligned so hierarchy
+            # matches the workbook layout (e.g. villages under towns).
+            if style.indent > 0:
+                text_align = "left"
+            else:
+                text_align = css_text_align_from_excel(
+                    style.horizontal, default=default_align
+                )
             extras.append(f"text-align:{text_align}")
             extras.append(
                 f"vertical-align:{css_vertical_align_from_excel(style.vertical)}"

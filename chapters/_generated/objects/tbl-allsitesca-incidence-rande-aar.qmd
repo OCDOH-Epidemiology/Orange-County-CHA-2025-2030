@@ -16,5 +16,5 @@ NYS Cancer Registry and Cancer Statistics, August 2025 [https://www.health.ny.go
 :::
 
 ::: {.callout-note}
-s: Rates are not displayed if fewer than 16 cases are reported in a specific category during the five-year period. Note: Includes only invasive cancers. Cancer sites are coded using Site Recode ICD-O-3/WHO 2008-SEER Data Reporting tools. Rate is age-adjusted to the 2000 US population (Census P25-1130). These five groups are mutually exclusive.
+s: Rates are not displayed if fewer than 16 cases are reported in a specific category during the five-year period. Note: Includes only invasive cancers. Cancer sites are coded using Site Recode ICD-O-3/WHO 2008-SEER Data Reporting tools. Rate is age-adjusted to the 2000 US population (Census P25–1130). These five groups are mutually exclusive.
 :::

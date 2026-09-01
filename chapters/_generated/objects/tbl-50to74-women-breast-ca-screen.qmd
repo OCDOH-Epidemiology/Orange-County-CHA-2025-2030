@@ -16,5 +16,5 @@ NYSDOH Behavioral Risk Factor Surveillance System, April 2025 [https://health.da
 :::
 
 ::: {.callout-note}
-Note: The Behavioral Risk Factor Surveillance System asks respondents, ""Have you ever had a mammogram?"" and “How long has it been since you had your last mammogram?” Based on the responses to these questions if a woman 50-74 years had a mammogram in the past two years they meet the current United States Preventive Services Task Force guidance.
+Note: The Behavioral Risk Factor Surveillance System asks respondents, ""Have you ever had a mammogram?"" and “How long has it been since you had your last mammogram?” Based on the responses to these questions if a woman 50–74 years had a mammogram in the past two years they meet the current United States Preventive Services Task Force guidance.
 :::

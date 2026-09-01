@@ -16,5 +16,5 @@ Special request from NYSDOH Bureau of Vital Records, July 2025
 :::
 
 ::: {.callout-note}
-s: Data are suppressed due to not meeting confidentiality criteria. Note: See Data Note section for more information regarding this request. Birth and death data for Orange County excludes events recorded in NYC. All rates use ACS 5-year population estimates, except for the ages under 1 year and 1-9 years, which are based on crude live births in Orange County. ICD-10-CM codes for Unintentional Injury includes: V01-X59, and Y85-86.
+s: Data are suppressed due to not meeting confidentiality criteria. Note: See Data Note section for more information regarding this request. Birth and death data for Orange County excludes events recorded in NYC. All rates use ACS 5-year population estimates, except for the ages under 1 year and 1–9 years, which are based on crude live births in Orange County. ICD-10-CM codes for Unintentional Injury includes: V01-X59, and Y85–86.
 :::

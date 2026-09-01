@@ -16,5 +16,5 @@ NYS Communicable Disease Electronic Surveillance System, July 2025
 :::
 
 ::: {.callout-note}
-*: From 2013-2021 counties investigated a sample of positive laboratory results. The number of cases was extrapolated to generated estimates of the total number of cases. Beginning in 2022, all records received were used for case counting and no extrapolation was done. s: Data are suppressed due to not meeting reporting criteria. Note: Only confirmed cases are included.
+*: From 2013–2021 counties investigated a sample of positive laboratory results. The number of cases was extrapolated to generated estimates of the total number of cases. Beginning in 2022, all records received were used for case counting and no extrapolation was done. s: Data are suppressed due to not meeting reporting criteria. Note: Only confirmed cases are included.
 :::

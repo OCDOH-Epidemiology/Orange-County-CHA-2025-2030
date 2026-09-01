@@ -16,5 +16,5 @@ US Census Bureau, Quick Facts, November 2025 [https://www.census.gov/quickfacts/
 :::
 
 ::: {.callout-note}
-Note: Town totals include Village totals. Land area calculated as of 2020 Census. Population density and housing unit density calculated using 2019-2023 estimates divided by land area.
+Note: Town totals include Village totals. Land area calculated as of 2020 Census. Population density and housing unit density calculated using 2019–2023 estimates divided by land area.
 :::
