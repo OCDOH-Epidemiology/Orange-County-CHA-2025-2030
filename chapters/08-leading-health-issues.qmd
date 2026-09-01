@@ -106,7 +106,7 @@ A consistent sex disparity was present across 2020–2023: in 2023, the age-adju
 
 Cerebrovascular disease mortality ranged from 22.8 to 30.4 per 100,000 during 2020–2023, with a most recent value of 22.8 per 100,000 in 2023 (92 deaths) [@tbl-cerebrovascdz-mortal-rande-zip]. The age-adjusted cerebrovascular mortality rate ranged from 19.9 to 25.3 per 100,000 and was 19.9 per 100,000 in 2023 [@fig-cerebrovascdz-mortal-aar]. Sex patterns varied by year; in 2023, the age-adjusted rate was 22.6 per 100,000 for females and 19.3 per 100,000 for males [@fig-cerebrovascdz-mortal-sex-aar].
 
-Hospitalization disparities by race and ethnicity were evident for cerebrovascular diseases from 2020–2022. During 2020–2022, the Orange County total cerebrovascular hospitalization rate was 21.9 per 10,000, and the rate was higher among Non-Hispanic Black residents (29.4 per 10,000) than among Non-Hispanic White residents (17.6 per 10,000) [@fig-cerebrovascdz-hosp-rande-aar].
+Hospitalization disparities by race and ethnicity were evident for cerebrovascular diseases from 2020–202 2. During 2020–2022, the Orange County total cerebrovascular hospitalization rate was 21.9 per 10,000, and the rate was higher among Non-Hispanic Black residents (29.4 per 10,000) than among Non-Hispanic White residents (17.6 per 10,000) [@fig-cerebrovascdz-hosp-rande-aar].
 
 <!-- Figure 28: Cerebrovascular Disease Hospitalizations, Age-Adjusted
 Rate per 10,000 Population by Race and Ethnicity, 2020–2022 -->
@@ -874,44 +874,4 @@ Adequate prenatal care is presented as a percent for 2018–2021 in the figure a
 {{< include _generated/objects/tbl-late-no-pnc-rande.qmd >}}
 
 <!-- Figure 115: Percentage of All Births with Late or No Prenatal Care, by ZIP Code, 2020–2023 -->
-{{< include _generated/objects/fig-late-no-pnc-zip.qmd >}}
-{{< include _generated/objects/tbl-late-no-pnc-zip.qmd >}}
-
-<!-- Figure 116: Percentage of Births with Adequate Prenatal Care, 2017–2022 -->
-{{< include _generated/objects/fig-adequate-pnc.qmd >}}
-{{< include _generated/objects/tbl-adequate-pnc.qmd >}}
-
-### Birth Outcomes: Premature Birth and Low Birthweight
-
-The percentage of premature births in Orange County was 8.5% in 2020 and 8.0% in 2023 [@tbl-premature-birth-age-rande-zip]. In 2023, premature birth was higher among Black Alone births (13.8%) compared with Non-Hispanic White births (6.1%) [@tbl-premature-birth-age-rande-zip]. Zip code stratifications also showed variation; in 2023, premature births were 12.4% in zip 10940 compared with 3.8% in zip 10950 [@tbl-premature-birth-age-rande-zip]. A multi-year race/ethnicity comparison for 2020–2022 showed Orange County’s overall premature birth percentage at 8.4%, lower than NYS excluding NYC (9.5%) and NYS overall (9.5%), while within Orange County the highest burden remained among Non-Hispanic Black births (14.9%) [@fig-premature-birth-rande].
-
-The percentage of low birthweight births was 6.9% in 2020 and 6.6% in 2023 [@tbl-lbw-age-rande-zip]. In 2023, low birthweight was higher among Black Alone births (14.0%) than among Non-Hispanic White births (5.4%) [@tbl-lbw-age-rande-zip]. Zip code stratifications showed additional variation; in 2023, low birthweight births were 11.8% in zip 10940 compared with 3.0% in zip 10950 [@tbl-lbw-age-rande-zip]. In the multi-year period 2020–2022, Orange County’s overall low birthweight percentage was 7.1%, lower than NYS excluding NYC (8.0%) and NYS overall (8.4%), with the highest burden among Non-Hispanic Black births (13.4%) [@fig-lbw-birth-rande].
-
-
-<!-- Table 49: Premature Births, per 100 Live Births by Age, Race and Ethnicity, and ZIP Code, 2020–2023 -->
-{{< include _generated/objects/tbl-premature-birth-age-rande-zip.qmd >}}
-
-<!-- Table 50: All Infants Born with Low Birthweight, by Age, Race and Ethnicity, and ZIP Code, 2020–2023 -->
-{{< include _generated/objects/tbl-lbw-age-rande-zip.qmd >}}
-
-<!-- Figure 117: Percentage of Premature Births, per 100 Live Births , 2020–2023 -->
-{{< include _generated/objects/fig-premature-birth.qmd >}}
-{{< include _generated/objects/tbl-premature-birth.qmd >}}
-
-<!-- Figure 118: Percentage of Premature Births, by Race and Ethnicity, 2020–2022 -->
-{{< include _generated/objects/fig-premature-birth-rande.qmd >}}
-{{< include _generated/objects/tbl-premature-birth-rande.qmd >}}
-
-<!-- Figure 119: Percentage of Infants Born Low Birthweight, 2020–2022 -->
-{{< include _generated/objects/fig-lbw-birth.qmd >}}
-{{< include _generated/objects/tbl-lbw-birth.qmd >}}
-
-<!-- Figure 120: Percentage of Infants Born Low Birthweight, by Race and Ethnicity, 2020–2022 -->
-{{< include _generated/objects/fig-lbw-birth-rande.qmd >}}
-{{< include _generated/objects/tbl-lbw-birth-rande.qmd >}}
-
-## Citations
-
-2. <a id="cite-2"></a>Orange County Department of Health, Respiratory Illness Dashboard, [https://www.orangecountygov.com/2361/Dashboard-Portal](https://www.orangecountygov.com/2361/Dashboard-Portal), accessed August 2025.
-
-5. <a id="cite-5"></a>Orange County Department of Health, 2024 Child and Adolescent Health Profile and MICHC data, [https://www.orangecountygov.com/2325/Reports-Assessments](https://www.orangecountygov.com/2325/Reports-Assessments), accessed August 2025.
+{{< include _generated/objects/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
