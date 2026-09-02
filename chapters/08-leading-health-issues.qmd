@@ -354,8 +354,6 @@ residents [@fig-allsitesca-incidence-rande-aar].
 {{< include _generated/objects/fig-allsitesca-incidence-rande-aar.qmd >}}
 {{< include _generated/objects/tbl-allsitesca-incidence-rande-aar.qmd >}}
 
-<!-- Table 37: Cancer Incidence, All Sites Combined, Case Counts and Rates per 100,000 Population by Age, Race and Ethnicity, and ZIP Code, 2018–2022 -->
-{{< include _generated/objects/tbl-allsitescombined-count-rate-age-rande-zip.qmd >}}
 
 ### Malignant Neoplasms
 
